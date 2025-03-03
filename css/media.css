@@ -146,6 +146,13 @@
   .f_flex {justify-content: center;}
 }
 
+@media (max-width:610px){
+  /* footer */
+  #footer .inner {gap: 40px;}
+  .txt_area {width: 100%;}
+  .copy {position: static;}
+}
+
 @media (max-width:580px){
 
   /* header */
