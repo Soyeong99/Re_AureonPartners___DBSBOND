@@ -90,19 +90,23 @@
   .quick_area::before {top: 45%;}
 
   /* company */
-  .left_box { text-align: center; top: 20%;  left: 50%; transform: translateX(-50%);}
+  /* .left_box { text-align: center; top: 20%;  left: 50%; transform: translateX(-50%);} */
+  .left_box { display: none;}
   .left_box h3 {font-size: 4rem; }
   .bottom_box p {display: none;}
 
   /* prd */
-  #prd {padding: 70px 0;}
-  #prd .tit_box {margin: 0 auto 30px;}
+  #prd {padding: 70px 0; background: #000;}
+  /* #prd .tit_box {margin: 0 auto 30px;} */
   #prd .tit_box h3 .br {display: none;}
   #prd .tit_box p {display: none;}
   #prd .tag_box {display: none;}
   #prd .content { width: 100%;}
 
-  /*  */  
+  #prd .tit_box h3{display: none;}
+  #prd .m_tit {display: block;}
+
+  /* invest */  
   #invest .content {width: 100%;}
   #invest .content ul li { width: calc((100% - 10px)/2); }
   .slide_box {width: 100%; float: none; margin: 0 auto;}
