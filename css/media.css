@@ -20,7 +20,6 @@
   #invest .content br.block {display: block;}
 
   /* prd */
-  #prd .tit_box {margin-left: 60px;}
   .container a.more {display: none;}
   a.more_btm {display: block;}
   #prd .container>div {padding: 12px 20px;}
@@ -28,9 +27,17 @@
 }
 
 @media (max-width:1380px){
+
   /* prd */
-  #prd .tit_box {margin-left: 60px;}
+  #prd .inner {justify-content: center;}
+  .con_tit {font-size: 1.4rem;}
+  #prd .prd_tit_box {width: 100%; margin: 0;}
+  .prd_tit_flex {display: flex; align-items: center; justify-content: space-around;}
+  #prd .content {width: 100%;}
+  #prd .container>div {padding: 12px 20px; margin: 0 0 8px 0; }
+  #prd .content h3 {font-size: 2.4rem;}
   #prd .content li {padding: 25px 20px;}
+  .container a.more { width: 113px; left: 258px; padding:8px;}
 
   /* invest */
   #invest .content ul span.hover  {margin-top: 18px;}
@@ -47,13 +54,6 @@
   #invest {padding: 50px 0 100px;}
   #invest .content ul {gap: 10px;}
   #invest .content ul li { width: calc((100% - 30px) / 4);}
-
-    /* prd */
-  #prd .inner {justify-content: space-between;}
-  .con_tit {font-size: 1.4rem;}
-  #prd .container>div {padding: 12px 20px; margin: 0 0 8px 0; }
-  #prd .content h3 {font-size: 2.4rem;}
-  .container a.more { width: 113px; left: 258px; padding:8px;}
 
   /*  */
     .cs_link li a img {width: 60px;}
@@ -98,8 +98,8 @@
   /* prd */
   #prd {padding: 70px 0; background: #000;}
   /* #prd .tit_box {margin: 0 auto 30px;} */
-  #prd .tit_box h3 .br {display: none;}
-  #prd .tit_box p {display: none;}
+  #prd .prd_tit_box h3 .br {display: none;}
+  #prd .prd_tit_box p {display: none;}
   #prd .tag_box {display: none;}
   #prd .content { width: 100%;}
 
@@ -135,11 +135,11 @@
 @media (max-width:790px){
 
   /* prd */
-  #prd .tit_box {width: 100%; margin: 0 0 30px;}
-  #prd .tit_box .br {display: none;}
-  #prd .tit_box h3 {text-align: center;}
+  #prd .prd_tit_box {width: 100%; margin: 0 0 30px;}
+  #prd .prd_tit_box .br {display: none;}
+  #prd .prd_tit_box h3 {text-align: center;}
   #prd .content {width: 100%;}
-  #prd .tit_box p, #prd .tag_box {display: none;}
+  #prd .prd_tit_box p, #prd .tag_box {display: none;}
 
   /* company */
   #company {height: auto;}
@@ -206,7 +206,7 @@
   .slide_box { height: 200px; }
 
   /* prd */
-  #prd .tit_box h3 {font-size: 3.5rem;}
+  #prd .prd_tit_box h3 {font-size: 3.5rem;}
   #prd .content li {gap: 2px; padding: 30px 0 70px;}
   #prd .content .img_box {height: 100px;}
   #prd .content li .con_tit {margin-top: 10px;}

@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+:root {
+    --main-color : #FF3333;
+    --main-font :'Pretendard', sans-serif;
+}
+
+/* -----
+    회사소개 페이지 
+----- */
+
+/* about */
+#about {padding: 120px 0; background: url(../img/sub/company_bg.jpg) no-repeat center / cover;}
+#about .inner {display: flex; justify-content: space-around; flex-wrap: wrap; }
+#about .img { width: 33.5%; height: 720px; border-radius: 30px; overflow: hidden;}
+#about .img img {width: 100%;  height: 100%;}
+
+.right_box {width: 50%;}
+.right_box .logo { width: 350px; height: 80px;  background: url(../img/common/logo_w.png) no-repeat center / 100%; }
+.right_box .txt {text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.25); color: #fff;}
+.right_box .tit_txt { font-size: 3.8rem; font-weight: 600; word-break: keep-all; margin: 70px 0 60px;}
+.right_box .muted_txt {font-size: 2.5rem; font-weight: 500;}
+
+/* history */
+#history { background: linear-gradient(#fff 20%, #E4E4E4); }
+#history .sub_inner { padding: 140px 0; background: url(../img/sub/history_bg.jpg) no-repeat center / cover; }
+.history_con { width: 100%; height: 100%; overflow: hidden; }
+.history_con ul { width: 90%; height: 200px; }/*  display: flex; align-items: center; justify-content: center; */
+/* .history_con .swiper-wrapper { display: flex; } */
+.history_con .swiper-slide { font-size: 1.8rem; height: 800px !important;  background: #cbcbcb;  padding: 30px 35px; text-align: center; border-radius: 10px;  transform: scale(0.8); }
+.history_con .swiper-slide .img { width: 98%; height: 210px; margin: 0 auto 30px; }
+.history_con .swiper-slide .img img { width: 100%; height: 100%; }
+.history_con .swiper-slide h4 { height: 80px; font-size: 2.2rem; font-weight: 800; margin-bottom: 30px; }
+.history_con .swiper-slide p { font-size: 6rem; font-weight: 300; }
+.history_con .swiper-slide span { display: inline-block; font-size: 2.4rem; word-break: keep-all; margin-top: 30px; }
+
+/* Active slide 효과 */
+.history_con .swiper-slide-next { transform: scale(1); background: #fff;  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+
+.swiper {width: 100%; height: 100%; }
+.swiper-slide { text-align: center; background: #fff; }
+.swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* vision */
+#vision {background: #E4E4E4; }
+#vision .sub_inner { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap;  background: url(../img/sub/vision_bg.jpg) no-repeat center / cover;}
+#vision .img_box { width: 40%; height: 400px;  border-radius: 30px; overflow: hidden;}
+#vision .img_box img {width: 100%; height: 100%;}
+
+#vision .txt_box { width: 50%; padding: 95px 0 ; font-size: 2.2rem; font-weight: 500; }
+#vision .txt_box h4 {font-size: 5.5rem; font-weight: 600; word-break: keep-all; text-shadow: 1px 1px 3px;}
+#vision .txt_box p { font-size: 2rem; margin: 60px 0;}
+
+/* -----
+    투자전략 페이지 
+----- */
+
+/* top_tit_box */
+#tit_box { height: 320px; width: 100vw; background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/sub/sub_investment_bg.jpg) no-repeat center / cover; }
+.animate_txt { text-align: center; }
+.typing-txt {display: none;}
+span.typing {color: #f5f5f5; font-size: 4rem; line-height: 300px;}
+.bold { font-size: 4.5rem; font-weight: 500; color: #fff; /* D, Y, S만 굵게 */}
+
+/* invest_info */
+#invest_info {padding: 60px 0;}
+#invest_info .sub_inner { padding: 0 2%; display: flex; align-items: center;}
+
+.img_box {width: 30%; height: 300px; border-radius: 10px; overflow: hidden; background: url(../img/sub/invest_info.jpg) no-repeat center / cover;}
+
+.tit_box {padding: 40px 42px;}
+.tit_box h4{font-size: 3.2rem; font-weight: 600; text-align: left;}
+.tit_box h4+p{font-size: 2.6rem; font-weight: 600;}
+.tit_box span{font-size: 2.2rem;}
+
+.info_box ul {display: flex; justify-content: space-around;}
+.info_box ul li {position: relative; padding: 0 30px;}
+.info_box li:nth-child(2)::before {display: block; content: ""; width: 2px; height: 100%; background: #ddd; position: absolute; top: 0; left: -16px;}
+.info_box li:nth-child(2)::after {display: block; content: ""; width: 2px; height: 100%; background: #ddd; position: absolute; top: 0; right: -10px;}
+    
+.con_tit {display: flex; gap: 16px; align-items: center; margin-bottom: 12px;}
+.con_tit h5 {font-size: 2.6rem;}
+.con_tit .icon {width: 25px; height: 25px; background: url(../img/sub/check_box.png) no-repeat center / 90%;}
+
+/* invest_contents */
+#invest_contents { max-width: 1280px; margin: 0 auto; padding: 80px 0;}
+
+.content {display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; margin-bottom: 50px;}
+
+.content .img { width: 45%; height: 350px; border-radius: 10px; overflow: hidden; }
+.content .img img {width: 100%; height: 100%;}
+.content .txt_box { width: calc(( 100% - 20px) / 2);}
+.content h3 {font-size: 3rem; font-weight: 600; margin-bottom: 20px; color: var(--main-color);}
+.content h3+p {font-size: 1.8rem;}
+
+/* -----
+    투자상품 페이지 
+----- */
+#top_tit_box { padding: 102px 260px; color: #fff; width: 100%; height: 450px; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)) ,url(../img/sub/product_bg.jpg) no-repeat center / cover;}
+#top_tit_box h2 {font-size: 5rem; font-weight: 700; margin-bottom: 30px; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+#top_tit_box h2+p { font-size: 3.2rem; font-weight: 600; }
+
+#banner {padding: 120px 0 135px; }
+.banner_img {display: flex; justify-content: center;}
+
+#prd_list { padding-bottom: 120px; }
+.prd_grid { max-width: 1105px !important; display: grid; gap: 130px; grid-template-columns: repeat(2, 1fr);}
+
+/* 수정된 카드 css */
+.prd_content { padding: 0; box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.2); border-radius: 15px; overflow: hidden; transition: all 0.5s;}
+.tit { position: relative; width: 100%;}
+.tit>.img  {  width:100%;}
+.tit>.img > img {width: 100%;}
+.card_tit { position: absolute; height: 120px; width: 100%; background: rgb(221, 221, 221, 0.5); text-align: center; font-size: 3.8rem; font-weight: 700; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.card_tit > p {  text-align: center; font-size: 3.8rem; font-weight: 700; text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.7); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } 
+.price_con { width: 100%; padding: 20px 30px;  }
+.price_con > p { font-size: 2rem; margin-bottom: 8px; }
+.price_con > p > span { display: inline-block; width: 120px;}
+
+.percent_area { padding:  0 20px 20px; }
+.percent { color: #888; text-align: right; margin-bottom: 3px;}
+.percent > span {color: var(--main-color);}
+.bar_ademin { margin: 0 auto; width: 100%; height: 12px; border-radius: 100px; overflow: hidden; background: #ddd; position: relative;}
+.bar_ademin > span.bar { display: inline-block;  width: 80% ; height: 12px; position: absolute; top: 0; left: 0; background: var(--main-color);} 
+
+.prd_btn {display: flex; gap: 12px; justify-content: center; padding: 20px 20px 40px;}
+.prd_content .more { display: block; padding: 8px 32px; background: #eee; border-radius: 100px; transition: all 0.5s;}
+
+.prd_content:hover {box-shadow: 2px 5px 16px 8px rgba(255, 51, 51, 0.6);} 
+.prd_content .more:hover { background: var(--main-color); color: #fff; }
+
+
+/* -----
+    투자상품 상세페이지로 이동
+----- */
+.grid_wrap { max-width: 1200px; display: grid; gap: 30px; grid-template-columns: repeat(2, 1fr);}
+.grid_wrap > div { width: 100%; }
+.grid_wrap > div > img { width: 100%; height: 100%;}
+
+.prd_card { margin: 20px 0; padding: 30px; box-shadow: 1px 4px 10px 2px rgba(0, 0, 0, 0.25); border-radius: 30px;}
+
+.card_info h5 {font-size: 2rem; font-weight: 700; position: relative; margin-left: 20px; }
+.card_info h5+span { margin: 6px 0 0 18px; font-size: 1.5rem; font-weight: 500; color: #888;} 
+.card_info h5::before { display: block; content: ""; background: var(--main-color); width: 3.5px; height: 28px; position: absolute; top: 50%; transform: translateY(-50%); left: -10px;}
+
+/* .txt_box { width: 80%; margin: 20px auto; display: flex; text-align: center; align-items: center; justify-content: center; padding: 16px; border-radius: 10px;} */
+.txt_box > input[type=text] {  color: var(--main-color); text-align: center; width: 28%; font-size: 3rem; font-weight: 700; }
+.txt { text-align: left; display: inline-block; font-size: 2.4rem; font-weight: 700;}
+ 
+button.pop_btn { display: block; margin: 0 auto;  width: 80%; padding: 8px; font-size: 2rem; font-weight: 600; border: 1px solid var(--main-color); border-radius: 100px; transition: all 0.5s; }
+button.pop_btn:hover { background: var(--main-color); color: #fff; } 
+
+.btm_card { width: 40%; margin: 0 auto;} 
+.btm_card img { width: 100%; height: 100%; }
+
+/* prd_f_info */
+#prd_f_info {padding-bottom: 80px;}
+.prd_info_wrap { margin-bottom: 30px; width: 63%; font-size: 1.8rem; margin: 0 auto; border-radius: 20px; padding: 30px 50px; background: #eee; }
+.col_prd { margin: 20px 0; }
+.prd_info_wrap p {word-break: keep-all;}
+.prd_info_wrap span { color: #888; display: block;}s
+
+.link_area {width: 100%;}
+a.go_form {  width: 60%; display: block; padding: 16px 58px; font-size: 18px; border: 1px solid var(--main-color); font-weight: 600; background: var(--main-color); color: #fff; text-align: center; border-radius: 500px; transition: all 0.5s;}
+a.go_form:hover { color: var(--main-color); background: #fff; }
+
+/* -----
+    채권 투자하기
+----- */
+input[type=checkbox] { border: none;}
+#form { padding: 80px 0; background: url(../img/sub/prd_form_bg.jpg) no-repeat center / cover ;}
+.form_wrap { max-width: 800px; margin: 0 auto; padding: 60px 50px; background: #fff; border-radius: 30px; box-shadow: 6px 6px 13px rgba(0, 0, 0, 0.25) ;}
+.form_wrap h2 { font-size: 3.2rem;  font-weight: 600;}
+.form_wrap h2>span {font-size: 1.4rem;  font-weight: 400; margin-bottom: 30px; color: #888;}
+#form .input_area { padding: 20px; }
+
+.choiced>label>input[type=text] {background: #ddd; color: #333; text-align: left;}
+.user_col span { width: 100%; font-size: 2rem; font-weight: 500;}
+.user_col span+small {color: var(--main-color);}
+
+.amount-container { width: 100%; margin: 20px auto; }
+.col_value { margin-bottom: 10px; width: 100%; display: inline-flex; gap: 10px; align-items: center; justify-content: center; }
+.col_value > span { display: inline-block; font-size: 2rem; text-align: right;  }
+.col_value > span.red {color: var(--main-color); text-align: left;}
+input.value { color: var(--main-color); border: 0; font-size: 2rem; font-weight: 500; padding: 0; margin: 0; }
+input { width: 100%; height: 40px; text-align: center; font-size: 20px; margin-bottom: 10px; }
+.btn-group { display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 10px; }
+button.num {  padding: 8px 15px 10x; height: 40px; font-size: 16px; border: 1px solid #ccc; background-color: white; border-radius: 5px; }
+.apply-btn { font-family: var(--main-font); width: 100%; height: 50px; font-size: 2rem; background-color: var(--main-color); color: #fff; margin-top: 30px; border-radius: 500px; border: 1px solid var(--main-color); transition: all 0.5s;}
+.apply-btn:hover { background: #fff; color: var(--main-color); border-color: var(--main-color); }
+
+.user_info_warp { margin: 20px 0;}
+.c_price { margin-top: 50px; }
+
+.input-group label{ width: 100%; display: flex; align-items: center; gap: 10px; }
+input { padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+.birth-input { width: calc((100% - 5px) / 2) !important; }
+.pw_info { width: calc((100% - 5px) / 2); }
+.id-first {  margin-right: 4px; width: 50px !important; padding: 3px !important; text-align: center; }
+.masked { font-size: 16px; font-weight: 700; }
+
+.c_price p {text-align: center;}
+.c_price p>span {font-size: 2rem; font-weight: 500; }
+.c_price p>span.red {color: var(--main-color);}
+
+.reset-btn { transition: all 0.2s; }
+.reset-btn:hover { border-color: var(--main-color); background-color: var(--main-color); color: #fff; }
+
+/* 투자 신청 완료 확인 모달창 */
+.modal_pop  { display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.6); z-index: 999;}
+.pop_wrap { max-width: 815px; padding: 60px 50px; margin: 60px auto ; display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: 30px; }
+.pop_sec {width: 100%;}
+p.sec_tit {font-size: 2.6rem; color: var(--main-color); font-weight: 600;}
+span.muted { display: block; font-size: 1.4rem; color: #888; }
+
+.top_tit {margin-bottom: 40px; display: flex; flex-direction: column; align-items: center; }
+.top_tit .img {width: 95px; height: 95px; background: url(../img/sub/check_3d.png) no-repeat center / 100%;}
+.top_tit .img+p {font-size: 2.2rem; font-weight: 600; margin-top: 35px;}
+
+label.agree_all { width: 715px; }
+
+.sec_02 { margin-top: 20px ; }
+ul.box_area { margin: 0 0 10px; padding: 16px; background: #eee; border-radius: 10px; }
+ul.box_area span {display: block; }
+ul.box_area small { font-size: 1.6rem; color: #888; }
+ul.box_area li { display: flex; justify-content: space-between; align-items: center; font-size: 2rem; font-weight: 500; margin: 12px 0;}
+ul.box_area li > .flex { display: inline-flex; align-items: center; gap: 6px;} 
+ul.box_area li > .flex > p { width: 25px; height: 25px;}
+ul.box_area li > .flex > button > img { width: 23px; height: 23px; } 
+
+/* 약관 동의 -- 아코디언 */
+.sec_03 {position: relative;}
+
+div.agree_list { position: relative; padding: 0 0 20px 0 !important;}
+div.agree_list::before { display: block; content: ""; width: 100%; height: 2px; background: #ddd; position: absolute; bottom: 0; left: 0; }
+
+.agree_wrap { gap: 3px !important; }
+.pop_sec .agree_list { padding: 10px; }
+
+.target { display: block; top: 0; left: 0; position: fixed; }
+.open-accordion { display: block; }
+.close-accordion { display: none; }
+:target ~ .open-accordion { display: none; }
+:target ~ .close-accordion { display: block; }
+
+.accordion { display: flex; flex-direction: column; gap: 1.5rem; }
+.accordion__li { position: relative; width: 100%; background: white; border-radius: 0.4rem; padding: 2rem;}
+.accordion__li a > div { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.accordion__li a > div div { display: flex; align-items: center; }
+.accordion__num { font-size: 1.8rem; margin-right: 1.3rem; }
+.accordion__title { font-size: 1.6rem; }
+
+span.down, span.hide { border-bottom: 1px solid #666; padding-bottom: 1px; font-size: 1.3rem; position: absolute; right: 0; bottom: 0; margin-bottom: 20px; transition: all 0.5s;}
+span.down:hover, span.hide:hover {color: var(--main-color);} 
+
+label.agree {display: inline-flex; align-items: center; padding: 5px; gap: 6px;}
+
+/* When accordion is open */
+.accordion__content { font-size: 1.6rem; line-height: 1.5; height: 0; overflow: scroll; transition: all 0.3s ease-in-out; }
+.accordion__li:first-of-type :target ~ .accordion__content { height: 250px; padding-top: 1rem;}
+.accordion__li:nth-of-type(2) :target ~ .accordion__content {height: 13rem; padding-top: 1rem; }
+.accordion__li:nth-of-type(3) :target ~ .accordion__content {height: 13rem; padding-top: 1rem; }
+.accordion__li:last-child :target ~ .accordion__content { height: 15.4rem; padding-top: 1rem;}
+
+.btn { display: flex; gap: 20px; align-items: center; justify-content: center; padding: 50px 0 0;}
+.btn button { display: block; font-size: 2rem; font-weight: 600;  }
+.btn > .del_pop { padding: 12px 32px; background: #fff; border: 1px solid var(--main-color); color: var(--main-color); border-radius: 100px; transition: all 0.5s;}
+.btn > .complete {padding: 12px 86px; background: var(--main-color); border: 1px solid var(--main-color); color: #fff; border-radius: 100px; transition: all 0.5s;}
+
+/* 2차 모달창 */
+/* 결제 완료 및 계좝 복사 */
+div.modal dt>strong { display: block; margin-bottom: 20px; }
+div.copy_pop  { display: none; z-index: 9998;}
+div.success_pop { display: none; z-index: 9999;}
+
+/* -----
+    이벤트 페이지
+----- */
+#event {height: 1080px;}
+#event .event_notice { display: block !important; }
+
+/* -----
+    게시판
+----- */
+/* sub_locate_nav */
+/* #sub_locate_nav { border-bottom: 1px solid #ddd; }
+#sub_locate_nav .sub_nav { display: flex;  max-width: 1280px; margin: 0 auto; padding: 12px 0; }
+#sub_locate_nav .sub_nav li a { display: block; padding: 8px 20px; position: relative;}
+#sub_locate_nav .sub_nav li a.bar::before { display: block; content: ""; background: #eee; width: 2px; height: 18px; position: absolute; bottom: 0; left: 0; transform: translateY(-50%);} */
+
+/* 콘텐츠 노출 영역 --- container */
+/* #container {max-width: 1280px; margin: 0 auto;} */
+
+/* sec_tit_box */
+/* .sec_tit_box { padding: 65px 0; }
+.sec_tit_box h2 { font-size: 3.5rem; font-weight: 800; text-align: center;}
+.sec_tit_box h2+span { display: block; margin-top: 15px; font-weight: 400; color: #666; letter-spacing: 0.5px; text-align: center;} */
+
+/* table_con */
+/* .table_con {padding: 10px 0 50px ;}
+thead {text-align: center; background: #f5f5f5; border-top: 2px solid #333; }
+thead th {padding: 20px 0; border-bottom: 1px solid #ddd;} */
+
+/* tbody {text-align: center; border-bottom: 1px solid #888;}
+tbody td {padding: 20px 0; border-bottom: 1px solid #ddd;}
+td.list_num {color: #888;}
+td.list_tit {text-align: left; font-weight: 600;} */
+
+/* pg_con */
+/* .pg_con {padding: 0 0 80px;}
+.pg_con .sub_inner { max-width: 1280px; }
+.pg_wrap { text-align: center; }
+.pg_con a { display: inline-block; text-align: center; font-size: 1.4rem; padding: 5px; min-width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ddd; background: #ddd;} */
