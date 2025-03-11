@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 쪽지작성하기 / 쪽지리스트 - 탭메뉴 구성-->
+  <title>DBS BOND | 관리자페이지 </title>
+
+  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <script src="../js/jquery-3.7.1.min.js.js"></script>
+  <script src="../js/admin.js"></script>
+</head>
+
+<body>
+  <div id="admin_wrap">
+
+    <div id="header">
+
+      <h1>
+        <img src="../img/common/logo.png" alt="로고">
+      </h1>
+
+      <nav>
+        <ul class="lnb_wrap">
+          <li>
+            <div class="icon_person">
+              <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
+            </div>
+            <div class="txt">관리자님, 반갑습니다</div>
+          </li>
+
+          <!-- 회원관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">회원 관리</div>
+              </div>
+
+              <div class="alarm"></div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="#">회원 목록</a>
+              </li>
+              <li>
+                <a href="#">쪽지 보내기</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 입금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">입금 관리</div>
+              </div>
+
+              <div class="alarm"></div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="#">입금 신청</a>
+              </li>
+              <li>
+                <a href="#">입금 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 출금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">출금 관리</div>
+              </div>
+
+              <div class="alarm"></div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="#">출금 내역</a>
+              </li>
+              <li>
+                <a href="#">미지급 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 투자금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">투자금 관리</div>
+              </div>
+
+              <div class="alarm"></div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="#">회수 관리</a>
+              </li>
+              <li>
+                <a href="#">회수 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 게시판 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">게시판 관리</div>
+              </div>
+
+              <div class="alarm"></div>
+            </div>
+
+            <ol class="depth2">
+              <li> <a href="#">상품 관리</a> </li>
+              <li> <a href="#">계좌 관리</a> </li>
+              <li> <a href="#">1:1 문의</a> </li>
+              <li> <a href="#">이벤트 관리</a> </li>
+              <li> <a href="#">공지사항 관리</a> </li>
+              <li> <a href="#">자주묻는질문 관리</a> </li>
+            </ol>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+    <!-- main -->
+    <div id="main">
+
+      <div class="card_tit">쪽지 작성하기</div>
+
+      <div class="tab_con">
+
+        <div class="tab_menu">
+          <ul>
+            <li class="active">작성</li>
+            <li >목록</li>
+          </ul>
+        </div>
+
+        <!-- 탭 메뉴 영역 -->
+        <div class="tab_item">
+
+          <!-- tab_menu_01 / 쪽지 작성&전송 -->
+          <div class="tab_content_01">
+            
+            <div class="util_box">
+
+              <div class="top">
+
+                <div class="search">
+                  <p>
+                    <i class="bi bi-search"></i>
+                    회원검색
+                  </p>
+                </div>
+
+                <div class="all">
+                  <label for="all_choice">
+                    <input type="checkbox" name="" id="all_choice">
+                    전체회원
+                  </label>
+                </div>
+              </div><!--//top-->
+
+              <!-- 회원 선택 리스트 / 관리자 삭제 가능하도록-->
+              <div class="btm search_tag_area">
+                <ul>
+
+                  <li data-id="1">
+                    <div class="search_tag">
+                      <p>홍길동</p>
+                      <p class="bi bi-x del"></p>
+                    </div>
+                  </li>
+
+                  <li data-id="1">
+                    <div class="search_tag">
+                      <p>홍길동</p>
+                      <p class="bi bi-x del"></p>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div> <!--//util_box-->
+
+            <div class="write_area">
+
+              <div id="in_title">
+                <textarea class="w_tit" name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="50"
+                  required></textarea>
+              </div>
+
+              <div id="in_content">
+                <textarea class="w_con" name="content" id="ucontent" placeholder="내용" maxlength='1000'
+                  required></textarea>
+              </div>
+
+            </div>
+            
+              <div class="btn_area">
+                <button type="button" class="close">닫기</button>
+                <button type="submit" class="submit">보내기</button>
+              </div>
+
+          </div><!--//tab_content_01-->
+
+          <!-- tab_menu_02 / 쪽지 리스트 -->
+          <div class="tab_content_02">
+
+            <div class="card_tit">쪽지 목록 보기</div>
+
+            <div class="table_con">
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>　</th>
+                    <th>내용</th>
+                    <th>발송일</th>
+                    <th>상태</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>안녕하세요. DBS입니다...</td>
+                    <td>2025.01.02</td>
+                    <td class="state_red">안읽음</td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>안녕하세요. DBS입니다...</td>
+                    <td>2025.01.02</td>
+                    <td class="state_green">읽음</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+
+        </div><!--//tab_content_02-->
+
+      </div><!--//tab_item-->
+
+    </div> <!--//tab_con-->
+
+
+  </div>
+
+  <div class="modal">
+
+    <div class="modal_inner">
+
+      <label for="search" class="search_area">
+        <input type="text" placeholder="회원명을 입력하세요." id="search">
+        <span class="bi bi-search icon_search"></span>
+      </label>
+
+      <div class="table_con">
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>생년월일</th>
+              <th>가입일</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>홍길동</td>
+              <td>2000.01.02</td>
+              <td>2025.02.01</td>
+            </tr>
+            <tr>
+              <td>홍길동</td>
+              <td>2000.01.02</td>
+              <td>2025.02.01</td>
+            </tr>
+            <tr>
+              <td>홍길동</td>
+              <td>2000.01.02</td>
+              <td>2025.02.01</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <span class="bi bi-x-lg close"></span>
+
+    </div><!--//modal_inner-->
+  </div>
+
+
+  </div>
+</body>
+
+</html>

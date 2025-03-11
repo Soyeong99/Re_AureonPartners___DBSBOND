@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 투자금관리 / 회수관리 // 회원 회수 신청페이지-->
+    <title>DBS BOND | 관리자페이지 </title>
+
+    <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/admin.js"></script>
+</head>
+
+<body>
+    <div id="admin_wrap">
+
+        <div id="header">
+
+            <h1>
+                <img src="../img/common/logo.png" alt="로고">
+            </h1>
+
+            <nav>
+                <ul class="lnb_wrap">
+                    <li>
+                        <div class="icon_person">
+                            <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
+                        </div>
+                        <div class="txt">관리자님, 반갑습니다</div>
+                    </li>
+
+                    <!-- 회원관리 -->
+                    <li>
+                        <div class="lnb">
+                            <div class="left_box">
+                                <div class="icon"></div>
+                                <div class="txt">회원 관리</div>
+                            </div>
+
+                            <div class="alarm"></div>
+                        </div>
+
+                        <ol class="depth2">
+                            <li>
+                                <a href="#">회원 목록</a>
+                            </li>
+                            <li>
+                                <a href="#">쪽지 보내기</a>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <!-- 입금 관리 -->
+                    <li>
+                        <div class="lnb">
+                            <div class="left_box">
+                                <div class="icon"></div>
+                                <div class="txt">입금 관리</div>
+                            </div>
+
+                            <div class="alarm"></div>
+                        </div>
+
+                        <ol class="depth2">
+                            <li>
+                                <a href="#">입금 신청</a>
+                            </li>
+                            <li>
+                                <a href="#">입금 내역</a>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <!-- 출금 관리 -->
+                    <li>
+                        <div class="lnb">
+                            <div class="left_box">
+                                <div class="icon"></div>
+                                <div class="txt">출금 관리</div>
+                            </div>
+
+                            <div class="alarm"></div>
+                        </div>
+
+                        <ol class="depth2">
+                            <li>
+                                <a href="#">출금 내역</a>
+                            </li>
+                            <li>
+                                <a href="#">미지급 내역</a>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <!-- 투자금 관리 -->
+                    <li>
+                        <div class="lnb">
+                            <div class="left_box">
+                                <div class="icon"></div>
+                                <div class="txt">투자금 관리</div>
+                            </div>
+
+                            <div class="alarm"></div>
+                        </div>
+
+                        <ol class="depth2">
+                            <li>
+                                <a href="#">회수 관리</a>
+                            </li>
+                            <li>
+                                <a href="#">회수 내역</a>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <!-- 게시판 관리 -->
+                    <li>
+                        <div class="lnb">
+                            <div class="left_box">
+                                <div class="icon"></div>
+                                <div class="txt">게시판 관리</div>
+                            </div>
+
+                            <div class="alarm"></div>
+                        </div>
+
+            <ol class="depth2">
+              <li> <a href="#">상품 관리</a> </li>
+              <li> <a href="#">계좌 관리</a> </li>
+              <li> <a href="#">1:1 문의</a> </li>
+              <li> <a href="#">이벤트 관리</a> </li>
+              <li> <a href="#">공지사항 관리</a> </li>
+              <li> <a href="#">자주묻는질문 관리</a> </li>
+            </ol>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="main">
+
+            <div class="card_tit">회수관리</div>
+
+            <div class="content_wrap">
+
+            <div class="cartagoty_area">
+
+                <div class="calender">
+                    <p>
+                        <span>2025.01.01</span>
+                        ~
+                        <span>2025.01.01</span>
+                    </p>
+
+                    <div class="bi bi-calendar icon_calender"></div>
+                </div>
+
+                <div class="car_state">
+                    <ul>
+                        <li class="m_state">구분
+                            <span class="bi bi-chevron-down"></span>
+                            </li>
+
+                        <li>
+                            <button type="button" class="state_cartn">대기</button>
+                        </li>
+
+                        <li>
+                            <button type="button" class="state_cartn">승인</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="num">
+                    <p>
+                        <span>금액</span>:
+                        <span>565,000</span>
+                        <span>원</span>
+                    </p>
+                </div>
+
+                <p class="muted">페이지 당 항목 수 15</p>
+            </div>
+
+            <div class="container">
+
+                <div class="table_con">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>이름</th>
+                                <th>날짜</th>
+                                <th>상품</th>
+                                <th>회수신청액</th>
+                                <th>계좌번호</th>
+                                <th>은행</th>
+                                <th>구분</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>홍길동</td>
+                                <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>12,340</td>
+                                <td>123-1111-1111</td>
+                                <td>우리은행</td>
+                                <td>
+                                    <span class="state_red">대기</span>
+                                    <span class="bi bi-chevron-down"></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>홍길동</td>
+                                <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>12,340</td>
+                                <td>123-1111-1111</td>
+                                <td>우리은행</td>
+                                <td>
+                                    <span class="state_red">대기</span>
+                                    <span class="bi bi-chevron-down"></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>홍길동</td>
+                                <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>12,340</td>
+                                <td>123-1111-1111</td>
+                                <td>우리은행</td>
+                                <td>
+                                    <span class="state_red">대기</span>
+                                    <span class="bi bi-chevron-down"></span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>홍길동</td>
+                                <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>12,340</td>
+                                <td>123-1111-1111</td>
+                                <td>우리은행</td>
+                                <td>
+                                    <span class="state_red">대기</span>
+                                    <span class="bi bi-chevron-down"></span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="pg_con">
+                    <div class="pg_wrap">
+                        <a href="#"><i class="bi bi-chevron-left"></i></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </div><!--//main-->
+
+    </div><!--/admin_wrap-->
+</body>
+
+</html>
