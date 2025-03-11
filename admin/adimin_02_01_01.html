@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- 게시판 관리 / 등록된 이벤트 목록 노출 -->
+    <!-- 입금신청 / 입금내역 -->
     <title>DBS BOND | 관리자페이지 </title>
 
     <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
@@ -164,7 +164,30 @@
 
         <div id="main">
 
-            <div class="card_tit">이벤트 관리</div>
+            <div class="card_tit">입금 내역</div>
+
+            <div class="cartagoty_area">
+
+                <div class="calender">
+                    <p>
+                        <span>2025.01.01</span>
+                        ~
+                        <span>2025.01.01</span>
+                    </p>
+
+                    <div class="bi bi-calendar icon_calender"></div>
+                </div>
+
+                <div class="num">
+                    <p>
+                        <span>금액</span>:
+                        <span>0 </span>
+                        <span>원</span>
+                    </p>
+                </div>
+
+                <p class="muted">페이지 당 항목 수 15</p>
+            </div>
 
             <div class="container">
 
@@ -173,43 +196,60 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>　</th>
-                                <th>제목</th>
-                                <th>게시일</th>
+                                <th>이름</th>
+                                <th>날짜</th>
+                                <th>상품</th>
+                                <th>신청액</th>
+                                <th>상태</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>이벤트 제목이 노출됩니다.</td>
+                                <td>홍길동</td>
                                 <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>40,000</td>
+                                <td>
+                                    <span class="state_green">승인</span>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td>1</td>
-                                <td>이벤트 제목이 노출됩니다.</td>
+                                <td>홍길동</td>
                                 <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>40,000</td>
+                                <td>
+                                    <span class="state_green">승인</span>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td>1</td>
-                                <td>이벤트 제목이 노출됩니다.</td>
+                                <td>홍길동</td>
                                 <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>40,000</td>
+                                <td>
+                                    <span class="state_green">승인</span>
+                                </td>
                             </tr>
 
                             <tr>
-                                <td>1</td>
-                                <td>이벤트 제목이 노출됩니다.</td>
+                                <td>홍길동</td>
                                 <td>2025.01.01</td>
+                                <td>EUR</td>
+                                <td>40,000</td>
+                                <td>
+                                    <span class="state_green">승인</span>
+                                </td>
                             </tr>
-
                         </tbody>
                     </table>
 
                 </div>
 
-                <div class="pg_con"> 
+                <div class="pg_con">
                     <div class="pg_wrap">
                         <a href="#"><i class="bi bi-chevron-left"></i></a>
                         <a href="#" class="active">1</a>
@@ -226,12 +266,9 @@
                 </div>
 
             </div>
+        </div>
 
-                <a href="#" class="upload btn_btm_r">등록</a>
-
-        </div><!--//main-->
-
-    </div><!--/admin_wrap-->
+    </div>
 </body>
 
 </html>
