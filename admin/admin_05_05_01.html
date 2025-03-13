@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 투자금관리 / 회수내역 // 회원 회수 완료페이지-->
+  <!-- 게시판 관리 / 새로운 공지사항 등록 -->
   <title>DBS BOND | 관리자페이지 </title>
 
   <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/admin.css">
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/admin.js"></script>
+  <script src="../js/jquery-3.7.1.min.js.js"></script>
+  <script src="../js/admin.js"></script>
 </head>
 
 <body>
@@ -163,149 +163,62 @@
       </nav>
 
     </div>
-
+    <!-- main -->
     <div id="main">
 
-      <div class="card_tit">회수 내역</div>
+      <div class="card_tit">공지사항 등록</div>
 
-      <div class="content_wrap">
+      <div class="event_up">
 
-        <div class="cartagoty_area">
+        <div class="write_area">
 
-          <div class="calender">
-            <input type="date">
-            <!-- <input type="text" name="" /> -->
+          <div id="in_title">
+            <textarea class="w_tit" name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="50"
+              required></textarea>
           </div>
 
-          <div class="num">
-            <p>
-              <span>금액</span>:
-              <span>0 </span>
-              <span>원</span>
-            </p>
+          <div id="in_title">
+            <textarea class="date" name="content" id="ucontent" placeholder="게시일" required></textarea>
           </div>
 
-          <p class="muted">페이지 당 항목 수 15</p>
+          <div id="in_content">
+            <textarea class="w_con" name="content" id="ucontent" placeholder="내용" required></textarea>
+          </div>
         </div>
 
-        <div class="container">
+        <div class="file_box">
+          <label for="file">첨부파일</label>
+          <input class="upload_name" placeholder="첨부파일">
+          <input type="file" id="file">
+        </div>
 
-          <div class="table_con">
-
-            <table>
-              <thead>
-                <tr>
-                  <th>이름</th>
-                  <th>날짜</th>
-                  <th>상품</th>
-                  <th>회수신청액</th>
-                  <th>계좌번호</th>
-                  <th>은행</th>
-                  <th>상태</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-
-          </div>
-
-          <div class="pg_con">
-            <div class="pg_wrap">
-              <a href="#"><i class="bi bi-chevron-left"></i></a>
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#"><i class="bi bi-chevron-right"></i></a>
-            </div>
-          </div>
-
+        <div class="file_box">
+          <label for="url">URL</label>
+          <input class="upload_name" placeholder="url입력">
+          <input type="url" id="url">
         </div>
 
       </div>
 
-    </div><!--//main-->
+      <div class="btn_area">
+        <button type="button" class="close">
+          <a href="admin_05_05_00.html">
+            취소
+          </a></button>
+        <button type="button" class="submit">
+          <a href="admin_05_05_00.html">
+            등록
+          </a>
+        </button>
+      </div>
 
-  </div><!--/admin_wrap-->
+    </div> <!--//tab_con-->
+
+
+
+  </div>
+
+  </div>
 </body>
 
 </html>

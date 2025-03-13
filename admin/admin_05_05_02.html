@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 게시판 관리 / 등록된 공지사항 내용 수정 -->
+    <title>DBS BOND | 관리자페이지 </title>
+
+    <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <script src="../js/jquery-3.7.1.min.js.js"></script>
+    <script src="../js/admin.js"></script>
+</head>
+
+<body>
+    <div id="admin_wrap">
+
+    <div id="header">
+
+      <h1>
+        <a href="admin_main.html">
+          <img src="../img/common/logo.png" alt="로고">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="lnb_wrap">
+          <li>
+            <div class="icon_person">
+              <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
+            </div>
+            <div class="txt">관리자님, 반갑습니다</div>
+          </li>
+
+          <!-- 회원관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">회원 관리</div>
+              </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="adimin_01_01_00.html">회원 목록</a>
+              </li>
+              <li>
+                <a href="adimin_01_02_00.html">쪽지 보내기</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 입금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">입금 관리</div>
+              </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="adimin_02_01_00.html">입금 신청</a>
+              </li>
+              <li>
+                <a href="adimin_02_01_01.html">입금 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 출금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">출금 관리</div>
+              </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="adimin_03_01_00.html">출금 내역</a>
+              </li>
+              <li>
+                <a href="admin_03_02_00.html">미지급 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 투자금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">투자금 관리</div>
+              </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="admin_04_01_00.html">회수 관리</a>
+              </li>
+              <li>
+                <a href="admin_04_02_00.html">회수 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 게시판 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">게시판 관리</div>
+              </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
+
+            <ol class="depth2">
+              <li> <a href="admin_05_01_00.html">상품 관리</a> </li>
+              <li> <a href="admin_05_02_00.html">계좌 관리</a> </li>
+              <li> <a href="admin_05_03_00.html">1:1 문의</a> </li>
+              <li> <a href="admin_05_04_01_00.html">이벤트 관리</a> </li>
+              <li> <a href="admin_05_05_00.html">공지사항 관리</a> </li>
+              <li> <a href="admin_05_06_00.html">자주묻는질문 관리</a> </li>
+            </ol>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+        <!-- main -->
+        <div id="main">
+
+            <div class="card_tit">공지사항 수정</div>
+
+            <div class="event_up">
+
+                <div class="write_area">
+
+                    <div id="in_title">
+                        <textarea class="w_tit" name="title" id="utitle" rows="1" cols="55" placeholder="제목"
+                            maxlength="50" required>이미 등록된 공지사항의 제목이 노출됩니다.</textarea>
+                    </div>
+
+                    <div id="in_title">
+                      <textarea class="date" name="content" id="ucontent" placeholder="게시일" required></textarea>
+                    </div>
+
+                    <div id="in_content">
+                        <textarea class="w_con" name="content" id="ucontent" placeholder="내용" maxlength='1000'
+                            required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minus nostrum, quas, sequi, accusantium dolorem reprehenderit voluptas ex consectetur nihil quidem aliquid aut odit sapiente esse veniam et minima nam.</textarea>
+                    </div>
+
+                    <div class="file_box">
+                        <label for="file">첨부파일</label> 
+                        <input class="upload_name" placeholder="첨부파일">
+                        <input type="file" id="file">
+                    </div>
+
+                    <div class="file_box">
+                        <label for="url">URL</label> 
+                        <input class="upload_name" placeholder="url입력">
+                        <input type="url" id="url">
+                    </div>
+
+                </div>
+
+                <div class="btn_area">
+                  <button type="button" class="close">
+                    <a href="admin_05_05_00.html">
+                      취소
+                    </a></button>
+                  <button type="button" class="submit">
+                    <a href="admin_05_05_00.html">
+                      등록
+                    </a>
+                  </button>
+                </div>
+          
+
+            </div> <!--//tab_con-->
+
+            <a href="admin_05_05_00.html" class="upload btn_btm_r delete">삭제하기</a>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

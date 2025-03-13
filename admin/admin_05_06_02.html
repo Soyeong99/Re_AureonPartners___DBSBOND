@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 게시판 관리 / 계좌 수정 -->
+    <!-- 게시판 관리 / 등록된 공지사항 내용 수정 -->
     <title>DBS BOND | 관리자페이지 </title>
 
     <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/admin.css">
 
     <script src="../js/jquery-3.7.1.min.js.js"></script>
@@ -164,69 +163,40 @@
         </nav>
   
       </div>
-
         <!-- main -->
         <div id="main">
 
-            <div class="card_tit">계좌 관리</div>
+            <div class="card_tit">자주 묻는 질문</div>
 
-            <div class="account_change">
+            <div class="event_up">
 
-                <!-- 예금주 입력란 -->
-                <div class="col admin_col">
-                    <span>예금주
-                        <small>*</small>
-                    </span>
-                    <label for="">
-                        <input type="text">
-                    </label>
+                <div class="write_area">
+
+                    <div id="in_title">
+                        <textarea class="w_tit" name="title" id="utitle" rows="1" cols="55" placeholder="제목"
+                            maxlength="50" required>질문</textarea>
+                    </div>
+
+                    <div id="in_content">
+                        <textarea class="w_con" name="content" id="ucontent" placeholder="내용" maxlength='1000'
+                            required>답변</textarea>
+                    </div>
+
                 </div>
 
-                <!-- 은행 선택란 -->
-                <div class="col admin_col">
-                    <span>은행
-                        <small>*</small>
-                    </span>
-                    <select name="" id="">
-                        <option value="농협">농협</option>
-                        <option value="수협">수협</option>
-                        <option value="신협">신협</option>
-                        <option value="우체국">우체국</option>
-                        <option value="신한은행">신한은행</option>
-                        <option value="광주은행">광주은행</option>
-                        <option value="경남은행">경남은행</option>
-                        <option value="국민은행">국민은행</option>
-                        <option value="기업은행">기업은행</option>
-                        <option value="대구은행">대구은행</option>
-                        <option value="우리은행">우리은행</option>
-                        <option value="부산은행">부산은행</option>
-                        <option value="산림조합">산림조합</option>
-                        <option value="산업은행">산업은행</option>
-                        <option value="씨티은행">씨티은행</option>
-                        <option value="전북은행">전북은행</option>
-                        <option value="제주은행">제주은행</option>
-                        <option value="새마을금고">새마을금고</option>
-                        <option value="카카오뱅크">카카오뱅크</option>
-                    </select>
+                <div class="btn_area">
+                    <button type="button" class="close">
+                      <a href="admin_05_06_00.html">취소</a>
+                    </button>
+                    <button type="submit" class="submit">
+                      <a href="admin_05_06_00.html">등록</a>
+                    </button>
                 </div>
 
-                <!-- 계좌번호 입력란 -->
-                <div class="col admin_col">
-                    <span>계좌번호
-                        <small>*</small>
-                    </span>
-                    <label for="">
-                        <input type="text" placeholder="은행 계좌번호를 입력해주세요.">
-                    </label>
-                </div>
-
-            </div>
-
-            <div class="btn_area">
-                <button type="submit" class="submit">확인</button>
-            </div>
-
+            </div> <!--//tab_con-->
         </div>
+
+    </div>
 </body>
 
-</html> 
+</html>

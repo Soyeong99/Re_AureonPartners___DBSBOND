@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 투자금관리 / 회수내역 // 회원 회수 완료페이지-->
+  <!-- 게시판 관리 / 1:1 문의 답변 등록 -->
   <title>DBS BOND | 관리자페이지 </title>
 
   <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../css/admin.css">
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/admin.js"></script>
+  <script src="../js/jquery-3.7.1.min.js.js"></script>
+  <script src="../js/admin.js"></script>
 </head>
 
 <body>
@@ -164,148 +164,60 @@
 
     </div>
 
+    <!-- main -->
     <div id="main">
 
-      <div class="card_tit">회수 내역</div>
+      <div class="card_tit">1:1 문의</div>
 
-      <div class="content_wrap">
+      <div class="faq">
 
-        <div class="cartagoty_area">
+        <div class="write_area">
 
-          <div class="calender">
-            <input type="date">
-            <!-- <input type="text" name="" /> -->
-          </div>
+          <div class="cartagoty_area user_q">
 
-          <div class="num">
-            <p>
-              <span>금액</span>:
-              <span>0 </span>
-              <span>원</span>
-            </p>
-          </div>
+            <div class="tit user_name">홍길동 님</div>
 
-          <p class="muted">페이지 당 항목 수 15</p>
-        </div>
 
-        <div class="container">
-
-          <div class="table_con">
-
-            <table>
-              <thead>
-                <tr>
-                  <th>이름</th>
-                  <th>날짜</th>
-                  <th>상품</th>
-                  <th>회수신청액</th>
-                  <th>계좌번호</th>
-                  <th>은행</th>
-                  <th>상태</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>김둘리</td>
-                  <td>2025.01.01</td>
-                  <td>USD</td>
-                  <td>38,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>유타조</td>
-                  <td>2025.01.01</td>
-                  <td>CNY</td>
-                  <td>24,000</td>
-                  <td>123-1111-1111</td>
-                  <td>우리은행</td>
-                  <td>
-                    <span class="state_green">승인</span>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-
-          </div>
-
-          <div class="pg_con">
-            <div class="pg_wrap">
-              <a href="#"><i class="bi bi-chevron-left"></i></a>
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">7</a>
-              <a href="#">8</a>
-              <a href="#">9</a>
-              <a href="#"><i class="bi bi-chevron-right"></i></a>
+            <div class="tit tit_q">
+              <span>[1:1 문의]</span>
+              문의 드립니다.
             </div>
+
           </div>
+
+          <div id="in_title">
+            <textarea class="w_con" name="content" id="ucontent" placeholder="답변" required>
+상품 가입하려는데 궁금한 사항이 생겨서 문의드립니다. 이자율은 매번 어떤 식으로 적용되며 만약 지급일자가 늦어진다면 
+어떤 방식으로 처리하시는지요. 회수요청을 했을 때 전액 회수되기 까지 걸리는 기간은 어느정도인지 답 주시면 감사하겠습니다.
+여러개의 채권에 동시에 가입하면, 일 이자들을 다른 계좌로 받을 수 있나요?
+                        </textarea>
+          </div>
+
+          <div id="in_content">
+            <textarea class="w_con" name="content" id="ucontent" placeholder="답변" required></textarea>
+          </div>
+
 
         </div>
 
-      </div>
+        <div class="btn_area">
 
-    </div><!--//main-->
+          <button type="button" class="close">
+            <a href="admin_05_03_00.html">취소</a>
+          </button>
 
-  </div><!--/admin_wrap-->
+          <button type="submit" class="submit">
+            <a href="admin_05_03_00.html">등록</a>
+          </button>
+        </div>
+
+      </div> <!--//tab_con-->
+
+
+
+    </div>
+
+  </div>
 </body>
 
 </html>
