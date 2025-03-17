@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+:root {
+    --main-color : #FF3333;
+    --main-font :'Pretendard', sans-serif;
+}
+
+html {overflow-x: hidden;}
+body { font-family:'Pretendard', sans-serif; font-size: 1.6rem; font-weight: 400; line-height: 1.5; color: #232323;}
+#wrap { margin: 0 auto; position: relative;}
+.inner {max-width: 1800px; padding: 0 5%; margin: 0 auto;}
+.sub_inner { margin: 0 auto; max-width: 1400px; padding: 0 5%;}
+
+button, input {cursor: pointer;}
+
+/* header */
+#header { background: #fff;  padding: 0 2%; height: 80px; width: 100%; display: flex; justify-content: space-evenly; align-items: center;}
+#header h1 a { display: block; width: 200px; height: 40px; margin: auto 0; background: url(../img/common/logo.png) no-repeat center / 100%;}
+/* #header h1 a img {width: 100%;} */
+
+nav {display: flex; align-items: center; gap: 60px; height: 100%;}
+.gnb {display: flex; gap: 2px; }
+.gnb>li {position: relative;}
+.gnb>li>a {display: block; height: 100%; padding: 20px 30px; font-size: 1.8rem; font-weight: 500; transition: all 0.5s; white-space: nowrap;}
+
+.util { display: flex;  position: relative; font-size: 1.8rem; font-weight: 500; } 
+.util>li {height: 100%;}
+.util>li>a {display: block; padding: 15px 20px;  color: #fff; background: var(--main-color); opacity: 0.9; white-space: nowrap; transition: all 0.5s;}
+
+.util::before {display: block; content: ""; width: 2px; height: 20px; background: #ddd; position: absolute; left: -45px; top: 50%; transform: translateY(-50%);}
+
+.util>li:hover>a {opacity: 1;}
+.gnb>li:hover>a {background: #eee;}
+
+/* depth2 */
+.depth2 { display: none; position: absolute; background: #eee; width: 100%; border-radius: 0 0 8px 8px;}
+.depth2 li a {  display: block; width: 100%; padding: 6px 20px; border-radius: 0 0 8px 8px; transition: all 0.5s;}
+.depth2 li:hover a {background: #ddd;}
+
+/* mgnb */
+.mlogin a { display: none; padding: 14px 12px ; color: #fff; background: var(--main-color); opacity: 0.9; white-space: nowrap; transition: all 0.5s;}
+
+.ham { display: none; font-size: 3.2rem; font-weight: 500;}
+.mgnb_wrap { display: none;  position: fixed; top: 0; left: 0;  height: 100%; width: 100%; background: #eee; z-index: 999; overflow-y: auto;}
+.mgnb_logo { position: absolute; top: 5%; left: 50%; transform: translateX(-50%); width: 35%; height: 40px; background: url(../img/common/logo.png) no-repeat center / 100%;}
+.mgnb { height: 100%; margin-top: 60px; padding: 60px;}
+.mgnb_wrap .mgnb>li a { display: block; padding: 16px 8px; font-size: 1.8rem; font-weight: 500;}
+.mgnb_wrap .mgnb>li span.show { display: inline-block; font-size: 1.6rem; margin:2px 0 0 6px; }
+.mgnb_wrap .mdepth2>li a{ padding-left: 20px;}
+
+.mgnb_wrap .mgnb>li:hover a {background: #ddd;}
+.mgnb_wrap .mdepth2>li:hover a {background: #ccc;}
+.mlogin a:hover {opacity: 1; }
+/* .show::before { transform: rotate(0); transition: all 0.5s;}
+.show.active::before{ transform: rotate(-180deg);} */
+
+.mgnb_close {position: absolute; font-size: 3rem; top: 1%; right: 5%; color: #232323;}
+
+/* footer */
+#footer {padding: 80px 5%; background: #ddd; opacity: 0.8; color: #666; font-size: 1.4rem;}
+#footer .inner {display: flex; gap: 60px; flex-wrap: wrap; position: relative;}
+#footer p.company {margin-bottom: 18px;}
+address {margin: 12px 0;}
+address span {display: block;}
+.email a{color: #666;}
+.copy {position: absolute; bottom: 0; right: 2%; }
+.f_logo {height: 40px; width: 200px; background: url(../img/common/logo.png) no-repeat center / 100%;}
+
+
+@media (max-width:1280px){
+  /* header */
+  .gnb>li>a {padding: 8px 18px;}
+
+  /* footer */
+  .f_flex {display: flex; gap: 60px; justify-content: space-between;}
+  }
+
+@media (max-width:1200px){
+  #header h1 a { width: 180px;}
+}
+
+@media (max-width:960px){
+  #header { justify-content: space-between; height: 60px; }
+  .ham {display: block;}
+  .mlogin a {display: block;}
+  nav {display: none;}
+}
+
+@media(max-width:900px){
+  #header h1 a {width: 150px;}
+}
+
+@media (max-width:610px){
+  #footer .inner {gap: 40px;}
+  .txt_area {width: 100%;}
+  .copy {position: static;}
+}
+
+@media (max-width:580px){
+  .mlogin {font-size: 1.4rem;}
+  .f_flex {flex-direction: column;}
+}
+

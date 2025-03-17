@@ -43,7 +43,7 @@
   #invest .content ul span.hover  {margin-top: 18px;}
 }
 
-@media (max-width:1280px){
+@media (max-width:1290px){
   /* header */
   .gnb>li>a {padding: 8px 18px;}
 
@@ -56,10 +56,13 @@
   #invest .content ul li { width: calc((100% - 30px) / 4);}
 
   /*  */
-    .cs_link li a img {width: 60px;}
+  .cs_link li a img {width: 60px;}
 
   /* footer */
   .f_flex {display: flex; gap: 60px; justify-content: space-between;}
+
+  /* sub_02 / 투자전략 */
+  
 }
 
 @media (max-width:1200px){

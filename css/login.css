@@ -36,7 +36,7 @@ input[type=checkbox] { appearance: none; position: absolute; }
 
 .check_on { position: relative; height: 20px; width: 20px; background: #ccc; border-radius: 50%; display: inline-block; transition: all 0.5s;}
 .check_on::after { display: block; content: ""; position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%) rotate(45deg); width: 4px; height: 10px; border: solid #fff; border-width: 0 2px 2px 0; border-radius: 2px; }
-.sub_area input[type="checkbox"]:checked + .check_on { background: var(--main-color); }
+input[type="checkbox"]:checked + .check_on { background: var(--main-color); }
 
 a.go_link { display: inline-block; position: relative; font-size: 1.4rem; color: #666;}
 a.go_link::before { display: block; content: ""; position: absolute; width: 100%; height: 1px; background: #888; bottom: 0; left: 0; }
@@ -84,6 +84,10 @@ a.go_link::before { display: block; content: ""; position: absolute; width: 100%
 label.phone { display: inline-flex; gap: 6px; }
 label.phone > button { margin: 3px 0 10px; padding: 5px 20px; border-radius: 10px; border: 1px solid var(--main-color); background: #fff; color: var(--main-color); transition: all 0.5s; }
 label.phone > button:hover { background: var(--main-color); color: #fff; }
+
+.b_group { width: 100%; }
+.b_group label { width: 100%; display: flex; align-items: center; gap: 20px; justify-content: space-between;}
+.b_group label > input , .pw_info > input{ text-align: center; } 
 
 /* select */
 .tel span { display: inline-block; font-size: 1.8rem; }

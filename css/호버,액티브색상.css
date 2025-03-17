@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* 
+메인 컬러  : FF3333
+폰트 : 프리텐다드 //링크연결된 대로 사용하시면 됩니다
+
+gray : #ddd // #888  > 주로 사용 / 디자인따라 따로 적용 >> (스타일 체계 없서요..)
+
+
+
+*/
+
+
+/* btn nomal */
+ button{ 
+    background: #fff ; 
+    border-radius: 100px; 
+    border: 1px solid #FF3333; 
+    transition: all 0.5s;
+/* pagdding 및 마진 통일 없으니 자체 추가해주세용 */
+}
+
+/* btn:hover */
+button:hover {
+    background: #FF3333; 
+    color: #fff; }
+
+
+/* active Red는 
+opcity로 조절했습니다 
+ex)) header > util 참고
+*/
+
+div { 
+    color: #fff; 
+    background: #FF3333; 
+    opacity: 0.9; 
+    transition: all 0.5s;}
+
+div {
+    opacity: 1;
+}
+ 
+
+/* pg_con */
+.pg_wrap { 
+    text-align: center; 
+}
+
+.pg_con a { 
+    display: inline-block; 
+    text-align: center; 
+    font-size: 1.4rem; 
+    padding: 5px; 
+    min-width: 30px; 
+    height: 30px; 
+    border-radius: 3px; 
+    border: 1px solid #FF3333; 
+    background: #fff;
+}
+
+.pg_con a:hover, .pg_con a.active { 
+    background: #FF3333; 
+    color: #fff; 
+} 
