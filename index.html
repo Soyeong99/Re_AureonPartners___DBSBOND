@@ -4,13 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DBS BOND</title>
 
+  <title>DBS : Trusted as the World's Best Bond | DBS Bond</title>
+
+  <!-- 파비콘 -->
   <link rel="shortcut icon" href="img/common/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
+
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/sub.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 
@@ -18,40 +25,39 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+  <!-- 아코디언 -->
+  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+
   <script defer src="js/jquery-3.7.1.min.js.js"></script>
   <script defer src="js/swiper-bundle.min.js.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- js -->
+  <script defer src="js/common.js"></script>
   <script defer src="js/main.js"></script>
 
 </head>
 
 <body>
   <div id="wrap">
+
+    <!-- header -->
     <header id="header">
 
       <div class="ham bi bi-list"></div>
 
-      <h1><a href="#">
+      <h1><a href="index.html">
           <!-- <img src="img/common/logo.png" alt="DBS BOND 로고"> -->
         </a></h1>
 
       <nav>
         <ul class="gnb">
           <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">투자전략</a></li>
-          <li><a href="#">투자상품</a></li>
-          <li><a href="#">입/출금
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="depth2">
-              <li><a href="#">입금하기</a></li>
-              <li><a href="#">출금하기</a></li>
-            </ol>
-          </li>
-
-          <li><a href="#">이벤트</a></li>
-
-          <li><a href="#">고객지원
+          <li><a href="sub/sub_01.html">회사소개</a></li>
+          <li><a href="sub/sub_02.html">투자전략</a></li>
+          <li><a href="sub/sub_03.html">투자상품</a></li>
+          <li><a href="sub/sub_04.html">이벤트</a></li>
+          <li><a href="sub/sub_05.html">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
@@ -64,12 +70,12 @@
         </ul>
 
         <ol class="util">
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
+          <li><a href="login.html">로그인</a></li>
+          <li><a href="join_01.html">회원가입</a></li>
         </ol>
       </nav>
 
-      <div class="mlogin"><a href="#">로그인</a></div>
+      <div class="mlogin"><a href="login.html">로그인</a></div>
 
       <div class="mgnb_wrap">
 
@@ -78,30 +84,19 @@
 
         <ul class="mgnb">
           <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">투자전략</a></li>
-          <li><a href="#">투자상품</a></li>
-          <li class="toggle"><a href="#">입/출금
+          <li><a href="sub/sub_01.html">회사소개</a></li>
+          <li><a href="sub/sub_02.html">투자전략</a></li>
+          <li><a href="sub/sub_03.html">투자상품</a></li>
+          <li><a href="sub/sub_04.html">이벤트</a></li>
+          <li><a href="sub/sub_05.html">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
-            <ol class="mdepth2">
-              <li><a href="#">입금하기</a></li>
-              <li><a href="#">출금하기</a></li>
-            </ol>
-          </li>
-
-          <li><a href="#">이벤트</a></li>
-
-          <li class="toggle"><a href="#">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="mdepth2">
+            <ol class="depth2">
               <li><a href="#">자주묻는질문</a></li>
               <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의하기</a></li>
+              <li><a href="#">1:1문의</a></li>
             </ol>
           </li>
-
         </ul>
       </div>
     </header>
@@ -112,7 +107,7 @@
       <!-- section main_visual -->
       <section id="main_visual" class="section">
         <div class="main_pc">
-          <video src="img/main/main_visual.mp4" autoplay muted loop></video>
+          <video src="img/main/main_visual.mp4" autoplay muted loop playsinline></video>
         </div>
 
         <div class="quick_area">
@@ -135,7 +130,7 @@
 
           <div class="content">
             <ul>
-              <li data-aos="fade-down">
+              <li data-aos="fade-down" data-aos-offset="0">
                 <a href="#">
                   <div class="icon">
                     <img src="img/main/icon_safe.png" alt="아이콘">
@@ -146,7 +141,7 @@
                     제공합니다.</span>
                 </a>
               </li>
-              <li data-aos="fade-down" data-aos-delay="1000"><a href="#">
+              <li data-aos="fade-down" data-aos-offset="300" data-aos-duration="500"><a href="#">
                   <div class="icon">
                     <img src="img/main/icon_asset.png" alt="아이콘">
                   </div>
@@ -155,7 +150,7 @@
                     구성합니다.</span>
                 </a>
               </li>
-              <li data-aos="fade-down" data-aos-duration="2000"><a href="#">
+              <li data-aos="fade-down" data-aos-offset="400" data-aos-duration="800"><a href="#">
                   <div class="icon">
                     <img src="img/main/icon_inhouse.png" alt="아이콘">
                   </div>
@@ -163,7 +158,7 @@
                   <span class="hover">짧은 주기 피드백으로 저축채권 안정성을 점검하며, 전문가들이 협력해 시장 변화에 신속하게 대응합니다.</span>
                 </a>
               </li>
-              <li data-aos="fade-down" data-aos-duration="3000"><a href="#">
+              <li data-aos="fade-down" data-aos-offset="550" data-aos-duration="1100"><a href="#">
                   <div class="icon">
                     <img src="img/main/icon_danger.png" alt="아이콘">
                   </div>
@@ -180,6 +175,7 @@
         <div class="section_bg"></div>
       </section>
 
+      <!-- section company -->
       <section id="company">
 
         <div class="inner">
@@ -222,24 +218,27 @@
       <section id="prd" class="section">
 
         <div class="inner">
-          
-          <div class="m_tit">
+
+          <!-- <div class="m_tit">
             <h3>당신의 성공을 위한 차별화된 전략
               <br>
               글로벌 외환 펀드 운용의 리더
             </h3>
-          </div>
+          </div> -->
 
-          <div class="tit_box">
-            <h3>변동성 <span class="down">Down</span>
-              <br class="br">
-              수익 <span class="up">UP</span>
-            </h3>
+          <div class="prd_tit_box">
 
-            <p>일상에 가치를 <br>
-              <span class="br">#DBS BOND</span>로<br>
-              더하다
-            </p>
+            <div class="prd_tit_flex">
+              <h3>변동성 <span class="green">Down</span>
+                <br class="br">
+                수익 <span class="red_up">UP</span>
+              </h3>
+
+              <p>일상에 가치를 <br>
+                <span class="br">#DBS BOND</span>로<br>
+                더하다
+              </p>
+            </div>
 
             <div class="tag_box">
               <p class="tag">#USD</p>
@@ -250,159 +249,116 @@
 
           </div>
 
+          <!-- 상품 카드 리스트 시작 -->
           <div class="content">
             <ol>
               <li>
-                <div class="img_box">
+                <div class="img_box final_img">
                   <img src="img/main/dollar.jpg" alt="달러사진">
                 </div>
 
-                <div class="con_tit">
-                  한도 최대 3억원
-                  <h3>USD 채권</h3>
-
-                  <a class="more_btm">투자하기</a>
-
-                </div>
-
-                <div class="container">
-                  <div class="top_box">
-                    <p>최소가입금액
-                      <span class="bar">USD 1,300</span>
-                      <span>KRW 1,700,000원</span>
-                    </p>
-                    <p>최대가입금액
-                      <span class="bar">USD 900,00</span>
-                      <span> KRW 11.9억원</span>
-                    </p>
+                <!-- USD -->
+                <div class="prd_list">
+                  <div class="prd_tit">
+                    <h3>USD 채권</h3>
                   </div>
 
-                  <div class="btm_box">
+                  <div class="in_rate_box">
+
                     <p class="slash">이자율</p>
-                    <p class="btm_txt">
-                      <span>(USD) 월 0.9% ~ 월 1.7%</span>
-                      <span>(KRW) 월 1.6% ~ 월 2.4%</span>
-                    </p>
-                  </div>
 
-                  <a class="more">투자하기</a>
+                    <p class="in_rate">
+                      <span>(USD) 월 0.9% ~ 1.7%</span>
+                      <span>(KRW) 월 1.6% ~ 2.4%</span>
+                    </p>
+
+                  </div><!--//btm_box-->
+
+                  <a class="go_btn">투자하기</a>
 
                 </div>
               </li>
 
+              <!-- EUR -->
               <li>
-                <div class="img_box">
+                <div class="img_box final_img">
                   <img src="img/main/euro.jpg" alt="유로사진">
                 </div>
 
-                <div class="con_tit">
-                  한도 최대 2억원
-                  <h3>EUR 채권</h3>
-
-                  <a class="more_btm">투자하기</a>
-
-                </div>
-
-                <div class="container">
-                  <div class="top_box">
-                    <p>최소가입금액
-                      <span class="bar">USD 1,300</span>
-                      <span>KRW 1,700,000원</span>
-                    </p>
-                    <p>최대가입금액
-                      <span class="bar">USD 900,00</span>
-                      <span> KRW 11.9억원</span>
-                    </p>
+                <div class="prd_list">
+                  <div class="prd_tit">
+                    <h3>EUR 채권</h3>
                   </div>
 
-                  <div class="btm_box">
+                  <div class="in_rate_box">
+
                     <p class="slash">이자율</p>
-                    <p class="btm_txt">
-                      <span>(USD) 월 0.4% ~ 월 1.1%</span>
-                      <span>(KRW) 월 0.65% ~ 월 1.35%</span>
-                    </p>
-                  </div>
 
-                  <a class="more">투자하기</a>
+                    <p class="in_rate">
+                      <span>(USD) 월 0.4% ~ 1.1%</span>
+                      <span>(KRW) 월 0.65% ~ 1.35%</span>
+                    </p>
+
+                  </div><!--//btm_box-->
+
+                  <a class="go_btn">투자하기</a>
 
                 </div>
               </li>
 
+              <!-- JPY -->
               <li>
-                <div class="img_box">
+                <div class="img_box final_img">
                   <img src="img/main/yen.jpg" alt="엔화사진">
                 </div>
 
-                <div class="con_tit">
-                  한도 최대 1.5억원
-                  <h3>JPY 채권</h3>
-
-                  <a class="more_btm">투자하기</a>
-
-                </div>
-
-                <div class="container">
-                  <div class="top_box">
-                    <p>최소가입금액
-                      <span class="bar">USD 1,300</span>
-                      <span>KRW 1,700,000원</span>
-                    </p>
-                    <p>최대가입금액
-                      <span class="bar">USD 900,00</span>
-                      <span> KRW 11.9억원</span>
-                    </p>
+                <div class="prd_list">
+                  <div class="prd_tit">
+                    <h3>JPY 채권</h3>
                   </div>
 
-                  <div class="btm_box">
+                  <div class="in_rate_box">
+
                     <p class="slash">이자율</p>
-                    <p class="btm_txt">
-                      <span>(USD) 월 0.38% ~ 월 0.88%</span>
-                      <span>(KRW) 월 0.18% ~ 월0.68.4%</span>
-                    </p>
-                  </div>
 
-                  <a class="more">투자하기</a>
+                    <p class="in_rate">
+                      <span>(USD) 월 0.38% ~ 0.88%</span>
+                      <span>(KRW) 월 0.18% ~ 0.68%</span>
+                    </p>
+
+                  </div><!--//btm_box-->
+
+                  <a class="go_btn">투자하기</a>
 
                 </div>
               </li>
 
+              <!-- CNY -->
               <li>
-                <div class="img_box">
+                <div class="img_box final_img">
                   <img src="img/main/solace.jpg" alt="위안사진">
                 </div>
 
-                <div class="con_tit">
-                  한도 최대 1.5억원
-                  <h3>CNY 채권</h3>
-
-                  <a class="more_btm">투자하기</a>
-
-                </div>
-                <div class="container">
-                  <div class="top_box">
-                    <p>최소가입금액
-                      <span class="bar">USD 1,300</span>
-                      <span>KRW 1,700,000원</span>
-                    </p>
-                    <p>최대가입금액
-                      <span class="bar">USD 900,00</span>
-                      <span> KRW 11.9억원</span>
-                    </p>
+                <div class="prd_list">
+                  <div class="prd_tit">
+                    <h3>CNY 채권</h3>
                   </div>
 
-                  <div class="btm_box">
+                  <div class="in_rate_box">
+
                     <p class="slash">이자율</p>
-                    <p class="btm_txt">
-                      <span>(USD) 월 0.24% ~ 월 0.55%</span>
-                      <span>(KRW) 월 0.28% ~ 월 0.58%</span>
-                    </p>
-                  </div>
 
-                  <a class="more">투자하기</a>
+                    <p class="in_rate">
+                      <span>(USD) 월 0.24% ~ 0.55%</span>
+                      <span>(KRW) 월 0.28% ~ 0.58%</span>
+                    </p>
+
+                  </div><!--//btm_box-->
+
+                  <a class="go_btn">투자하기</a>
 
                 </div>
               </li>
-
             </ol>
           </div><!--//content-->
 
@@ -431,26 +387,19 @@
               <a href="#">전체보기</a>
             </div>
 
-            <!-- 공지사항 데이터 연결 -->
             <ol class="list">
               <li><a href="#">
                   <p>데이터 준비 중입니다.</p>
-                  <!-- 메인 홈에서는 날짜데이터 -->
-                  <!-- <span class="date">date</span> -->
                   <span class="go_link bi bi-arrow-right"></span>
                 </a></li>
 
               <li><a href="#">
                   <p>데이터 준비 중입니다.</p>
-                  <!-- 메인 홈에서는 날짜데이터 -->
-                  <!-- <span class="date">date</span> -->
                   <span class="go_link bi bi-arrow-right"></span>
                 </a></li>
 
               <li><a href="#">
                   <p>데이터 준비 중입니다.</p>
-                  <!-- 메인 홈에서는 날짜데이터 -->
-                  <!-- <span class="date">date</span> -->
                   <span class="go_link bi bi-arrow-right"></span>
                 </a></li>
             </ol>
@@ -479,6 +428,220 @@
               </li>
             </ol>
           </div>
+        </div>
+      </section>
+
+      <!-- section exchange_rate -->
+      <section id="exchange_rate">
+        <div class="inner">
+
+          <div class="rate_container">
+
+            <ol>
+
+              <!-- USD 환율 차트 그래프 -->
+              <li>
+                <div class="top_con">
+
+                  <div class="img">
+                    <img src="img/common/dollar.png" alt="달러사진">
+                  </div>
+
+                  <div class="rate_txt">
+                    <p class="prd_name">USD</p>
+
+                    <p class="charac">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <!-- API // 숫자로 환율 지수 -->
+                      <span class="ex_rate">2312.5</span>
+                    </p>
+                  </div>
+
+                </div><!--//top_con-->
+
+                <div class="btm_con">
+
+                  <h3>달러
+                    <p>
+                      <!-- 업다운 표시 -->
+                      <span>+</span>
+                      <!-- 전날 기준 -->
+                      <span>0.0155</span>%
+                    </p>
+                  </h3>
+
+                  <div class="muted">
+                    09:36:04
+                  </div>
+
+                  <!-- chart_graph -->
+                  <div class="chart_graph">
+
+                    <!-- 삭제해도 되는 태그 시작-->
+                    <p class="">
+                      그래프 들어가는 영역입니다
+                      감사합니다
+                    </p>
+                    <!-- 삭제해도 되는 태그 끝 -->
+
+                  </div><!--//chart_graph -->
+
+                </div>
+              </li>
+
+              <!-- EUR 환율 차트 그래프 -->
+              <li>
+                <div class="top_con">
+
+                  <div class="img">
+                    <img src="img/common/euro.png" alt="유로 사진">
+                  </div>
+
+                  <div class="rate_txt">
+                    <p class="prd_name">EUR</p>
+
+                    <p class="charac">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <!-- API // 숫자로 환율 지수 -->
+                      <span class="ex_rate">2312.5</span>
+                    </p>
+                  </div>
+
+                </div><!--//top_con-->
+
+                <div class="btm_con">
+
+                  <h3>유로
+                    <p>
+                      <!-- 업다운 표시 -->
+                      <span>+</span>
+                      <!-- 전날 기준 -->
+                      <span>0.0155</span>%
+                    </p>
+                  </h3>
+
+                  <div class="muted">
+                    09:36:04
+                  </div>
+
+                  <!-- chart_graph -->
+                  <div class="chart_graph">
+
+                    <!-- 삭제해도 되는 태그 시작-->
+                    <p class="">
+                      그래프 들어가는 영역입니다
+                      감사합니다
+                    </p>
+                    <!-- 삭제해도 되는 태그 끝 -->
+
+                  </div><!--//chart_graph -->
+
+                </div>
+              </li>
+
+              <!-- JPY 환율 차트 그래프 -->
+              <li>
+                <div class="top_con">
+
+                  <div class="img">
+                    <img src="img/common/yen.png" alt="엔화 사진">
+                  </div>
+
+                  <div class="rate_txt">
+                    <p class="prd_name">JPY</p>
+
+                    <p class="charac">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <!-- API // 숫자로 환율 지수 -->
+                      <span class="ex_rate">2312.5</span>
+                    </p>
+                  </div>
+
+                </div><!--//top_con-->
+
+                <div class="btm_con">
+
+                  <h3>엔화
+                    <p>
+                      <!-- 업다운 표시 -->
+                      <span>+</span>
+                      <!-- 전날 기준 -->
+                      <span>0.0155</span>%
+                    </p>
+                  </h3>
+
+                  <div class="muted">
+                    09:36:04
+                  </div>
+
+                  <!-- chart_graph -->
+                  <div class="chart_graph">
+
+                    <!-- 삭제해도 되는 태그 시작-->
+                    <p class="">
+                      그래프 들어가는 영역입니다
+                      감사합니다
+                    </p>
+                    <!-- 삭제해도 되는 태그 끝 -->
+
+                  </div><!--//chart_graph -->
+
+                </div>
+              </li>
+
+              <!-- CNY 환율 차트 그래프 -->
+              <li>
+                <div class="top_con">
+
+                  <div class="img">
+                    <img src="img/common/solace.png" alt="위안 사진">
+                  </div>
+
+                  <div class="rate_txt">
+                    <p class="prd_name">CNY</p>
+
+                    <p class="charac">
+                      <i class="bi bi-caret-up-fill"></i>
+                      <!-- API // 숫자로 환율 지수 -->
+                      <span class="ex_rate">2312.5</span>
+                    </p>
+                  </div>
+
+                </div><!--//top_con-->
+
+                <div class="btm_con">
+
+                  <h3>위안
+                    <p>
+                      <!-- 업다운 표시 -->
+                      <span>+</span>
+                      <!-- 전날 기준 -->
+                      <span>0.0155</span>%
+                    </p>
+                  </h3>
+
+                  <div class="muted">
+                    09:36:04
+                  </div>
+
+                  <!-- chart_graph -->
+                  <div class="chart_graph">
+
+                    <!-- 삭제해도 되는 태그 시작-->
+                    <p class="">
+                      그래프 들어가는 영역입니다
+                      감사합니다
+                    </p>
+                    <!-- 삭제해도 되는 태그 끝 -->
+
+                  </div><!--//chart_graph -->
+
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
         </div>
       </section>
 
