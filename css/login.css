@@ -88,6 +88,7 @@ label.phone > button:hover { background: var(--main-color); color: #fff; }
 .b_group { width: 100%; }
 .b_group label { width: 100%; display: flex; align-items: center; gap: 20px; justify-content: space-between;}
 .b_group label > input , .pw_info > input{ text-align: center; } 
+.b_group label > .pw_info > input.id-first { width: 50px; }
 
 /* select */
 .tel span { display: inline-block; font-size: 1.8rem; }
