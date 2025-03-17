@@ -114,6 +114,33 @@ $(function () {
       }, 1000))
   })
 
-  //  계좌 번호 복사시  모달창
+  // 전체동의
+  const $agreementForm = document.querySelector('.agree_form');
+  const $selectAll = $agreementForm.querySelector('.agree_all');
+  const $listInput = $agreementForm.querySelectorAll('.accordion input');
+  const $selectAllMkt = $agreementForm.querySelector('.select-all-mkt');
 
+  const toggleCheckbox = (allBox, itemBox) => {
+    allBox.addEventListener('change', () => {
+      itemBox.forEach((item) => {
+        item.checked = allBox.checked;
+      });
+    })
+  }
+  toggleCheckbox($selectAll, $listInput);
+  toggleCheckbox($selectAllMkt, $mktListInput);
+
+  $listInput.forEach((item) => {
+    item.addEventListener('change', () => {
+      const isChecked = Array.from($listInput).every(i => i.checked);
+      $selectAll.checked = isChecked;
+    });
+  });
+
+  $mktListInput.forEach((item) => {
+    item.addEventListener('change', () => {
+      const isChecked = Array.from($mktListInput).some(i => i.checked);
+      $selectAllMkt.checked = isChecked;
+    });
+  });
 });
