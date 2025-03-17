@@ -2,227 +2,226 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 게시판 관리 / 상품관리 / 상품 정보 수정  -->
-    <title>DBS BOND | 관리자페이지 </title>
+  <!-- 게시판 관리 / 상품관리 / 상품 정보 수정  -->
+  <title>DBS BOND | 관리자페이지 </title>
 
-    <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/admin.css">
 
-    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-    <script defer src="../js/admin.js"></script>
+  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+  <script defer src="../js/admin.js"></script>
 </head>
 
 <body>
-    <div id="admin_wrap">
+  <div id="admin_wrap">
 
-      <div id="header">
+    <div id="header">
 
-        <h1>
-          <a href="admin_main.html">
-            <img src="../img/common/logo.png" alt="로고">
-          </a>
-        </h1>
-  
-        <nav>
-          <ul class="lnb_wrap">
-            <li>
-              <div class="icon_person">
-                <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
+      <h1>
+        <a href="admin_main.html">
+          <img src="../img/common/logo.png" alt="로고">
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="lnb_wrap">
+          <li>
+            <div class="icon_person">
+              <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
+            </div>
+            <div class="txt">관리자님, 반갑습니다</div>
+          </li>
+
+          <!-- 회원관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">회원 관리</div>
               </div>
-              <div class="txt">관리자님, 반갑습니다</div>
-            </li>
-  
-            <!-- 회원관리 -->
-            <li>
-              <div class="lnb">
-                <div class="left_box">
-                  <div class="icon"></div>
-                  <div class="txt">회원 관리</div>
-                </div>
-  
-                <div class="right_box">
-                  <span class="bi bi-chevron-down snb"></span>
-                  <div class="alarm"></div>
-                </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
               </div>
-  
-              <ol class="depth2">
-                <li>
-                  <a href="adimin_01_01_00.html">회원 목록</a>
-                </li>
-                <li>
-                  <a href="adimin_01_02_00.html">쪽지 보내기</a>
-                </li>
-              </ol>
-            </li>
-  
-            <!-- 입금 관리 -->
-            <li>
-              <div class="lnb">
-                <div class="left_box">
-                  <div class="icon"></div>
-                  <div class="txt">입금 관리</div>
-                </div>
-  
-                <div class="right_box">
-                  <span class="bi bi-chevron-down snb"></span>
-                  <div class="alarm"></div>
-                </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="adimin_01_01_00.html">회원 목록</a>
+              </li>
+              <li>
+                <a href="adimin_01_02_00.html">쪽지 보내기</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 입금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">입금 관리</div>
               </div>
-  
-              <ol class="depth2">
-                <li>
-                  <a href="adimin_02_01_00.html">입금 신청</a>
-                </li>
-                <li>
-                  <a href="adimin_02_01_01.html">입금 내역</a>
-                </li>
-              </ol>
-            </li>
-  
-            <!-- 출금 관리 -->
-            <li>
-              <div class="lnb">
-                <div class="left_box">
-                  <div class="icon"></div>
-                  <div class="txt">출금 관리</div>
-                </div>
-  
-                <div class="right_box">
-                  <span class="bi bi-chevron-down snb"></span>
-                  <div class="alarm"></div>
-                </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
               </div>
-  
-              <ol class="depth2">
-                <li>
-                  <a href="adimin_03_01_00.html">출금 내역</a>
-                </li>
-                <li>
-                  <a href="admin_03_02_00.html">미지급 내역</a>
-                </li>
-              </ol>
-            </li>
-  
-            <!-- 투자금 관리 -->
-            <li>
-              <div class="lnb">
-                <div class="left_box">
-                  <div class="icon"></div>
-                  <div class="txt">투자금 관리</div>
-                </div>
-  
-                <div class="right_box">
-                  <span class="bi bi-chevron-down snb"></span>
-                  <div class="alarm"></div>
-                </div>
+            </div>
+
+            <ol class="depth2">
+              <li>
+                <a href="adimin_02_01_00.html">입금 신청</a>
+              </li>
+              <li>
+                <a href="adimin_02_01_01.html">입금 내역</a>
+              </li>
+            </ol>
+          </li>
+
+          <!-- 출금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">출금 관리</div>
               </div>
-  
-              <ol class="depth2">
-                <li>
-                  <a href="admin_04_01_00.html">회수 관리</a>
-                </li>
-                <li>
-                  <a href="admin_04_02_00.html">회수 내역</a>
-                </li>
-              </ol>
-            </li>
-  
-            <!-- 게시판 관리 -->
-            <li>
-              <div class="lnb">
-                <div class="left_box">
-                  <div class="icon"></div>
-                  <div class="txt">게시판 관리</div>
-                </div>
-  
-                <div class="right_box">
-                  <span class="bi bi-chevron-down snb"></span>
-                  <div class="alarm"></div>
-                </div>
+
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
               </div>
-  
-              <ol class="depth2">
-                <li> <a href="admin_05_01_00.html">상품 관리</a> </li>
-                <li> <a href="admin_05_02_00.html">계좌 관리</a> </li>
-                <li> <a href="admin_05_03_00.html">1:1 문의</a> </li>
-                <li> <a href="admin_05_04_01_00.html">이벤트 관리</a> </li>
-                <li> <a href="admin_05_05_00.html">공지사항 관리</a> </li>
-                <li> <a href="admin_05_06_00.html">자주묻는질문 관리</a> </li>
-              </ol>
-            </li>
-  
-          </ul>
-        </nav>
-  
-      </div>
+            </div>
 
-        <div id="main">
+            <ol class="depth2">
+              <li>
+                <a href="adimin_03_01_00.html">출금 내역</a>
+              </li>
+              <li>
+                <a href="admin_03_02_00.html">미지급 내역</a>
+              </li>
+            </ol>
+          </li>
 
-            <div class="card_tit">상품 관리</div>
+          <!-- 투자금 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">투자금 관리</div>
+              </div>
 
-                <!-- 상품리스트 -->
-                <div class="prd_grid rocr_container">
-                    <!-- 상품 카드 영역 시작 -->
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
 
-                    <!-- USD  -->
-                    <div class="prd_con"> 
+            <ol class="depth2">
+              <li>
+                <a href="admin_04_01_00.html">회수 관리</a>
+              </li>
+              <li>
+                <a href="admin_04_02_00.html">회수 내역</a>
+              </li>
+            </ol>
+          </li>
 
-                        <div class="prd_content">
+          <!-- 게시판 관리 -->
+          <li>
+            <div class="lnb">
+              <div class="left_box">
+                <div class="icon"></div>
+                <div class="txt">게시판 관리</div>
+              </div>
 
-                            <div class="tit">
-                                <div class="img">
-                                    <img src="../img/main/dollar.jpg" alt="달러사진">
-                                </div>
+              <div class="right_box">
+                <span class="bi bi-chevron-down snb"></span>
+                <div class="alarm"></div>
+              </div>
+            </div>
 
-                                <div class="prd_card_tit">
-                                    <p>USD 채권</p>
-                                </div>
-                            </div>
+            <ol class="depth2">
+              <li> <a href="admin_05_01_00.html">상품 관리</a> </li>
+              <li> <a href="admin_05_02_00.html">계좌 관리</a> </li>
+              <li> <a href="admin_05_03_00.html">1:1 문의</a> </li>
+              <li> <a href="admin_05_04_01_00.html">이벤트 관리</a> </li>
+              <li> <a href="admin_05_05_00.html">공지사항 관리</a> </li>
+              <li> <a href="admin_05_06_00.html">자주묻는질문 관리</a> </li>
+            </ol>
+          </li>
 
-                            <!-- 가입금액 안내 -->
-                            <div class="price_con">
-                                <p>
-                                    <span>모집금액</span>
-                                    100억
-                                </p>
+        </ul>
+      </nav>
 
-                                <p>
-                                    <span>예상 수익률</span>
-                                    <em>월 1.6% ~ 2.4%</em>
-                                </p>
+    </div>
 
+    <div id="main">
 
-                                <p>
-                                    <span>상품기간</span>
-                                    6/12/18/24개월
-                                </p>
-                            </div><!--//price_con-->
+      <div class="card_tit">상품 관리</div>
 
-                            <div class="percent_area">
-                                <p class="percent">
-                                    <span>90.02%</span>
-                                    (모집율)
-                                </p>
+      <!-- 상품리스트 -->
+      <div class="prd_grid rocr_container">
+        <!-- 상품 카드 영역 시작 -->
 
-                                <!-- 관리자가 조정하는 %영역입니다 -->
-                                <div class="bar_ademin">
-                                    <span class="bar"></span>
-                                </div>
-                            </div>
+        <!-- USD  -->
+        <div class="prd_con">
 
-                        </div>
-                    </div>
+          <div class="prd_content">
 
-                    <!-- EUR -->
-                    <!-- <div class="prd_con">
+            <div class="tit">
+              <div class="img">
+                <img src="../img/main/dollar.jpg" alt="달러사진">
+              </div>
+
+              <div class="prd_card_tit">
+                <p>USD 채권</p>
+              </div>
+            </div>
+
+            <!-- 가입금액 안내 -->
+            <div class="price_con">
+              <p>
+                <span>모집금액</span>
+                100억
+              </p>
+
+              <p>
+                <span>예상 수익률</span>
+                <em>월 1.6% ~ 2.4%</em>
+              </p>
+
+              <p>
+                <span>상품기간</span>
+                6/12/18/24개월
+              </p>
+            </div><!--//price_con-->
+
+            <div class="percent_area">
+              <p class="percent">
+                <span>90.02%</span>
+                (모집율)
+              </p>
+
+              <!-- 관리자가 조정하는 %영역입니다 -->
+              <div class="bar_ademin">
+                <span class="bar"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- EUR -->
+        <!-- <div class="prd_con">
                     <div class="prd_content">
 
                         <div class="tit">
@@ -266,8 +265,8 @@
                     </div>
                 </div> -->
 
-                    <!-- JPY -->
-                    <!-- <div class="prd_con">
+        <!-- JPY -->
+        <!-- <div class="prd_con">
 
                     <div class="prd_content">
 
@@ -312,8 +311,8 @@
                     </div>
                 </div> -->
 
-                    <!-- CNY -->
-                    <!-- <div class="prd_con">
+        <!-- CNY -->
+        <!-- <div class="prd_con">
 
                     <div class="prd_content">
 
@@ -359,93 +358,109 @@
                 </div> -->
 
 
-                    <div class="right_cor_box">
-                        <div class="card_tit tit_transparent">USD 상품 수정</div>
+        <div class="right_cor_box">
+          <div class="card_tit tit_transparent">USD 상품 수정</div>
 
-                        <ul class="list_num">
-                            <li>
-                                <label for="price">모집금액</label>
-                            </li>
+          <ul class="list_num">
+            <li>
+              <label for="price">모집금액</label>
+            </li>
 
-                            <li>
-                                <input type="text" id="price" placeholder="100억">
-                            </li>
+            <li>
+              <input type="text" id="price" placeholder="100억">
+            </li>
 
-                            <li>
-                                <button type="submit" class="rcor">수정</button>
-                            </li>
-                        </ul>
+            <li>
+              <button type="submit" class="rcor">수정</button>
+            </li>
+          </ul>
 
-                        <ul class="list_num">
-                            <li>
-                                <label for="revenue">예상 수익률</label>
-                            </li>
+          <ul class="list_num">
+            <li>
+              <label for="revenue">예상 수익률</label>
+            </li>
 
-                            <li>
-                                <input type="text" id="revenue" placeholder="1.6 ~ 2.4%">
-                            </li>
+            <li>
+              <input type="text" id="revenue" placeholder="1.6 ~ 2.4%">
+            </li>
 
-                            <li>
-                                <button type="submit" class="rcor">수정</button>
-                            </li>
-                        </ul>
+            <li>
+              <button type="submit" class="rcor">수정</button>
+            </li>
+          </ul>
 
-                        <ul class="list_num">
-                            <li>
-                                <label for="period">상품 기간</label>
-                            </li>
+          <ul class="list_num">
+            <li>
+              <label for="period">상품 기간</label>
+            </li>
 
-                            <li>
-                                <input type="text" id="period" placeholder="6/12/18/24개월">
-                            </li>
+            <li>
+              <input type="text" id="period" placeholder="6/12/18/24개월">
+            </li>
 
-                            <li>
-                                <button type="submit" class="rcor">수정</button>
-                            </li>
-                        </ul>
+            <li>
+              <button type="submit" class="rcor">수정</button>
+            </li>
+          </ul>
 
+          <ul class="list_num">
+            <li>
+              <label for="revenue">예상 수익률</label>
+            </li>
 
-                        <div class="percent_area">
-                            <p class="percent">
-                                <span>90.02%</span>
-                                (모집율)
-                            </p>
+            <li>
+              <ol class="rate">
+                <li> (USD)<input type="text" id="revenue" placeholder="1.6 ~ 2.4">% </li>
+                <li> (KRW)<input type="text" id="revenue" placeholder="1.6 ~ 2.4">% </li>
+              </ol>
+            </li>
 
-                            <!-- 관리자가 조정하는 %영역입니다 -->
-                            <div class="bar_ademin">
-                                <span class="bar"></span>
-                            </div>
-                        </div>
+            <li>
+              <button type="submit" class="rcor">수정</button>
+            </li>
+          </ul>
 
-                        <ul class="list_num">
-                            <li>
-                                <label for="rate">모집율 수정</label>
-                            </li>
+          <div class="percent_area">
+            <p class="percent">
+              <span>90.02%</span>
+              (모집율)
+            </p>
 
-                            <li>
-                                <input type="text" id="rate" placeholder="80.02%">
-                            </li>
+            <!-- 관리자가 조정하는 %영역입니다 -->
+            <div class="bar_ademin">
+              <span class="bar"></span>
+            </div>
+          </div>
 
-                            <li>
-                                <button type="submit" class="rcor">수정</button>
-                            </li>
-                        </ul>
-                    </div>
+          <ul class="list_num">
+            <li>
+              <label for="rate">모집율 수정</label>
+            </li>
 
-                    <button type="submit" class="save_prd btn_btm_r">
-                     <a href="admin_05_01_00.html">
-                       확인
-                      </a>
-                    </button>
-                </div>
+            <li>
+              <input type="text" id="rate" placeholder="80.02%">
+            </li>
 
-                <div class="back_pg">
-                    <a href="admin_05_01_00.html" class="bi bi-arrow-left"></a>
-                </div>
+            <li>
+              <button type="submit" class="rcor">수정</button>
+            </li>
+          </ul>
+        </div>
 
-        </div><!--//main-->
+        <button type="submit" class="save_prd btn_btm_r">
+          <a href="admin_05_01_00.html">
+            확인
+          </a>
+        </button>
+      </div>
 
-    </div>
+      <div class="back_pg">
+        <a href="admin_05_01_00.html" class="bi bi-arrow-left"></a>
+      </div>
+
+    </div><!--//main-->
+
+  </div>
 </body>
 
 </html>
