@@ -95,6 +95,7 @@ $(function () {
 
   //  결제 완료시 모달창
   $(".success_pop").hide();
+
   $(".btn > .complete").click(function () {
     $(".success_pop").stop().fadeIn();
   })
@@ -105,10 +106,12 @@ $(function () {
   //  계좌 번호 복사시  모달창
   $(".copy_pop").hide();
   $("ul.box_area li > .flex > button.copy_btn").click(function () {
-    $(".copy_pop").stop().fadeIn();
-  })
-  $(".okay").click(function () {
-    $(".copy_pop").stop().fadeOut();
+    $(".copy_pop").stop().fadeIn(
+
+      setTimeout(function () {
+        testEle = $('.copy_pop');
+        testEle.fadeOut();
+      }, 1000))
   })
 
   //  계좌 번호 복사시  모달창
