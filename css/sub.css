@@ -5,6 +5,8 @@
     --main-font :'Pretendard', sans-serif;
 }
 
+input, button, a, textarea { font-family: var(--main-font); }
+
 /* -----
     회사소개 페이지 
 ----- */
@@ -71,7 +73,7 @@ span.typing {color: #f5f5f5; font-size: 4rem; line-height: 300px;}
 .tit_box {padding: 40px 42px;}
 .tit_box h4{font-size: 3.2rem; font-weight: 600; text-align: left;}
 .tit_box h4+p{font-size: 2.6rem; font-weight: 600;}
-.tit_box span{font-size: 2.2rem; word-break: keep-all;}s
+.tit_box span{font-size: 2.2rem; word-break: keep-all;}
 
 .info_box ul {display: flex; justify-content: space-around;}
 .info_box ul li {position: relative; padding: 0 30px;}
@@ -153,7 +155,7 @@ span.typing {color: #f5f5f5; font-size: 4rem; line-height: 300px;}
 
 /* .txt_box { width: 80%; margin: 20px auto; display: flex; text-align: center; align-items: center; justify-content: center; padding: 16px; border-radius: 10px;} */
 .prd_card > .txt_box { text-align: center; margin: 70px 0;}
-.txt_box > input[type=text] { border: 0; color: var(--main-color); text-align: center; width: 30%; font-size: 5rem; font-weight: 700; }
+.txt_box > input[type=text] { border: 0; color: var(--main-color); text-align: center; width: 30%; font-size: 4rem; font-weight: 700; }
 .txt { text-align: left; display: inline-block; font-size: 2.4rem; font-weight: 700;}
 
 button.pop_btn { color: var(--main-color); display: block; margin: 0 auto;  width: 80%; padding: 8px; font-size: 2rem; font-weight: 600; border: 1px solid var(--main-color); border-radius: 100px; transition: all 0.5s; }
@@ -187,9 +189,22 @@ ul.prd_info li strong { font-size: 1.8rem; font-weight: 600;}
 ul.prd_info li p, ul.prd_info li span  { display: block; font-size: 1.8rem; font-weight: 500;}
 ul.prd_info li span > i { color: #888; }
 
-/* modal 이자율 계산산*/
-.rate_modal_inner { padding: 30px;}
+/* modal 이자율 계산*/
+/* .modal_wrap { display: block !important; }  */
+.rate_modal_inner { padding: 60px 30px 40px; max-width: 480px; position: sticky; top: 20%; left: 50%; transform: translateX(-50%); background: #fff; border-radius: 15px; overflow: hidden;}
 
+.rate_modal_inner > table > thead { background-color: var(--main-color); color: #fff; }
+.rate_modal_inner > table > thead th { text-align: center; padding: 6px 20px; font-size: 1.8rem; font-weight: 500;}
+
+.rate_modal_inner > table > tbody td { text-align: center; font-size: 1.6rem; padding: 3px 0; border: 1px solid #eee;}  
+.rate_modal_inner > table > tbody td > span.rate_data { font-size: 1.8rem; font-weight: 600; color: var(--main-color); }
+
+.result { padding: 20px 0 ; text-align: center; font-size: 2rem; font-weight: 600; margin: 12px;}
+
+.r_info_txt { width: 95%; padding: 12px 20px; color: #555; background: #eee; border-radius: 15px; font-size: 1.4rem; margin: 20px auto; }
+.r_info_txt p { line-height: 1.2; }
+
+.btn_area button { width: 95%; margin: 0 auto; font-size: 1.8rem; font-weight: 500; cursor: pointer; display: block; padding: 15px 0; border-radius: 100px; background-color: var(--main-color); color: #fff;}
 
 /* -----
     채권 투자하기
@@ -209,7 +224,7 @@ input[type=checkbox] { border: none;}
 .col_value { margin-bottom: 10px; width: 100%; display: inline-flex; gap: 10px; align-items: center; justify-content: center; }
 .col_value > span { display: inline-block; font-size: 2rem; text-align: right;  }
 .col_value > span.red {color: var(--main-color); text-align: left;}
-input.value { color: var(--main-color); border: 0; font-size: 2rem; font-weight: 500; padding: 0; margin: 0; }
+input.value { text-align: center; color: var(--main-color); border: 0; font-size: 2rem; font-weight: 500; padding: 0; margin: 0; }
 input { width: 100%; height: 40px; text-align: center; font-size: 20px; margin-bottom: 10px; }
 .btn-group { display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; gap: 10px; }
 button.num {  padding: 8px 15px 10x; height: 40px; font-size: 16px; border: 1px solid #ccc; background-color: white; border-radius: 5px; }
@@ -221,9 +236,9 @@ button.num {  padding: 8px 15px 10x; height: 40px; font-size: 16px; border: 1px 
 
 .input-group label{ width: 100%; display: flex; align-items: center; gap: 10px; }
 input { padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
-.birth-input { width: calc((100% - 5px) / 2) !important; }
+.birth_input { width: calc((100% - 5px) / 2) !important; }
 .pw_info { width: calc((100% - 5px) / 2); }
-.id-first {  margin-right: 4px; width: 50px !important; padding: 3px !important; text-align: center; }
+.id_first { margin-right: 4px; width: 50px !important; padding: 3px !important; text-align: center; }
 .masked { font-size: 16px; font-weight: 700; }
 
 .c_price p {text-align: center;}
@@ -232,6 +247,9 @@ input { padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4p
 
 .reset-btn { transition: all 0.2s; }
 .reset-btn:hover { border-color: var(--main-color); background-color: var(--main-color); color: #fff; }
+
+/* placeholder=center */
+.birth_input::placeholder ,.id_first::placeholder { text-align: center; }
 
 /* 투자 신청 완료 확인 모달창 */
 .modal_pop  { display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0, 0, 0, 0.6); z-index: 999;}
@@ -258,7 +276,7 @@ ul.box_area li > .flex > button > img { width: 23px; height: 23px; }
 /* 약관 동의 -- 아코디언 */
 .sec_03 {position: relative;}
 
-div.agree_list { position: relative; padding: 0 0 20px 0 !important;}
+div.agree_list { position: relative; padding: 20px 10px !important;  }
 div.agree_list::before { display: block; content: ""; width: 100%; height: 2px; background: #ddd; position: absolute; bottom: 0; left: 0; }
 
 .agree_wrap { gap: 3px !important; }
@@ -299,6 +317,8 @@ label.agree {display: inline-flex; align-items: center; padding: 5px; gap: 6px;}
 div.modal dt>strong { display: block; margin-bottom: 20px; }
 div.copy_pop  { display: none; z-index: 9998;}
 div.success_pop { display: none; z-index: 9999;}
+
+.modal .okay { padding: 8px 32px; background: var(--main-color); border-radius: 100px; font-size: 1.8rem; color: #fff; margin-top: 12px; transition: all 0.5s; }
 
 /* -----
     이벤트 페이지
