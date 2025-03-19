@@ -315,8 +315,12 @@ a.rcor:hover { background: #232323; color: #fff;}
     1:1 문의
 ----- */
 td.txt_ell { text-align: center; }
+td.txt_ell > label input[type="text"]{ margin-bottom: 0; padding: 0; border: 0; }
 td.txt_ell > p { margin: 0 auto; width: 500px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 
+textarea.faq_read  ,td.faq_read > label input { pointer-events : none; } 
+    /* user-select: none; */
+s
 .user_q { gap: 0 ;}
 .tit { padding: 12px 20px ; font-size: 1.8rem; margin-right: 5px; height: 100%; background: #fff;  }
 .faq .w_con { height: 300px; margin-top: 2px; }
