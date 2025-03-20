@@ -64,6 +64,28 @@ button, input {cursor: pointer;}
 /* -----
     Section header
 ----- */
+/* alarm - pc*/
+.gnb>li::before { display: block; content: ""; position: absolute; left: 15px; top: 15px; border-radius: 50%; background: var(--main-color); width: 6px; height: 6px; }
+
+.util>li a { position: relative; }
+.util>li:not(.note_alarm) a::after { display: block; content: ""; position: absolute; left: 10px; top: 8px; border-radius: 50%; background: #fff; width: 6px; height: 6px; }
+.util>li.note_alarm a::after { display: block; width: 6px; height: 6px;  content: ""; border-radius: 50%; position: absolute;  right: 0; bottom: 30px; background: var(--main-color); }
+
+/* alarm - mgnb */
+.mgnb>li, .mdepth2>li , .m_util > li > a, .u_depth2 > li > a { position: relative; }
+.mgnb>li::before { display: block; content: ""; position: absolute; left: -6px; top: 12px; border-radius: 50%; background: var(--main-color); width: 6px; height: 6px; }
+
+/* alarm - m_depth2 */
+.mdepth2>li:not(:first-child)::after { display: block; content: ""; position: absolute; left: 85px; top: 15px;  border-radius: 50%; background: var(--main-color);  width: 6px; height: 6px; }
+.mdepth2>li:first-child:after { display: block; content: ""; position: absolute; left: 115px; top: 15px;  border-radius: 50%; background: var(--main-color);  width: 6px; height: 6px; }
+
+.m_util > li:not(.note) > a::before { display: block; content: ""; position: absolute; left: 32px; top: 14px; border-radius: 50%; background: #fff; width: 6px; height: 6px; }
+
+/* larm - m_util */
+.m_util>li.note > a::after { display: block; content: ""; position: absolute; right: 15px; top: 10px; border-radius: 50%; background: var(--main-color); width: 6px; height: 6px; }
+.u_depth2 li > a::before { display: block; content: ""; position: absolute; right: 37px; top: 7px; border-radius: 50%; background:var(--main-color); width: 6px; height: 6px; }
+
+/* header */
 #header { background: #fff; padding: 2px 2%; width: 100%; display: flex; justify-content: center; align-items: center;}
 #header h1 a { display: block; width: 200px; height: 40px; margin-right: 60px; background: url(../img/common/logo.png) no-repeat center / 100%;}
 
