@@ -432,7 +432,7 @@
     .col span.masked { font-size: 1.2rem; }
 
     /* sub_03_01_00 */
-    .form_wrap  { max-width: 400px; padding: 25px 30px; }
+    .form_wrap  { max-width: 400px; padding: 25px 22px; }
     .user_col span { font-size: 1.6rem; }
     select { font-size: 1.4rem; }
     .apply-btn { padding: 5px; }
@@ -492,6 +492,8 @@
     .btn > .complete, .btn > .del_pop { font-size: 1.6rem; font-weight: 500; }
     .check_on { width: 15px ; height: 15px; }
 
+    /* sub_03_01_00 */
+    .btn-group { gap: 4px; position: relative; padding-bottom: 33px; }
 }
 
 @media (max-width: 420px) {
@@ -584,11 +586,14 @@
     .c_price  { margin-top: 30px; }
     select { padding: 10px; font-size: 1.2rem; }
     .id_first { width: 28px !important; }
-    .btn-group { grid-template-columns: repeat(2, 1fr); position: relative; padding-bottom: 33px; }
-    button.reset-btn { width: 100%; position: absolute; width: 50%; left: 50%; bottom: 0; transform: translateX(-50%); }
+    button.reset-btn { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); }
     .amount-container { margin: 20px auto 0; } 
 
     /* login */
     .btn_final { padding: 40px 0 60px;}
     .btn_final>a { padding: 3px 40px ; font-size: 1.6rem; }
+}
+
+@media (max-width: 330px) {
+    button.num { font-size: 1.4rem;}
 }

@@ -83,7 +83,7 @@ a.go_link::before { display: block; content: ""; position: absolute; width: 100%
 /* 휴대폰 인증 btn */
 .phone_col { width: 100%; display: flex; align-items: center; gap: 6px; }
 .phone_col label { width: 100%; }
-label.phone { display: inline-flex; gap: 6px; }
+label.phone { display: inline-flex; gap: 6px; align-items: center; }
 label.phone + button { margin: 3px 0 10px; padding: 8px 20px; border-radius: 10px; border: 1px solid var(--main-color); background: #fff; color: var(--main-color); transition: all 0.5s; }
 label.phone + button:hover { background: var(--main-color); color: #fff; }
 

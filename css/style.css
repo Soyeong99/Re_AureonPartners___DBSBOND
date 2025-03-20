@@ -94,7 +94,6 @@ nav {display: flex; align-items: center; gap: 60px; height: 100%;}
 .ham { display: none; font-size: 3.2rem; font-weight: 500;}
 .mgnb_wrap { overflow-y: hidden; height: 100vh; width: 100%;  display: none; position: fixed; top: 0; left: 0; background: #eee; z-index: 9000;}
 .mgnb_logo { position: absolute; top: 5%; left: 60px; width: 30%; height: 40px; background: url(../img/common/logo.png) no-repeat left / contain;}
-.mgnb { margin-top: 60px; padding: 60px 60px 30px;}
 .mgnb_wrap .mgnb>li a { display: block; padding: 16px 8px; font-size: 1.8rem; font-weight: 500; transition: all 0.5s;}
 .mgnb_wrap .mgnb>li span.show { display: inline-block; font-size: 1.6rem; margin:2px 0 0 6px; }
 .mgnb_wrap .mgnb>li:hover a {background: #ddd;}
@@ -102,6 +101,8 @@ nav {display: flex; align-items: center; gap: 60px; height: 100%;}
 .mgnb_wrap .mdepth2 { display: none; }
 .mgnb_wrap .mdepth2>li a { padding: 16px 12px;  }
 .mgnb_wrap .mdepth2>li:hover a {background: #ccc;}
+
+.mgnb { margin-top: 60px; padding: 60px 60px 30px;}
 
 /* m_util */
 .m_util { display: flex; align-items: center; width: 100%; }

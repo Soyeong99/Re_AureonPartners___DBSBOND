@@ -347,8 +347,8 @@ div.success_pop { display: none; z-index: 9999;}
 /* -----
     이벤트 페이지
 ----- */
-/* #event .event_notice { display: block !important; }
-#event .event_notice > dl { width: 33%; } */
+#event_notice { display: block !important; }
+#event .event_notice > dl { width: 33%; }
 
 .event_wrap .inner { padding: 60px 5%; }
 .evt_line { width: 80%; margin: 0 auto; gap: 20px;}
