@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/media.css">
+  <link rel="stylesheet" href="../css/sub_media.css">
 
   <!-- aos / boot -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -35,6 +36,7 @@
   <script defer src="../js/common.js"></script>
 
 </head>
+
 <body>
 
   <div id="wrap" class="about_wrap">
@@ -42,38 +44,45 @@
     <!-- header -->
     <header id="header">
 
-      <div class="ham bi bi-list"></div>
-
       <h1><a href="../index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
           <li><a href="sub_01.html">회사소개</a></li>
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-
-          <li><a href="#">고객지원
+          <li><a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+              <li><a href="sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub_05_02.html">공지사항</a></li>
+              <li><a href="sub_05_03.html">1:1문의</a></li>
             </ol>
           </li>
-
         </ul>
 
         <ol class="util">
-          <li><a href="../login.html">로그인</a></li>
-          <li><a href="../join_01.html">회원가입</a></li>
+          <li>
+            <a href="#none">마이페이지</a>
+            <ol class="u_depth2">
+              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+          </li>
+
+          <li><a href="../en/index.html">로그아웃</a></li>
+
+          <li class="note_alarm">
+            <a href="../a_login/mail.html">
+              <span>내 쪽지함</span>
+            </a>
+          </li>
         </ol>
       </nav>
 
-
-      <div class="mlogin"><a href="../login.html">로그인</a></div>
+      <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
 
@@ -81,25 +90,38 @@
         <div class="mgnb_logo"></div>
 
         <ul class="mgnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
           <li><a href="sub_01.html">회사소개</a></li>
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-
-          <li><a href="#">고객지원
+          <li><a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
-            <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+            <ol class="mdepth2">
+              <li><a href="sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub_05_02.html">공지사항</a></li>
+              <li><a href="sub_05_03.html">1:1문의</a></li>
             </ol>
           </li>
         </ul>
+
+        <ul class="m_util">
+          <li>
+            <a href="#none">마이페이지</a>
+
+            <ol class="u_depth2 mu_depth2">
+              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+
+          </li>
+
+          <li><a href="../en/index.html">로그아웃</a></li>
+          <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
+        </ul>
+
       </div>
     </header>
-
 
     <!-- main -->
     <main id="main">
@@ -109,7 +131,8 @@
           <div class="inner">
 
             <div class="img">
-              <img src="../img/sub/about_img.jpg" alt="DBS 회사 건물">
+              <img class="img_pc" src="../img/sub/about_img.jpg" alt="DBS 회사 건물">
+              <img class="m_img" src="../img/sub/about_m_img.jpg" alt="DBS 회사 건물">
             </div>
 
             <div class="right_box">
@@ -214,7 +237,7 @@
 
                   <h4>미래 성장 전략 개발</h4>
                   <P>2024</P>
-                  <span>지속적인 성장 및 글로벌 시장에서의 영향력 확대. 신흥 시장 탐색 및 기술 혁신을 통한 미래 성장 전략 개발</span>
+                  <span>지속적인 성장 및 글로벌 시장에서의 영향력 확대 신흥 시장 탐색 및 기술 혁신을 통한 미래 성장 전략 개발</span>
                 </li>
 
               </ul>
@@ -279,6 +302,13 @@
       </div>
     </footer>
     <!--//footer-->
+
+    <!-- go_top -->
+    <div class="go_top">맨 위로
+      <a href="#">
+        <span class="bi bi-chevron-up"></span>
+      </a>
+    </div>
 
   </div>
 
