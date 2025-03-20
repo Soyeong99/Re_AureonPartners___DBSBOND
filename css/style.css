@@ -84,7 +84,7 @@ button, input {cursor: pointer;}
 
 /* alarm - m_util */
 /* .m_util>li.note > a::after { display: block; content: ""; position: absolute; right: 15px; top: 10px; border-radius: 50%; background: var(--main-color); width: 6px; height: 6px; }
-.u_depth2 li > a::before { display: block; content: ""; position: absolute; right: 37px; top: 7px; border-radius: 50%; background:var(--main-color); width: 6px; height: 6px; }  */
+.u_depth2 > li > a::before { display: block; content: ""; position: absolute; right: 37px; top: 7px; border-radius: 50%; background:var(--main-color); width: 6px; height: 6px; }  */
 
 /* header */
 #header { background: #fff; padding: 2px 2%; width: 100%; display: flex; justify-content: center; align-items: center;}
