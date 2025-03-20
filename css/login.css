@@ -14,10 +14,20 @@
 .col label {width: 100%;}
 small {display: block; color: #888; font-weight: 500; margin-left: 18%;}
 input[type=password], input[type=text], input[type=number], input[type=email], input[type=tel]
-{ font-family: var(--main-font); text-align: left; font-size: 1.6rem; padding: 16px; margin-top: 3px; width: 100%; border-radius: 8px; border: 1px solid #eee;}
+{ font-family: var(--main-font); text-align: left; appearance: none; -webkit-appearance: none; -webkit-border-radius: 0; font-size: 1.6rem; padding: 16px; margin-top: 3px; width: 100%; border-radius: 8px; border: 1px solid #eee;}
 
 select { display: inline-block; color: #232323; font-family: var(--main-font);  width: 100%; font-size: 1.6rem;  padding: 16px; margin-top: 3px; border-radius: 8px; border: 1px solid #eee;}
 span>small {color: var(--main-color); display: inline-block; margin: 0;}
+
+/* 아이폰 select 기본 스타일 제거 */
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+/* 익스플로러 select 화살표 제거 */
+select::-ms-expand{display:none; }
+/* 화살표 없애기 for IE10, 11*/ 
+
+/* 화살표 배경 넣기 */
+/* background: #fff url('이미지경로') no-repeat 98% center; } */
 
 /* -----
     로그인 페이지 
