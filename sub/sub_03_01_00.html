@@ -655,7 +655,7 @@
     AOS.init();
   </script>
 
-   <!-- <script>
+  <!-- <script>
     // 금액 업다운
     document.addEventListener("DOMContentLoaded", function () {
       const amountInput = document.getElementById("amount");
@@ -708,14 +708,15 @@
   const amountInput = document.getElementById("amount");
   const buttons = document.querySelectorAll(".num");
   const resetButton = document.querySelector(".reset-btn");
-  const initialAmount = 0; // 시작 금액: 1000만원
+  const initialAmount = 0; // 초기 금액 설정
+  let isTouchDevice = false; // 터치 디바이스 여부 확인
 
   function formatNumber(value) {
-    return value.toLocaleString(); // 숫자를 1,000,000 형태로 변환
+    return value ? value.toLocaleString() : "0"; // 0을 항상 반환하여 NaN 방지
   }
 
   function changeAmount(value) {
-    let currentAmount = parseInt(amountInput.value.replace(/,/g, ""), 10); // 기존 금액 가져오기
+    let currentAmount = parseInt(amountInput.value.replace(/,/g, ""), 10) || 0; // NaN 방지
     let newAmount = currentAmount + value;
 
     // 1000만원 이하로 내려가지 않도록 제한
@@ -727,26 +728,39 @@
   }
 
   function resetAmount() {
-    amountInput.value = formatNumber(initialAmount); // 초기화
+    amountInput.value = formatNumber(initialAmount); // NaN 방지하여 "0" 표시
   }
 
   // 버튼 클릭 이벤트 추가
   buttons.forEach(button => {
-    button.addEventListener("pointerdown", function (event) {
-      event.preventDefault(); // 모바일에서 터치 이벤트 중복 방지
+    function handleClick() {
       changeAmount(parseInt(this.textContent.replace(/[^\d-]/g, ""), 10));
 
       // 클릭 시 버튼 강조 효과
       this.classList.add("active");
       setTimeout(() => this.classList.remove("active"), 200);
+    }
+
+    function handleTouch(event) {
+      event.preventDefault(); // 터치 이벤트에서 기본 동작 방지 (클릭 중복 방지)
+      isTouchDevice = true; // 터치 디바이스임을 표시
+      handleClick.call(this); // 클릭 이벤트와 동일한 로직 실행
+    }
+
+    button.addEventListener("click", function (event) {
+      if (!isTouchDevice) handleClick.call(this); // 터치 디바이스가 아니면 클릭 이벤트 실행
     });
+
+    button.addEventListener("touchstart", handleTouch, { passive: false });
   });
 
   // 초기화 버튼 이벤트 추가
   resetButton.addEventListener("click", resetAmount);
+
+  // 초기 값 설정 (NaN 방지 및 0으로 초기화)
+  resetAmount();
 });
 </script>
- 
 
 </body>
 
