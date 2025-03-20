@@ -16,10 +16,11 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <!-- style.css -->
-  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/sub.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sub_media.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- aos / boot -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -42,39 +43,33 @@
     <!-- header -->
     <header id="header">
 
-      <div class="ham bi bi-list"></div>
-
-      <h1><a href="index.html">
-          <!-- <img src="img/common/logo.png" alt="DBS BOND 로고"> -->
-        </a></h1>
+      <h1><a href="index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="sub/sub_01.html">회사소개</a></li>
-          <li><a href="sub/sub_02.html">투자전략</a></li>
-          <li><a href="sub/sub_03.html">투자상품</a></li>
-          <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li><a href="en/sub_01.html">회사소개</a></li>
+          <li><a href="en/sub_02.html">투자전략</a></li>
+          <li><a href="login.html">투자상품</a></li>
+          <li><a href="login.html">이벤트</a></li>
+          <li><a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+              <li><a href="login.html">자주묻는질문</a></li>
+              <li><a href="login.html">공지사항</a></li>
+              <li><a href="login.html">1:1 문의</a></li>
             </ol>
           </li>
 
         </ul>
 
-        <!-- util -->
         <ol class="util">
           <li><a href="login.html">로그인</a></li>
           <li><a href="join_01.html">회원가입</a></li>
         </ol>
       </nav>
 
-      <div class="mlogin"><a href="login.html">로그인</a></div>
+      <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
 
@@ -82,21 +77,26 @@
         <div class="mgnb_logo"></div>
 
         <ul class="mgnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="sub/sub_01.html">회사소개</a></li>
-          <li><a href="sub/sub_02.html">투자전략</a></li>
-          <li><a href="sub/sub_03.html">투자상품</a></li>
-          <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li><a href="en/sub_01.html">회사소개</a></li>
+          <li><a href="en/sub_02.html">투자전략</a></li>
+          <li><a href="login.html">투자상품</a></li>
+          <li><a href="login.html">이벤트</a></li>
+          <li><a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
-            <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+            <ol class="mdepth2 mu_depth2">
+              <li><a href="login.html">자주묻는질문</a></li>
+              <li><a href="login.html">공지사항</a></li>
+              <li><a href="login.html">1:1 문의</a></li>
             </ol>
           </li>
         </ul>
+
+        <ul class="m_util">
+          <li><a href="login.html">로그인</a></li>
+          <li><a href="join_01.html">회원가입</a></li>
+        </ul>
+
       </div>
     </header>
 
@@ -122,8 +122,8 @@
                 <span>아이디
                   <small>*</small>
                 </span>
-                <label for="">
-                  <input type="text" placeholder="5~20자 영문소문자, 숫자">
+                <label for="id">
+                  <input id="id" type="text" placeholder="5~20자 영문소문자, 숫자">
                 </label>
               </div>
 
@@ -133,8 +133,8 @@
                 <span>비밀번호
                   <small>*</small>
                 </span>
-                <label for="">
-                  <input type="password" placeholder="8자 ~ 16자의 영문,숫자,특수문자 조합">
+                <label for="pw">
+                  <input id="pw" type="password" placeholder="8자 ~ 16자의 영문,숫자,특수문자 조합">
                 </label>
               </div>
 
@@ -143,8 +143,8 @@
                 <span>비밀번호 확인
                   <small>*</small>
                 </span>
-                <label for="">
-                  <input type="password">
+                <label for="pw_check">
+                  <input id="pw_check" type="password">
                 </label>
               </div>
 
@@ -165,35 +165,23 @@
                 <span>이름
                   <small>*</small>
                 </span>
-                <label for="">
-                  <input type="text">
+                <label for="name">
+                  <input id="name" type="text">
                 </label>
               </div>
-
-              <!-- 통신사 선택란 -->
-              <!-- <div class="col">
-                <span>통신사
-                  <small>*</small>
-                </span>
-                <select name="" id="">
-                  <option value="">SKT</option>
-                  <option value="">KT</option>
-                  <option value="">LG</option>
-                  <option value="">SKT알뜰폰</option>
-                  <option value="">KT알뜰폰</option>
-                  <option value="">LG알뜰폰</option>
-                </select>
-              </div> -->
 
               <!-- 휴대폰 본인 인증란 -->
               <div class="col">
                 <span>휴대폰
                   <small>*</small>
                 </span>
-                <label for="" class="phone">
-                  <input type="tel" name="" id="">
+
+                <div class="phone_col">
+                  <label for="phone" class="phone">
+                    <input type="tel" id="phone">
+                  </label>
                   <button type="button">인증하기</button>
-                </label>
+                </div>
               </div>
 
               <!-- 휴대폰 본인 인증란 -->
@@ -201,40 +189,30 @@
                 <span>인증번호
                   <small>*</small>
                 </span>
-                <label for="" class="phone">
-                  <input type="text" name="" id="">
-                  <button type="button">확인</button>
-                </label>
-              </div>
 
-              <!-- 생년월일 입력란 -->
-              <!-- <div class="col">
-                <span>생년월일
-                  <small>*</small>
-                </span>
-                <label for="">
-                  <input type="text">
-                </label>
-              </div> -->
+                <div class="phone_col">
+                  <label for="ca_num" class="phone">
+                    <input type="text" id="ca_num">
+                  </label>
+                  <button type="button">확인</button>
+                </div>
+              </div>
 
               <!-- 생년월일 입력란 -->
               <div class="col">
                 <span>생년월일
                   <small>*</small>
                 </span>
-  
-                <div class="b_group">
 
+                <div class="b_group">
                   <label for="birth">
                     <input type="text" id="birth" class="birth-input" maxlength="6" placeholder="YYMMDD">
-                    -
-                    <div class="pw_info">
-                      <input type="text" class="id-first" maxlength="1" placeholder="X">
-                      <span class="masked">● ● ● ● ● ●</span>
-                    </div>
-
                   </label>
-
+                  -
+                  <label>
+                    <input type="text" class="id-first" maxlength="1" placeholder="X">
+                    <span class="masked">● ● ● ● ● ●</span>
+                  </label>
                 </div>
 
               </div>
@@ -244,28 +222,18 @@
                 <span>성별
                   <small>*</small>
                 </span>
-                <select name="" id="">
+                <select>
                   <option value="남성">남성</option>
                   <option value="여성">여성</option>
                 </select>
               </div>
-
-              <!-- 이메일 입력란 -->
-              <!-- <div class="col">
-                <span>이메일
-                  <small>*</small>
-                </span>
-                <label for="">
-                  <input type="email">
-                </label>
-              </div> -->
 
               <!-- 은행 선택란 -->
               <div class="col">
                 <span>은행
                   <small>*</small>
                 </span>
-                <select name="" id="">
+                <select>
                   <option value="농협">농협</option>
                   <option value="수협">수협</option>
                   <option value="신협">신협</option>
@@ -293,8 +261,8 @@
                 <span>계좌번호
                   <small>*</small>
                 </span>
-                <label for="">
-                  <input type="text" placeholder="은행 계좌번호를 입력해주세요.">
+                <label for="ac_num">
+                  <input type="text" id="ac_num" placeholder="은행 계좌번호를 입력해주세요.">
                 </label>
               </div>
 
@@ -308,9 +276,8 @@
               <span>*회원 이용 약관 및 개인정보보호 정책 동의</span>
             </div>
 
+            <span class="target" id="accordion"></span>
             <ul class="accordion">
-
-              <span class="target" id="accordion"></span>
 
               <!-- 통합이용약관 -->
               <li class="accordion__li">
@@ -373,7 +340,7 @@
                 </p>
 
                 <label for="agree_01" class="agree">
-                  <input type="checkbox" name="" id="agree_01">
+                  <input type="checkbox" id="agree_01">
                   <span class="check_on"></span>
                   (필수) 이용약관 동의
                 </label>
@@ -450,7 +417,7 @@
                 </p>
 
                 <label for="agree_02" class="agree">
-                  <input type="checkbox" name="" id="agree_02">
+                  <input type="checkbox" id="agree_02">
                   <span class="check_on"></span>
 
                   (필수) 개인정보 수집 및 이용 동의
@@ -519,7 +486,7 @@
                 </p>
 
                 <label for="agree_03" class="agree">
-                  <input type="checkbox" name="" id="agree_03">
+                  <input type="checkbox" id="agree_03">
                   <span class="check_on"></span>
 
                   (선택) 마케팅 정보 수신 동의
@@ -541,6 +508,16 @@
         </div><!--//join_con-->
 
       </div><!--//sub_inner-->
+
+      <!-- 인증번호 발송 모달창 -->
+      <div class="modal ctf_num">
+        <dl>
+          <dt>인증번호가 발송되었습니다.</dt>
+          <!-- <dd><strong>Please choose a language appropriate for your country of residence.</strong></dd> -->
+          <dd><a class="okay" href="#none">확인</a></dd>
+        </dl>
+      </div>
+
     </main><!-- //main -->
 
     <!-- footer -->
@@ -575,15 +552,19 @@
 
       </div>
     </footer>
-    <!--//footer-->
+  <!--//footer-->
 
-  </div>
+    <!-- go_top -->
+    <div class="go_top">맨 위로
+      <a href="#">
+        <span class="bi bi-chevron-up"></span>
+      </a>
+    </div>
 
-  <!-- AOS -->
+  <!-- aos소스 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <script>
-    AOS.init();  
+    AOS.init();
   </script>
 
 </body>

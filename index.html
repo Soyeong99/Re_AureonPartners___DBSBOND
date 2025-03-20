@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/sub.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sub_media.css">
   <link rel="stylesheet" href="css/media.css">
 
   <!-- aos / boot -->
@@ -44,38 +45,46 @@
     <!-- header -->
     <header id="header">
 
-      <div class="ham bi bi-list"></div>
-
-      <h1><a href="index.html">
-          <!-- <img src="img/common/logo.png" alt="DBS BOND 로고"> -->
-        </a></h1>
+      <h1><a href="index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
           <li><a href="sub/sub_01.html">회사소개</a></li>
           <li><a href="sub/sub_02.html">투자전략</a></li>
           <li><a href="sub/sub_03.html">투자상품</a></li>
           <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li><a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+              <li><a href="sub/sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub/sub_05_02.html">공지사항</a></li>
+              <li><a href="sub/sub_05_03.html">1:1문의</a></li>
             </ol>
           </li>
 
         </ul>
 
         <ol class="util">
-          <li><a href="login.html">로그인</a></li>
-          <li><a href="join_01.html">회원가입</a></li>
+          <li>
+            <a href="#none">마이페이지</a>
+            <ol class="u_depth2">
+              <li><a href="a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+          </li>
+
+          <li><a href="en/index.html">로그아웃</a></li>
+
+          <li class="note_alarm">
+            <a href="a_login/mail.html">
+              <span>내 쪽지함</span>
+            </a>
+          </li>
         </ol>
       </nav>
 
-      <div class="mlogin"><a href="login.html">로그인</a></div>
+      <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
 
@@ -83,21 +92,37 @@
         <div class="mgnb_logo"></div>
 
         <ul class="mgnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
           <li><a href="sub/sub_01.html">회사소개</a></li>
           <li><a href="sub/sub_02.html">투자전략</a></li>
           <li><a href="sub/sub_03.html">투자상품</a></li>
           <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li>
+            <a href="#none">고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
-            <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+            <ol class="mdepth2">
+              <li><a href="sub/sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub/sub_05_02.html">공지사항</a></li>
+              <li><a href="sub/sub_05_03.html">1:1문의</a></li>
             </ol>
           </li>
         </ul>
+
+        <ul class="m_util">
+          <li>
+            <a href="#none">마이페이지</a>
+
+            <ol class="u_depth2 mu_depth2">
+              <li><a href="a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+
+          </li>
+
+          <li><a href="en/index.html">로그아웃</a></li>
+          <li class="note"><a href="a_login/mail.html">내 쪽지함</a></li>
+        </ul>
+
       </div>
     </header>
 
@@ -106,24 +131,29 @@
 
       <!-- section main_visual -->
       <section id="main_visual" class="section">
+
         <div class="main_pc">
           <video src="img/main/main_visual.mp4" autoplay muted loop playsinline></video>
         </div>
 
+        <div class="mobile">
+          <video src="img/main/m_video.mp4" autoplay muted loop playsinline></video>
+        </div>
+
         <div class="quick_area">
-          <a href="#" class="about">자세히보기</a>
+          <a href="sub/sub_01.html" class="about">자세히보기</a>
         </div>
       </section>
 
       <!-- section promote-->
       <section id="invest" class="section">
         <div class="inner">
-          <div class="tit_box">
+          <div class="iv_tit_box">
             <h2>안정적 수익 창출을 위한 선두주자</h2>
             <p>국제 고수익 채권 선별과 환율 헷지를 통해 <br class="block"> 안정적 월간 수익과 자산 보호를 제공합니다.</p>
           </div>
 
-          <a class="more" href="#">MORE VIEW
+          <a class="more" href="sub/sub_02.html">MORE VIEW
             <!-- 투자전략 바로가기 버튼 -->
             <span class="bi bi-arrow-right right"></span>
           </a>
@@ -131,48 +161,49 @@
           <div class="content">
             <ul>
               <li data-aos="fade-down" data-aos-offset="0">
-                <a href="#">
-                  <div class="icon">
-                    <img src="img/main/icon_safe.png" alt="아이콘">
-                  </div>
-                  <h3>안정성 확보</h3>
-                  <span class="hover">주간 변동 리스크 최소화를 위해 <br class="none">
-                    USD, EUR, JPY, CNY 채권에 집중 투자하여 안정적인 수익 구조를
-                    제공합니다.</span>
-                </a>
+                <div class="icon">
+                  <img src="img/main/icon_safe.png" alt="아이콘">
+                </div>
+                <h3>안정성 확보</h3>
+                <span class="hover">주간 변동 리스크 최소화를 위해 <br class="none">
+                  USD, EUR, JPY, CNY 채권에 집중 투자하여 안정적인 수익 구조를
+                  제공합니다.</span>
               </li>
-              <li data-aos="fade-down" data-aos-offset="300" data-aos-duration="500"><a href="#">
-                  <div class="icon">
-                    <img src="img/main/icon_asset.png" alt="아이콘">
-                  </div>
-                  <h3>업종 및 자산 선택</h3>
-                  <span class="hover">외부 요인에 영향을 받는 기술주는 제외하고 소비재, 산업재 및 단기 채권 중심으로 포트폴리오를
-                    구성합니다.</span>
-                </a>
+
+              <li data-aos="fade-down" data-aos-offset="300" data-aos-duration="400">
+                <div class="icon">
+                  <img src="img/main/icon_asset.png" alt="아이콘">
+                </div>
+                <h3>업종 및 자산 선택</h3>
+                <span class="hover">외부 요인에 영향을 받는 기술주는 제외하고 소비재, 산업재 및 단기 채권 중심으로 포트폴리오를
+                  구성합니다.</span>
+
               </li>
-              <li data-aos="fade-down" data-aos-offset="400" data-aos-duration="800"><a href="#">
-                  <div class="icon">
-                    <img src="img/main/icon_inhouse.png" alt="아이콘">
-                  </div>
-                  <h3>인하우스 리서치</h3>
-                  <span class="hover">짧은 주기 피드백으로 저축채권 안정성을 점검하며, 전문가들이 협력해 시장 변화에 신속하게 대응합니다.</span>
-                </a>
+
+              <li data-aos="fade-down" data-aos-offset="400" data-aos-duration="600">
+                <div class="icon">
+                  <img src="img/main/icon_inhouse.png" alt="아이콘">
+                </div>
+                <h3>인하우스 리서치</h3>
+                <span class="hover">짧은 주기 피드백으로 저축채권 안정성을 점검하며, 전문가들이 협력해 시장 변화에 신속하게 대응합니다.</span>
               </li>
-              <li data-aos="fade-down" data-aos-offset="550" data-aos-duration="1100"><a href="#">
-                  <div class="icon">
-                    <img src="img/main/icon_danger.png" alt="아이콘">
-                  </div>
-                  <h3>위험분산</h3>
-                  <span class="hover">저축채권은 안정적 수익을 목표로 하며, 낮은 리스크의 국제 채권 <br class="none">
-                    (USD, EUR, JPY, CNY)에 집중
-                    투자합니다.</span>
-                </a>
+
+              <li data-aos="fade-down" data-aos-offset="550" data-aos-duration="700">
+                <div class="icon">
+                  <img src="img/main/icon_danger.png" alt="아이콘">
+                </div>
+                <h3>위험분산</h3>
+                <span class="hover">저축채권은 안정적 수익을 목표로 하며, 낮은 리스크의 국제 채권 <br class="none">
+                  (USD, EUR, JPY, CNY)에 집중
+                  투자합니다.</span>
               </li>
+
             </ul>
           </div>
 
+          <div class="section_bg"></div>
+
         </div>
-        <div class="section_bg"></div>
       </section>
 
       <!-- section company -->
@@ -217,13 +248,6 @@
       <!-- section prd 수정 -->
       <section id="prd" class="section">
         <div class="sub_inner prd_con">
-
-          <!-- <div class="m_tit">
-            <h3>당신의 성공을 위한 차별화된 전략
-              <br>
-              글로벌 외환 펀드 운용의 리더
-            </h3>
-          </div> -->
 
           <div class="prd_tit_box">
             <div class="prd_tit_flex">
@@ -275,13 +299,13 @@
 
                   <div class="i_col">
                     <div class="percent_area">
-                      <p class="percent">
+                      <p class="percent m_percent">
                         <span>90.02%</span>
                         (모집율)
                       </p>
 
                       <!-- 관리자가 조정하는 %영역입니다 -->
-                      <div class="bar_ademin">
+                      <div class="bar_ademin m_bar_ademin">
                         <span class="bar"></span>
                       </div>
                     </div>
@@ -289,7 +313,7 @@
 
                 </div><!--//item_info-->
 
-                <a class="detail_link">상세보기</a>
+                <a class="detail_link" href="sub/sub_03_01_usd.html">상세보기</a>
 
               </div><!--//b_item_box-->
 
@@ -332,7 +356,7 @@
 
                 </div><!--//item_info-->
 
-                <a class="detail_link">상세보기</a>
+                <a class="detail_link" href="sub/sub_03_01_eur.html">상세보기</a>
 
               </div><!--//b_item_box-->
 
@@ -375,7 +399,7 @@
 
                 </div><!--//item_info-->
 
-                <a class="detail_link">상세보기</a>
+                <a class="detail_link" href="sub/sub_03_01_jpy.html">상세보기</a>
 
               </div><!--//b_item_box-->
 
@@ -418,7 +442,7 @@
 
                 </div><!--//item_info-->
 
-                <a class="detail_link">상세보기</a>
+                <a class="detail_link" href="sub/sub_03_01_cny.html">상세보기</a>
 
               </div><!--//b_item_box-->
 
@@ -438,61 +462,6 @@
           </div>
         </div>
       </section>
-
-      <!-- notice -->
-      <!-- <section id="notice" class="section">
-        <div class="inner">
-
-          <div class="notice_area">
-
-            <div class="area_tit">
-              <h3>공지사항</h3>
-              <a href="#">전체보기</a>
-            </div>
-
-            <ol class="list">
-              <li><a href="#">
-                  <p>데이터 준비 중입니다.</p>
-                  <span class="go_link bi bi-arrow-right"></span>
-                </a></li>
-
-              <li><a href="#">
-                  <p>데이터 준비 중입니다.</p>
-                  <span class="go_link bi bi-arrow-right"></span>
-                </a></li>
-
-              <li><a href="#">
-                  <p>데이터 준비 중입니다.</p>
-                  <span class="go_link bi bi-arrow-right"></span>
-                </a></li>
-            </ol>
-
-          </div>
-
-          <div class="cs_area">
-
-            <h5>고객센터</h5>
-
-            <ol class="cs_link">
-              <li>
-                <a href="#" class="faq">
-                  <img class="bk" src="img/main/icon_faq.png" alt="자주묻는질문">
-                  <img class="red" src="img/main/icon_faq_r.png" alt="자주묻는질문">
-                  자주묻는질문
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="faq">
-                  <img class="bk" src="img/main/icon_cs.png" alt="1:1문의하기">
-                  <img class="red" src="img/main/icon_cs_r.png" alt="1:1문의하기">
-                  1:1 문의하기
-                </a>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </section> -->
 
       <!-- section exchange_rate -->
       <section id="exchange_rate">
@@ -524,14 +493,14 @@
 
                 <div class="btm_con">
 
-                  <h3>달러
+                  <div class="ctn">달러
                     <p>
                       <!-- 업다운 표시 -->
                       <span>+</span>
                       <!-- 전날 기준 -->
                       <span>0.0155</span>%
                     </p>
-                  </h3>
+                  </div>
 
                   <div class="muted">
                     09:36:04
@@ -574,14 +543,14 @@
 
                 <div class="btm_con">
 
-                  <h3>유로
+                  <div class="ctn">유로
                     <p>
                       <!-- 업다운 표시 -->
                       <span>+</span>
                       <!-- 전날 기준 -->
                       <span>0.0155</span>%
                     </p>
-                  </h3>
+                  </div>
 
                   <div class="muted">
                     09:36:04
@@ -624,14 +593,14 @@
 
                 <div class="btm_con">
 
-                  <h3>엔화
+                  <div class="ctn">엔화
                     <p>
                       <!-- 업다운 표시 -->
                       <span>+</span>
                       <!-- 전날 기준 -->
                       <span>0.0155</span>%
                     </p>
-                  </h3>
+                  </div>
 
                   <div class="muted">
                     09:36:04
@@ -674,14 +643,14 @@
 
                 <div class="btm_con">
 
-                  <h3>위안
+                  <div class="ctn">위안
                     <p>
                       <!-- 업다운 표시 -->
                       <span>+</span>
                       <!-- 전날 기준 -->
                       <span>0.0155</span>%
                     </p>
-                  </h3>
+                  </div>
 
                   <div class="muted">
                     09:36:04
@@ -707,6 +676,51 @@
 
         </div>
       </section>
+
+      <!-- 이벤트 팝업 -->
+      <!--    <div class="popup">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="sub/sub_04.html"><img src="img/main/popup_img.png" alt="이벤트팝업"></a>
+            </div>
+            <div class="swiper-slide"><a href="sub/sub_04.html"><img src="img/main/popup_img.png" alt="이벤트팝업"></a>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+
+    <div class="popup-btn">
+
+          <ul>
+ // 닫기와 오늘하루 보지않기 동일하게 닫아지기만 합니다 
+           오늘 하루 보지 않기 눌렀을 때 하루종일 뜨지 않도록 작업 부탁드립니다 //
+           
+           //  관리자가 회원에게 쪽지를 전송했을 경우 
+            => 이벤트가 존재하더라도 쪽지 팝업만 노출 됩니다 '.mail_alarm' 
+            => 쪽지 확인 후, 메인 접속 시 이벤트 팝업 노출 설정 부탁드립니다 
+            감사합니다 // 
+
+            <li><a href="#none">오늘 하루 보지 않기</a></li>
+            <li><a href="#none">닫기</a></li>
+          </ul>
+        </div>
+      </div> -->
+
+
+      <!-- // 관리자가 보낸 쪽지 / 미확인 시 타 페이지 전환 불가능 // -->
+
+      <!-- <div class="modal mail_alarm">
+        <dl>
+          <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+          <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+          <dd><a class="okay" href="a_login/mail_in.html">이동</a></dd>
+        </dl>
+      </div> -->
+
 
     </main><!-- //main -->
 
@@ -743,6 +757,13 @@
       </div>
     </footer>
     <!--//footer-->
+
+    <!-- go_top -->
+    <div class="go_top">Go Top
+      <a href="#">
+        <span class="bi bi-chevron-up"></span>
+      </a>
+    </div>
 
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

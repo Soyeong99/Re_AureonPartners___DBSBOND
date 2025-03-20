@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -17,9 +17,11 @@
 
   <!-- style.css -->
   <link rel="stylesheet" href="css/sub.css">
-  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sub_media.css">
   <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/sub_02.css">
 
   <!-- aos / boot -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -30,10 +32,11 @@
 
   <script defer src="js/jquery-3.7.1.min.js.js"></script>
   <script defer src="js/swiper-bundle.min.js.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- js -->
-  <script defer src="js/main.js"></script>
   <script defer src="js/common.js"></script>
+  <script defer src="js/main.js"></script>
 
 </head>
 
@@ -43,38 +46,33 @@
     <!-- header -->
     <header id="header">
 
-      <div class="ham bi bi-list"></div>
-
-      <h1><a href="index.html">
-          <!-- <img src="img/common/logo.png" alt="DBS BOND 로고"> -->
-        </a></h1>
+      <h1><a href="index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="sub/sub_01.html">회사소개</a></li>
-          <li><a href="sub/sub_02.html">투자전략</a></li>
-          <li><a href="sub/sub_03.html">투자상품</a></li>
-          <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li><a href="en/sub_01.html">About</a></li>
+          <li><a href="en/sub_02.html">Strategy</a></li>
+          <li><a href="login.html">Investment</a></li>
+          <li><a href="login.html">Event</a></li>
+          <li><a href="#none">Support
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+              <li><a href="login.html">FAQ</a></li>
+              <li><a href="login.html">Notice</a></li>
+              <li><a href="login.html">1:1 Contact</a></li>
             </ol>
           </li>
 
         </ul>
 
         <ol class="util">
-          <li><a href="login.html">로그인</a></li>
-          <li><a href="join_01.html">회원가입</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="join_01.html">Sign Up</a></li>
         </ol>
       </nav>
 
-      <div class="mlogin"><a href="login.html">로그인</a></div>
+      <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
 
@@ -82,21 +80,26 @@
         <div class="mgnb_logo"></div>
 
         <ul class="mgnb">
-          <!-- main페이지랑, 회사소개 투자전략 3개는 영어 한국어 연동 -->
-          <li><a href="sub/sub_01.html">회사소개</a></li>
-          <li><a href="sub/sub_02.html">투자전략</a></li>
-          <li><a href="sub/sub_03.html">투자상품</a></li>
-          <li><a href="sub/sub_04.html">이벤트</a></li>
-          <li><a href="sub/sub_05.html">고객지원
+          <li><a href="en/sub_01.html">About</a></li>
+          <li><a href="en/sub_02.html">Strategy</a></li>
+          <li><a href="login.html">Investment</a></li>
+          <li><a href="login.html">Event</a></li>
+          <li><a href="#none">Support
               <span class="bi bi-chevron-down show"></span>
             </a>
-            <ol class="depth2">
-              <li><a href="#">자주묻는질문</a></li>
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">1:1문의</a></li>
+            <ol class="mdepth2 mu_depth2">
+              <li><a href="login.html">FAQ</a></li>
+              <li><a href="login.html">Notice</a></li>
+              <li><a href="login.html">1:1 Contact</a></li>
             </ol>
           </li>
         </ul>
+
+        <ul class="m_util">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="join_01.html">Sign Up</a></li>
+        </ul>
+
       </div>
     </header>
 
@@ -110,9 +113,10 @@
 
             <div class="tit_area">
               <!-- <div class="img">체크 이미지</div> -->
-              <h2>로그인</h2>
-              <p> 아직 계정이 없으신가요?
-                <a href="join_01.html">지금 가입하세요</a>
+              <h2>Login</h2>
+              <p> Don't have an account yet?
+                <a href="join_01.html">Sign up now
+                </a>
               </p>
             </div>
 
@@ -123,16 +127,16 @@
               <div class="text_id">
 
                 <label for="id">ID
-                  <input type="text" name="" id="id" placeholder="아이디">
-                </label>  
+                  <input type="text" id="id" placeholder="ID">
+                </label>
               </div>
 
 
               <!-- pw -->
               <div class="txt_pw">
 
-                <label for="pw">비밀번호
-                  <input type="text" id="pw" placeholder="비밀번호">
+                <label for="pw">Password
+                  <input type="text" id="pw" placeholder="PW">
                 </label>
               </div>
 
@@ -142,27 +146,27 @@
             <div class="sub_area">
 
               <label for="auto_login" class="auto_login">
-                <input type="checkbox" name="" id="auto_login">
+                <input type="checkbox" id="auto_login">
                 <span class="check_on"></span>
-                자동로그인
+                Auto Login
               </label>
 
-              <a href="#" class="go_link">
-                아이디/비밀번호찾기
+              <a href="a_login/find_id.html" class="go_link">
+                Find ID/PW
               </a>
 
             </div>
 
             <!-- 로그인 버튼 -->
             <div class="btn_login">
-              <a href="index.html">로그인</a>
+              <a href="index.html">Login</a>
             </div>
 
           </div>
 
           <!-- 회원가입 바로가기 -->
           <div class="btn_join">
-            <a href="join_01.html">회원가입</a>
+            <a href="join_01.html">Sign up</a>
           </div>
 
         </div>
@@ -202,14 +206,22 @@
 
       </div>
     </footer>
-    <!--//footer-->
+  <!--//footer-->
 
-  </div>
+    <!-- go_top -->
+    <div class="go_top">Go Top
+      <a href="#">
+        <span class="bi bi-chevron-up"></span>
+      </a>
+    </div>
+
+  <!-- aos소스 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 
+  <script src="../js/sub05_01.js"></script>
 </body>
 
 </html>
