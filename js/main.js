@@ -1,4 +1,8 @@
-$(function () {
+document.addEventListener("DOMContentLoaded", function () {
+  
+  $('label.phone + button, .input_area .phone button').click(function () {
+    $('.ctf_num').stop().fadeIn();
+  });
 
   // --------- 
   //  Main (Home)
@@ -20,6 +24,24 @@ $(function () {
     speed: 1500,
     slidesPerView: 1, //모바일 기준
     spaceBetween: 20, //모바일 기준
+
+  });
+
+  // event 모달팝업 생성
+  $(function () {
+    $('.popup').fadeIn();
+
+    $('.popup-btn').click(function () {
+      $('.popup').fadeOut();
+    });
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
   // --------- 
@@ -27,13 +49,8 @@ $(function () {
   // ---------   
 
   //회사 소개 -연혁 슬라이드
-
-  // 스와이퍼 찾기
-
   const history_con = new Swiper(".history_con", {
 
-    // initialSlide: 2,
-    // centeredSlides: false,
     autoHeight: true,
     loop: true,
     clickable: true,
@@ -45,52 +62,52 @@ $(function () {
     },
 
     speed: 1500,
-    slidesPerView: 4, //모바일 기준
+    slidesPerView: 1, //모바일 기준
+
+    breakpoints: {
+      450: { //min-width 기준
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      650: { //min-width 기준
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: { //min-width 기준
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+    },
+
   });
 
-  // --------- 
-  //  Sub Page
-  // ---------   
+  //  계좌 번호 복사시  모달창
+  $(".copy_pop").hide();
+  $("ul.box_area li > .flex > button.copy_btn").click(function () {
+    $(".copy_pop").stop().fadeIn(
 
-  // 투자전략 페이지 - 상단 텍스트 애니메이션 글자 / 한글자씩 떨어지게 - 특정 굵게
-  var typingIdx = 0;
-  var typingSpeed = 100; // 타이핑 속도 (ms)
-  var delayBeforeFade = 1000; // 타이핑이 끝난 후 유지 시간 (1초)
-  var fadeSpeed = 500; // fade 효과 속도 (0.5초)
-  var delayBeforeRestart = 500; // 삭제 후 다시 시작하기 전 대기 시간 (0.5초)
-
-  // 텍스트를 한 글자씩 나누면서 특정 글자는 <span class="bold">로 감싸기
-  var typingTxt = "당신의 성공을 꿈꾸세요 Dream Your Success";
-  var formattedTxt = typingTxt.split("").map(char => {
-    return (char === "D" || char === "Y" || char === "S") ? `<span class="bold">${char}</span>` : char;
-  });
-
-  function typing() {
-    if (typingIdx < formattedTxt.length) {
-      $(".typing").html(formattedTxt.slice(0, typingIdx + 1).join("")); // HTML 유지
-      typingIdx++;
-      setTimeout(typing, typingSpeed);
-    } else {
-      setTimeout(() => {
-        $(".typing").fadeOut(fadeSpeed, function () {
-          $(this).empty().fadeIn(0); // 텍스트 삭제 후 다시 표시 준비
-          typingIdx = 0; // 인덱스 초기화
-          setTimeout(typing, delayBeforeRestart);
-        });
-      }, delayBeforeFade);
-    }
-  }
-
-  $(".typing").empty(); // 기존 텍스트 초기화
-  typing(); // 애니메이션 실행
+      setTimeout(function () {
+        testEle = $('.copy_pop');
+        testEle.fadeOut();
+      }, 1000))
+  })
 
   //  상품 구매 시 모달창
   $(".modal_pop").hide();
+
   $(".apply-btn").click(function () {
     $(".modal_pop").stop().fadeIn();
   })
   $(".btn > .del_pop").click(function () {
     $(".modal_pop").stop().fadeOut();
+  })
+
+  // 이자율 계산 모달창
+  $(".pop_btn").click(function () {
+    $(".modal_wrap").stop().fadeIn()
+  })
+  $(".btn_area button").click(function () {
+    $(".modal_wrap").stop().fadeOut()
   })
 
   //  결제 완료시 모달창
@@ -115,32 +132,108 @@ $(function () {
   })
 
   // 전체동의
-  const $agreementForm = document.querySelector('.agree_form');
-  const $selectAll = $agreementForm.querySelector('.agree_all');
-  const $listInput = $agreementForm.querySelectorAll('.accordion input');
-  const $selectAllMkt = $agreementForm.querySelector('.select-all-mkt');
+  const agreeAllCheckbox = document.querySelector(".agree_all");
+  const agreeItemCheckboxes = document.querySelectorAll(".agree_item");
+  const selectAllMktCheckbox = document.querySelector(".select_all_mkt");
+  const mktItemCheckboxes = document.querySelectorAll(".mkt_item");
 
-  const toggleCheckbox = (allBox, itemBox) => {
-    allBox.addEventListener('change', () => {
-      itemBox.forEach((item) => {
-        item.checked = allBox.checked;
-      });
-    })
+  // 전체 동의 체크박스 클릭 시
+  agreeAllCheckbox.addEventListener("change", function () {
+    agreeItemCheckboxes.forEach(checkbox => {
+      checkbox.checked = agreeAllCheckbox.checked;
+    });
+    selectAllMktCheckbox.checked = agreeAllCheckbox.checked;
+    mktItemCheckboxes.forEach(checkbox => {
+      checkbox.checked = agreeAllCheckbox.checked;
+    });
+  });
+
+  // 개별 체크박스 클릭 시
+  agreeItemCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", function () {
+      agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
+        Array.from(mktItemCheckboxes).every(item => item.checked);
+    });
+  });
+
+  // 선택적 마케팅 동의 전체 체크박스 클릭 시
+  selectAllMktCheckbox.addEventListener("change", function () {
+    mktItemCheckboxes.forEach(checkbox => {
+      checkbox.checked = selectAllMktCheckbox.checked;
+    });
+    agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
+      Array.from(mktItemCheckboxes).every(item => item.checked);
+  });
+
+  // 개별 마케팅 체크박스 클릭 시
+  mktItemCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", function () {
+      selectAllMktCheckbox.checked = Array.from(mktItemCheckboxes).some(item => item.checked);
+      agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
+        Array.from(mktItemCheckboxes).every(item => item.checked);
+    });
+  });
+
+  // 투자전략 페이지 
+  // - 상단 텍스트 애니메이션 글자 / 한글자씩 떨어지게 - 특정 굵게
+  var typingIdx = 0;
+  var typingSpeed = 130; // 타이핑 속도 (ms)
+  var delayBeforeFade = 1000; // 타이핑이 끝난 후 유지 시간 (1초)
+  var fadeSpeed = 500; // fade 효과 속도 (0.5초)
+  var delayBeforeRestart = 500; // 삭제 후 다시 시작하기 전 대기 시간 (0.5초)
+  var typingTimer;
+
+  function getTypingText() {
+    return window.innerWidth <= 768
+      ? "당신의 성공을 꿈꾸세요<br>Dream Your Success"
+      : "당신의 성공을 꿈꾸세요 Dream Your Success";
   }
-  toggleCheckbox($selectAll, $listInput);
-  toggleCheckbox($selectAllMkt, $mktListInput);
 
-  $listInput.forEach((item) => {
-    item.addEventListener('change', () => {
-      const isChecked = Array.from($listInput).every(i => i.checked);
-      $selectAll.checked = isChecked;
-    });
+  function formatText(text) {
+    return text.replace(/<br>/g, "¶") // 줄바꿈을 특수문자로 변경
+      .split("") // 한 글자씩 나누기_ 
+      // split("/?=<br>/")로 처리하면 한글자씩 나타나는 효과가 나타나지 않게 됨 
+      // - <br>의 기능 삭제 == 하나의 텍스트로 인식 
+      .map(char => {
+        if (char === "¶") return "<br>"; // 다시 <br> 기능 살리기
+        return (char === "D" || char === "Y" || char === "S")
+          ? `<span class="bold">${char}</span>`
+          : char;
+      });
+  }
+
+  var typingTxt = getTypingText();
+  var formattedTxt = formatText(typingTxt);
+
+  function typing() {
+    if (typingIdx < formattedTxt.length) {
+      $(".typing").html(formattedTxt.slice(0, typingIdx + 1).join(""));
+      typingIdx++;
+      typingTimer = setTimeout(typing, typingSpeed);
+    } else {
+      setTimeout(() => {
+        $(".typing").fadeOut(fadeSpeed, function () {
+          $(this).empty().fadeIn(0);
+          typingIdx = 0;
+          setTimeout(typing, delayBeforeRestart);
+        });
+      }, delayBeforeFade);
+    }
+  }
+
+  // 초기 실행
+  $(".typing").empty();
+  typing();
+
+  // 화면 크기 변경 시 타이핑 효과 초기화
+  $(window).resize(function () {
+    clearTimeout(typingTimer); // 기존 타이머 초기화
+    typingIdx = 0;
+    typingTxt = getTypingText();
+    formattedTxt = formatText(typingTxt);
+    $(".typing").empty();
+    typing();
   });
 
-  $mktListInput.forEach((item) => {
-    item.addEventListener('change', () => {
-      const isChecked = Array.from($mktListInput).some(i => i.checked);
-      $selectAllMkt.checked = isChecked;
-    });
-  });
+
 });
