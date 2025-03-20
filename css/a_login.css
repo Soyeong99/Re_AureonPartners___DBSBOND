@@ -29,6 +29,7 @@
 }
 
 /* 쪽지함 */
+#tab02 {display: none;}
 
 .table_con td:nth-of-type(2) {
   max-width: 20ch; /* 8글자만큼의 너비 */ 
@@ -483,10 +484,11 @@
   border: 1px solid #FF3333;
 }
 
-.a_account2 a:nth-of-type(1):hover {
+.a_account2 .del:hover {
   background-color: #FF3333;
   color: #fff;
 }
+
 .join_con2{
   width: 800px;
   margin: 50px auto 80px;
@@ -521,8 +523,19 @@
 .btn_final2 a{
   border-radius: 100px;
 }
+.btn_final2 a:hover{
+  background-color: #fff !important;
+  border: 1px solid #FF3333;
+}
+.btn_final2>a.join:hover{
+  color: #FF3333;
+}
+.btn_final2>a.del:hover{
+  background-color: #FF3333 !important;
+}
+
 @media (max-width:1100px){
-    .sub_banner_in, .tab, .tab_top, .write, .write_in ol{width: 1000px; margin: auto;}
+  .sub_banner_in, .tab, .tab_top, .write, .write_in ol{width: 1000px; margin: auto;}
     .write_in ol{margin: 50px auto 80px;}
 }
 @media (max-width:1000px){
