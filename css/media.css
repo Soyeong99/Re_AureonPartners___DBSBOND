@@ -486,6 +486,11 @@
 }
 
 @media (max-width:325px){
+
+  /* header */
+  .m_util > li > a { font-size: 1.6rem; }
+  .m_util > li.note { width: 35%; }
+
   /* prd */
   #prd { padding: 40px 0; }
   #prd .prd_tit_box h3 { font-size: 2.8rem; }

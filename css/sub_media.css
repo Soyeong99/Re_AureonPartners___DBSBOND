@@ -328,7 +328,11 @@
 }
 
 @media (max-width: 660px) {
-    
+
+    /* join */
+    .ctf_num dl dt { font-size: 1.6rem; }
+    .modal dd>a.okay { padding: 5px 28px;}
+
     /* sub_02 */
     .en_invest .tit_box { top: 4.03%; }
 
@@ -401,8 +405,7 @@
     .evt_line li a { margin: 0 auto; width: 80%; }
 }
 
-@media (max-width: 520px) {
-
+@media (max-width: 520px) { 
      /* sub_01  */
     #about { padding: 20px 0; }
     #about .img { height: 280px; }

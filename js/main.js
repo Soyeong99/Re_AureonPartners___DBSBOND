@@ -1,187 +1,114 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
-  $('button.btn_submit').click(function () {
-    $('.ctf_num').stop().fadeIn();
-  });
-
-  // --------- 
-  //  Main (Home)
-  // ---------   
-
-  //회사 슬라이드
-  const slide_box = new Swiper(".slide_box", {
-
-    centeredSlides: true,
-    autoHeight: true,
-    loop: true,
-    clickable: true,
-
-    autoplay: {
-      delay: 1500,
-      disableOnIneraction: false,
-    },
-
-    speed: 1500,
-    slidesPerView: 1, //모바일 기준
-    spaceBetween: 20, //모바일 기준
-
-  });
-
-  // event 모달팝업 생성
-  $(function () {
-    $('.popup').fadeIn();
-
-    $('.popup-btn').click(function () {
-      $('.popup').fadeOut();
+  // ✅ Swiper 초기화 (라이브러리 확인 후 실행)
+  if (typeof Swiper !== "undefined") {
+    new Swiper(".slide_box", {
+      centeredSlides: true,
+      autoHeight: true,
+      loop: true,
+      clickable: true,
+      autoplay: { delay: 1500, disableOnInteraction: false },
+      speed: 1500,
+      slidesPerView: 1,
+      spaceBetween: 20,
     });
-  });
 
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  // --------- 
-  //  SUB
-  // ---------   
-
-  //회사 소개 -연혁 슬라이드
-  const history_con = new Swiper(".history_con", {
-
-    autoHeight: true,
-    loop: true,
-    clickable: true,
-    loopAdditionalSlides: 1,
-
-    autoplay: {
-      delay: 1000,
-      disableOnIneraction: false,
-    },
-
-    speed: 1500,
-    slidesPerView: 1, //모바일 기준
-
-    breakpoints: {
-      450: { //min-width 기준
-        slidesPerView: 2,
-        spaceBetween: 10,
+    new Swiper(".history_con", {
+      autoHeight: true,
+      loop: true,
+      clickable: true,
+      autoplay: { delay: 1000, disableOnInteraction: false },
+      speed: 1500,
+      slidesPerView: 1,
+      breakpoints: {
+        450: { slidesPerView: 2, spaceBetween: 10 },
+        650: { slidesPerView: 3, spaceBetween: 10 },
+        1200: { slidesPerView: 4, spaceBetween: 10 },
       },
-      650: { //min-width 기준
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1200: { //min-width 기준
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-
-  });
-
-  //  계좌 번호 복사시  모달창
-  $(".copy_pop").hide();
-  $("ul.box_area li > .flex > button.copy_btn").click(function () {
-    $(".copy_pop").stop().fadeIn(
-
-      setTimeout(function () {
-        testEle = $('.copy_pop');
-        testEle.fadeOut();
-      }, 1000))
-  })
-
-  //  상품 구매 시 모달창
-  $(".modal_pop").hide();
-
-  $(".apply-btn").click(function () {
-    $(".modal_pop").stop().fadeIn();
-  })
-  $(".btn > .del_pop").click(function () {
-    $(".modal_pop").stop().fadeOut();
-  })
-
-  // 이자율 계산 모달창
-  $(".pop_btn").click(function () {
-    $(".modal_wrap").stop().fadeIn()
-  })
-  $(".btn_area button").click(function () {
-    $(".modal_wrap").stop().fadeOut()
-  })
-
-  //  결제 완료시 모달창
-  $(".success_pop").hide();
-
-  $(".btn > .complete").click(function () {
-    $(".success_pop").stop().fadeIn();
-  })
-  $(".okay").click(function () {
-    $(".success_pop, .modal_pop").stop().fadeOut();
-  })
-
-  //  계좌 번호 복사시  모달창
-  $(".copy_pop").hide();
-  $("ul.box_area li > .flex > button.copy_btn").click(function () {
-    $(".copy_pop").stop().fadeIn(
-
-      setTimeout(function () {
-        testEle = $('.copy_pop');
-        testEle.fadeOut();
-      }, 1000))
-  })
-
-  // 전체동의
-  const agreeAllCheckbox = document.querySelector(".agree_all");
-  const agreeItemCheckboxes = document.querySelectorAll(".agree_item");
-  const selectAllMktCheckbox = document.querySelector(".select_all_mkt");
-  const mktItemCheckboxes = document.querySelectorAll(".mkt_item");
-
-  // 전체 동의 체크박스 클릭 시
-  agreeAllCheckbox.addEventListener("change", function () {
-    agreeItemCheckboxes.forEach(checkbox => {
-      checkbox.checked = agreeAllCheckbox.checked;
     });
-    selectAllMktCheckbox.checked = agreeAllCheckbox.checked;
-    mktItemCheckboxes.forEach(checkbox => {
-      checkbox.checked = agreeAllCheckbox.checked;
+  }
+
+  // ✅ 모달 show/hide 함수
+  function showModal(element) {
+    if (element) {
+      element.style.display = "block";
+      setTimeout(() => (element.style.opacity = "1"), 10);
+    }
+  }
+
+  function hideModal(element) {
+    if (element) {
+      element.style.opacity = "0";
+      setTimeout(() => (element.style.display = "none"), 500);
+    }
+  }
+
+  // ✅ 인증하기 모달
+  const btnSubmit = document.querySelector(".btn_submit");
+  const modal = document.querySelector(".ctf_num");
+  const modalContent = modal?.querySelector("dl");
+
+  if (btnSubmit && modal && modalContent) {
+    btnSubmit.addEventListener("click", function () {
+      const rect = btnSubmit.getBoundingClientRect();
+      modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
+      modalContent.style.left = "50%";
+      modalContent.style.transform = "translateX(-50%)";
+      modal.style.display = "block";
+    });
+  }
+
+  // ✅ 이벤트 모달 팝업
+  document.querySelectorAll(".popup-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const popup = document.querySelector(".popup");
+      if (popup) hideModal(popup);
     });
   });
 
-  // 개별 체크박스 클릭 시
-  agreeItemCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", function () {
-      agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
-        Array.from(mktItemCheckboxes).every(item => item.checked);
+  // ✅ jQuery가 있는 경우만 실행 (계좌번호 복사 모달 등)
+  if (window.jQuery) {
+    $(".copy_pop").hide();
+    $("ul.box_area").on("click", "button.copy_btn", function () {
+      $(".copy_pop").stop().fadeIn();
+      setTimeout(() => $(".copy_pop").fadeOut(), 1000);
     });
-  });
 
-  // 선택적 마케팅 동의 전체 체크박스 클릭 시
-  selectAllMktCheckbox.addEventListener("change", function () {
-    mktItemCheckboxes.forEach(checkbox => {
-      checkbox.checked = selectAllMktCheckbox.checked;
+    $(".modal_pop").hide();
+    $(".apply-btn").click(() => showModal($(".modal_pop")[0]));
+    $(".btn > .del_pop").click(() => hideModal($(".modal_pop")[0]));
+
+    $(".pop_btn").click(() => showModal($(".modal_wrap")[0]));
+    $(".btn_area button").click(() => hideModal($(".modal_wrap")[0]));
+
+    $(".success_pop").hide();
+    $(".btn > .complete").click(() => showModal($(".success_pop")[0]));
+    $(".okay").click(() => $(".success_pop, .modal_pop").stop().fadeOut());
+  }
+
+  // ✅ 전체동의 체크박스
+  const agreeAllCheckbox = document.querySelector("#agree_all");
+  const agreeItems = document.querySelectorAll(".agree_item");
+
+  if (agreeAllCheckbox && agreeItems.length > 0) {
+    agreeAllCheckbox.addEventListener("change", function () {
+      agreeItems.forEach(checkbox => (checkbox.checked = agreeAllCheckbox.checked));
     });
-    agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
-      Array.from(mktItemCheckboxes).every(item => item.checked);
-  });
 
-  // 개별 마케팅 체크박스 클릭 시
-  mktItemCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", function () {
-      selectAllMktCheckbox.checked = Array.from(mktItemCheckboxes).some(item => item.checked);
-      agreeAllCheckbox.checked = Array.from(agreeItemCheckboxes).every(item => item.checked) &&
-        Array.from(mktItemCheckboxes).every(item => item.checked);
+    agreeItems.forEach(checkbox => {
+      checkbox.addEventListener("change", function () {
+        agreeAllCheckbox.checked = [...agreeItems].every(item => item.checked);
+      });
     });
-  });
+  }
 
-  // 투자전략 페이지 
-  // - 상단 텍스트 애니메이션 글자 / 한글자씩 떨어지게 - 특정 굵게
-  var typingIdx = 0;
-  var typingSpeed = 130; // 타이핑 속도 (ms)
-  var delayBeforeFade = 1000; // 타이핑이 끝난 후 유지 시간 (1초)
-  var fadeSpeed = 500; // fade 효과 속도 (0.5초)
-  var delayBeforeRestart = 500; // 삭제 후 다시 시작하기 전 대기 시간 (0.5초)
-  var typingTimer;
+  // ✅ 타이핑 애니메이션
+  let typingIdx = 0;
+  const typingSpeed = 130;
+  const delayBeforeFade = 1000;
+  const fadeSpeed = 500;
+  const delayBeforeRestart = 500;
+  let typingTimer;
+  let isTyping = false;
 
   function getTypingText() {
     return window.innerWidth <= 768
@@ -190,50 +117,50 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function formatText(text) {
-    return text.replace(/<br>/g, "¶") // 줄바꿈을 특수문자로 변경
-      .split("") // 한 글자씩 나누기_ 
-      // split("/?=<br>/")로 처리하면 한글자씩 나타나는 효과가 나타나지 않게 됨 
-      // - <br>의 기능 삭제 == 하나의 텍스트로 인식 
-      .map(char => {
-        if (char === "¶") return "<br>"; // 다시 <br> 기능 살리기
-        return (char === "D" || char === "Y" || char === "S")
-          ? `<span class="bold">${char}</span>`
-          : char;
-      });
+    return text.replace(/<br>/g, "¶").split("").map(char => {
+      if (char === "¶") return "<br>";
+      return (char === "D" || char === "Y" || char === "S") ? `<span class="bold">${char}</span>` : char;
+    });
   }
 
-  var typingTxt = getTypingText();
-  var formattedTxt = formatText(typingTxt);
+  function startTypingAnimation() {
+    const typingElement = document.querySelector(".typing");
+    if (!typingElement || isTyping) return; // 요소 없으면 실행 X
 
-  function typing() {
-    if (typingIdx < formattedTxt.length) {
-      $(".typing").html(formattedTxt.slice(0, typingIdx + 1).join(""));
-      typingIdx++;
-      typingTimer = setTimeout(typing, typingSpeed);
-    } else {
-      setTimeout(() => {
-        $(".typing").fadeOut(fadeSpeed, function () {
-          $(this).empty().fadeIn(0);
-          typingIdx = 0;
-          setTimeout(typing, delayBeforeRestart);
-        });
-      }, delayBeforeFade);
-    }
-  }
-
-  // 초기 실행
-  $(".typing").empty();
-  typing();
-
-  // 화면 크기 변경 시 타이핑 효과 초기화
-  $(window).resize(function () {
-    clearTimeout(typingTimer); // 기존 타이머 초기화
+    isTyping = true;
+    let typingTxt = getTypingText();
+    let formattedTxt = formatText(typingTxt);
     typingIdx = 0;
-    typingTxt = getTypingText();
-    formattedTxt = formatText(typingTxt);
-    $(".typing").empty();
+
+    function typing() {
+      if (typingIdx < formattedTxt.length) {
+        typingElement.innerHTML = formattedTxt.slice(0, typingIdx + 1).join("");
+        typingIdx++;
+        typingTimer = setTimeout(typing, typingSpeed);
+      } else {
+        setTimeout(() => {
+          typingElement.style.opacity = "0";
+          setTimeout(() => {
+            typingElement.innerHTML = "";
+            typingElement.style.opacity = "1";
+            isTyping = false;
+            startTypingAnimation();
+          }, delayBeforeRestart);
+        }, delayBeforeFade);
+      }
+    }
+
+    typingElement.innerHTML = "";
     typing();
-  });
+  }
 
-
+  const typingElement = document.querySelector(".typing");
+  if (typingElement) {
+    startTypingAnimation();
+    window.addEventListener("resize", function () {
+      clearTimeout(typingTimer);
+      isTyping = false;
+      startTypingAnimation();
+    });
+  }
 });
