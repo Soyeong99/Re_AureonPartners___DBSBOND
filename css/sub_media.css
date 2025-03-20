@@ -1,0 +1,594 @@
+@charset "utf-8";
+
+@media (max-width: 1620px) {
+    /* sub_01  */
+    #about .img { height: 650px; }
+    .right_box .logo { width: 300px; height: 60px; }
+    .right_box .tit_txt { font-size: 3.3rem; margin: 50px 0 40px; }
+    .right_box .muted_txt { font-size: 2.2rem; font-weight: 500; }
+
+    #vision .txt_box h4 { font-size: 4.5rem; }
+    #vision .txt_box p { font-size: 1.8rem; margin: 50px 0; }
+
+    /* sub_03 */
+    #top_tit_box { height: 430px; }
+    .txt_wrap h2 { font-size: 4.5rem; }
+    .txt_wrap h2+p {  font-size: 2.8rem; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 70%; }
+    ul.prd_info li p, ul.prd_info li span, ul.prd_info li strong { font-size: 1.6rem; }
+    .btm_card { width: 31%; padding: 10px; }
+}
+
+@media (max-width: 1300px) {
+
+    /* sub_01  */
+    .right_box { width: 61.5%;  }  
+    .right_box .tit_txt { font-size: 3rem; }
+    .right_box .muted_txt { font-size: 2rem; }
+
+    /* sub_02  */
+    #invest_info { padding-bottom: 0; }
+    #invest_info .sub_inner { position: relative; padding: 0 2%;}
+    .img_box { width: 100%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/sub/invest_info.jpg) no-repeat bottom/ cover ;} 
+
+    .tit_box { position: absolute; top: 12.03%; color: #fff; padding: 20px 30px;}
+    .tit_box h4 { font-size: 2.8rem; }
+    .tit_box h4+p { font-size: 2.2rem; }
+    .tit_box span { font-size: 2rem; } 
+
+    .info_box { margin-top: 30px; }
+    .info_txt { width: 100%; }
+    .info_box ul li { padding:  0 8px; }
+
+    .con_tit { gap: 3px; }
+    .con_tit h5 { font-size: 2.2rem; }
+    .info_box ul { padding: 0; }
+    .info_box ul li {  padding: 0 6px 0 20px; }
+    .txt_box p { font-size: 1.4rem; }
+
+    .content .img { height: 260px; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 80%; }
+    .prd_img { width: 70%; height: 200px; }
+    .prd_info_wrap { width: 90%; }
+    ul.prd_info { padding: 0 60px; }
+
+    /* event */
+    .evt_line {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+}
+
+@media (max-width: 1100px) {
+
+    /* sub_01  */
+    #about .img { height: 580px; }
+    .right_box .tit_txt { font-size: 2.8rem; }
+
+    .history_con .swiper-slide { height: 700px !important; }
+
+    /* sub_03 */
+    .txt_wrap { width: 90%; }
+    .txt_wrap h2 { font-size: 3.8rem; line-height: 1.2; }
+    .txt_wrap h2+p { font-size: 2.4rem; }
+    #top_tit_box { height: 400px; }
+    .txt_wrap h2 { margin-bottom: 20px; }
+    .txt_wrap h2+p {  font-size: 2.6rem; }
+    
+    #banner { padding: 80px 0 90px; }
+    .prd_grid  { gap: 60px; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 90%; }
+    .txt_box > input[type=text] { width: 45%; font-size: 3.5rem;}
+    .prd_info_wrap { padding: 20px 30px; }
+    .prd_card > .txt_box { margin: 11%  0; }
+    
+    .pop_wrap { max-width: 780px ; }
+
+    /* sub_04 */
+    .evt_line { width: 90%; } 
+}
+
+@media (max-width: 980px) {
+
+    /* sub_01  */
+    #about { padding: 80px 0; }
+    #about .img {height: 500px; }
+    .right_box .tit_txt { font-size: 2.6rem; margin: 40px 0 30px;}
+    
+    .history_con .swiper-slide h4 { font-size: 2rem; }
+    .history_con .swiper-slide span { font-size: 2rem; }
+    .history_con .swiper-slide p { font-size: 5rem; }
+
+    #vision .img_box { height: 300px; } 
+    #vision .txt_box h4 { font-size: 4rem; margin-bottom: 20px;}
+    #vision .txt_box p { font-size: 1.6rem; margin: 20px 0; }
+    
+    #vision .en_txt_box h4 { font-size: 3.6rem; }
+    #vision .en_txt_box p { font-size: 1.4rem; margin: 20px 0; }
+
+    #history .sub_inner { padding: 100px 0; }
+    .history_con .swiper-slide { height: 600px !important; padding: 30px 25px; }
+
+    /* sub_03 */
+    .price_con > p { font-size: 1.8rem; }
+    ul.prd_info { padding: 0 50px; }
+    .prd_img { width: 80%; height: 180px; }
+    a.go_form { padding: 5px 48px 4px;  font-size: 1.6rem; }
+    /* .card_info h5 { font-size: 1.8rem; } */
+    button.pop_btn { font-size: 1.8rem; }
+    .txt_box > span.txt { font-weight: 600; font-size: 2rem; }
+
+    /* sub_03_01 */
+    .card_info h5+span { font-size: 1.4rem; }
+    button.pop_btn { padding: 5px; }
+    .card_info h5::before { height: 24px; }
+    .txt { font-size: 2.2rem; }
+    .prd_info_wrap { font-size: 1.6rem; }
+    .btm_card { width: 40%; }
+
+    .result { padding: 3px; }
+
+    /* sub_04 */
+    .event_wrap .inner { padding: 30px 5% 60px; }
+    .evt_line { width: 100%; }
+
+    /* modal */
+    .modal dl { width: 70%; padding: 25px 20px; }
+    div.modal dt > strong { font-size: 1.8rem;  }
+    .modal .okay { padding: 2px 30px; margin: 0;}
+
+    .en_history_con .swiper-slide span { font-size: 1.8rem; }
+}
+
+@media (max-width: 890px) {
+
+    /* sub_01 */
+    .history_con .swiper-slide h4 { font-weight: 700; }
+    .history_con .swiper-slide p { font-size: 4rem; }
+    .br { display: none; }
+
+    /* sub_02  */
+    #tit_box { height: 280px; } 
+    #tit_box .sub_inner, .animate_txt  { height: 100%; }
+    span.typing { font-size: 3rem; }
+    .bold { font-size: 3.5rem; }
+
+    #invest_contents .content { gap: 30px; }
+    .content h3+p { font-size: 1.6rem; }
+    #vision .sub_inner { justify-content: normal; gap: 5%; }
+
+    /* sub_03 */
+    #banner {padding: 80px 2%; }
+    .txt_wrap h2 { font-size: 4rem; }
+    .txt_wrap h2+p { font-size: 2.4rem; }
+    .prd_grid  { gap: 30px; }
+    .card_tit > p { font-size: 3.6rem; }
+    .price_con  { padding: 20px ; }
+
+    .prd_btn { padding: 20px 0 30px; }
+
+    /* sub_03_01 */
+    .prd_he { height: 570px; }
+    .detail_prd > .content h3 { font-size: 2.6rem; font-weight: 600; }
+    ul.prd_info li { margin-bottom: 20px; }
+    ul.prd_info { padding: 0 30px; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { max-width: 700px; }
+
+    .pop_wrap { max-width: 90% ; }
+    p.sec_tit { font-size: 2.4rem; }
+    ul.box_area { padding: 6px 20px; }
+    ul.box_area li { font-size: 1.8rem; margin: 8px 0; }
+    div.agree_list { padding: 12px 10px 16px !important; }
+    
+    .pop_wrap { padding: 50px; }
+    p.sec_tit { font-size: 2.4rem; }
+    .top_tit .img { width: 85px; height: 85px; }
+    .top_tit .img+p { margin-top: 20px; }
+    .btn > .del_pop { padding: 8px 30px; }
+    .btn > .complete { padding: 8px 80px; }
+}
+
+@media (max-width: 810px) {
+    /* sub_03 */
+    .txt_wrap { width: 90%; }
+    .txt_wrap h2 { font-size: 3.8rem; }
+    .card_tit > p { font-size: 3.2rem; }
+    .percent_area { font-size: 1.4rem; }
+    .prd_content .more { padding: 6px 28px; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 93%; gap: 20px; }
+    .prd_img { height: 160px; }
+    .card_info h5 { font-size: 1.8rem; font-weight: 600; }
+    .prd_card > .txt_box { margin: 9% 0; }
+    .txt_box > input[type=text] { width: 42%; font-size: 3.2rem; }
+    .card_info h5::before { width: 2.5px; height: 20px;}
+    .btm_card { margin: 20px auto 40px; }
+    .prd_info_wrap { font-size: 1.4rem; }
+    .col span.masked { padding-left: 0; }
+
+    /* modal */
+    .mail_alarm dl dd.muted_txt  { font-size: 1.6rem; }
+    
+    /* sub_03_01 */
+    .rate_modal_inner { width: 90%; }
+    .result { padding: 3px; }
+    .result p { margin-top: 3px;}
+}
+
+    @media (max-width: 768px) {
+    .animate_txt  { position: relative; margin: 0 auto; }
+    span.typing { line-height: 1.2; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    }
+
+@media (max-width: 765px) {
+    /* sub_01 */
+    #about .img { height: 380px; }
+    .right_box .tit_txt { font-size: 2.4rem; }
+    .right_box .muted_txt { font-size: 1.8rem; }
+    #about .inner { gap: 3.5%; }
+    .history_con .swiper-slide { padding: 20px 15px; height: 560px !important; }
+    #vision .img_box { height: 280px; }
+    #vision .txt_box h4 { font-size: 3.6rem; }
+    #vision .en_txt_box h4 { font-size: 3.2rem; }
+
+    /* sub_02 */
+    .content .img { height: 200px; }
+    .content h3 { font-size: 2.8rem; }
+    .img_box { height: 280px; }
+    .tit_box { top: 7.03%; } 
+    .tit_box h4+p { font-size: 2rem; }
+    .tit_box span { font-size: 1.8rem; }
+
+    .en_invest .img_box { height: 270px; }
+    .en_invest .tit_box h4+p { font-size: 1.8rem; }
+    .en_invest .tit_box span { font-size: 1.6rem; }
+    .en_invest .con_tit h5 { font-size: 2.2rem; }
+    .en_invest .content h3 { font-size: 2.8rem; line-height: 1.3; }
+    .en_invest .content h3+p { font-size: 1.5rem; }
+
+    /* sub_03 */
+    #top_tit_box { height: 350px; } 
+    .txt_wrap h2 { font-size: 3.5rem; }
+    .txt_wrap h2+p { font-size: 2.2rem; font-weight: 500; }
+    .card_tit  { height: 90px; }
+    .card_tit > p { font-size: 3rem; }
+    .percent_area { padding: 0 15px 20px; } 
+    .price_con { padding: 12px; }
+    #banner {padding: 50px 2%; }
+    .price_con > p { font-size: 1.6rem; }
+    .prd_btn { padding: 10px 0 20px; }
+    .prd_content .more { font-size: 1.4rem; padding: 4px 26px ; }
+
+    /* sub_03_01 */
+    #choice_nation { padding: 30px 0 50px; }
+    #choice_nation h2 { padding: 30px 0 20px; }
+    .grid_wrap { width: 76%; grid-template-columns: repeat(1, 1fr); }
+    .grid_wrap > div > img { display: block; width: 80%; height: 100%; margin: 0 auto; }
+    ul.prd_info { padding: 0 60px; }
+    .btm_card { width: 80%; }
+    .prd_info_wrap  { width: 93%; padding: 20px 16px; }
+    .prd_he+div { order: 1; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { max-width: 600px; }
+    .form_wrap h2 { font-size: 3rem ; }
+    .form_wrap h2>span { margin-bottom: 20px; }
+}
+
+@media (max-width: 680px) {
+    /* sub_01  */
+    #about .inner { display: block; }
+    #about .img { width: 100%; height: 320px;}
+    #about .img .m_img {display: block;}
+    #about .img .img_pc { display: none; }
+    .right_box { width: 100%; margin-top: 30px; }
+    .right_box .logo { width: 200px; height: 40px; }
+    .right_box .tit_txt { font-size: 2.2rem; font-weight: 500 ; margin: 20px 0 12px;}
+    .right_box .muted_txt { font-size: 1.6rem; }
+
+    #vision .sub_inner { padding: 60px 5%; }
+    #vision .img_box { width: 100%;}
+    #vision .txt_box { width: 100%; padding: 25px 2%; }
+
+    /* sub_02  */
+    #invest_contents { padding: 40px 0; }
+    .info_box ul li { width: 100%; margin: 0 auto 20px; display:flex; align-items: center; justify-content: space-between;}
+    /* .info_box ul li .con_tit { width: 30%; margin: 0;} */
+    .con_tit .icon { width: 20px; height: 20px; }
+
+    .info_box ul li .txt_box { width: 70%; }
+    .txt_box p { font-size: 1.6rem; }
+    .content:nth-child(even) .txt_box { order: 2;}
+    .info_box li:first-child::before, .info_box li:last-child::after {display: none; } 
+
+    #invest_contents .content >  div { width: 100%; }
+
+    /* sub_03_01_00 */
+    .form_wrap h2 { font-size: 2.8rem; }
+
+    /* sub_03_01_00 */
+    .pop_wrap { padding: 30px; }
+    p.sec_tit, .top_tit .img+p { font-size: 2rem; margin-bottom: 6px; }
+    ul.box_area li { font-size: 1.6rem; }
+    .btn { gap: 12px }
+    .btn > .complete { padding: 6px 65px; }
+    .btn > .del_pop { padding: 5px 22px; }
+    
+    /* event */
+    /* .evt_line li p:nth-of-type(1){ font-size: 1.6rem; } */
+}
+
+@media (max-width: 660px) {
+    
+    /* sub_02 */
+    .en_invest .tit_box { top: 4.03%; }
+
+    /* sub_03 */
+    #top_tit_box { height: 300px; }
+    .txt_wrap h2+p { font-size: 2rem; } 
+    #prd_list > .sub_inner { padding: 0 10%; }
+    .prd_grid { display: block;}
+    .prd_content { margin-bottom: 50px; }
+    .price_con > p { font-size: 1.8rem; }
+    .prd_content .more { font-size: 1.8rem; padding: 8px 32px; }
+    .prd_btn { padding: 20px 0 30px; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { padding: 40px 45px; max-width: 500px; }
+}
+
+@media (max-width: 580px) {
+    /* sub_01 */
+    .right_box { width: 100%; margin-top: 30px ;}
+    .right_box .muted_txt { display: none; }
+    .right_box .tit_txt { margin: 20px 0 30px;  font-size: 2rem; margin: 20px 0 30px;} 
+
+    /* sub_02  */
+    #invest_contents .content { margin-bottom: 30px; }
+    .content h3 { font-size: 2.4rem; margin-bottom: 12px;}
+    
+    #invest_info { padding: 40px 0; }
+    .en_invest .info_box {margin-top: 12px;  }
+    .en_invest .img_box { height: 225px; }
+    .en_invest .info_box ul { gap: 0; }
+    .en_invest .tit_box { padding: 20px 12px; }
+    .en_invest .tit_box h4+p { margin: 10px 0; }
+    .en_invest .tit_box span { display: none; }
+    .en_invest .tit_box { top: 11.03%; } 
+    
+    /* sub_03_01 */
+    #choice_nation { padding: 20px 0 40px; }
+    #choice_nation h2 { padding: 13px 0 20px; }
+    .txt_box > input[type=text] { font-size: 3rem; padding: 0;}
+    button.pop_btn { font-size: 1.6rem; }
+
+    .rate_modal_inner > table > thead th { padding: 6px 14px; font-size: 1.6rem; }
+    .rate_modal_inner > table > tbody td { font-size: 1.5rem; }
+    .result { font-size: 1.8rem; padding: 3px 0; }
+    .btn_area button { padding: 10px 0; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { padding: 35px 40px; max-width: 450px; }
+    .form_wrap h2 { font-size: 2.6rem; }
+
+    .apply-btn { font-size: 1.8rem; padding: 6px; }
+    
+    .btn  { padding: 30px 0 0; }
+    .btn button { font-size: 1.8rem;}
+
+    .modal dl { width: 60%; padding: 20px; }
+    div.modal dt > strong { font-size: 1.6rem;  }
+    .modal .okay { font-size: 1.6rem; font-weight: 400;}
+
+    /* login */
+    .col { flex-direction: column; align-items: flex-start !important; }
+    
+    /* modal */
+    .modal dd>a.okay { font-size: 1.6rem; padding: 4px 28px; }
+
+    /* event */
+    .evt_line { gap: 40px; }
+    .event_in .evt_line {grid-template-columns: repeat(1, 1fr);}
+    .evt_line li a { margin: 0 auto; width: 80%; }
+}
+
+@media (max-width: 520px) {
+
+     /* sub_01  */
+    #about { padding: 20px 0; }
+    #about .img { height: 280px; }
+
+    /* sub_02 */
+    .img_box { height: 250px; }
+    .tit_box { top: 4.03%; }
+    .tit_box h4+p { font-size: 1.8rem; }
+
+    .en_invest .tit_box h4+p { font-size: 1.6rem; font-weight: 500; }
+    .en_invest .con_tit h5 { font-size: 1.8rem; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 90%; }
+    ul.prd_info { padding: 0 40px; }
+    .c_price { margin-top: 40px; }
+    a.go_form { padding: 4px 38px 3px;  font-weight: 400; }
+    
+    /* sub_03_01_01 */
+    .modal dl { width: 80%; padding: 20px;}
+    .tit_box span { font-size: 1.6rem; }
+}
+
+@media (max-width: 490px) {
+    
+    /* join */
+    .col span.masked { font-size: 1.2rem; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { max-width: 400px; padding: 25px 30px; }
+    .user_col span { font-size: 1.6rem; }
+    select { font-size: 1.4rem; }
+    .apply-btn { padding: 5px; }
+
+    .top_tit .img { width: 75px; height: 75px; }
+    p.sec_tit, .top_tit .img+p { font-size: 1.8rem; }
+    ul.box_area li { font-size: 1.4rem; }
+
+    /* modal */
+    .modal  { font-size: 1.6rem; }
+}
+
+@media (max-width: 465px) {
+    /* sub_01 */
+    #about .img { height: 230px; }
+    .right_box .logo { width: 180px; }
+    #history .sub_inner { padding: 0;}
+    .right_box .tit_txt { font-size: 1.8rem; }
+    #vision .sub_inner { padding: 60px 5% 20px; }
+    #vision .img_box { height: 240px; }
+
+    .en_right_box .tit_txt { font-size: 1.6rem; font-weight: 400 ; }
+    #vision .en_txt_box h4 { font-size: 2.8rem; }
+    #vision .en_txt_box p { margin: 16px 0; }
+
+    /* sub_02 */
+    #invest_contents { padding: 0 0 40px; }
+
+    /* sub_03 */ 
+    #top_tit_box { height: 250px; margin: 16px 0 20px;} 
+    .txt_wrap h2 { font-size: 2.8rem; line-height: 1.2; }
+    .txt_wrap h2+p { font-size: 1.6rem; }
+  
+    .prd_content .more { font-size: 1.6rem; padding: 4px 24px; }
+    .prd_btn { padding: 10px 0 30px; }
+    .price_con > p { font-size: 1.6rem; }
+
+    .price_con > p > span { width: 100px; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 90%; }
+    .form_wrap h2 { font-size: 2.4rem; }
+    button.num { padding: 5px 6px 4px ; }
+    button.reset-btn {  width: 100%; }
+    span.muted { font-size: 1.2rem; }
+
+    .rate_modal_inner { padding: 35px 19px 35px; }
+    .rate_modal_inner > table > tbody td { font-size: 1.4rem; }
+    .rate_modal_inner > table > tbody td > span.rate_data { font-size: 1.6rem; }
+    .r_info_txt { width: 100%; padding: 12px 15px; font-size: 1.2rem; }
+    .btn_area button { font-size: 1.6rem; padding: 6px 0;  }
+
+    .pop_wrap { padding: 30px; }
+    .pop_sec .agree_list { padding: 5px 10px 0 10px; }
+    div.agree_list { padding: 0 10px 16px !important; }
+    .accordion__title, label.agree, .accordion__content { font-size: 1.4rem; }
+    .btn > .complete, .btn > .del_pop { font-size: 1.6rem; font-weight: 500; }
+    .check_on { width: 15px ; height: 15px; }
+
+}
+
+@media (max-width: 420px) {
+
+    /* sub_02  */
+    /* #tit_box { height: 220px; position: relative; }  */
+    span.typing { font-size: 2.4rem; }
+    .bold { font-size: 2.8rem; }
+
+    .tit_box h4 { font-size: 2.6rem; }
+    .tit_box h4+p { font-size: 1.6rem; margin: 20px 0 12px; }
+    .tit_box span { font-size: 1.6rem; }
+    /* span.typing { line-height: 1;  position: absolute; top: 50%; transform: translateY(-50%); } */
+    
+    .info_box { display: none; }
+    
+    .info_box ul li { padding: 0; }
+
+    #invest_contents .content { gap: 18px; }
+    .content h3 { font-size: 2.2rem; margin-bottom: 6px;}
+    .content h3+p { font-size: 1.4rem; }
+    
+    .en_invest .content h3 { font-size: 2.6rem; }
+    .en_invest .content h3+p { font-size: 1.4rem; }
+
+    /* sub_03 */
+    #prd_list { padding-bottom: 60px; }
+    .card_tit > p { font-size: 2.8rem ; }
+
+    .top_tit .img { width: 60px; height: 60px; }
+    ul.box_area li > .flex > button > img { width: 18px; height: 18px; }
+
+    /* sub_03_01 */
+    .grid_wrap { width: 90%; }
+    .prd_he { height: 500px; }
+    ul.prd_info li { margin-bottom: 10px; }
+    ul.prd_info li:not(:nth-child(3)) { display: block; }
+    .btm_card { width: 90%; }
+    ul.prd_info li p, 
+    ul.prd_info li span, 
+    ul.prd_info li strong { font-size: 1.4rem; }
+    .prd_info .bar_ademin, .prd_info .bar_ademin > span.bar {  height: 8px; }
+    .prd_info .dp_percent, 
+    .link_area + em { font-size: 1.2rem; }
+
+    .rate_modal_inner  { padding: 22px 6px ; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { max-width: 350px; }
+    .form_wrap h2 { font-size: 2.6rem; }
+    .form_wrap h2>span { margin-bottom: 12px; }
+    .input-group label { gap: 3px; }
+    .user_col span.masked { font-size: 1rem; }
+    .text_id { margin-bottom: 10px; }
+    .id_first { width: 40px !important; }
+    input[type=password], input[type=text], input[type=number], input[type=email], input[type=tel] 
+    { margin: 0; font-size: 1.4rem; }
+    input.value { font-size: 1.8rem; }
+
+    .pop_wrap { padding: 20px 10px; }
+    .top_tit { margin-bottom: 25px; } 
+    .btn { padding: 20px 0 0; }
+    .btn > .complete, .btn > .del_pop { padding: 6px 30px; font-weight: 400; }
+
+    /* login */
+    .col span{padding-left: 5px;}
+    .col span{font-size: 13px; width: 30%;}
+
+    /* modal */
+    .mail_alarm dl dd.muted_txt  { font-size: 1.4rem; }
+
+}
+
+@media (max-width: 360px) {
+
+    /* sub_02 ?? */
+    #about .img { height: 200px; }
+
+    /* sub_03 */
+    .price_con > p { font-size: 1.4rem; }
+    .percent { font-size: 1.2rem; }
+    .prd_btn { padding: 10px 0 20px; }
+    .prd_content .more  { font-size: 1.4rem; }
+
+    /* sub_03_01_00 */
+    .form_wrap  { max-width: 90%; padding: 20px 30px;}
+    .form_wrap h2 { font-size: 2.2rem; }
+    .form_wrap h2>span { font-size: 1.2rem; font-weight: 500;}
+    .user_col span { font-size: 1.4rem; }
+    .c_price  { margin-top: 30px; }
+    select { padding: 10px; font-size: 1.2rem; }
+    .id_first { width: 28px !important; }
+    .btn-group { grid-template-columns: repeat(2, 1fr); position: relative; padding-bottom: 33px; }
+    button.reset-btn { width: 100%; position: absolute; width: 50%; left: 50%; bottom: 0; transform: translateX(-50%); }
+    .amount-container { margin: 20px auto 0; } 
+
+    /* login */
+    .btn_final { padding: 40px 0 60px;}
+    .btn_final>a { padding: 3px 40px ; font-size: 1.6rem; }
+}
