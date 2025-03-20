@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBS : Trusted as the World's Best Bond | DBS Bond</title>
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/media.css">
+  <link rel="stylesheet" href="../css/sub_media.css">
+
+  <!-- aos / boot -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- 아코디언 -->
+  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+
+  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+  <script defer src="../js/swiper-bundle.min.js.js"></script>
+
+  <!-- js -->
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+
+    <!-- header -->
+    <header id="header">
+
+      <h1><a href="../index.html"></a></h1>
+
+      <nav>
+        <ul class="gnb">
+          <li><a href="sub_01.html">회사소개</a></li>
+          <li><a href="sub_02.html">투자전략</a></li>
+          <li><a href="sub_03.html">투자상품</a></li>
+          <li><a href="sub_04.html">이벤트</a></li>
+          <li><a href="#none">고객지원
+              <span class="bi bi-chevron-down show"></span>
+            </a>
+            <ol class="depth2">
+              <li><a href="sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub_05_02.html">공지사항</a></li>
+              <li><a href="sub_05_03.html">1:1문의</a></li>
+            </ol>
+          </li>
+        </ul>
+
+        <ol class="util">
+          <li>
+            <a href="#none">마이페이지</a>
+            <ol class="u_depth2">
+              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+          </li>
+
+          <li><a href="../en/index.html">로그아웃</a></li>
+
+          <li class="note_alarm">
+            <a href="../a_login/mail.html">
+              <span>내 쪽지함</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="ham bi bi-list"></div>
+
+      <div class="mgnb_wrap">
+
+        <div class="bi bi-x-lg mgnb_close"></div>
+        <div class="mgnb_logo"></div>
+
+        <ul class="mgnb">
+          <li><a href="sub_01.html">회사소개</a></li>
+          <li><a href="sub_02.html">투자전략</a></li>
+          <li><a href="sub_03.html">투자상품</a></li>
+          <li><a href="sub_04.html">이벤트</a></li>
+          <li><a href="#none">고객지원
+              <span class="bi bi-chevron-down show"></span>
+            </a>
+            <ol class="mdepth2">
+              <li><a href="sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="sub_05_02.html">공지사항</a></li>
+              <li><a href="sub_05_03.html">1:1문의</a></li>
+            </ol>
+          </li>
+        </ul>
+
+        <ul class="m_util">
+          <li>
+            <a href="#none">마이페이지</a>
+
+            <ol class="u_depth2 mu_depth2">
+              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+            </ol>
+
+          </li>
+
+          <li><a href="../en/index.html">로그아웃</a></li>
+          <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
+        </ul>
+
+      </div>
+    </header>
+
+    <!-- main -->
+    <main id="main">
+
+      <!-- 투자자 정보 입력란 -->
+      <div class="form_wrap">
+
+        <h2>투자자 정보
+          <span>*는 필수 입력 항목입니다.</span>
+        </h2>
+
+        <!-- 투자자 인적사항 입력란 입니다 -->
+        <div class="user_info_warp">
+
+          <!-- 사용자가 선택한 채권 정보 / 수정 불가능한 영역입니다 -->
+          <div class="choiced user_col">
+            <span>선택한 채권</span>
+            <label for="prd_name">
+              <input type="text" id="prd_name" value="USD 채권" readonly>
+            </label>
+          </div>
+
+          <div class="text_id user_col">
+            <span>이름
+              <small>*</small>
+            </span>
+            <label for="name">
+              <input type="text" id="name">
+            </label>
+          </div>
+
+          <div class="user_col ">
+            <span>생년월일
+              <small>*</small>
+            </span>
+
+            <div class="b_group input-group">
+              <label for="birth">
+                <input type="text" id="birth" class="birth-input" maxlength="6" placeholder="YYMMDD">
+              </label>
+              -
+              <label>
+                <input type="text" class="id-first" maxlength="1" placeholder="X">
+                <span class="masked">●●●●●●</span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- user_col -->
+        <div class="c_period user_col">
+          <span>가입기간 선택
+            <small>*</small>
+          </span>
+          <select id="month">
+            <option value="">가입기간을 입력해주세요.</option>
+            <option value="month_6">6개월</option>
+            <option value="month_12">12개월</option>
+            <option value="month_18">18개월</option>
+            <option value="month_24">24개월</option>
+          </select>
+        </div>
+
+        <div class="c_price user_col">
+          <h2>가입 금액 입력
+            <span>*모든 채권의 최소 가입 금액은 100만원입니다.</span>
+          </h2>
+
+          <div class="amount-container">
+
+            <div class="col_value">
+              <span>가입금액</span>
+              <input type="text" class="value subscript" id="amount" value="0" readonly>
+              <span class="red">만원</span>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="num" onclick="changeAmount(100000)">+10만</button>
+              <button type="button" class="num" onclick="changeAmount(1000000)">+100만</button>
+              <button type="button" class="num" onclick="changeAmount(10000000)">+1000만</button>
+              <button type="button" class="num" onclick="changeAmount(-100000)">-10만</button>
+              <button type="button" class="num" onclick="changeAmount(-1000000)">-100만</button>
+              <button type="button" class="num" onclick="changeAmount(-10000000)">-1000만</button>
+              <div class="col_blank"></div>
+              <button class="reset-btn num" onclick="resetAmount()">
+                <i class="bi bi-arrow-clockwise"></i>
+                초기화
+              </button>
+            </div>
+            <button class="apply-btn">신청하기</button>
+          </div>
+        </div>
+
+        <!-- 상품 계좌 발급 창 -->
+        <div class="modal_pop">
+          <div class="pop_wrap">
+
+            <div class="top_tit">
+              <div class="img"></div>
+              <p>홍길동님 결제 계좌가 발급되었습니다.</p>
+            </div>
+
+            <div class="sec_01 pop_sec">
+              <p class="sec_tit">결제 정보</p>
+
+              <ul class="box_area">
+                <li>
+                  신청금액
+                  <span>1,000,000원</span>
+                </li>
+
+                <li>
+                  결제계좌
+                  <div class="flex">
+
+                    <!-- 계좌번호 복사하기 -->
+                    <button type="button" class="copy_btn">
+                      <img src="../img/sub/icon_copy.png" alt="계좌복사버튼" class="copy-btn" data-account="123-123-123">
+                    </button>
+                    <span>XX은행</span>
+                    <span class="account-number">123-123-123</span>
+                  </div>
+                </li>
+
+                <li>
+                  예금주
+                  <span>(주)홍길동</span>
+                </li>
+
+                <li>
+                  결제하실 금액
+                  <span>1,000,000원</span>
+                </li>
+              </ul>
+
+              <span class="muted">위에 지정된 계좌번호로 본인 명의로 입금하셔야 하며, <br>
+                입금 완료 후 결제 완료 하기 버튼을 누르셔야 정상 처리됩니다.</span>
+
+            </div>
+
+            <div class="sec_02 agree_form">
+              <p class="sec_tit">이용 약관</p>
+
+              <div class="accordion__li agree_list">
+
+                <label for="agree_all" class="agree">
+                  <input type="checkbox" id="agree_all" class="agree_all">
+                  <span class="check_on"></span>
+                  전체동의
+                </label>
+
+                <span class="muted">약관, 개인정보 수집 및 이용안내, 제3자 정보제공, 서비스 홍보 및 마케팅 활용에 모두 동의</span>
+              </div>
+
+              <span class="target" id="accordion"></span>
+              <ul class="accordion agree_wrap pop_sec">
+
+                <!-- 통합 이용 약관 동의-->
+                <li class="accordion__li agree_list">
+                  <span class="target" id="accordion1"></span>
+                  <a href="#accordion1" class="open-accordion" title="open">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">01</span> -->
+                        <h5 class="accordion__title">
+                          통합이용약관
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#accordion" class="close-accordion" title="close">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">01</span> -->
+                        <h5 class="accordion__title">
+                          통합이용약관
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <p class="accordion__content">
+                    1. 소개
+                    본 이용약관&#40;"약관"&#41;은 회사의 공식 홈페이지 그리고 회사가 제공하는 모든 서비스&#40;"서비스"&#41;의 이용조건을
+                    규정합니다.
+                    본 약관의 수락은 회사의 서비스를 이용함으로써 이루어 집니다. 서비스 이용 전 본 약관을 주의 깊게 읽어주시기 바랍니다.
+                    <br>
+                    2. 서비스 이용 조건
+                    본 서비스는 싱가폴을 포함한 다양한 국가의 거주자들을 대상으로 합니다. 각 국가의 법률 및 규제에 따라 서비스의 이용 조건이 달라질 수
+                    있습니다.
+                    서비스 이용자는 본인의 거주 국가의 법률을 준수할 책임이 있으며, 필요한 경우 회사 공식 홈페이지 고객지원을 통해 조언을 구해야 합니다.
+                    <br>
+                    3. 투자 위험 고지
+                    모든 투자에는 위험이 수반 됩니다. 과거의 성과는 미래의 결과를 보장하지 않습니다.
+                    투자 가치는 상승 또는 하락할 수 있으며, 투자한 원금을 잃을 수 도 있습니다.
+                    <br>
+                    4. 지적 재산권
+                    본 웹사이트 및 서비스에 포함된 모든 콘텐츠, 텍스트, 이미지, 로고, 트레이드 마크는 회사의 소유이며, 저작권 및 기타 지적 재산권 법에 의해
+                    보호
+                    됩니다.
+                    <br>
+                    5. 개인정보 보호
+                    회사는 고객의 개인정보 보호를 매우 중요하게 여깁니다. 회사의 개인정보 처리 방침은 별도 문서로 제공되며,
+                    서비스 이용 과정에서 수집되는 개인정보의 수집, 사용, 보호에 관한 사항을 규정합니다.
+                    <br>
+                    6. 책임의 제한
+                    회사는 서비스 이용으로 인해 발생할 수 있는 직접적, 간접적, 특별한 손해에 대해 책임을 지지 않습니다.
+                    이는 서비스의 사용 불가, 데이터 손실, 이익 손실을 포함하되 이에 국한되지 않습니다.
+                    <br>
+                    7. 약관의 변경
+                    회사는 본 약관을 수시로 변경할 권리를 보유 합니다. 변경된 약관은 웹 사이트에 게시될 예정이며, 서비스 이용의 계속은 변경된 약관의 수락으로
+                    간주
+                    됩니다.
+                    <br>
+                    8. 분쟁 해결
+                    본 약관 또는 서비스 이용과 관련된 분쟁은 회사의 소재지 법률에 따라 해결 됩니다.
+
+                    <br>
+                    본 이용약관은 서비스를 이용하는 모든 고객에게 공통적으로 적용 됩니다.
+                    서비스 이용 전, 모든 고객은 본 약관의 내용을 이해하고 동의해야 합니다.
+                  </p>
+
+                  <label for="agree_01" class="agree">
+                    <input type="checkbox" id="agree_01" class="agree_item">
+                    <span class="check_on"></span>
+                    통합 이용 약관 (필수)
+                  </label>
+                </li>
+
+                <!-- 개인 정보 수집 및 이용 정보 동의 -->
+                <li class="accordion__li agree_list">
+                  <span class="target" id="accordion2"></span>
+                  <a href="#accordion2" class="open-accordion" title="open">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">02</span> -->
+                        <h5 class="accordion__title">
+                          개인정보 수집 및 이용 제공 동의
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#accordion" class="close-accordion" title="close">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">02</span> -->
+                        <h5 class="accordion__title">
+                          개인정보 수집 및 이용 제공 동의
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <p class="accordion__content">
+                    본 개인정보 수집 및 이용 제공 동의서&#40;"동의서"&#41;는 &#40;이하 "회사"&#41;의 서비스 제공을 위해 필요한 고객의
+                    개인정보 수집 이용, 제공에 대한 조건을 규정 합니다. 본 동의서는 전 세계의 모든 고객에게 적용되며,
+                    서비스 이용을 위해 반드시 동의해야 합니다.
+                    <br>
+                    1. 개인정보의 수집 및 이용 목적
+                    회사는 다음의 목적을 위해 개인정보를 수집 및 이용합니다.
+                    <br>
+                    1&#41; 서비스 제공 및 개인 맞춤 서비스의 제공
+                    <br>
+                    2&#41; 회원 관리: 회원제 서비스 이용에 따른 본인확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용 방지,
+                    가입의사 확인, 연령 확인, 만족도 조사 등
+                    <br>
+                    3&#41; 마케팅 및 광고의 활용: 신규 서비스&#40;제품&#41; 개발 및 특화, 이벤트 등 광고성 정보 전달, 접속빈도 파악, 회원의
+                    서비스
+                    이용에 대한 통계
+                    <br>
+                    2. 수집하는 개인정보 항목
+                    회사는 서비스 제공을 위해 다음과 같은 개인정보를 수집 합니다.
+                    <br>
+                    1&#41; 필수항목: 이름, 생년월일, 국적, 연락처&#40;전화번호,이메일&#41;, 주소, 계좌정보, 서비스 이용 기록, 접속로그, 쿠키,
+                    접속
+                    IP 정보
+                    2&#41; 선택항목: 투자상품, 재무상태 정보, 기타 선택적으로 제공하는 정보
+                    <br>
+                    3. 개인정보의 보유 및 이용 기간
+                    회사는 개인정보 수집 및 이용 목적이 달성되면 해당 정보를 지체 없이 파기합니다.
+                    단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존 합니다.
+                    <br>
+                    1&#41; 보존 항목: 로그인 기록
+                    2&#41; 보존 기간: 1년
+                    <br>
+                    4. 개인정보의 제 3자 제공
+                    회사는 고객의 동의 없이 개인정보를 제 3자에게 제공하지 않습니다. 다만, 다음의 경우 예외로 합니다.
+                    <br>
+                    1&#41; 법률에 근거한 요구가 있는 경우
+                    <br>
+                    2&#41; 서비스 제공에 따른 요금 정산을 위해 필요한 경우
+                    <br>
+                    3&#41; 통계작성, 학술연구, 또는 시장조사를 위해 필요한 경우 &#40;단, 개인을 식별할 수 없는 형태로 제공&#41;
+                    <br>
+                    5. 동의 철회 권리
+                    고객은 언제든지 개인정보 수집 및 이용에 대한 동의를 철회할 수 있습니다. 동의를 철회 하시려면 회사의 고객 서비스 센터로 연락 하시면 됩니다.
+                    단, 동의 철회는 서비스 제공에 필수적인 정보의 수집 및 이용에 영향을 줄 수 있습니다.
+                    <br>
+                    6. 개인정보 보호를 위한 회사의 노력
+                    회사는 고객의 개인정보를 보호하기 위해 최선을 다하고 있으며, 개인정보 보호 관련 법률 및 규정을 준수합니다.
+                  </p>
+
+                  <label for="agree_02" class="agree">
+                    <input type="checkbox" id="agree_02" class="agree_item">
+                    <span class="check_on"></span>
+                    개인정보 수집 · 이용 및 제공 동의 (필수)
+                  </label>
+                </li>
+
+                <!-- 고객 자금 보호 정책  -->
+                <li class="accordion__li agree_list">
+
+                  <span class="target" id="accordion3"></span>
+                  <a href="#accordion3" class="open-accordion" title="open">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">03</span> -->
+                        <h5 class="accordion__title">
+                          고객 자금 보호 정책
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#accordion" class="close-accordion" title="close">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">03</span> -->
+                        <h5 class="accordion__title">
+                          고객 자금 보호 정책
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <p class="accordion__content">
+                    1. 자금 안전 보장
+                    <br>
+                    고객의 자금을 최대한 안전하게 보호하기 위해 노력합니다.
+                    <br>
+                    고객의 자금은 회사의 엄격한 재무 관리 및 감독을 받으며, 안전한 금융 시스템 내에 안전하게 보관됩니다.
+                    <br>
+                    2. 리스크 관리
+                    <br>
+                    고객의 투자 리스크를 최소화하기 위해 효과적이고 신뢰할 수 있는 리스크 관리 시스템을 운영합니다.
+                    <br>
+                    투자 리스크는 전문적인 투자 전략 및 포트폴리오 다변화를 통해 최소화됩니다.
+                    <br>
+                    3. 보증금 보호
+                    <br>
+                    고객의 보증금을 보호하기 위해 미국 금융 규제 기관의 규정을 엄격히 준수합니다.
+                    <br>
+                    고객 보증금은 회사의 자본과 분리되어 보관되며, 회사의 부채에 대한 보안으로 사용되지 않습니다.
+                    <br>
+                    4. 수익 보장
+                    <br>
+                    안정적이고 일관된 수익을 제공하기 위해 최선을 다하고 있습니다.
+                    <br>
+                    고객의 투자 수익을 극대화하기 위해 전문가 팀과 협력하여 투자 전략을 개발하고 있습니다.
+                    <br>
+                    5. 투명성
+                    <br>
+                    고객에게 완전한 투명성을 제공하기 위해 모든 투자 활동을 정확하게 기록하고 보고합니다.
+                    <br>
+                    고객은 언제든지 자신의 계정 상태와 투자 활동에 대한 정보를 열람할 수 있습니다.
+                    <br>
+                    6. 법적 책임
+                    <br>
+                    고객의 권리와 이익을 보호하기 위해 모든 관련 법률 및 규정을 엄격히 준수합니다.
+                    <br>
+                    고객은 회사에 대한 법적 책임을 요구할 경우 합법적인 권리를 행사할 수 있습니다.
+                    <br>
+                    위의 약관은 고객 자금 보호에 대한 기본 원칙을 포함하고 있습니다.
+                    고객의 안전과 이익을 최우선으로 여기며, 항상 공정하고 투명한 서비스를 제공하기 위해 노력하고 있습니다.
+                  </p>
+
+                  <label for="agree_03" class="agree">
+                    <input type="checkbox" id="agree_03" class="agree_item">
+                    <span class="check_on"></span>
+
+                    고객 자금 보호 정책 (필수)
+                  </label>
+                </li>
+
+                <!-- 마케팅 정보 수신 동의 -->
+                <li class="accordion__li agree_list">
+
+                  <span class="target" id="accordion4"></span>
+                  <a href="#accordion4" class="open-accordion" title="open">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">03</span> -->
+                        <h5 class="accordion__title">
+                          마케팅 정보 수신 동의
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#accordion" class="close-accordion" title="close">
+                    <div>
+                      <div>
+                        <!-- <span class="accordion__num">03</span> -->
+                        <h5 class="accordion__title">
+                          마케팅 정보 수신 동의
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                  <p class="accordion__content">
+                    본 마케팅 정보 수신 동의서는 &#40;이하"회사"&#41;가 제공하는 마케팅 정보 및 프로모션 관련 커뮤니케이션을
+                    고객에게 전송하는 것에 대한 귀하의 동의를 요청하는 문서 입니다. 본 동의서는 전 세계 국가의 고객들을 대상으로 합니다.
+
+                    마케팅 정보 수신 동의
+
+                    1. 마케팅 정보의 정의
+
+                    1&#41; 마케팅 정보에는 신규 상품 출시, 특별 프로모션, 투자 관련 조언 및 팁, 회사 뉴스, 설문조사 등 회사 서비스의 이용 가치를 높일
+                    수
+                    있는 다양한 정보가 포함 됩니다.
+
+                    2. 정보 수신 동의
+
+                    1&#41; 귀하는 회사로부터 마케팅 및 프로모션 관련 정보를 이메일, 문자메세지&#40;SMS&#41;, 전화, 우편, 소셜미디어 등의
+                    방법으로
+                    수신하는데 동의 합니다.
+                    2&#41; 귀하는 언제든지 마케팅 정보 수신 동의를 철회할 수 있으며, 동의 철회는 회사가 제공하는 마케팅 정보 수신을 중단시킬 것 입니다.
+
+                    3. 정보 수신 방법의 선택
+
+                    1&#41; 회사는 귀하의 선호에 따라 맞춤화 된 마케팅 정보를 제공하기 위해 여러 수신 방법을 제안할 수 있습니다.
+                    2&#41; 귀하는 원하는 마케팅 정보의 수신 방법을 선택할 수 있으며, 언제든지 이를 변경할 수 있습니다.
+
+                    4. 개인정보의 보호
+
+                    1&#41; 회사는 귀하 개인정보 보호를 최우선으로 하며, 마케팅 정보 수신과 관련된 모든 활동은 관련 법률 및 규정을 준수합니다.
+                    2&#41; 귀하의 개인정보는 마케팅 목적으로만 사용 되며, 제 3자에게 제공되지 않습니다.
+
+                    5. 동의 철회
+
+                    1&#41; 마케팅 정보 수신에 대한 동의는 언제든지 철회할 수 있으며, 철회는 회사가 제공하는 수신 동의 관리 기능을 통해 쉽게 수행할 수
+                    있습니다.
+                    2&#41; 동의 철회 후에는 귀하가 선택한 수신 방법을 통한 마케팅 정보의 수신이 중단 됩니다.
+
+
+                    본 동의서의 목적은 귀하가 회사의 마케팅 정보를 원활하게 수신하고, 귀하의 투자 경험을 향상 시키기 위함 입니다.
+                    회사는 귀하가 제공하는 동의를 바탕으로 유용하고 가치있는 정보를 제공하기 위해 최선을 다할 것 입니다.
+                  </p>
+
+                  <label for="agree_04" class="agree">
+                    <input type="checkbox" id="agree_04" class="agree_item mkt_item">
+                    <span class="check_on"></span>
+
+                    마케팅 정보 수신 동의 (선택)
+                  </label>
+                </li>
+
+              </ul>
+            </div><!--//sec_02-->
+
+            <div class="btn">
+              <button class="del_pop">
+                닫기
+              </button>
+
+              <button class="complete">
+                결제 완료하기
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 결제 완료 나타나는 모달창 -->
+        <div class="modal success_pop">
+          <dl>
+            <dt><strong>결제 신청이 완료 되었습니다.</strong></dt>
+            <dd><a class="okay" href="#">닫기</a></dd>
+          </dl>
+        </div>
+
+        <!-- 계좌 번호 복사시 나타나는 모달창 -->
+        <div class="modal copy_pop">
+          <dl>
+            <dt><strong>계좌 번호가 복사 되었습니다.</strong></dt>
+            <!-- <dd><span class="muted">곧 창이 자동으로 닫힙니다.</span></dd> -->
+          </dl>
+        </div>
+
+      </div>
+    </main><!-- //main -->
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="inner">
+
+        <div class="f_logo"></div>
+
+        <div class="txt_area">
+
+          <div class="f_txt">
+
+            <p class="company">DBS BOND Financial (Singapore)</p>
+
+            <address>
+              <span>Limited</span>
+              <span>Tower 3, Marina Bay Financial Centre</span>
+              <span>12 Marina Boulevard, Singapore</span>
+            </address>
+
+          </div>
+
+          <div class="email">
+            <a href="mailto:support@dbs.com">Support : support@dbs.com</a>
+          </div>
+
+        </div>
+
+        <div class="copy">
+          <p>Copylight © 2024 DBS BOND Ltd</p>
+        </div>
+
+      </div>
+    </footer>
+    <!--//footer-->
+
+    <!-- go_top -->
+    <div class="go_top">맨 위로
+      <a href="#">
+        <span class="bi bi-chevron-up"></span>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    // 금액 업다운
+    document.addEventListener("DOMContentLoaded", function () {
+      const amountInput = document.getElementById("amount");
+      const buttons = document.querySelectorAll(".num");
+      const resetButton = document.querySelector(".reset-btn");
+      const initialAmount = 0; // 시작 금액: 1000만원
+
+      function formatNumber(value) {
+        return value.toLocaleString(); // 숫자를 1,000,000 형태로 변환
+      }
+
+      function changeAmount(value) {
+        let currentAmount = parseInt(amountInput.value.replace(/,/g, ""), 10); // 기존 금액 가져오기
+        let newAmount = currentAmount + value;
+
+        // 1000만원 이하로 내려가지 않도록 제한
+        if (newAmount < initialAmount) {
+          newAmount = initialAmount;
+        }
+
+        amountInput.value = formatNumber(newAmount); // 포맷 적용
+      }
+
+      function resetAmount() {
+        amountInput.value = formatNumber(initialAmount); // 초기화
+      }
+
+      // 버튼 클릭 이벤트 추가
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          changeAmount(parseInt(this.textContent.replace(/[^\d-]/g, ""), 10));
+
+          // 클릭 시 버튼 강조 효과
+          this.classList.add("active");
+          setTimeout(() => this.classList.remove("active"), 200);
+        });
+
+        button.addEventListener("touchstart", function () {
+          changeAmount(parseInt(this.textContent.replace(/[^\d-]/g, ""), 10));
+        });
+      });
+
+      // 초기화 버튼 이벤트 추가
+      resetButton.addEventListener("click", resetAmount);
+    });
+  </script>
+
+</body>
+
+</html>
