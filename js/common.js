@@ -4,11 +4,6 @@ $(function () {
   //  Common
   // --------- 
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const mgnb_wrap = document.querySelector(".mgnb_wrap");
-  //   mobileMenu.style.display = "none"; // 강제로 숨김 처리
-  // });
-
   //depth2
   $(".depth2").hide();
 
@@ -36,22 +31,11 @@ $(function () {
     // $(this).find('.show').addClass("active")
   });
 
-  // $(".m_gnb>li").click(function () {
-  //   $(this).find(".m_depth2").slideDown();
-  // });
-
-  // u_depth2
-  // $(".u_depth2").hide();
 
   $(".m_util>li").click(function () {
     $(this).find(".u_depth2").stop().slideToggle();
   });
 
-  // $(".m_util>li").click(function () {
-  //   $(this).find(".u_depth2").stop().slideUp();
-  // });
-
-  // --------- 
   //  Login
   // ---------  
   $(".modal").hide();

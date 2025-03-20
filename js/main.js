@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  $('label.phone + button, .input_area .phone button').click(function () {
+  $('button.btn_submit').click(function () {
     $('.ctf_num').stop().fadeIn();
   });
 
