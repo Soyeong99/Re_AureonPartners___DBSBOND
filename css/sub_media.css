@@ -415,6 +415,10 @@
     .en_invest .tit_box h4+p { font-size: 1.6rem; font-weight: 500; }
     .en_invest .con_tit h5 { font-size: 1.8rem; }
 
+    /* sub_03 */
+    .txt_wrap h2+p { font-size: 1.6rem; }
+    #banner { padding: 30px 2% 50px;}
+
     /* sub_03_01 */
     .grid_wrap { width: 90%; }
     ul.prd_info { padding: 0 40px; }
@@ -493,11 +497,10 @@
     .check_on { width: 15px ; height: 15px; }
 
     /* sub_03_01_00 */
-    .btn-group { gap: 4px; position: relative; padding-bottom: 33px; }
+    .btn-group { gap: 4px; position: relative; }
 }
 
 @media (max-width: 420px) {
-
     /* sub_02  */
     /* #tit_box { height: 220px; position: relative; }  */
     span.typing { font-size: 2.4rem; }
@@ -522,7 +525,7 @@
     /* sub_03 */
     #prd_list { padding-bottom: 60px; }
     .card_tit > p { font-size: 2.8rem ; }
-
+    .txt_wrap h2+p { font-size: 1.4rem; }
     .top_tit .img { width: 60px; height: 60px; }
     ul.box_area li > .flex > button > img { width: 18px; height: 18px; }
 
@@ -586,8 +589,9 @@
     .c_price  { margin-top: 30px; }
     select { padding: 10px; font-size: 1.2rem; }
     .id_first { width: 28px !important; }
-    button.reset-btn { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); }
     .amount-container { margin: 20px auto 0; } 
+    button.reset-btn { position: absolute; left: 50%; bottom: -35px; transform: translateX(-50%); }
+    .btn-group { margin-bottom: 20px; }
 
     /* login */
     .btn_final { padding: 40px 0 60px;}
@@ -596,4 +600,5 @@
 
 @media (max-width: 330px) {
     button.num { font-size: 1.4rem;}
+    .m_util > li > a { padding: 14px 4px; font-size: 1.6rem; } 
 }

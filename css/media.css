@@ -343,7 +343,7 @@
 @media (max-width:590px){
   
   /* go_top */
-  .go_top { width: 45px; height: 45px; }
+  .go_top { width: 45px; height: 45px; bottom: 20px; }
   .go_top a span {margin: 0; line-height: 40px; }
 
   /* invest */
