@@ -5,6 +5,10 @@
     --main-font :'Pretendard', sans-serif;
 }
 
+input[type=password], input[type=text], input[type=number], input[type=email], input[type=tel], textarea, input[type=checkbox] { 
+  font-family:'Pretendard', sans-serif;
+}
+
 /* 이벤트 */
 
 .evt_line{

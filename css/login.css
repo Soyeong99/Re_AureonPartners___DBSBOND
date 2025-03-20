@@ -14,7 +14,7 @@
 .col label {width: 100%;}
 small {display: block; color: #888; font-weight: 500; margin-left: 18%;}
 input[type=password], input[type=text], input[type=number], input[type=email], input[type=tel]
-{ text-align: left; font-size: 1.6rem; padding: 16px; margin-top: 3px; width: 100%; border-radius: 8px; border: 1px solid #eee;}
+{ font-family: var(--main-font); text-align: left; font-size: 1.6rem; padding: 16px; margin-top: 3px; width: 100%; border-radius: 8px; border: 1px solid #eee;}
 
 select { color: #232323; font-family: var(--main-font);  width: 100%; font-size: 1.6rem;  padding: 16px; margin-top: 3px; border-radius: 8px; border: 1px solid #eee;}
 span>small {color: var(--main-color); display: inline-block; margin: 0;}
