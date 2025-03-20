@@ -300,6 +300,9 @@
 
   /* company */
   .en_left_box h3 { font-size: 3.5rem; }
+
+  /* checkbox */
+  .check_on::after { width: 3px; height: 8px; }
 }
 
 @media (max-width:650px){
