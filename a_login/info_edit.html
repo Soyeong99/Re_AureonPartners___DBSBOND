@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBS : Trusted as the World's Best Bond | DBS Bond</title>
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/media.css">
+  <link rel="stylesheet" href="../css/a_login.css">
+
+  <!-- aos / boot -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- 아코디언 -->
+  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+
+  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+  <script defer src="../js/swiper-bundle.min.js.js"></script>
+
+  <!-- js -->
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script defer src="../js/common.js"></script>
+  <script defer src="../js/sub05_01.js"></script>
+  <script defer src="../js/main.js"></script>
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <header id="header">
+
+    <h1><a href="../index.html"></a></h1>
+
+    <nav>
+      <ul class="gnb">
+        <li><a href="../sub/sub_01.html">회사소개</a></li>
+        <li><a href="../sub/sub_02.html">투자전략</a></li>
+        <li><a href="../sub/sub_03.html">투자상품</a></li>
+        <li><a href="../sub/sub_04.html">이벤트</a></li>
+        <li><a href="#none">고객지원
+            <span class="bi bi-chevron-down show"></span>
+          </a>
+          <ol class="depth2">
+            <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+            <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+            <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+          </ol>
+        </li>
+      </ul>
+
+      <ol class="util">
+        <li>
+          <a href="#none">마이페이지</a>
+          <ol class="u_depth2">
+            <li><a href="info_edit.html">내 정보수정</a></li>
+            <li><a href="mycash.html">내 자산현황</a></li>
+          </ol>
+        </li>
+
+        <li><a href="../en/index.html">로그아웃</a></li>
+
+        <li class="note_alarm">
+          <a href="mail.html">
+            <span>내 쪽지함</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="ham bi bi-list"></div>
+
+    <div class="mgnb_wrap">
+
+      <div class="bi bi-x-lg mgnb_close"></div>
+      <div class="mgnb_logo"></div>
+
+      <ul class="mgnb">
+        <li><a href="../sub/sub_01.html">회사소개</a></li>
+        <li><a href="../sub/sub_02.html">투자전략</a></li>
+        <li><a href="../sub/sub_03.html">투자상품</a></li>
+        <li><a href="../sub/sub_04.html">이벤트</a></li>
+        <li><a href="#none">고객지원
+            <span class="bi bi-chevron-down show"></span>
+          </a>
+          <ol class="mdepth2">
+            <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+            <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+            <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+          </ol>
+        </li>
+      </ul>
+
+      <ul class="m_util">
+        <li>
+          <a href="#none">마이페이지</a>
+
+          <ol class="u_depth2 mu_depth2">
+            <li><a href="info_edit.html">내 정보수정</a></li>
+            <li><a href="mycash.html">내 자산현황</a></li>
+          </ol>
+
+        </li>
+
+        <li><a href="../en/index.html">로그아웃</a></li>
+        <li class="note"><a href="mail.html">내 쪽지함</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- 모달팝업 -->
+  <div class="popup2 modal">
+
+    <div>
+      <ul>
+        <li>내 정보 수정이 완료 되었습니다.</li>
+        <li><a href="../index.html" class="popop2-btn">확인</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 인증번호 발송 모달창 -->
+  <div class="modal ctf_num">
+    <dl>
+      <dt>인증번호가 발송되었습니다.</dt>
+      <!-- <dd><strong>Please choose a language appropriate for your country of residence.</strong></dd> -->
+      <dd><a class="okay" href="#none">확인</a></dd>
+    </dl>
+  </div>
+
+  <!-- main -->
+  <main id="main">
+    <div class="sub_inner">
+
+      <div class="join_con">
+
+        <h2>내 정보수정</h2>
+
+        <section id="account">
+
+          <div class="sec_title">
+            <h4>계정정보 수정</h4>
+          </div>
+
+          <div class="input_area">
+
+            <!-- 아이디 설정란 -->
+            <div class="col">
+              <span>아이디
+              </span>
+              <label for="">
+                <input type="text" placeholder="abcd1234">
+              </label>
+            </div>
+
+
+            <!-- 비밀번호 설정란 -->
+            <div class="col">
+              <span>새 비밀번호
+              </span>
+              <label for="">
+                <input type="password">
+              </label>
+            </div>
+
+            <!-- 비밀번호 확인란 -->
+            <div class="col">
+              <span>새 비밀번호 확인
+              </span>
+              <label for="">
+                <input type="password">
+              </label>
+            </div>
+
+            <!-- 휴대폰 본인 인증란 -->
+            <div class="col">
+              <span>휴대폰
+              </span>
+              <label for="" class="phone">
+                <input type="tel" name="" id="" placeholder="010-1234-5678">
+                <button type="button">인증하기</button>
+              </label>
+            </div>
+
+            <!-- 휴대폰 본인 인증란 -->
+            <div class="col">
+              <span>인증번호
+              </span>
+              <label for="" class="phone">
+                <input type="text" name="" id="">
+                <button type="button">확인</button>
+              </label>
+            </div>
+
+            <div class="col">
+              <span>은행
+              </span>
+              <select name="" id="">
+                <option value="농협">농협</option>
+                <option value="수협">수협</option>
+                <option value="신협">신협</option>
+                <option value="우체국">우체국</option>
+                <option value="신한은행">신한은행</option>
+                <option value="광주은행">광주은행</option>
+                <option value="경남은행">경남은행</option>
+                <option value="국민은행">국민은행</option>
+                <option value="기업은행">기업은행</option>
+                <option value="대구은행">대구은행</option>
+                <option value="우리은행">우리은행</option>
+                <option value="부산은행">부산은행</option>
+                <option value="산림조합">산림조합</option>
+                <option value="산업은행">산업은행</option>
+                <option value="씨티은행">씨티은행</option>
+                <option value="전북은행">전북은행</option>
+                <option value="제주은행">제주은행</option>
+                <option value="새마을금고">새마을금고</option>
+                <option value="카카오뱅크">카카오뱅크</option>
+              </select>
+            </div>
+
+            <!-- 계좌번호 입력란 -->
+            <div class="col">
+              <span>계좌번호
+                <small>*</small>
+              </span>
+              <label for="">
+                <input type="text" placeholder="은행 계좌번호를 입력해주세요.">
+              </label>
+            </div>
+
+          </div>
+        </section>
+
+
+        <div class="btn_final a_account2 ">
+
+          <a href="../index.html" class="del">취소</a>
+
+          <a href="#none" class="join">확인</a>
+
+
+        </div>
+
+      </div><!--//join_con-->
+
+    </div><!--//sub_inner-->
+  </main><!-- //main -->
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="inner">
+
+      <div class="f_logo"></div>
+
+      <div class="txt_area">
+
+        <div class="f_txt">
+
+          <p class="company">DBS BOND Financial &#40;Singapore&#41;</p>
+
+          <address>
+            <span>Limited</span>
+            <span>Tower 3, Marina Bay Financial Centre</span>
+            <span>12 Marina Boulevard, Singapore</span>
+          </address>
+
+        </div>
+
+        <div class="email">
+          <a href="mailto:support@dbs.com">Support : support@dbs.com</a>
+        </div>
+
+      </div>
+
+      <div class="copy">
+        <p>Copylight © 2024 DBS BOND Ltd</p>
+      </div>
+
+    </div>
+  </footer>
+  <!--//footer-->
+
+  <!-- go_top -->
+  <div class="go_top">맨 위로
+    <a href="#">
+      <span class="bi bi-chevron-up"></span>
+    </a>
+  </div>
+
+  <!-- aos소스 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="../js/sub05_01.js"></script>
+</body>
+
+</html>
