@@ -493,6 +493,10 @@
   .swiper{width: 260px; height: 350px;}
   .popup-btn{width: 260px;}
   .swiper-button-next:after, .swiper-button-prev:after{font-size: 25px;}
+
+@media (max-width: 330px) {
+  /* m_gnb */
+  .m_util > li > a { padding: 14px 4px; font-size: 1.6rem;
 }
 
 @media (max-width:325px){
