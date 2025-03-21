@@ -301,7 +301,7 @@ font-family:'Pretendard', sans-serif;
   }
 
   .input_area .phone button{
-/*     margin: 3px 0 10px; */
+    margin: 3px 0 10px;
     padding: 8px 20px;
     border-radius: 10px;
     border: 1px solid var(--main-color);
@@ -571,6 +571,10 @@ font-family:'Pretendard', sans-serif;
 
   .tab_top_in ul:nth-of-type(2) li{margin-right: 0px;}
   .write_in ol{margin: 50px auto 80px;}
+}
+
+@media (max-width:820px) {
+    .input_area .phone button { margin:0; }
 }
 @media (max-width:700px){
     .sub_banner_in, .tab, .tab_top, .join_con2,.write, .write_in ol{width: 600px; margin: auto;}
