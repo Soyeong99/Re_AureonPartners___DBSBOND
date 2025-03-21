@@ -43,22 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-// // ✅ 인증하기 모달
-// const btnSubmits = document.querySelectorAll(".btn_submit");
-// const modal = document.querySelector(".ctf_num");
-// const modalContent = modal?.querySelector("dl");
+// ✅ 인증하기 모달
+const btnSubmits = document.querySelectorAll(".btn_submit");
+const modal = document.querySelector(".ctf_num");
+const modalContent = modal?.querySelector("dl");
 
-// if (btnSubmits.length > 0 && modal && modalContent) {
-//   btnSubmits.forEach((btnSubmit) => {
-//     btnSubmit.addEventListener("click", function () {
-//       const rect = btnSubmit.getBoundingClientRect();
-//       modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
-//       modalContent.style.left = "50%";
-//       modalContent.style.transform = "translateX(-50%)";
-//       modal.style.display = "block";
-//     });
-//   });
-// }
+if (btnSubmits.length > 0 && modal && modalContent) {
+  btnSubmits.forEach((btnSubmit) => {
+    btnSubmit.addEventListener("click", function () {
+      // const rect = btnSubmit.getBoundingClientRect();
+      // modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
+      // modalContent.style.left = "50%";
+      // modalContent.style.transform = "translateX(-50%)";
+      modal.style.display = "block";
+    });
+  });
+}
 
   // ✅ 이벤트 모달 팝업
   document.querySelectorAll(".popup-btn").forEach(btn => {
