@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  
   // ✅ Swiper 초기화 (라이브러리 확인 후 실행)
   if (typeof Swiper !== "undefined") {
     new Swiper(".slide_box", {
@@ -42,12 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ✅ 인증하기 모달
-  const btnSubmit = document.querySelector(".btn_submit");
-  const modal = document.querySelector(".ctf_num");
-  const modalContent = modal?.querySelector("dl");
+// ✅ 인증하기 모달
+const btnSubmits = document.querySelectorAll(".btn_submit");
+const modal = document.querySelector(".ctf_num");
+const modalContent = modal?.querySelector("dl");
 
-  if (btnSubmit && modal && modalContent) {
+if (btnSubmits.length > 0 && modal && modalContent) {
+  btnSubmits.forEach((btnSubmit) => {
     btnSubmit.addEventListener("click", function () {
       const rect = btnSubmit.getBoundingClientRect();
       modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
@@ -55,7 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
       modalContent.style.transform = "translateX(-50%)";
       modal.style.display = "block";
     });
-  }
+  });
+}
 
   // ✅ 이벤트 모달 팝업
   document.querySelectorAll(".popup-btn").forEach(btn => {
