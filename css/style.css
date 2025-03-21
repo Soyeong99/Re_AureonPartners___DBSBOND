@@ -46,21 +46,32 @@ button, input {cursor: pointer;}
 
 /* 모달창 */
 .modal { display: none;  position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(0, 0, 0, 0.6); z-index: 9999;}
-.modal dl { 
-  /*  width: 38%; */ width: fit-content;
-  font-size: 1.8rem; text-align: center; padding: 30px 50px; margin: 25% auto; background: #fff;  border-radius: 20px; }
+.modal dl { position: fixed; top: 50vh; left: 50vw; transform: translate(-50%, -50%); font-size: 1.8rem; text-align: center; padding: 30px 50px; /* margin: 25% auto; */ background: #fff; border-radius: 20px; }
+
 .modal dd strong { display: block; margin: 12px 0 30px; font-weight: 600; }
 .modal dd>a.okay { padding: 8px 32px ; background: var(--main-color); border-radius: 100px; font-size: 1.8rem; color: #fff; margin-top: 20px; transition:  all 0.5s;  }
 
+/* .modal .okay { padding: 8px 32px; background: var(--main-color); border-radius: 100px; font-size: 1.8rem; color: #fff; margin-top: 12px; transition: all 0.5s; } */
+
 /* 인증하기 모달 */
-.ctf_num dl { position: absolute; margin: 0;}
+/* .ctf_num dl { position: absolute; margin: 0;} */
 .ctf_num dl dt { margin-bottom: 20px; font-weight: 500;}
+
+/* 2차 모달창 */
+/* 결제 완료 및 계좌 복사 */
+div.modal dt>strong { display: block; margin-bottom: 20px; }
+div.copy_pop  { display: none; z-index: 9998;}
+div.success_pop { display: none; z-index: 9999;}
 
 /* 쪽지 연락 왔을 때  */
 .mail_alarm { display: block !important;}
 .mail_alarm dl { position: sticky; top: 30%; } 
 .mail_alarm dt>strong { display: block;  font-weight: 600; margin: 0 !important;}
 .mail_alarm dl dd.muted_txt  {margin: 0 0 20px 0; }
+
+/* 계좌번호 복사 모달 */
+div.copy_pop dl { font-weight: 500; padding: 20px 40px; }
+div.copy_pop dt>strong { margin-bottom: 0 !important; }
 
 /* -----
     Section header
@@ -133,8 +144,8 @@ nav {display: flex; align-items: center; gap: 60px; height: 100%;}
 .m_util > li:first-child { position: relative; } 
 .m_util > li { width: 50%; text-align: center; color: #fff; background: var(--op-main); transition: all 0.5s;}
 .m_util > li.note { width: 33%; background: transparent;  border-bottom: 1px solid var(--main-color);}
-.m_util > li.note a { color: var(--op-main);  }
 .m_util > li > a { display: block; width: 100%; padding: 14px 8px ; font-size: 1.8rem; color: #fff;}
+.m_util > li.note > a { color: var(--op-main);  }
 
 .mu_depth2 {width: 100%; }
 .u_depth2 { position: absolute; display: none; left: 0;}
@@ -142,7 +153,7 @@ nav {display: flex; align-items: center; gap: 60px; height: 100%;}
 .u_depth2 li:hover, .u_depth2 li:hover a { background: var(--main-color); color: #fff;}
 
 .m_util li:hover { background: var(--main-color); }
-.m_util > li.note:hover a { color: var(--main-color); }
+.m_util > li.note:hover a { color: #fff; }
 
 .mgnb_close {position: absolute; font-size: 3rem; top: 1%; right: 5%; color: #232323;}
 /* .mlogin a:hover {opacity: 1; } */

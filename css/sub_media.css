@@ -139,7 +139,8 @@
     .evt_line { width: 100%; }
 
     /* modal */
-    .modal dl { width: 70%; padding: 25px 20px; }
+
+    .modal dl {  padding: 25px 20px; /* width: 70%; */ } 
     div.modal dt > strong { font-size: 1.8rem;  }
     .modal .okay { padding: 2px 30px; margin: 0;}
 
@@ -194,6 +195,10 @@
     .top_tit .img+p { margin-top: 20px; }
     .btn > .del_pop { padding: 8px 30px; }
     .btn > .complete { padding: 8px 80px; }
+
+    /* 인증하기 모달 */
+    .ctf_num dl dt { font-size: 1.6rem; }
+    .modal dd>a.okay  { font-size: 1.6rem; padding: 6px 20px; }
 }
 
 @media (max-width: 810px) {
@@ -329,10 +334,6 @@
 
 @media (max-width: 660px) {
 
-    /* join */
-    .ctf_num dl dt { font-size: 1.6rem; }
-    .modal dd>a.okay { padding: 5px 28px;}
-
     /* sub_02 */
     .en_invest .tit_box { top: 4.03%; }
 
@@ -435,7 +436,8 @@
 
 @media (max-width: 490px) {
     
-    /* join */
+    /* sign_up & sign_in*/
+    .login_inner .tit_area p>a { padding: 0; }
     .col span.masked { font-size: 1.2rem; }
 
     /* sub_03_01_00 */

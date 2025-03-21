@@ -384,6 +384,10 @@
 }
 
 @media (max-width:560px){
+
+  /* join */
+  .ctf_num dl dt { font-size: 1.6rem; }
+
   /* company */
   .left_box h3 {font-size: 3.6rem;}
 
@@ -446,6 +450,12 @@
   /* invest */
   #company .slide_box { margin-top: 12px; }
   .left_box h3 { font-size: 3rem; }
+
+  /* modal */
+  .modal dl {  padding: 16px 30px; font-size: 1.6rem; }
+  .modal dl { font-size: 1.6rem; }
+
+  .modal dd>a.okay { padding: 6px 28px; }
 }
 
 @media (max-width:420px){

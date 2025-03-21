@@ -265,6 +265,41 @@ font-family:'Pretendard', sans-serif;
     border-radius: 20px;
     padding: 10px 40px;
   }
+
+  .input_area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input_area .col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .input_area .col span {
+    width: 120px;
+    text-align: left;
+    flex-shrink: 0; 
+  }
+
+  .input_area .col label {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input_area .col input {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%; 
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 1;
+  }
+
   .input_area .phone button{
     margin: 3px 0 10px;
     padding: 8px 20px;
@@ -531,10 +566,12 @@ font-family:'Pretendard', sans-serif;
     .write_in ol{margin: 50px auto 80px;}
 }
 @media (max-width:900px){
-    .sub_banner_in, .tab, .tab_top, .join_con2, .write, .write_in ol{width: 700px; margin: auto;}
-    .tab_top_in ul:nth-of-type(2) li{margin-right: 0px;}
-    .write_in ol{margin: 50px auto 80px;}
-  }
+  .sub_banner_in, .tab, .tab_top,.write,.write_in ol{width: 700px; margin: auto;}
+  .join_con2{width: 90%;}
+
+  .tab_top_in ul:nth-of-type(2) li{margin-right: 0px;}
+  .write_in ol{margin: 50px auto 80px;}
+}
 @media (max-width:700px){
     .sub_banner_in, .tab, .tab_top, .join_con2,.write, .write_in ol{width: 600px; margin: auto;}
     .write_in ol{margin: 50px auto 80px;}
@@ -548,9 +585,14 @@ font-family:'Pretendard', sans-serif;
     .write_in h1{font-size: 25px; padding-bottom: 10px;}
     .input_area2 .col label {width: 80%;}
 }
+
+@media (max-width:580px){
+  .col{gap: 15px;}
+  .col span{text-align: left;}
+}
+
 @media (max-width:550px){
     .sub_banner_in, .tab, .tab_top, .write, .write_in ol{width: 480px; margin: auto;}
-    .col{gap: 40px;}
     .write_in h1{padding-left:10px;}
     .write{height: 550px;}
     .write_in ol{margin: 30px auto 50px;}
@@ -576,7 +618,14 @@ font-family:'Pretendard', sans-serif;
     .port_text ol{width: 100%; padding: 10px 15px;}    
     .port_text ol:nth-of-type(4){border-top: none;}
     .port_text ol li{margin-bottom: 10px;}
+    .sub5_container tbody td {font-size: 14px;}
   }
+
+@media (max-width:410px) {
+  label.phone { align-items: center;}
+  .input_area .phone button{margin: 0;}
+}  
+
 @media (max-width:400px){
     .cash, .refund, .write, .write_in ol{width: 360px;}
     .chart{width: 150px; height: 150px;}

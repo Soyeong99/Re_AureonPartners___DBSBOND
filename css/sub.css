@@ -223,10 +223,6 @@ ul.prd_info li span > i { color: #888; }
 
 .btn_area button { width: 95%; margin: 0 auto; font-size: 1.8rem; font-weight: 500; cursor: pointer; display: block; padding: 15px 0; border-radius: 100px; background-color: var(--main-color); color: #fff;}
 
-/* 계좌번호 복사 모달 */
-div.copy_pop dl { width: fit-content; font-weight: 500; padding: 20px 40px; margin: 275px auto; }
-div.copy_pop dt>strong { margin-bottom: 0 !important; }
-
 /* -----
     채권 투자하기
 ----- */
@@ -336,19 +332,11 @@ label.agree {display: inline-flex; align-items: center; padding: 5px; gap: 6px;}
 .btn > .del_pop:hover { background: var(--main-color); color: #fff; }
 .btn > .complete:hover { background: #fff; color: var(--main-color);}
 
-/* 2차 모달창 */
-/* 결제 완료 및 계좝 복사 */
-div.modal dt>strong { display: block; margin-bottom: 20px; }
-div.copy_pop  { display: none; z-index: 9998;}
-div.success_pop { display: none; z-index: 9999;}
-
-.modal .okay { padding: 8px 32px; background: var(--main-color); border-radius: 100px; font-size: 1.8rem; color: #fff; margin-top: 12px; transition: all 0.5s; }
-
 /* -----
     이벤트 페이지
 ----- */
 #event_notice { display: block !important; }
-#event_notice > dl { width: 33%; }
+#event .event_notice > dl { width: 33%; }
 
 .event_wrap .inner { padding: 60px 5%; }
 .evt_line { width: 80%; margin: 0 auto; gap: 20px;}
