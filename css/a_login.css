@@ -301,7 +301,7 @@ font-family:'Pretendard', sans-serif;
   }
 
   .input_area .phone button{
-    margin: 3px 0 10px;
+/*     margin: 3px 0 10px; */
     padding: 8px 20px;
     border-radius: 10px;
     border: 1px solid var(--main-color);
