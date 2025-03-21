@@ -78,6 +78,7 @@ a.go_link::before { display: block; content: ""; position: absolute; width: 100%
 #choice_nation {padding: 30px 0 120px;}
 .grid_con {margin: 30px auto 0; display: grid; grid-template-columns: repeat(3, 1fr);}
 .nation {display: flex; gap: 10px; align-items: center; padding: 50px 30px; border: 1px solid #ddd; transition: all 0.5s;}
+.nation p{text-align: center;}
 .nation:hover {color: #fff; background: var(--main-color);}
 
 /* -----
