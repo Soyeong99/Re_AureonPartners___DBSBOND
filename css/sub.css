@@ -220,6 +220,7 @@ ul.prd_info li span > i { color: #888; }
 
 .r_info_txt { width: 95%; padding: 12px 20px; color: #555; background: #eee; border-radius: 15px; font-size: 1.4rem; margin: 20px auto; }
 .r_info_txt p { line-height: 1.2; word-break: keep-all; }
+.r_info_txt p > br { display: none; }
 
 .btn_area button { width: 95%; margin: 0 auto; font-size: 1.8rem; font-weight: 500; cursor: pointer; display: block; padding: 15px 0; border-radius: 100px; background-color: var(--main-color); color: #fff;}
 
