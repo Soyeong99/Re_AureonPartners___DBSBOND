@@ -604,7 +604,6 @@ font-family:'Pretendard', sans-serif;
 @media (max-width:500px){
   .cash, .join_con2,.write, .write_in ol{width: 400px; margin: auto;}
   .portfolio{padding: 50px 0;}
-  .input_area{padding: 20px 0 10px 15px;}
   .id_seach input{width: 80%;}
   .btn_final>a.del, .btn_final>a.join{padding: 10px 20px;}
   .cash h2{margin: 20px 0 0 5px; font-size: 20px;}
