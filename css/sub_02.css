@@ -310,6 +310,7 @@ input[type=password], input[type=text], input[type=number], input[type=email], i
 
 .write_in tr:nth-of-type(3) input,
 .write_in tr:nth-of-type(4) textarea{
+  font-size: 1.4rem ;
   border: 1px solid #ddd;
   padding-left: 10px;
 }
