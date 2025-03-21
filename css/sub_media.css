@@ -227,6 +227,8 @@
     .rate_modal_inner { width: 90%; }
     .result { padding: 3px; }
     .result p { margin-top: 3px;}
+    
+    .r_info_txt p > br { display: block; }
 }
 
     @media (max-width: 768px) {
