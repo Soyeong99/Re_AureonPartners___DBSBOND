@@ -185,6 +185,13 @@
   .copy { left: 5%; }
 }
 
+@media (max-width:980px){
+  /* modal */
+  .modal dl {  padding: 25px 20px; /* width: 70%; */ } 
+  div.modal dt > strong { font-size: 1.8rem;  }
+  .modal .okay { padding: 2px 30px; margin: 0;}
+}
+
 @media (max-width:960px){
 
   /* main_visual */
@@ -381,6 +388,11 @@
   .swiper{width: 300px; height: 400px;}
   .popup-btn{width: 300px;}
   .popup-btn ul li a{font-size: 12px; margin-top: 5px;}
+
+  /* modal */
+  .modal dd>a.okay { font-size: 1.6rem; padding: 4px 28px; font-weight: 400; }
+  .modal dl { width: 60%; padding: 20px; }
+  div.modal dt > strong { font-size: 1.6rem;  }
 }
 
 @media (max-width:560px){
@@ -444,6 +456,10 @@
   .btn_final>a { padding: 6px 48px; }
   .b_group label > input.id-first { width: 37px; }
   .masked { font-size: 14px; }
+
+  /* modal */
+  .modal dl { width: 80%; padding: 20px;}
+  .tit_box span { font-size: 1.6rem; }
 }
 
 @media (max-width:480px){
@@ -452,11 +468,9 @@
   .left_box h3 { font-size: 3rem; }
 
   /* modal */
-  .modal dl {  padding: 16px 30px; font-size: 1.6rem; }
-  .modal dl { font-size: 1.6rem; }
-
-  .modal dd>a.okay { padding: 6px 28px; }
-}
+  /* .modal dl {  padding: 16px 30px; font-size: 1.6rem; }
+  .modal dd>a.okay { padding: 6px 28px; } */
+} 
 
 @media (max-width:420px){
 
@@ -493,10 +507,6 @@
   .swiper{width: 260px; height: 350px;}
   .popup-btn{width: 260px;}
   .swiper-button-next:after, .swiper-button-prev:after{font-size: 25px;}
-
-@media (max-width: 330px) {
-  /* m_gnb */
-  .m_util > li > a { padding: 14px 4px; font-size: 1.6rem;
 }
 
 @media (max-width:325px){
