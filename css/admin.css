@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-:root {
+/* :root {
     --main-color : #FF3333;
     --main-font :'Pretendard', sans-serif;
-}
+} */
 
 html {overflow-x: hidden; }
 body { font-family:'Pretendard', sans-serif; font-size: 1.6rem; font-weight: 400; line-height: 1.5; color: #232323; background: #eee;}

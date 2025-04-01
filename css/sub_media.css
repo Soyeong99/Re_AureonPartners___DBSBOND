@@ -7,7 +7,6 @@
     .right_box .tit_txt { font-size: 3.3rem; margin: 50px 0 40px; }
     .right_box .muted_txt { font-size: 2.2rem; font-weight: 500; }
 
-    #vision .txt_box h4 { font-size: 4.5rem; }
     #vision .txt_box p { font-size: 1.8rem; margin: 50px 0; }
 
     /* sub_03 */
@@ -71,6 +70,8 @@
 
     .history_con .swiper-slide { height: 700px !important; }
 
+    #vision .txt_box h4 { font-size: 3.6rem; margin-bottom: 20px;}
+
     /* sub_03 */
     .txt_wrap { width: 90%; }
     .txt_wrap h2 { font-size: 3.8rem; line-height: 1.2; }
@@ -102,11 +103,10 @@
     .right_box .tit_txt { font-size: 2.6rem; margin: 40px 0 30px;}
     
     .history_con .swiper-slide h4 { font-size: 2rem; }
-    .history_con .swiper-slide span { font-size: 2rem; }
+    .history_con .swiper-slide span { font-size: 1.8rem; }
     .history_con .swiper-slide p { font-size: 5rem; }
 
     #vision .img_box { height: 300px; } 
-    #vision .txt_box h4 { font-size: 4rem; margin-bottom: 20px;}
     #vision .txt_box p { font-size: 1.6rem; margin: 20px 0; }
     
     #vision .en_txt_box h4 { font-size: 3.6rem; }
@@ -118,15 +118,13 @@
     /* sub_03 */
     .price_con > p { font-size: 1.8rem; }
     ul.prd_info { padding: 0 50px; }
-    .prd_img { width: 80%; height: 180px; }
-    a.go_form { padding: 5px 48px 4px;  font-size: 1.6rem; }
-    /* .card_info h5 { font-size: 1.8rem; } */
-    button.pop_btn { font-size: 1.8rem; }
+    .prd_img { width: 80%; height: 210px; }
+    a.go_form { padding: 6px 48px ;  font-size: 1.6rem; }
+    button.pop_btn { font-size: 1.6rem; }
     .txt_box > span.txt { font-weight: 600; font-size: 2rem; }
 
     /* sub_03_01 */
     .card_info h5+span { font-size: 1.4rem; }
-    button.pop_btn { padding: 5px; }
     .card_info h5::before { height: 24px; }
     .txt { font-size: 2.2rem; }
     .prd_info_wrap { font-size: 1.6rem; }
@@ -139,7 +137,6 @@
     .evt_line { width: 100%; }
 
     /* modal */
-
     .modal dl {  padding: 25px 20px; /* width: 70%; */ } 
     div.modal dt > strong { font-size: 1.8rem;  }
     .modal .okay { padding: 2px 30px; margin: 0;}
@@ -153,6 +150,7 @@
     .history_con .swiper-slide h4 { font-weight: 700; }
     .history_con .swiper-slide p { font-size: 4rem; }
     .br { display: none; }
+    #vision .txt_box h4 { font-size: 3.4rem; }
 
     /* sub_02  */
     #tit_box { height: 280px; } 
@@ -176,6 +174,7 @@
 
     /* sub_03_01 */
     .prd_he { height: 570px; }
+    .detail_prd { gap: 10px; }
     .detail_prd > .content h3 { font-size: 2.6rem; font-weight: 600; }
     ul.prd_info li { margin-bottom: 20px; }
     ul.prd_info { padding: 0 30px; }
@@ -202,6 +201,10 @@
 }
 
 @media (max-width: 810px) {
+
+    /* sub_01 */
+    #vision .txt_box h4 { font-size: 3.2rem; }
+
     /* sub_03 */
     .txt_wrap { width: 90%; }
     .txt_wrap h2 { font-size: 3.8rem; }
@@ -211,9 +214,9 @@
 
     /* sub_03_01 */
     .grid_wrap { width: 93%; gap: 20px; }
-    .prd_img { height: 160px; }
+
     .card_info h5 { font-size: 1.8rem; font-weight: 600; }
-    .prd_card > .txt_box { margin: 9% 0; }
+    .prd_card > .txt_box { margin: 7% 0; }
     .txt_box > input[type=text] { width: 42%; font-size: 3.2rem; }
     .card_info h5::before { width: 2.5px; height: 20px;}
     .btm_card { margin: 20px auto 40px; }
@@ -227,14 +230,12 @@
     .rate_modal_inner { width: 90%; }
     .result { padding: 3px; }
     .result p { margin-top: 3px;}
-    
-    .r_info_txt p > br { display: block; }
 }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     .animate_txt  { position: relative; margin: 0 auto; }
     span.typing { line-height: 1.2; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-    }
+}
 
 @media (max-width: 765px) {
     /* sub_01 */
@@ -244,7 +245,7 @@
     #about .inner { gap: 3.5%; }
     .history_con .swiper-slide { padding: 20px 15px; height: 560px !important; }
     #vision .img_box { height: 280px; }
-    #vision .txt_box h4 { font-size: 3.6rem; }
+    #vision .txt_box h4 { font-size: 3.4rem; }
     #vision .en_txt_box h4 { font-size: 3.2rem; }
 
     /* sub_02 */
@@ -291,6 +292,14 @@
     .form_wrap h2>span { margin-bottom: 20px; }
 }
 
+@media (max-width: 740px) {
+    /* sub_01 */
+    #vision .txt_box h4 { font-size: 2.8rem; }
+
+    /* sub_03_01 */
+    button.pop_btn { padding: 8px; }
+}
+
 @media (max-width: 680px) {
     /* sub_01  */
     #about .inner { display: block; }
@@ -309,7 +318,6 @@
     /* sub_02  */
     #invest_contents { padding: 40px 0; }
     .info_box ul li { width: 100%; margin: 0 auto 20px; display:flex; align-items: center; justify-content: space-between;}
-    /* .info_box ul li .con_tit { width: 30%; margin: 0;} */
     .con_tit .icon { width: 20px; height: 20px; }
 
     .info_box ul li .txt_box { width: 70%; }
@@ -329,9 +337,7 @@
     .btn { gap: 12px }
     .btn > .complete { padding: 6px 65px; }
     .btn > .del_pop { padding: 5px 22px; }
-    
-    /* event */
-    /* .evt_line li p:nth-of-type(1){ font-size: 1.6rem; } */
+
 }
 
 @media (max-width: 660px) {
@@ -392,15 +398,13 @@
     .btn  { padding: 30px 0 0; }
     .btn button { font-size: 1.8rem;}
 
-    .modal dl { width: 60%; padding: 20px; }
-    div.modal dt > strong { font-size: 1.6rem;  }
-    .modal .okay { font-size: 1.6rem; font-weight: 400;}
-
     /* login */
     .col { flex-direction: column; align-items: flex-start !important; }
     
     /* modal */
-    .modal dd>a.okay { font-size: 1.6rem; padding: 4px 28px; }
+    .modal dd>a.okay { font-size: 1.6rem; padding: 4px 28px; font-weight: 400; }
+    .modal dl { width: 60%; padding: 20px; }
+    div.modal dt > strong { font-size: 1.6rem;  }
 
     /* event */
     .evt_line { gap: 40px; }
@@ -429,7 +433,7 @@
     .grid_wrap { width: 90%; }
     ul.prd_info { padding: 0 40px; }
     .c_price { margin-top: 40px; }
-    a.go_form { padding: 4px 38px 3px;  font-weight: 400; }
+    a.go_form { font-weight: 400; }
     
     /* sub_03_01_01 */
     .modal dl { width: 80%; padding: 20px;}
@@ -437,11 +441,6 @@
 }
 
 @media (max-width: 490px) {
-    
-    /* sign_up & sign_in*/
-    .login_inner .tit_area p>a { padding: 0; }
-    .col span.masked { font-size: 1.2rem; }
-
     /* sub_03_01_00 */
     .form_wrap  { max-width: 400px; padding: 25px 22px; }
     .user_col span { font-size: 1.6rem; }
@@ -607,4 +606,5 @@
 
 @media (max-width: 330px) {
     button.num { font-size: 1.4rem;}
+    .m_util > li > a { padding: 14px 4px; font-size: 1.6rem; } 
 }
