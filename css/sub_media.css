@@ -133,8 +133,11 @@
     .result { padding: 3px; }
 
     /* sub_04 */
-    .event_wrap .inner { padding: 30px 5% 60px; }
+    .event_wrap .inner { padding: 0 5% 60px; }
     .evt_line { width: 100%; }
+    .evt_pg_tit>h2 { font-size: 3.6rem; margin: 60px 0 10px ; }
+    #event .evt_prev_txt > p { font-size: 1.8rem; }
+    .evt_date_area > span { font-size: 1.6rem; }
 
     /* modal */
     .modal dl {  padding: 25px 20px; /* width: 70%; */ } 
@@ -357,6 +360,15 @@
 
     /* sub_03_01_00 */
     .form_wrap  { padding: 40px 45px; max-width: 500px; }
+
+    /* sub_04 */
+    #event .evt_prev_txt > p { font-size: 1.6rem; }
+    .evt_date_area > span { font-size: 1.4rem; }
+}
+
+@media (max-width: 580px) {
+    /* sub_04 */
+    .evt_pg_tit>h2 { margin: 40px 0 10px ; }
 }
 
 @media (max-width: 580px) {
@@ -397,6 +409,7 @@
     
     .btn  { padding: 30px 0 0; }
     .btn button { font-size: 1.8rem;}
+
 
     /* login */
     .col { flex-direction: column; align-items: flex-start !important; }
