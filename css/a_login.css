@@ -125,7 +125,7 @@ input[type="checkbox"] {
   border-bottom: 1px solid transparent;
 }
 
-.line-hover a:hover {
+/* .line-hover a:hover {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
@@ -133,6 +133,28 @@ input[type="checkbox"] {
 .line-hover.active a {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
+} */
+
+.tab_top_in ul:nth-of-type(1) li a {
+  color: inherit;
+  border-bottom: none;
+  font-weight: normal;
+}
+
+/* 전체쪽지 */
+.tab_top_in ul:nth-of-type(1) li:nth-of-type(1) a:hover,
+.tab_top_in ul:nth-of-type(1) li:nth-of-type(1) a.active {
+  color: #3f7bda;
+  border-bottom: 1px solid #3f7bda;
+  font-weight: 700;
+}
+
+/* 안 읽은 쪽지 */
+.tab_top_in ul:nth-of-type(1) li:nth-of-type(2) a:hover,
+.tab_top_in ul:nth-of-type(1) li:nth-of-type(2) a.active {
+  color: #FF3333;
+  border-bottom: 1px solid #FF3333;
+  font-weight: 700;
 }
 
 .tab_top_in ul {
