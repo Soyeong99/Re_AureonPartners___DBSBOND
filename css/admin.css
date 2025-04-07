@@ -613,11 +613,12 @@ span.user_num + i {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 500;
+  border: 1px solid var(--main-color);
+  transition: all 0.5s;
 }
 .modal_reset dd button:hover,
 .modal_secess_02 dd button:hover {
   color: #fff;
-  border: 1px solid var(--main-color);
 }
 
 .modal {
