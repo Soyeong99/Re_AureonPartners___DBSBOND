@@ -159,3 +159,14 @@ $(document).ready(function () {
     }
   });
 });
+
+// 쪽지함 카테고리
+$(document).ready(function() {
+  $('.tab_top_in ul:nth-of-type(1) li:nth-of-type(1) a').addClass('active');
+
+  $('.tab_top_in ul:nth-of-type(1) li a').on('click', function(e) {
+    e.preventDefault();
+    $('.tab_top_in ul:nth-of-type(1) li a').removeClass('active');
+    $(this).addClass('active');
+  });
+});
