@@ -852,7 +852,7 @@ nav {
 }
 
 #prd .prd_tit_box span.company_name {
-  color: var(--main-color);
+  color: #54ab36 ;
 }
 #prd .prd_tit_box > p {
   color: var(--main-color);
@@ -860,10 +860,6 @@ nav {
   font-weight: 700;
   font-size: 5.5rem;
   margin-top: 120px;
-}
-
-#prd .prd_tit_box > p span {
-  color: #54ab36 ;
 }
 
 #prd .tag_box {
