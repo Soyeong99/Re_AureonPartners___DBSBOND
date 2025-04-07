@@ -139,6 +139,12 @@
   /* event */
   .evt_line {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .evt_img {
+    width: 456px;
+    height: 456px;
   }
 }
 
@@ -210,7 +216,12 @@
 
   /* sub_04 */
   .evt_line {
-    width: 90%;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inner {
+    padding: 0 2% !important;
   }
 }
 
