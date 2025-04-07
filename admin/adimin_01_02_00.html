@@ -1,380 +1,396 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 쪽지작성하기 / 쪽지리스트 - 탭메뉴 구성-->
+    <title>Aureon Partners | 관리자페이지</title>
 
-  <!-- 쪽지작성하기 / 쪽지리스트 - 탭메뉴 구성-->
-  <title>DBS BOND | 관리자페이지 </title>
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/loader.css" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/admin.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/admin/message-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/admin/admin-notification.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
 
-  <script src="../js/jquery-3.7.1.min.js.js"></script>
-  <script src="../js/admin.js"></script>
-</head>
+  <body>
+    <div id="admin_wrap">
+      <div id="header">
+        <h1>
+          <a href="admin_main.html">
+            <img src="../img/common/logo.png" alt="로고" />
+          </a>
+        </h1>
 
-<body>
-  <div id="admin_wrap">
+        <nav id="sidebar-menu">
+          <ul class="lnb_wrap">
+            <li>
+              <div class="icon_person">
+                <img src="../img/admin/icon_person.png" alt="관리자 아이콘" />
+              </div>
+              <div class="txt">관리자님, 반갑습니다</div>
+              <div class="logout_icon" style="cursor: pointer">
+                <img
+                  src="../img/admin/logout-icon.png"
+                  alt="로그아웃 아이콘"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 4px;
+                    margin-left: 10px;
+                  "
+                />
+              </div>
+            </li>
 
-    <div id="header">
+            <!-- 회원관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">회원 관리</div>
+                </div>
 
-      <h1>
-        <a href="admin_main.html">
-          <img src="../img/common/logo.png" alt="로고">
-        </a>
-      </h1>
-
-      <nav>
-        <ul class="lnb_wrap">
-          <li>
-            <div class="icon_person">
-              <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
-            </div>
-            <div class="txt">관리자님, 반갑습니다</div>
-          </li>
-
-          <!-- 회원관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">회원 관리</div>
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="member-alarm"></div>
+                </div>
               </div>
 
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_01_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-1"></span>회원 목록
+                  </a>
+                </li>
+                <li>
+                  <a href="adimin_01_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-2"></span>쪽지 보내기
+                  </a>
+                </li>
+              </ol>
+            </li>
 
-            <ol class="depth2">
-              <li>
-                <a href="adimin_01_01_00.html">회원 목록</a>
-              </li>
-              <li>
-                <a href="adimin_01_02_00.html">쪽지 보내기</a>
-              </li>
-            </ol>
-          </li>
+            <!-- 입금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">입금 관리</div>
+                </div>
 
-          <!-- 입금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">입금 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li>
-                <a href="adimin_02_01_00.html">입금 신청</a>
-              </li>
-              <li>
-                <a href="adimin_02_01_01.html">입금 내역</a>
-              </li>
-            </ol>
-          </li>
-
-          <!-- 출금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">출금 관리</div>
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="deposit-alarm"></div>
+                </div>
               </div>
 
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_02_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-3"></span>입금 신청
+                  </a>
+                </li>
+                <li>
+                  <a href="adimin_02_01_01.html" class="notice-link">
+                    <span class="notice-dot" id="nd-4"></span>입금 내역
+                  </a>
+                </li>
+              </ol>
+            </li>
 
-            <ol class="depth2">
-              <li>
-                <a href="adimin_03_01_00.html">출금 내역</a>
-              </li>
-              <li>
-                <a href="admin_03_02_00.html">미지급 내역</a>
-              </li>
-            </ol>
-          </li>
+            <!-- 출금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">출금 관리</div>
+                </div>
 
-          <!-- 투자금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">투자금 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li>
-                <a href="admin_04_01_00.html">회수 관리</a>
-              </li>
-              <li>
-                <a href="admin_04_02_00.html">회수 내역</a>
-              </li>
-            </ol>
-          </li>
-
-          <!-- 게시판 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">게시판 관리</div>
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="withdrawal-alarm"></div>
+                </div>
               </div>
 
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_03_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-5"></span>출금 내역
+                  </a>
+                </li>
+                <li>
+                  <a href="admin_03_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-6"></span>미지급 내역
+                  </a>
+                </li>
+              </ol>
+            </li>
+
+            <!-- 투자금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">투자금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="repayment-alarm"></div>
+                </div>
               </div>
-            </div>
 
-            <ol class="depth2">
-              <li> <a href="admin_05_01_00.html">상품 관리</a> </li>
-              <li> <a href="admin_05_02_00.html">계좌 관리</a> </li>
-              <li> <a href="admin_05_03_00.html">1:1 문의</a> </li>
-              <li> <a href="admin_05_04_01_00.html">이벤트 관리</a> </li>
-              <li> <a href="admin_05_05_00.html">공지사항 관리</a> </li>
-              <li> <a href="admin_05_06_00.html">자주묻는질문 관리</a> </li>
-            </ol>
-          </li>
+              <ol class="depth2">
+                <li>
+                  <a href="admin_04_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-7"></span>회수 관리
+                  </a>
+                </li>
+                <li>
+                  <a href="admin_04_02_00.html">회수 내역</a>
+                </li>
+              </ol>
+            </li>
 
-        </ul>
-      </nav>
+            <!-- 게시판 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">게시판 관리</div>
+                </div>
 
-    </div>
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="management-alarm"></div>
+                </div>
+              </div>
 
-    <!-- main -->
-    <div id="main">
-
-      <div class="tab_con">
-
-        <div class="card_tit_tab">
-          <div class="card_tit card_tit_02">쪽지 목록 보기</div>
-          <div class="card_tit card_tit_01 active">쪽지 작성하기</div>
-        </div>
-
-        <!-- tab_menu -->
-        <div class="tab_menu">
-          <ul>
-            <li>목록</li>
-            <li class="active">작성</li>
+              <ol class="depth2">
+                <li><a href="admin_05_01_00.html">상품 관리</a></li>
+                <li><a href="admin_05_02_00.html">계좌 관리</a></li>
+                <li>
+                  <a href="admin_05_03_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-8"></span>1:1 문의
+                  </a>
+                </li>
+                <li><a href="admin_05_04_01_00.html">이벤트 관리</a></li>
+                <li><a href="admin_05_05_00.html">공지사항 관리</a></li>
+                <li><a href="admin_05_06_00.html">자주묻는질문 관리</a></li>
+              </ol>
+            </li>
           </ul>
-        </div>
+        </nav>
+      </div>
 
-        <!-- 탭 콘텐츠 -->
-        <div class="tab_item_wrap">
+      <!-- main -->
+      <div id="main">
+        <div class="tab_con">
+          <div class="card_tit_tab">
+            <div class="card_tit card_tit_02">쪽지 목록 보기</div>
+            <div class="card_tit card_tit_01 active">쪽지 작성하기</div>
+          </div>
 
-          <!-- tab_menu_02 / 쪽지 리스트 -->
-          <div class="tab_content_02 tab_item">
+          <!-- tab_menu -->
+          <div class="tab_menu">
+            <ul>
+              <li class="active">목록</li>
+              <li>작성</li>
+            </ul>
+          </div>
 
-            <div class="table_con">
+          <!-- 탭 콘텐츠 -->
+          <div class="tab_item_wrap" style="margin-bottom: 20px">
+            <!-- tab_menu_02 / 쪽지 리스트 -->
+            <div class="tab_content_02 tab_item">
+              <div class="table_con">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>　</th>
+                      <th>제목</th>
+                      <th>이름</th>
+                      <th>발송일</th>
+                      <th>상태</th>
+                    </tr>
+                  </thead>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>　</th>
-                    <th>제목</th>
-                    <th>발송일</th>
-                    <th>상태</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <a href="adimin_01_02_01.html">안녕하세요. DBS입니다...</a>
-                    </td>
-                    <td>2025.01.02</td>
-                    <td class="state_red">안읽음</td>
-                  </tr>
-
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <a href="adimin_01_02_01.html">안녕하세요. DBS입니다...</a>
-                    </td>
-                    <td>2025.01.02</td>
-                    <td class="state_red">안읽음</td>
-                  </tr>
-
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <a href="adimin_01_02_01.html">안녕하세요. DBS입니다...</a>
-                    </td>
-                    <td>2025.01.02</td>
-                    <td class="state_red">안읽음</td>
-                  </tr>
-
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <a href="adimin_01_02_01.html">안녕하세요. DBS입니다...</a>
-                    </td>
-                    <td>2025.01.02</td>
-                    <td class="state_red">안읽음</td>
-                  </tr>
-
-                  <tr>
-                    <td>1</td>
-                    <td>
-                      <a href="adimin_01_02_01.html">안녕하세요. DBS입니다...</a>
-                    </td>
-                    <td>2025.01.02</td>
-                    <td class="state_red">안읽음</td>
-                  </tr>
-
-                </tbody>
-              </table>
-
+                  <tbody id="admin-messages-tbody">
+                    <tr id="loading-screen">
+                      <td colspan="6">
+                        <div class="spinner-container">
+                          <div class="spinner"></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
-          </div><!--//tab_content_02-->
+            <div class="pg_con">
+              <div class="pg_wrap" id="pagination">
+                <!-- Pagination buttons will be dynamically inserted here -->
+              </div>
+            </div>
+            <!--//tab_content_02-->
 
-          <!-- tab_menu_01 / 쪽지 작성&전송 -->
-          <div class="tab_content_01 tab_item">
+            <!-- tab_menu_01 / 쪽지 작성&전송 -->
+            <div class="tab_content_01 tab_item">
+              <div class="util_box">
+                <div class="top">
+                  <div class="search" id="search" style="cursor: pointer">
+                    <p>
+                      <i class="bi bi-search"></i>
+                      회원검색
+                    </p>
+                  </div>
 
-            <div class="util_box">
+                  <div class="all">
+                    <label for="all_choice">
+                      <input type="checkbox" name="" id="all_choice" />
+                      전체회원
+                    </label>
+                  </div>
+                </div>
+                <!--//top-->
 
-              <div class="top">
+                <!-- 회원 선택 리스트 / 관리자 삭제 가능하도록-->
+                <div class="btm search_tag_area">
+                  <ul></ul>
+                </div>
+              </div>
+              <!--//util_box-->
 
-                <div class="search">
-                  <p>
-                    <i class="bi bi-search"></i>
-                    회원검색
-                  </p>
+              <div class="write_area">
+                <div id="in_title" style="color: black">
+                  <textarea
+                    class="w_tit"
+                    name="title"
+                    id="utitle"
+                    rows="1"
+                    cols="55"
+                    placeholder="제목"
+                    maxlength="50"
+                    required
+                  ></textarea>
                 </div>
 
-                <div class="all">
-                  <label for="all_choice">
-                    <input type="checkbox" name="" id="all_choice">
-                    전체회원
-                  </label>
+                <div id="in_content">
+                  <textarea
+                    class="w_con"
+                    name="content"
+                    id="ucontent"
+                    placeholder="내용"
+                    required
+                  ></textarea>
                 </div>
-              </div><!--//top-->
-
-              <!-- 회원 선택 리스트 / 관리자 삭제 가능하도록-->
-              <div class="btm search_tag_area">
-                <ul>
-
-                  <li data-id="1">
-                    <div class="search_tag">
-                      <p>홍길동</p>
-                      <p class="bi bi-x del"></p>
-                    </div>
-                  </li>
-
-                  <li data-id="1">
-                    <div class="search_tag">
-                      <p>홍길동</p>
-                      <p class="bi bi-x del"></p>
-                    </div>
-                  </li>
-
-                </ul>
               </div>
 
-            </div> <!--//util_box-->
-
-            <div class="write_area">
-
-              <div id="in_title">
-                <textarea class="w_tit" name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="50"
-                  required></textarea>
+              <div class="btn_area">
+                <button type="button" class="close" style="cursor: pointer">
+                  <a href="adimin_01_02_00.html">닫기</a>
+                </button>
+                <button
+                  type="submit"
+                  class="submit"
+                  style="display: flex; align-items: center; cursor: pointer"
+                >
+                  <a>보내기</a>
+                </button>
               </div>
-
-              <div id="in_content">
-                <textarea class="w_con" name="content" id="ucontent" placeholder="내용" required></textarea>
-              </div>
-
             </div>
-
-            <div class="btn_area">
-              <button type="button" class="close">
-                <a href="adimin_01_02_00.html">닫기</a>
-              </button>
-              <button type="submit" class="submit">
-                <a href="adimin_01_02_00.html">보내기</a>
-              </button>
-            </div>
-
-          </div><!--//tab_content_01-->
-
-        </div><!--//tab_item-->
-
-      </div> <!--//tab_con-->
-
-    </div>
-
-    <!-- modal -->
-    <div class="modal">
-
-      <div class="modal_inner">
-
-        <label for="search" class="search_area">
-          <input type="text" placeholder="회원명을 입력하세요." id="search">
-          <span class="bi bi-search icon_search"></span>
-        </label>
-
-        <div class="table_con">
-          <table>
-            <thead>
-              <tr>
-                <th>이름</th>
-                <th>생년월일</th>
-                <th>가입일</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>홍길동</td>
-                <td>2000.01.02</td>
-                <td>2025.02.01</td>
-              </tr>
-              <tr>
-                <td>홍길동</td>
-                <td>2000.01.02</td>
-                <td>2025.02.01</td>
-              </tr>
-              <tr>
-                <td>홍길동</td>
-                <td>2000.01.02</td>
-                <td>2025.02.01</td>
-              </tr>
-            </tbody>
-          </table>
-
+            <!--//tab_content_01-->
+          </div>
+          <!--//tab_item-->
         </div>
+        <!--//tab_con-->
+      </div>
 
-        <span class="bi bi-x-lg close"></span>
+      <!-- modal -->
+      <div class="modal">
+        <div class="modal_inner" style="overflow: hidden">
+          <div style="display: flex; gap: 10px; margin-bottom: 10px">
+            <div
+              class="calender"
+              style="border: 1px solid #ddd; padding: 5px 10px"
+            >
+              <input type="date" id="startRegDateFilter" />
+            </div>
+            <div
+              class="calender"
+              style="border: 1px solid #ddd; padding: 5px 10px"
+            >
+              <input type="date" id="endRegDateFilter" />
+            </div>
+          </div>
+          <label for="search" class="search_area">
+            <input
+              type="text"
+              placeholder="회원명을 입력하세요."
+              id="search-input"
+            />
+            <span class="bi bi-search icon_search"></span>
+          </label>
 
-      </div><!--//modal_inner-->
+          <div class="table_con" id="table_modal" style="overflow-y: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>이름</th>
+                  <th>생년월일</th>
+                  <th>가입일</th>
+                </tr>
+              </thead>
+
+              <tbody id="member-list-modal">
+                <tr id="loading-screen-2">
+                  <td colspan="6">
+                    <div class="spinner-container">
+                      <div class="spinner"></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <span
+            class="bi bi-x-lg close"
+            id="modal-close"
+            style="cursor: pointer"
+          ></span>
+        </div>
+      </div>
     </div>
-
-  </div>
-</body>
-
+  </body>
 </html>

@@ -1,227 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aureon Partners</title>
 
-  <title>Aureon Partners</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="img/common/favicon.png" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="css/sub.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-  <link rel="stylesheet" href="css/sub_media.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/sub_02.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-  <script defer src="js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="js/swiper-bundle.min.js.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sub_media.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/sub_02.css" />
 
-  <!-- js -->
-  <script defer src="js/common.js"></script>
-  <script defer src="js/main.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-</head>
+    <script src="./js/jquery-3.7.1.min.js.js"></script>
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
-<body>
-  <div id="login_wrap">
+    <script defer src="./js/swiper-bundle.min.js.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- header -->
-    <header id="header">
+    <!-- js -->
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script type="module" src="./js/api/client/auth-controller.js"></script>
+  </head>
 
-      <h1><a href="en/index.html"></a></h1>
+  <body>
+    <div id="login_wrap">
+      <!-- header -->
+      <header id="header">
+        <h1><a href="index.html"></a></h1>
 
-      <nav>
-        <ul class="gnb">
-          <li><a href="en/sub_01.html">About</a></li>
-          <li><a href="en/sub_02.html">Strategy</a></li>
-          <li><a href="login.html">Investment</a></li>
-          <li><a href="login.html">Event</a></li>
-          <li><a href="#none">Support
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="depth2">
-              <li><a href="login.html">FAQ</a></li>
-              <li><a href="login.html">Notice</a></li>
-              <li><a href="login.html">1:1 Contact</a></li>
-            </ol>
-          </li>
-
-        </ul>
-
-        <ol class="util">
-          <li><a href="login.html">Login</a></li>
-          <li><a href="join_01.html">Sign Up</a></li>
-        </ol>
-      </nav>
-
-      <div class="ham bi bi-list"></div>
-
-      <div class="mgnb_wrap">
-
-        <div class="bi bi-x-lg mgnb_close"></div>
-        <div class="mgnb_logo"></div>
-
-        <ul class="mgnb">
-          <li><a href="en/sub_01.html">About</a></li>
-          <li><a href="en/sub_02.html">Strategy</a></li>
-          <li><a href="login.html">Investment</a></li>
-          <li><a href="login.html">Event</a></li>
-          <li><a href="#none">Support
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="mdepth2">
-              <li><a href="login.html">FAQ</a></li>
-              <li><a href="login.html">Notice</a></li>
-              <li><a href="login.html">1:1 Contact</a></li>
-            </ol>
-          </li>
-        </ul>
-
-        <ul class="m_util">
-          <li><a href="login.html">Login</a></li>
-          <li><a href="join_01.html">Sign Up</a></li>
-        </ul>
-
-      </div>
-    </header>
-
-    <!-- main -->
-    <main id="main">
-
-      <section id="login_area">
-        <div class="login_inner">
-
-          <div class="top_wrap">
-
-            <div class="tit_area">
-              <!-- <div class="img">체크 이미지</div> -->
-              <h2>Login</h2>
-              <p> Don't have an account yet?
-                <a href="join_01.html">Sign up now
-                </a>
-              </p>
-            </div>
-
-            <!-- 로그인 정보 입력란 입니다. -->
-            <div class="input_area">
-
-              <!-- id -->
-              <div class="text_id">
-
-                <label for="id">ID
-                  <input type="text" id="id" placeholder="ID">
-                </label>
-              </div>
-
-
-              <!-- pw -->
-              <div class="txt_pw">
-
-                <label for="pw">Password
-                  <input type="text" id="pw" placeholder="PW">
-                </label>
-              </div>
-
-            </div>
-
-            <!-- 자동로그인 설정란 입니다 -->
-            <div class="sub_area">
-
-              <label for="auto_login" class="auto_login">
-                <input type="checkbox" id="auto_login">
-                <span class="check_on"></span>
-                Auto Login
-              </label>
-
-              <a href="a_login/find_id.html" class="go_link">
-                Find ID/PW
+        <nav>
+          <ul class="gnb">
+            <li><a href="en/sub_01.html">About</a></li>
+            <li><a href="en/sub_02.html">Strategy</a></li>
+            <li><a href="login.html">Investment</a></li>
+            <li><a href="login.html">Event</a></li>
+            <li>
+              <a href="#none"
+                >Support
+                <span class="bi bi-chevron-down show"></span>
               </a>
+              <ol class="depth2">
+                <li><a href="login.html">FAQ</a></li>
+                <li><a href="login.html">Notice</a></li>
+                <li><a href="login.html">1:1 Contact</a></li>
+              </ol>
+            </li>
+          </ul>
 
+          <ol class="util">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="join_01.html">Sign Up</a></li>
+          </ol>
+        </nav>
+
+        <div class="ham bi bi-list"></div>
+
+        <div class="mgnb_wrap">
+          <div class="bi bi-x-lg mgnb_close"></div>
+          <div class="mgnb_logo"></div>
+
+          <ul class="mgnb">
+            <li><a href="en/sub_01.html">About</a></li>
+            <li><a href="en/sub_02.html">Strategy</a></li>
+            <li><a href="login.html">Investment</a></li>
+            <li><a href="login.html">Event</a></li>
+            <li>
+              <a href="#none"
+                >Support
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="mdepth2">
+                <li><a href="login.html">FAQ</a></li>
+                <li><a href="login.html">Notice</a></li>
+                <li><a href="login.html">1:1 Contact</a></li>
+              </ol>
+            </li>
+          </ul>
+
+          <ul class="m_util">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="join_01.html">Sign Up</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- main -->
+      <main id="main">
+        <section id="login_area">
+          <div class="login_inner">
+            <div class="top_wrap">
+              <div class="tit_area">
+                <!-- <div class="img">체크 이미지</div> -->
+                <h2>Login</h2>
+                <p>
+                  Don't have an account yet?
+                  <a href="join_01.html">Sign up now </a>
+                </p>
+              </div>
+
+              <!-- 로그인 정보 입력란 입니다. -->
+              <div class="input_area">
+                <!-- id -->
+                <div class="text_id">
+                  <label for="id"
+                    >ID
+                    <input type="text" id="id" placeholder="ID" />
+                  </label>
+                </div>
+
+                <!-- pw -->
+                <div class="txt_pw">
+                  <label for="pw"
+                    >Password
+                    <input type="password" id="pw" placeholder="PW" />
+                  </label>
+                </div>
+              </div>
+
+              <!-- 자동로그인 설정란 입니다 -->
+              <div class="sub_area">
+                <label for="auto_login" class="auto_login">
+                  <input type="checkbox" id="auto_login" />
+                  <span class="check_on"></span>
+                  Auto Login
+                </label>
+
+                <a href="a_login/find_id.html" class="go_link"> Find ID/PW </a>
+              </div>
+
+              <!-- 로그인 버튼 -->
+              <div class="btn_login" style="cursor: pointer">
+                <a>Login</a>
+              </div>
             </div>
 
-            <!-- 로그인 버튼 -->
-            <div class="btn_login">
-              <a href="index.html">Login</a>
+            <!-- 회원가입 바로가기 -->
+            <div class="btn_join">
+              <a href="join_01.html">Sign up</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- //main -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="f_logo"></div>
+
+          <div class="txt_area">
+            <div class="f_txt">
+              <p class="company">Aureon Partners</p>
+
+              <address>
+                <span>Limited</span>
+                <span>7760 Office Plaza Drive South,</span>
+                <span>West Des Moines, IA 50266</span>
+              </address>
             </div>
 
+            <div class="email">
+              <a href="mailto:support@aureon.com"
+                >Support : support@aureon.com</a
+              >
+            </div>
           </div>
 
-          <!-- 회원가입 바로가기 -->
-          <div class="btn_join">
-            <a href="join_01.html">Sign up</a>
+          <div class="copy">
+            <p>Copylight © 2022 Aureon Partners Ltd</p>
           </div>
-
         </div>
-      </section>
+      </footer>
+      <!--//footer-->
 
-    </main><!-- //main -->
-
-    <!-- footer -->
-    <footer id="footer">
-      <div class="inner">
-
-        <div class="f_logo"></div>
-
-        <div class="txt_area">
-
-          <div class="f_txt">
-
-            <p class="company">Aureon Partners</p>
-
-            <address>
-              <span>Limited</span>
-              <span>7760 Office Plaza Drive South,</span>
-              <span>West Des Moines, IA 50266</span>
-            </address>
-
-          </div>
-
-          <div class="email">
-            <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
-          </div>
-
-        </div>
-
-        <div class="copy">
-          <p>Copylight © 2022 Aureon Partners Ltd</p>
-        </div>
-
+      <!-- go_top -->
+      <div class="go_top">
+        Go Top
+        <a href="#">
+          <span class="bi bi-chevron-up"></span>
+        </a>
       </div>
-    </footer>
-    <!--//footer-->
 
-    <!-- go_top -->
-    <div class="go_top">Go Top
-      <a href="#">
-        <span class="bi bi-chevron-up"></span>
-      </a>
+      <!-- modal -->
+      <div class="modal mail_alarm" style="display: none">
+        <dl style="position: fixed">
+          <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+          <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+          <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+        </dl>
+      </div>
+      <div id="notificationContainer"></div>
     </div>
 
-  <!-- aos소스 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- 1. SockJS 먼저 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="./js/api/websocket.js"></script>
+    <script src="./js/api/websocket-init.js"></script>
 
-  <script src="../js/sub05_01.js"></script>
-</body>
+    <script>
+      fetch("/components/notifications/error-notification.html")
+        .then((response) => response.text())
+        .then((html) => {
+          const container = document.getElementById("notificationContainer");
+          if (!container) {
+            console.error("Error: #notificationContainer does not exist.");
+            return;
+          }
 
+          container.innerHTML = html;
+
+          const scripts = container.getElementsByTagName("script");
+          for (let script of scripts) {
+            eval(script.innerText);
+          }
+        })
+        .catch((error) =>
+          console.error("Error loading notification.html:", error)
+        );
+    </script>
+    <!-- aos소스 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="./js/sub05_01.js"></script>
+  </body>
 </html>

@@ -1,245 +1,288 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DBS : Trusted as the World's Best Bond | DBS Bond</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/login.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/a_login.css">
-  <link rel="stylesheet" href="../css/media.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/a_login.css" />
+    <link rel="stylesheet" href="../css/media.css" />
 
-  <!-- js -->
-  <script src="../js/jquery-3.7.1.min.js"></script>
-  <!-- <script defer src="../js/main.js"></script> -->
-  <script defer src="../js/common.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-</head>
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
-<body>
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/swiper-bundle.min.js.js"></script>
 
-  <!-- header -->
-  <header id="header">
+    <!-- js -->
+    <script src="../js/jquery-3.7.1.min.js.js"></script>
+    <!-- <script defer src="../js/main.js"></script> -->
+    <script defer type="module" src="/js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script
+      type="module"
+      defer
+      src="../js/api/client/my-info-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
 
-    <h1><a href="../index.html"></a></h1>
+  <body>
+    <!-- header -->
+    <header id="header">
+      <h1><a href="../kr/index.html"></a></h1>
 
-    <nav>
-      <ul class="gnb">
-        <li><a href="../sub/sub_01.html">회사소개</a></li>
-        <li><a href="../sub/sub_02.html">투자전략</a></li>
-        <li><a href="../sub/sub_03.html">투자상품</a></li>
-        <li><a href="../sub/sub_04.html">이벤트</a></li>
-        <li><a href="#none">고객지원
-            <span class="bi bi-chevron-down show"></span>
-          </a>
-          <ol class="depth2">
-            <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
-            <li><a href="../sub/sub_05_02.html">공지사항</a></li>
-            <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
-          </ol>
-        </li>
-      </ul>
+      <nav>
+        <ul class="gnb">
+          <li><a href="../sub/sub_01.html">회사소개</a></li>
+          <li><a href="../sub/sub_02.html">투자전략</a></li>
+          <li><a href="../sub/sub_03.html">투자상품</a></li>
+          <li><a href="../sub/sub_04.html">이벤트</a></li>
+          <li>
+            <a href="#none"
+              >고객지원
+              <span class="bi bi-chevron-down show"></span>
+            </a>
+            <ol class="depth2">
+              <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+              <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+            </ol>
+          </li>
+        </ul>
 
-      <ol class="util">
-        <li>
-          <a href="#none">마이페이지</a>
-          <ol class="u_depth2">
-            <li><a href="info_edit.html">내 정보수정</a></li>
-            <li><a href="mycash.html">내 자산현황</a></li>
-          </ol>
-        </li>
+        <ol class="util">
+          <li>
+            <a href="#none">마이페이지</a>
+            <ol class="u_depth2">
+              <li><a href="info_edit.html">내 정보수정</a></li>
+              <li><a href="mycash.html">내 자산현황</a></li>
+            </ol>
+          </li>
 
-        <li><a href="../en/index.html">로그아웃</a></li>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
 
-        <li class="note_alarm">
-          <a href="mail.html">
-            <span>내 쪽지함</span>
-          </a>
-        </li>
-      </ol>
-    </nav>
+          <li class="note_alarm">
+            <a href="mail.html">
+              <span>내 쪽지함</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
 
-    <div class="ham bi bi-list"></div>
+      <div class="ham bi bi-list"></div>
 
-    <div class="mgnb_wrap">
+      <div class="mgnb_wrap">
+        <div class="bi bi-x-lg mgnb_close"></div>
+        <div class="mgnb_logo"></div>
 
-      <div class="bi bi-x-lg mgnb_close"></div>
-      <div class="mgnb_logo"></div>
+        <ul class="mgnb">
+          <li><a href="../sub/sub_01.html">회사소개</a></li>
+          <li><a href="../sub/sub_02.html">투자전략</a></li>
+          <li><a href="../sub/sub_03.html">투자상품</a></li>
+          <li><a href="../sub/sub_04.html">이벤트</a></li>
+          <li>
+            <a href="#none"
+              >고객지원
+              <span class="bi bi-chevron-down show"></span>
+            </a>
+            <ol class="mdepth2">
+              <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+              <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+              <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+            </ol>
+          </li>
+        </ul>
 
-      <ul class="mgnb">
-        <li><a href="../sub/sub_01.html">회사소개</a></li>
-        <li><a href="../sub/sub_02.html">투자전략</a></li>
-        <li><a href="../sub/sub_03.html">투자상품</a></li>
-        <li><a href="../sub/sub_04.html">이벤트</a></li>
-        <li><a href="#none">고객지원
-            <span class="bi bi-chevron-down show"></span>
-          </a>
-          <ol class="mdepth2">
-            <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
-            <li><a href="../sub/sub_05_02.html">공지사항</a></li>
-            <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
-          </ol>
-        </li>
-      </ul>
+        <ul class="m_util">
+          <li>
+            <a href="#none">마이페이지</a>
 
-      <ul class="m_util">
-        <li>
-          <a href="#none">마이페이지</a>
+            <ol class="u_depth2 mu_depth2">
+              <li><a href="info_edit.html">내 정보수정</a></li>
+              <li><a href="mycash.html">내 자산현황</a></li>
+            </ol>
+          </li>
 
-          <ol class="u_depth2 mu_depth2">
-            <li><a href="info_edit.html">내 정보수정</a></li>
-            <li><a href="mycash.html">내 자산현황</a></li>
-          </ol>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
+          <li class="note"><a href="mail.html">내 쪽지함</a></li>
+        </ul>
+      </div>
+    </header>
 
-        </li>
+    <main id="main">
+      <div class="cash">
+        <div class="cash_in">
+          <section>
+            <div class="mycash">
+              <h1><span>｜</span>내 자산현황</h1>
 
-        <li><a href="../en/index.html">로그아웃</a></li>
-        <li class="note"><a href="mail.html">내 쪽지함</a></li>
-
-      </ul>
-
-    </div>
-  </header>
-
-
-  <main id="main">
-    <div class="cash">
-      <div class="cash_in">
-
-        <section>
-          <div class="mycash">
-            <h1><span>｜</span>내 자산현황</h1>
-
-            <ul>
-              <li>
-                <p>총 투자금</p>
-                <b>500,000원</b>
-              </li>
-              <li>
-                <p>총 수익금</p>
-                <b>2,000,000원</b>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <h2>보유자산 포트폴리오</h2>
-          <div class="portfolio">
-            
-            <div class="chart">
-              <div class="chart-bar" data-deg="50"></div>
+              <ul>
+                <li>
+                  <p>총 투자금</p>
+                  <b id="total-investment-amount">500,000원</b>
+                </li>
+                <li>
+                  <p>총 수익금</p>
+                  <b id="total-profit-amount">2,000,000원</b>
+                </li>
+              </ul>
             </div>
+          </section>
 
-            <ul>
+          <section>
+            <h2>보유자산 포트폴리오</h2>
+            <div class="portfolio">
+              <div class="chart">
+                <div class="chart-bar" data-deg="50"></div>
+              </div>
+
+              <ul>
+                <li>
+                  <p><span>·</span>&nbsp;USD 채권</p>
+                  <b class="usd-investment-ratio">10%</b>
+                </li>
+                <li>
+                  <p><span>·</span>&nbsp;EUR 채권</p>
+                  <b class="eur-investment-ratio">40%</b>
+                </li>
+                <li>
+                  <p><span>·</span>&nbsp;JPY 채권</p>
+                  <b class="jpy-investment-ratio">30%</b>
+                </li>
+                <li>
+                  <p><span>·</span>&nbsp;CNY 채권</p>
+                  <b class="cny-investment-ratio">20%</b>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <div class="port_text">
+            <ol>
+              <li><span>·</span>&nbsp;USD</li>
               <li>
-                <p><span>·</span>&nbsp;USD 채권</p>
-                <b>10%</b>
+                <p><span>｜</span>채권손익</p>
+                <b id="usd-profit-amount">200,000원</b>
               </li>
               <li>
-                <p><span>·</span>&nbsp;EUR 채권</p>
-                <b>40%</b>
+                <p><span>｜</span>수익률</p>
+                <b id="usd-profit-percent">34.97%</b>
+              </li>
+            </ol>
+            <ol>
+              <li><span>·</span>&nbsp;EUR</li>
+              <li>
+                <p><span>｜</span>채권손익</p>
+                <b id="eur-profit-amount">200,000원</b>
               </li>
               <li>
-                <p> <span>·</span>&nbsp;JPY 채권</p>
-                <b>30%</b>
+                <p><span>｜</span>수익률</p>
+                <b id="eur-profit-percent">34.97%</b>
+              </li>
+            </ol>
+            <ol>
+              <li><span>·</span> &nbsp; JPY</li>
+              <li>
+                <p><span>｜</span>채권손익</p>
+                <b id="jpy-profit-amount">200,000원</b>
               </li>
               <li>
-                <p><span>·</span>&nbsp;CNY 채권</p>
-                <b>20%</b>
+                <p><span>｜</span>수익률</p>
+                <b id="jpy-profit-percent">34.97%</b>
               </li>
-            </ul>
+            </ol>
+            <ol>
+              <li><span>·</span>&nbsp;CNY</li>
+              <li>
+                <p><span>｜</span>채권손익</p>
+                <b id="cny-profit-amount">200,000원</b>
+              </li>
+              <li>
+                <p><span>｜</span>수익률</p>
+                <b id="cny-profit-percent">34.97%</b>
+              </li>
+            </ol>
           </div>
-        </section>
-        <div class="port_text">
-          <ol>
-            <li><span>·</span>&nbsp;USD</li>
-            <li>
-              <p><span>｜</span>채권손익</p>
-              <b>200,000원</b>
-            </li>
-            <li>
-              <p><span>｜</span>수익률</p>
-              <b>34.97%</b>
-            </li>
-          </ol>
-          <ol>
-            <li><span>·</span>&nbsp;EUR</li>
-            <li>
-              <p><span>｜</span>채권손익</p>
-              <b>200,000원</b>
-            </li>
-            <li>
-              <p><span>｜</span>수익률</p>
-              <b>34.97%</b>
-            </li>
-          </ol>
-          <ol>
-            <li><span>·</span> &nbsp; JPY</li>
-            <li>
-              <p><span>｜</span>채권손익</p>
-              <b>200,000원</b>
-            </li>
-            <li>
-              <p><span>｜</span>수익률</p>
-              <b>34.97%</b>
-            </li>
-          </ol>
-          <ol>
-            <li><span>·</span>&nbsp;CNY</li>
-            <li>
-              <p><span>｜</span>채권손익</p>
-              <b>200,000원</b>
-            </li>
-            <li>
-              <p><span>｜</span>수익률</p>
-              <b>34.97%</b>
-            </li>
-          </ol>
-        </div>
 
-        <div class="btn_final a_account2">
-
-          <a href="../index.html" class="join">홈으로</a>
-
-
+          <div class="btn_final a_account2">
+            <a href="../kr/index.html" class="join">홈으로</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main><!-- //main -->
+    </main>
+    <!-- //main -->
 
     <!-- footer -->
     <footer id="footer">
       <div class="inner">
-
         <div class="f_logo"></div>
 
         <div class="txt_area">
-
           <div class="f_txt">
-
             <p class="company">Aureon Partners</p>
 
             <address>
@@ -247,37 +290,43 @@
               <span>7760 Office Plaza Drive South,</span>
               <span>West Des Moines, IA 50266</span>
             </address>
-
           </div>
 
           <div class="email">
             <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
           </div>
-
         </div>
 
         <div class="copy">
           <p>Copylight © 2022 Aureon Partners Ltd</p>
         </div>
-
       </div>
     </footer>
     <!--//footer-->
 
     <!-- go_top -->
-    <div class="go_top">맨 위로
+    <div class="go_top">
+      맨 위로
       <a href="#">
         <span class="bi bi-chevron-up"></span>
       </a>
     </div>
 
-  <!-- aos소스 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
 
-  <script src="../js/sub05_01.js"></script>
-</body>
+    <!-- aos소스 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
+    <script src="../js/sub05_01.js"></script>
+  </body>
 </html>

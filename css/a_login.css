@@ -5,14 +5,14 @@
     --main-font :'Pretendard', sans-serif;
 } */
 
-input[type=password],
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=tel],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
 textarea,
-input[type=checkbox] {
-  font-family: 'Pretendard', sans-serif;
+input[type="checkbox"] {
+  font-family: "Pretendard", sans-serif;
 }
 
 /* 쪽지함 */
@@ -29,6 +29,10 @@ input[type=checkbox] {
   /* 넘치는 내용 숨김 */
   text-overflow: ellipsis;
   /* 생략 부호(...) 표시 */
+}
+
+.sub5_container {
+  height: 100vh;
 }
 
 .sub5_container .table_con {
@@ -105,19 +109,30 @@ input[type=checkbox] {
 }
 
 .btn-hover,
-.btn-hover>button,
-.line-hover>a {
+.btn-hover > button,
+.line-hover > a {
   transition: all 0.5s;
 }
 
-.btn-hover:hover>button {
+.btn-hover:hover > button {
   color: #fff;
   background: var(--main-color);
 }
 
+.line-hover a {
+  transition: all 0.3s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
 .line-hover a:hover {
-  border-bottom: 1px solid var(--main-color);
   color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.line-hover.active a {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
 }
 
 .tab_top_in ul {
@@ -128,12 +143,13 @@ input[type=checkbox] {
   font-weight: 600;
 }
 
-.tab_top_in ul:nth-of-type(1) li:nth-of-type(1) a {
+/* Initialize first tab as active */
+#all-recs.active a {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
 
-.tab_top_in .btn-hover>button {
+.tab_top_in .btn-hover > button {
   width: 100%;
   border: var(--main-color) 1px solid;
   padding: 3px 28px;
@@ -169,7 +185,7 @@ input[type=checkbox] {
 }
 
 .table_con tbody .end {
-  color: #FF3333;
+  color: #ff3333;
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -283,7 +299,7 @@ input[type=checkbox] {
 /* 내정보수정 */
 
 .popup2 ul {
-  margin: 200px auto;
+  margin: 10% auto;
   background-color: #fff;
   text-align: center;
   padding: 30px 50px;
@@ -463,19 +479,19 @@ input[type=checkbox] {
 }
 
 .portfolio ul li:nth-of-type(1) span {
-  color: #FC7E05;
+  color: #fc7e05;
 }
 
 .portfolio ul li:nth-of-type(2) span {
-  color: #FFD900;
+  color: #ffd900;
 }
 
 .portfolio ul li:nth-of-type(3) span {
-  color: #6732B0;
+  color: #6732b0;
 }
 
 .portfolio ul li:nth-of-type(4) span {
-  color: #22E025;
+  color: #22e025;
 }
 
 /* 원형차트만들기기 */
@@ -491,7 +507,7 @@ input[type=checkbox] {
 
 .chart:after {
   /* 가상선택자는 도넛 모양을 만들기 위함이다.*/
-  content: '';
+  content: "";
   background: #fff;
   /* 백그라운드 컬러로 중앙가리기 */
   position: absolute;
@@ -508,7 +524,12 @@ input[type=checkbox] {
   width: inherit;
   height: inherit;
   border-radius: 50%;
-  background: conic-gradient(#FC7E05 36deg, #FFD900 36deg 170deg, #6732B0 170deg 290deg, #22E025 290deg 360deg);
+  background: conic-gradient(
+    #fc7e05 36deg,
+    #ffd900 36deg 170deg,
+    #6732b0 170deg 290deg,
+    #22e025 290deg 360deg
+  );
   /* 차트 설정 */
 }
 
@@ -542,21 +563,20 @@ input[type=checkbox] {
 }
 
 .port_text ol:nth-of-type(1) li:nth-of-type(1) span {
-  color: #FC7E05;
+  color: #fc7e05;
 }
 
 .port_text ol:nth-of-type(2) li:nth-of-type(1) span {
-  color: #FFD900;
+  color: #ffd900;
 }
 
 .port_text ol:nth-of-type(3) li:nth-of-type(1) span {
-  color: #6732B0;
+  color: #6732b0;
 }
 
 .port_text ol:nth-of-type(4) li:nth-of-type(1) span {
-  color: #22E025;
+  color: #22e025;
 }
-
 
 /* 아이디 비밀번호 찾기 */
 .a_account {
@@ -621,7 +641,6 @@ input[type=checkbox] {
 
 .btn_final2 {
   padding: 20px 0 40px;
-
 }
 
 .btn_final2 a {
@@ -633,16 +652,15 @@ input[type=checkbox] {
   border: 1px solid var(--main-color);
 }
 
-.btn_final2>a.join:hover {
+.btn_final2 > a.join:hover {
   color: var(--main-color);
 }
 
-.btn_final2>a.del:hover {
+.btn_final2 > a.del:hover {
   background-color: var(--main-color) !important;
 }
 
-@media (max-width:1100px) {
-
+@media (max-width: 1100px) {
   .sub_banner_in,
   .tab,
   .tab_top,
@@ -657,8 +675,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:1000px) {
-
+@media (max-width: 1000px) {
   .sub_banner_in,
   .tab,
   .tab_top,
@@ -673,8 +690,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:900px) {
-
+@media (max-width: 900px) {
   .sub_banner_in,
   .tab,
   .tab_top,
@@ -697,8 +713,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:700px) {
-
+@media (max-width: 700px) {
   .sub_banner_in,
   .tab,
   .tab_top,
@@ -714,8 +729,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:610px) {
-
+@media (max-width: 610px) {
   .cash,
   .refund,
   .join_con2,
@@ -756,7 +770,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:580px) {
+@media (max-width: 580px) {
   .col {
     gap: 15px;
   }
@@ -766,8 +780,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:550px) {
-
+@media (max-width: 550px) {
   .sub_banner_in,
   .tab,
   .tab_top,
@@ -807,8 +820,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:500px) {
-
+@media (max-width: 500px) {
   .cash,
   .join_con2,
   .write,
@@ -829,8 +841,8 @@ input[type=checkbox] {
     width: 80%;
   }
 
-  .btn_final>a.del,
-  .btn_final>a.join {
+  .btn_final > a.del,
+  .btn_final > a.join {
     padding: 10px 20px;
   }
 
@@ -840,8 +852,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:480px) {
-
+@media (max-width: 480px) {
   .cash,
   .refund,
   .join_con2,
@@ -887,7 +898,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:410px) {
+@media (max-width: 410px) {
   label.phone {
     align-items: center;
   }
@@ -897,8 +908,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:400px) {
-
+@media (max-width: 400px) {
   .cash,
   .refund,
   .write,
@@ -960,8 +970,8 @@ input[type=checkbox] {
     gap: 20px;
   }
 
-  .btn_final>a.del,
-  .btn_final>a.join {
+  .btn_final > a.del,
+  .btn_final > a.join {
     font-size: 14px;
   }
 
@@ -986,8 +996,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:360px) {
-
+@media (max-width: 360px) {
   .cash,
   .tab,
   .tab_top,
@@ -1003,7 +1012,7 @@ input[type=checkbox] {
   }
 
   .input_area {
-    padding: 20px 0 10px
+    padding: 20px 0 10px;
   }
 
   .write_in ul li a {
@@ -1020,8 +1029,7 @@ input[type=checkbox] {
   }
 }
 
-@media (max-width:321px) {
-
+@media (max-width: 321px) {
   .cash,
   .join_con2,
   .write,
@@ -1054,8 +1062,8 @@ input[type=checkbox] {
     width: 300px;
   }
 
-  .btn_final>a.del,
-  .btn_final>a.join {
+  .btn_final > a.del,
+  .btn_final > a.join {
     font-size: 12px;
   }
 

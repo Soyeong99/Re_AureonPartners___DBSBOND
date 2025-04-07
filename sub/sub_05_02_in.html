@@ -1,49 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aureon Partners</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.png" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/sub_02.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/media.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/sub_02.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/media.css" />
 
-  <!-- js -->
-  <script defer src="../js/sub05_01.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <script defer src="../js/main.js"></script>
-  <script defer src="../js/common.js"></script>
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/swiper-bundle.min.js.js"></script>
 
+    <!-- js -->
+    <script defer src="../js/sub05_01.js"></script>
 
-</head>
+    <script defer src="../js/main.js"></script>
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/notice-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
 
-<body>
+    <style>
+      .attachments {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
 
+      .attachment-image {
+        width: 100%;
+        max-width: 600px;
+        margin-right: 8px;
+      }
+
+      .attachment-link {
+        width: auto;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 5px;
+        padding: 5px;
+        background: #ddd;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+
+      .attachment-link:hover {
+        background: #bbb;
+      }
+
+      #loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- header -->
     <header id="header">
-
-      <h1><a href="../index.html"></a></h1>
+      <h1><a href="../kr/index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
@@ -51,7 +138,9 @@
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
+          <li>
+            <a href="#none"
+              >고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
@@ -71,7 +160,7 @@
             </ol>
           </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
 
           <li class="note_alarm">
             <a href="../a_login/mail.html">
@@ -84,7 +173,6 @@
       <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
-
         <div class="bi bi-x-lg mgnb_close"></div>
         <div class="mgnb_logo"></div>
 
@@ -93,7 +181,9 @@
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
+          <li>
+            <a href="#none"
+              >고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="mdepth2">
@@ -112,85 +202,51 @@
               <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
               <li><a href="../a_login/mycash.html">내 자산현황</a></li>
             </ol>
-
           </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
           <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
         </ul>
-
       </div>
     </header>
 
-  <main id="main">
-    <div class="sub5_container">
+    <main id="main">
+      <div class="sub5_container">
+        <section id="container">
+          <div class="out_notion_wrap">
+            <div class="out_notion_section1">
+              <h5>고객지원 > 공지사항</h5>
 
-      <section id="container">
+              <h1>공지사항</h1>
+              <ul>
+                <li>
+                  <h2 id="announcement-title"></h2>
+                </li>
+                <li id="announcement-date"></li>
+              </ul>
 
+              <div class="out_notion_txt">
+                <!-- 공지사항 내용 예시입니다. -->
+                <div id="attachments" class="attachment-container"></div>
+                <p id="announcement-content"></p>
+              </div>
+            </div>
 
-        <div class="out_notion_wrap">
-          <div class="out_notion_section1">
-            <h5>고객지원 > 공지사항</h5>
-
-            <h1>공지사항</h1>
-
-            <ul>
-              <li>
-                <h2>공지사항 타이틀</h2>
-              </li>
-              <li>2025.03.12</li>
-            </ul>
-
-            <div class="out_notion_txt">
-              <!-- 공지사항 내용 예시입니다. -->
-
-              <p>안녕하세요, <span>DBS BOND 입니다</span> <br><br>
-
-                보다 안정적인 서비스 제공과 시스템 개선을 위해 정기 시스템 점검을 진행할 예정입니다. <br>
-                점검 시간 동안 일부 서비스 이용이 제한될 수 있으므로, 아래 내용을 참고하여 투자 및 거래 계획을 세워주시기 바랍니다. <br>
-                <br>
-                🛠 <span>점검 일정</span> <br>
-                📅 점검 일시: XX월 XX일 (목) 00:00 ~ 06:00 (KST 기준) <br>
-                ⚠ 영향을 받는 서비스: <br>
-                ✔ 홈페이지 및 모바일 앱 로그인 제한 <br>
-                ✔ 투자 내역 조회 및 신규 투자 신청 불가 <br>
-                ✔ 출금 및 입금 요청 지연 가능 <br>
-                <br>
-                점검 시간 동안 기존 투자 상품 및 자산에는 영향이 없으며, 점검 완료 후 정상적으로 서비스 이용이 가능합니다. <br>
-                고객님의 투자 활동에 불편을 드려 죄송합니다. <br>
-                더 좋은 서비스 제공을 위해 노력하겠습니다. <br>
-                <br>
-                궁금한 사항은 고객센터로 문의해 주세요. <br>
-                📞 고객센터: 0000-0000 <br>
-                💻 공식 웹사이트: www.회사명.com <br>
-
-                감사합니다.
-              </p>
-
+            <div class="out_notion_section2">
+              <a href="./sub_05_02.html">목록보기</a>
             </div>
           </div>
-
-          <div class="out_notion_section2">
-            <a href="./sub_05_02.html">목록보기</a>
-          </div>
-
-        </div>
-
-      </section>
-
-    </div>
-  </main>
+        </section>
+      </div>
+    </main>
 
     <!-- footer -->
     <footer id="footer">
       <div class="inner">
-
         <div class="f_logo"></div>
 
         <div class="txt_area">
-
           <div class="f_txt">
-
             <p class="company">Aureon Partners</p>
 
             <address>
@@ -198,37 +254,47 @@
               <span>7760 Office Plaza Drive South,</span>
               <span>West Des Moines, IA 50266</span>
             </address>
-
           </div>
 
           <div class="email">
             <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
           </div>
-
         </div>
 
         <div class="copy">
           <p>Copylight © 2022 Aureon Partners Ltd</p>
         </div>
-
       </div>
     </footer>
     <!--//footer-->
 
     <!-- go_top -->
-    <div class="go_top">맨 위로
+    <div class="go_top">
+      맨 위로
       <a href="#">
         <span class="bi bi-chevron-up"></span>
       </a>
     </div>
 
-  <!-- aos소스 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
+    <!-- aos소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="../js/api/websocket.js"></script>
+    <script src="../js/api/websocket-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-  <script src="../js/sub05_01.js"></script>
-</body>
-
+    <script src="../js/sub05_01.js"></script>
+  </body>
 </html>

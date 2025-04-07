@@ -1,6 +1,52 @@
 $(function () {
+  const authConfig = {
+    protectedRoutes: ["/admin"],
 
-  // 2차메뉴 
+    hasValidAccessToken() {
+      const token = localStorage.getItem("accessToken");
+      return token && token.trim() !== "";
+    },
+
+    hasAdminAccess() {
+      const admin = localStorage.getItem("admin");
+      return admin === "true";
+    },
+
+    isProtectedRoute(path) {
+      return this.protectedRoutes.some((route) => path.startsWith(route));
+    },
+
+    checkAuthAndRedirect() {
+      const currentPath = window.location.pathname;
+
+      if (this.isProtectedRoute(currentPath)) {
+        if (!this.hasValidAccessToken() && !this.hasAdminAccess()) {
+          window.location.href = `/login.html`;
+          return;
+        }
+
+        if (this.hasValidAccessToken() && !this.hasAdminAccess()) {
+          window.location.href = `/kr/index.html`;
+          return;
+        }
+
+        if (!this.hasValidAccessToken()) {
+          window.location.href = `/login.html`;
+          return;
+        }
+      }
+
+      document.documentElement.style.display = "";
+    },
+
+    init() {
+      this.checkAuthAndRedirect();
+      window.addEventListener("popstate", () => {
+        this.checkAuthAndRedirect();
+      });
+    },
+  };
+  // 2차메뉴
   // $(".depth2").hide()
   // $(".lnb_wrap li").click(function () {
   //   // $(".lnb_wrap li .lnb").addClass('active').siblings().removeClass('active')
@@ -15,52 +61,51 @@ $(function () {
   //   $(this).find(".depth2").slideUp()
   // })
 
-  
   // ----------
-  // 팝업 영역입니다 
+  // 팝업 영역입니다
   // ----------
   $(".modal").hide();
 
   //  - 비번 초기화
-  $("button.reset_btn").click(function () {
-    $(".modal_reset").stop().fadeIn('200');
-  })
+  // $("button.reset_btn").click(function () {
+  //   $(".modal_reset").stop().fadeIn('200');
+  // })
   $("button.reset").click(function () {
-    $(".modal_reset").stop().fadeOut('200');
-  })
+    $(".modal_reset").stop().fadeOut("200");
+  });
 
   // - 회원탈퇴 / 진행 알림
   $("button.secess").click(function () {
-    $(".modal_secess").stop().fadeIn('200');
-  })
+    $(".modal_secess").stop().fadeIn("200");
+  });
   $("button.close, button.submit").click(function () {
-    $(".modal_secess").stop().fadeOut('200');
-  })
+    $(".modal_secess").stop().fadeOut("200");
+  });
 
   // - 회원탈퇴 / 완료 알림
-  $("button.close").click(function () {
-    $(".modal_secess_02").stop().fadeIn('200');
-  })
+  // $("button.close").click(function () {
+  //   $(".modal_secess_02").stop().fadeIn('200');
+  // })
   $("button.okay").click(function () {
-    $(".modal_secess_02").stop().fadeOut('200');
-  })
+    $(".modal_secess_02").stop().fadeOut("200");
+  });
 
   // - 검색창
   $("div.search p").click(function () {
-    $(".modal").stop().fadeIn('200');
-  })
+    $(".modal").stop().fadeIn("200");
+  });
   $("span.close").click(function () {
-    $(".modal").stop().fadeOut('200');
-  })
+    $(".modal").stop().fadeOut("200");
+  });
 
   // - 검색창 선택한 태그 삭제
   $(".search_tag_area ul li").click(function () {
-    $(this).find(".search_tag").empty()
-  })
+    $(this).find(".search_tag").empty();
+  });
 
   // 팝업 관리 js
 
-  $(".manage_area").hide()
+  $(".manage_area").hide();
 
   // $("#btn").click(function (){
 
@@ -74,52 +119,69 @@ $(function () {
   //       real.innerHTML = '완료';
   //   }
   // })
-  
-  $(".manage_area, .save").hide()
+
+  $(".manage_area, .save").hide();
 
   $(".manage").click(function () {
-    $(".manage_area").stop().slideDown()
-    $(".save").show().siblings().hide()
-  })
+    $(".manage_area").stop().slideDown();
+    $(".save").show().siblings().hide();
+  });
 
   $(".save").click(function () {
-    $(".manage_area").stop().slideUp()
-    $(".manage").show().siblings().hide()
-  })
+    $(".manage_area").stop().slideUp();
+    $(".manage").show().siblings().hide();
+  });
 
   //  ---------------------------------
   //            코드 확인 영역
   //   --------------------------------
 
-  //  쪽지 탭 메뉴 - adimin_01_02_00 
-$(".card_tit:not(:first-child), .tab_item:not(:first-child)").hide();
+  //  쪽지 탭 메뉴 - adimin_01_02_00
+  $(".card_tit:not(:first-child), .tab_item:not(:first-child)").hide();
 
-$(".tab_menu ul li").click(function () {
-  $(this).addClass('active').siblings().removeClass('active');
+  $(".tab_menu ul li").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
 
-  let idx = $(this).index();
-  $('.tab_item').eq(idx).fadeIn(500).siblings().fadeOut(0);
+    let idx = $(this).index();
+    $(".tab_item").eq(idx).fadeIn(500).siblings().fadeOut(0);
 
-  let num = $(this).index();
-  $('.card_tit').eq(num).fadeIn(500).siblings().fadeOut(0);
-})
+    let num = $(this).index();
+    $(".card_tit").eq(num).fadeIn(500).siblings().fadeOut(0);
+  });
 
-// car_state 상태값-승인&대기&취소 
-$("ol.m_state_ch").hide()
+  // car_state 상태값-승인&대기&취소
+  // $("ol.m_state_ch").hide()
 
-$(".m_state_con>li>button").click(function () {
-  $("ol.m_state_ch").slideDown()
-})
+  // $(".m_state_con>li>button").click(function () {
+  //   $("ol.m_state_ch").slideDown()
+  // })
 
-$("ol.m_state_ch li").click(function () {
-  $("ol.m_state_ch").slideUp()
-})
+  // $("ol.m_state_ch li").click(function () {
+  //   $("ol.m_state_ch").slideUp()
+  // })
 
-// 구분 상태값 수정 js
-$(".state_ch").hide()
+  $("ol.m_state_ch").hide();
+  $(".m_state_con>li>button").off("click");
+  $("ol.m_state_ch li").off("click");
 
-$(".state_con li").click(function () {
-  $(".state_ch").slideToggle()
-})
+  $(".m_state_con>li>button").on("click", function (e) {
+    e.stopPropagation();
+    $(this).siblings("ol.m_state_ch").slideToggle();
+  });
 
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".m_state_con").length) {
+      $("ol.m_state_ch").slideUp();
+    }
+  });
+
+  // 구분 상태값 수정 js
+  $(".state_ch").hide();
+
+  $(".state_con li").click(function () {
+    $(".state_ch").slideToggle();
+  });
+
+  document.documentElement.style.display = "none";
+  authConfig.init();
 });

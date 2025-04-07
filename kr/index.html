@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aureon Partners</title>
+
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
+
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
+
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/popup-slider.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sub_media.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- js -->
+
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/product-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/member-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/exchange-rate-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
+  <style>
+    .chart_graph {
+      display: flex;
+      justify-content: center;
+    }
+
+    .popupSlidesContainer {
+      height: 593px;
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1><a href="index.html"></a></h1>
+
+        <nav>
+          <ul class="gnb">
+            <li><a href="../sub/sub_01.html">회사소개</a></li>
+            <li><a href="../sub/sub_02.html">투자전략</a></li>
+            <li><a href="../sub/sub_03.html">투자상품</a></li>
+            <li><a href="../sub/sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="depth2">
+                <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+                <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
+
+          <ol class="util">
+            <li>
+              <a href="#none">마이페이지</a>
+              <ol class="u_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
+
+            <li><a href="" class="logout">로그아웃</a></li>
+            <!-- en/index.html -->
+            <li class="note_alarm">
+              <a href="../a_login/mail.html">
+                <span>내 쪽지함</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="ham bi bi-list"></div>
+
+        <div class="mgnb_wrap">
+          <div class="bi bi-x-lg mgnb_close"></div>
+          <div class="mgnb_logo"></div>
+
+          <ul class="mgnb">
+            <li><a href="../sub/sub_01.html">회사소개</a></li>
+            <li><a href="../sub/sub_02.html">투자전략</a></li>
+            <li><a href="../sub/sub_03.html">투자상품</a></li>
+            <li><a href="../sub/sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="mdepth2">
+                <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+                <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
+
+          <ul class="m_util">
+            <li>
+              <a href="#none">마이페이지</a>
+
+              <ol class="u_depth2 mu_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
+
+            <!-- en/index.html -->
+            <li><a href="" id="logout" class="logout">로그아웃</a></li>
+
+            <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- main -->
+      <main id="main">
+        <!-- section main_visual -->
+        <section id="main_visual" class="section">
+          <div class="main_pc">
+            <video autoplay muted loop playsinline>
+              <source src="../img/main/main_visual.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="mobile">
+            <video autoplay muted loop playsinline>
+              <source src="../img/main/m_video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="quick_area">
+            <a href="../sub/sub_01.html" class="about">자세히보기</a>
+          </div>
+        </section>
+
+        <!-- section promote-->
+        <section id="invest" class="section">
+          <div class="inner">
+            <div class="iv_tit_box">
+              <h2>안정적 수익 창출을 위한 선두주자</h2>
+              <p>
+                국제 고수익 채권 선별과 환율 헷지를 통해 <br class="block" />
+                안정적 월간 수익과 자산 보호를 제공합니다.
+              </p>
+            </div>
+
+            <a class="more" href="../sub/sub_02.html"
+              >MORE VIEW
+              <!-- 투자전략 바로가기 버튼 -->
+              <span class="bi bi-arrow-right right"></span>
+            </a>
+
+            <div class="content">
+              <ul>
+                <li data-aos="fade-down" data-aos-offset="0">
+                  <div class="icon">
+                    <img src="../img/main/icon_safe.png" alt="아이콘" />
+                  </div>
+                  <h3>안정성 확보</h3>
+                  <span class="hover"
+                    >주간 변동 리스크 최소화를 위해 <br class="none" />
+                    USD, EUR, JPY, CNY 채권에 집중 투자하여 안정적인 수익 구조를
+                    제공합니다.</span
+                  >
+                </li>
+
+                <li
+                  data-aos="fade-down"
+                  data-aos-offset="300"
+                  data-aos-duration="400"
+                >
+                  <div class="icon">
+                    <img src="../img/main/icon_asset.png" alt="아이콘" />
+                  </div>
+                  <h3>업종 및 자산 선택</h3>
+                  <span class="hover"
+                    >외부 요인에 영향을 받는 기술주는 제외하고 소비재, 산업재 및
+                    단기 채권 중심으로 포트폴리오를 구성합니다.</span
+                  >
+                </li>
+
+                <li
+                  data-aos="fade-down"
+                  data-aos-offset="400"
+                  data-aos-duration="600"
+                >
+                  <div class="icon">
+                    <img src="../img/main/icon_inhouse.png" alt="아이콘" />
+                  </div>
+                  <h3>인하우스 리서치</h3>
+                  <span class="hover"
+                    >짧은 주기 피드백으로 저축채권 안정성을 점검하며, 전문가들이
+                    협력해 시장 변화에 신속하게 대응합니다.</span
+                  >
+                </li>
+
+                <li
+                  data-aos="fade-down"
+                  data-aos-offset="550"
+                  data-aos-duration="700"
+                >
+                  <div class="icon">
+                    <img src="../img/main/icon_danger.png" alt="아이콘" />
+                  </div>
+                  <h3>위험분산</h3>
+                  <span class="hover"
+                    >저축채권은 안정적 수익을 목표로 하며, 낮은 리스크의 국제
+                    채권 <br class="none" />
+                    (USD, EUR, JPY, CNY)에 집중 투자합니다.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="section_bg"></div>
+          </div>
+        </section>
+
+        <!-- section company -->
+        <!-- <section id="company">
+
+        <div class="inner">
+
+          <div class="left_box">
+            <div class="top_box">
+              <h3>당신의 성공을 위한 차별화된 전략
+                <br>
+                글로벌 외환 펀드 운용의 리더
+              </h3>
+            </div>
+
+            <div class="bottom_box">
+              <p>세계 경제의 흐름을 선도하며, <br>
+                다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관입니다.</p>
+            </div>
+          </div>
+
+          <div class="slide_box">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="img/main/swiper_01.jpg" alt="회사이미지">
+              </li>
+              <li class="swiper-slide">
+                <img src="img/main/swiper_02.jpg" alt="회사이미지">
+              </li>
+              <li class="swiper-slide">
+                <img src="img/main/swiper_03.png" alt="회사이미지">
+              </li>
+              <li class="swiper-slide">
+                <img src="img/main/swiper_04.png" alt="회사이미지">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section> -->
+
+        <!-- section prd 수정 -->
+        <section id="prd" class="section">
+          <div class="sub_inner prd_con">
+            <div class="prd_tit_box">
+              <p>
+                일상에 가치를 <br class="br" />
+                <span class="company_name">#Aureon</span>으로<br class="br" />
+                더하다
+              </p>
+
+              <div class="tag_box">
+                <p class="tag">#USD</p>
+                <p class="tag">#EUR</p>
+                <p class="tag">#JPY</p>
+                <p class="tag">#CNY</p>
+              </div>
+            </div>
+
+            <article>
+              <!-- 상품 카드 리스트 시작 -->
+              <div class="con_item">
+                <!-- USD -->
+                <div class="b_item_box">
+                  <div class="bond_img">
+                    <img src="../img/common/dollar.png" alt="달러사진" />
+                  </div>
+
+                  <div class="bond_tit">
+                    <h3 id="usd-title">USD 채권</h3>
+                    <p>Bond</p>
+                  </div>
+
+                  <div class="item_info">
+                    <div class="i_col">
+                      <p class="slash">이자율</p>
+
+                      <div class="in_rate">
+                        <p id="usd-us-yield">
+                          <span>(USD)</span> 월 0.9% ~ 1.7%
+                        </p>
+                        <p id="usd-kr-yield">
+                          <span>(KRW)</span> 월 1.6% ~ 2.4%
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="i_col">
+                      <div class="percent_area">
+                        <p class="percent m_percent">
+                          <span id="usd-progress">90.02%</span>
+                          (모집율)
+                        </p>
+
+                        <!-- 관리자가 조정하는 %영역입니다 -->
+                        <div class="bar_ademin m_bar_ademin">
+                          <span class="bar" id="usd-bar"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--//item_info-->
+
+                  <a class="detail_link" href="../sub/sub_03_01_usd.html"
+                    >상세보기</a
+                  >
+                </div>
+                <!--//b_item_box-->
+
+                <!-- EUR -->
+                <div class="b_item_box">
+                  <div class="bond_img">
+                    <img src="../img/common/euro.png" alt="유로사진" />
+                  </div>
+
+                  <div class="bond_tit">
+                    <h3 id="eur-title">EUR 채권</h3>
+                    <p>Bond</p>
+                  </div>
+
+                  <div class="item_info">
+                    <div class="i_col">
+                      <p class="slash">이자율</p>
+
+                      <div class="in_rate">
+                        <p id="eur-us-yield">
+                          <span>(USD)</span> 월 0.4% ~ 1.1%
+                        </p>
+                        <p id="eur-kr-yield">
+                          <span>(KRW)</span> 월 0.65% ~ 1.35%
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="i_col">
+                      <div class="percent_area">
+                        <p class="percent">
+                          <span id="eur-progress">90.02%</span>
+                          (모집율)
+                        </p>
+
+                        <!-- 관리자가 조정하는 %영역입니다 -->
+                        <div class="bar_ademin">
+                          <span class="bar" id="eur-bar"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--//item_info-->
+
+                  <a class="detail_link" href="../sub/sub_03_01_eur.html"
+                    >상세보기</a
+                  >
+                </div>
+                <!--//b_item_box-->
+
+                <!-- JPY  -->
+                <div class="b_item_box">
+                  <div class="bond_img">
+                    <img src="../img/common/yen.png" alt="엔화사진" />
+                  </div>
+
+                  <div class="bond_tit">
+                    <h3 id="jpy-title">JPY 채권</h3>
+                    <p>Bond</p>
+                  </div>
+
+                  <div class="item_info">
+                    <div class="i_col">
+                      <p class="slash">이자율</p>
+
+                      <div class="in_rate">
+                        <p id="jpy-us-yield">
+                          <span>(USD)</span> 월 0.38% ~ 0.88%
+                        </p>
+                        <p id="jpy-kr-yield">
+                          <span>(KRW)</span> 월 0.18% ~ 0.68%
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="i_col">
+                      <div class="percent_area">
+                        <p class="percent">
+                          <span id="jpy-progress">90.02%</span>
+                          (모집율)
+                        </p>
+
+                        <!-- 관리자가 조정하는 %영역입니다 -->
+                        <div class="bar_ademin">
+                          <span class="bar" id="jpy-bar"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--//item_info-->
+
+                  <a class="detail_link" href="../sub/sub_03_01_jpy.html"
+                    >상세보기</a
+                  >
+                </div>
+                <!--//b_item_box-->
+
+                <!-- CNY  -->
+                <div class="b_item_box">
+                  <div class="bond_img">
+                    <img src="../img/common/solace.png" alt="위안사진" />
+                  </div>
+
+                  <div class="bond_tit">
+                    <h3 id="cny-title">CNY 채권</h3>
+                    <p>Bond</p>
+                  </div>
+
+                  <div class="item_info">
+                    <div class="i_col">
+                      <p class="slash">이자율</p>
+
+                      <div class="in_rate">
+                        <p id="cny-us-yield">
+                          <span>(USD)</span> 월 0.24% ~ 0.55%
+                        </p>
+                        <p id="cny-kr-yield">
+                          <span>(KRW)</span> 월 0.28% ~ 0.58%
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="i_col">
+                      <div class="percent_area">
+                        <p class="percent">
+                          <span id="cny-progress">90.02%</span>
+                          (모집율)
+                        </p>
+
+                        <!-- 관리자가 조정하는 %영역입니다 -->
+                        <div class="bar_ademin">
+                          <span class="bar" id="cny-bar"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--//item_info-->
+
+                  <a class="detail_link" href="../sub/sub_03_01_cny.html"
+                    >상세보기</a
+                  >
+                </div>
+                <!--//b_item_box-->
+              </div>
+              <!--//con_item-->
+            </article>
+            <!--//prd_con-->
+          </div>
+          <!--//inner-->
+        </section>
+
+        <!-- section rate -->
+        <section id="rate" class="section">
+          <div class="inner">
+            <!-- 환율 데이터베이스 끌어오는 영역입니다. -->
+            <div class="chart"></div>
+          </div>
+        </section>
+
+        <!-- section exchange_rate -->
+        <section id="exchange_rate">
+          <div class="inner">
+            <div class="rate_container">
+              <ol>
+                <!-- USD 환율 차트 그래프 -->
+                <li>
+                  <div class="top_con">
+                    <div class="img">
+                      <img src="../img/common/dollar.png" alt="달러사진" />
+                    </div>
+
+                    <div class="rate_txt">
+                      <p class="prd_name">USD</p>
+
+                      <p class="charac">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <!-- API // 숫자로 환율 지수 -->
+                        <span class="ex_rate" id="usd-rate">2312.5</span>
+                      </p>
+                    </div>
+                  </div>
+                  <!--//top_con-->
+
+                  <div class="btm_con">
+                    <div class="ctn">
+                      달러
+                      <p>
+                        <!-- 업다운 표시 -->
+                        <span>+</span>
+                        <!-- 전날 기준 -->
+                        <span id="usd-change">0.0155</span>%
+                      </p>
+                    </div>
+
+                    <div class="muted">09:36:04</div>
+
+                    <!-- chart_graph -->
+                    <div class="chart_graph">
+                      <canvas
+                        id="lineChartUSD"
+                        width="500"
+                        height="200"
+                      ></canvas>
+                    </div>
+                    <!--//chart_graph -->
+                  </div>
+                </li>
+
+                <!-- EUR 환율 차트 그래프 -->
+                <li>
+                  <div class="top_con">
+                    <div class="img">
+                      <img src="../img/common/euro.png" alt="유로 사진" />
+                    </div>
+
+                    <div class="rate_txt">
+                      <p class="prd_name">EUR</p>
+
+                      <p class="charac">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <!-- API // 숫자로 환율 지수 -->
+                        <span class="ex_rate" id="eur-rate">2312.5</span>
+                      </p>
+                    </div>
+                  </div>
+                  <!--//top_con-->
+
+                  <div class="btm_con">
+                    <div class="ctn">
+                      유로
+                      <p>
+                        <!-- 업다운 표시 -->
+                        <span>+</span>
+                        <!-- 전날 기준 -->
+                        <span id="eur-change">0.0155</span>%
+                      </p>
+                    </div>
+
+                    <div class="muted" id="eur-time">09:36:04</div>
+
+                    <!-- chart_graph -->
+                    <div class="chart_graph">
+                      <canvas
+                        id="lineChartEUR"
+                        width="500"
+                        height="200"
+                      ></canvas>
+                    </div>
+                    <!--//chart_graph -->
+                  </div>
+                </li>
+
+                <!-- JPY 환율 차트 그래프 -->
+                <li>
+                  <div class="top_con">
+                    <div class="img">
+                      <img src="../img/common/yen.png" alt="엔화 사진" />
+                    </div>
+
+                    <div class="rate_txt">
+                      <p class="prd_name">JPY</p>
+
+                      <p class="charac">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <!-- API // 숫자로 환율 지수 -->
+                        <span class="ex_rate" id="jpy-rate">2312.5</span>
+                      </p>
+                    </div>
+                  </div>
+                  <!--//top_con-->
+
+                  <div class="btm_con">
+                    <div class="ctn">
+                      엔화
+                      <p>
+                        <!-- 업다운 표시 -->
+                        <span>+</span>
+                        <!-- 전날 기준 -->
+                        <span id="jpy-change">0.0155</span>%
+                      </p>
+                    </div>
+
+                    <div class="muted" id="jpy-time">09:36:04</div>
+
+                    <!-- chart_graph -->
+                    <div class="chart_graph">
+                      <canvas
+                        id="lineChartJPY"
+                        width="500"
+                        height="200"
+                      ></canvas>
+                    </div>
+                    <!--//chart_graph -->
+                  </div>
+                </li>
+
+                <!-- CNY 환율 차트 그래프 -->
+                <li>
+                  <div class="top_con">
+                    <div class="img">
+                      <img src="../img/common/solace.png" alt="위안 사진" />
+                    </div>
+
+                    <div class="rate_txt">
+                      <p class="prd_name">CNY</p>
+
+                      <p class="charac">
+                        <i class="bi bi-caret-up-fill"></i>
+                        <!-- API // 숫자로 환율 지수 -->
+                        <span class="ex_rate" id="cnh-rate">2312.5</span>
+                      </p>
+                    </div>
+                  </div>
+                  <!--//top_con-->
+
+                  <div class="btm_con">
+                    <div class="ctn">
+                      위안
+                      <p>
+                        <!-- 업다운 표시 -->
+                        <span>+</span>
+                        <!-- 전날 기준 -->
+                        <span id="cnh-change">0.0155</span>%
+                      </p>
+                    </div>
+
+                    <div class="muted" id="cnh-time">09:36:04</div>
+
+                    <!-- chart_graph -->
+                    <div class="chart_graph">
+                      <canvas
+                        id="lineChartCNY"
+                        width="500"
+                        height="200"
+                      ></canvas>
+                    </div>
+                    <!--//chart_graph -->
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- 이벤트 팝업 -->
+        <!--    <div class="popup">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="sub/sub_04.html"><img src="img/main/popup_img.png" alt="이벤트팝업"></a>
+            </div>
+            <div class="swiper-slide"><a href="sub/sub_04.html"><img src="img/main/popup_img.png" alt="이벤트팝업"></a>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+
+    <div class="popup-btn">
+
+          <ul>
+ // 닫기와 오늘하루 보지않기 동일하게 닫아지기만 합니다 
+           오늘 하루 보지 않기 눌렀을 때 하루종일 뜨지 않도록 작업 부탁드립니다 //
+           
+           //  관리자가 회원에게 쪽지를 전송했을 경우 
+            => 이벤트가 존재하더라도 쪽지 팝업만 노출 됩니다 '.mail_alarm' 
+            => 쪽지 확인 후, 메인 접속 시 이벤트 팝업 노출 설정 부탁드립니다 
+            감사합니다 // 
+
+            <li><a href="#none">오늘 하루 보지 않기</a></li>
+            <li><a href="#none">닫기</a></li>ㄴ
+          </ul>
+        </div>
+      </div> -->
+
+        <!-- // 관리자가 보낸 쪽지 / 미확인 시 타 페이지 전환 불가능 // -->
+
+        <!-- <div class="modal mail_alarm">
+        <dl style="
+    position: fixed;
+">
+          <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+          <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+          <dd><a class="okay" href="a_login/mail_in.html">이동</a></dd>
+        </dl>
+      </div> -->
+      </main>
+      <!-- //main -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="f_logo"></div>
+
+          <div class="txt_area">
+            <div class="f_txt">
+              <p class="company">Aureon Partners</p>
+
+              <address>
+                <span>Limited</span>
+                <span>7760 Office Plaza Drive South,</span>
+                <span>West Des Moines, IA 50266</span>
+              </address>
+            </div>
+
+            <div class="email">
+              <a href="mailto:support@aureon.com"
+                >Support : support@aureon.com</a
+              >
+            </div>
+          </div>
+
+          <div class="copy">
+            <p>Copylight © 2022 Aureon Partners Ltd</p>
+          </div>
+        </div>
+      </footer>
+      <!--//footer-->
+
+      <div class="go_top">
+        맨 위로
+        <a href="#">
+          <span class="bi bi-chevron-up"></span>
+        </a>
+      </div>
+    </div>
+    <!-- 팝업 -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="eventPopup">
+      <div id="popupSlidesContainer"></div>
+
+      <!-- 화살표 버튼 -->
+      <div class="nav-arrows">
+        <button id="popupPrevBtn">&#10094;</button>
+        <button id="popupNextBtn">&#10095;</button>
+      </div>
+
+      <!-- 하단 버튼 -->
+      <div class="actions">
+        <button id="popupDoNotShowBtn">오늘 하루 보지 않기</button>
+        <button id="popupCloseBtn">닫기</button>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
+    <script defer type="module" src="../js/api/client/popup-slider.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="../js/api/websocket.js"></script>
+    <script src="../js/api/websocket-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

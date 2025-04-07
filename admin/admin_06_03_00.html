@@ -1,236 +1,266 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 게시판 관리 / 등록된 공지사항 목록 노출 -->
+    <title>Aureon Partners | 관리자페이지</title>
 
-   <!-- 게시판 관리 / 등록된 공지사항 목록 노출 -->
-    <title>DBS BOND | 관리자페이지 </title>
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-    <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
 
     <script defer src="../js/jquery-3.7.1.min.js.js"></script>
     <script defer src="../js/admin.js"></script>
-</head>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div id="admin_wrap">
+      <div id="header">
+        <h1>
+          <img src="../img/common/logo.png" alt="로고" />
+        </h1>
 
-        <div id="header">
+        <nav id="sidebar-menu">
+          <ul class="lnb_wrap">
+            <li>
+              <div class="icon_person">
+                <img src="../img/admin/icon_person.png" alt="관리자 아이콘" />
+              </div>
+              <div class="txt">관리자님, 반갑습니다</div>
+              <div class="logout_icon" style="cursor: pointer">
+                <img
+                  src="../img/admin/logout-icon.png"
+                  alt="로그아웃 아이콘"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 4px;
+                    margin-left: 10px;
+                  "
+                />
+              </div>
+            </li>
 
-            <h1>
-              <img src="../img/common/logo.png" alt="로고">
-            </h1>
-      
-            <nav>
-              <ul class="lnb_wrap">
+            <!-- 회원관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">회원 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="member-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
                 <li>
-                  <div class="icon_person">
-                    <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
-                  </div>
-                  <div class="txt">관리자님, 반갑습니다</div>
+                  <a href="adimin_01_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-1"></span>회원 목록
+                  </a>
                 </li>
-      
-                <!-- 회원관리 -->
                 <li>
-                  <div class="lnb">
-                    <div class="left_box">
-                      <div class="icon"></div>
-                      <div class="txt">회원 관리</div>
-                    </div>
-      
-                    <div class="right_box">
-                      <span class="bi bi-chevron-down snb"></span>
-                      <div class="alarm"></div>
-                    </div>
-                  </div>
-      
-                  <ol class="depth2">
-                    <li>
-                      <a href="#">회원 목록</a>
-                    </li>
-                    <li>
-                      <a href="#">쪽지 보내기</a>
-                    </li>
-                  </ol>
+                  <a href="adimin_01_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-2"></span>쪽지 보내기
+                  </a>
                 </li>
-      
-                <!-- 입금 관리 -->
+              </ol>
+            </li>
+
+            <!-- 입금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">입금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="deposit-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
                 <li>
-                  <div class="lnb">
-                    <div class="left_box">
-                      <div class="icon"></div>
-                      <div class="txt">입금 관리</div>
-                    </div>
-      
-                    <div class="right_box">
-                      <span class="bi bi-chevron-down snb"></span>
-                      <div class="alarm"></div>
-                    </div>
-                  </div>
-      
-                  <ol class="depth2">
-                    <li>
-                      <a href="#">입금 신청</a>
-                    </li>
-                    <li>
-                      <a href="#">입금 내역</a>
-                    </li>
-                  </ol>
+                  <a href="adimin_02_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-3"></span>입금 신청
+                  </a>
                 </li>
-      
-                <!-- 출금 관리 -->
                 <li>
-                  <div class="lnb">
-                    <div class="left_box">
-                      <div class="icon"></div>
-                      <div class="txt">출금 관리</div>
-                    </div>
-      
-                    <div class="right_box">
-                      <span class="bi bi-chevron-down snb"></span>
-                      <div class="alarm"></div>
-                    </div>
-                  </div>
-      
-                  <ol class="depth2">
-                    <li>
-                      <a href="#">출금 내역</a>
-                    </li>
-                    <li>
-                      <a href="#">미지급 내역</a>
-                    </li>
-                  </ol>
+                  <a href="adimin_02_01_01.html" class="notice-link">
+                    <span class="notice-dot" id="nd-4"></span>입금 내역
+                  </a>
                 </li>
-      
-                <!-- 투자금 관리 -->
+              </ol>
+            </li>
+
+            <!-- 출금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">출금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="withdrawal-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
                 <li>
-                  <div class="lnb">
-                    <div class="left_box">
-                      <div class="icon"></div>
-                      <div class="txt">투자금 관리</div>
-                    </div>
-      
-                    <div class="right_box">
-                      <span class="bi bi-chevron-down snb"></span>
-                      <div class="alarm"></div>
-                    </div>
-                  </div>
-      
-                  <ol class="depth2">
-                    <li>
-                      <a href="#">회수 관리</a>
-                    </li>
-                    <li>
-                      <a href="#">회수 내역</a>
-                    </li>
-                  </ol>
+                  <a href="adimin_03_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-5"></span>출금 내역
+                  </a>
                 </li>
-      
-                <!-- 게시판 관리 -->
                 <li>
-                  <div class="lnb">
-                    <div class="left_box">
-                      <div class="icon"></div>
-                      <div class="txt">게시판 관리</div>
-                    </div>
-      
-                    <div class="right_box">
-                      <span class="bi bi-chevron-down snb"></span>
-                      <div class="alarm"></div>
-                    </div>
-                  </div>
-      
-                  <ol class="depth2">
-                    <li> <a href="#">상품 관리</a> </li>
-                    <li> <a href="#">계좌 관리</a> </li>
-                    <li> <a href="#">1:1 문의</a> </li>
-                    <li> <a href="#">이벤트 관리</a> </li>
-                    <li> <a href="#">공지사항 관리</a> </li>
-                    <li> <a href="#">자주묻는질문 관리</a> </li>
-                  </ol>
+                  <a href="admin_03_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-6"></span>미지급 내역
+                  </a>
                 </li>
-      
-              </ul>
-            </nav>
-      
+              </ol>
+            </li>
+
+            <!-- 투자금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">투자금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="repayment-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li>
+                  <a href="admin_04_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-7"></span>회수 관리
+                  </a>
+                </li>
+                <li>
+                  <a href="admin_04_02_00.html">회수 내역</a>
+                </li>
+              </ol>
+            </li>
+
+            <!-- 게시판 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">게시판 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="management-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li><a href="admin_05_01_00.html">상품 관리</a></li>
+                <li><a href="admin_05_02_00.html">계좌 관리</a></li>
+                <li>
+                  <a href="admin_05_03_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-8"></span>1:1 문의
+                  </a>
+                </li>
+                <li><a href="admin_05_04_01_00.html">이벤트 관리</a></li>
+                <li><a href="admin_05_05_00.html">공지사항 관리</a></li>
+                <li><a href="admin_05_06_00.html">자주묻는질문 관리</a></li>
+              </ol>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="main">
+        <div class="card_tit">공지사항</div>
+
+        <div class="container">
+          <div class="table_con">
+            <table>
+              <thead>
+                <tr>
+                  <th>　</th>
+                  <th>제목</th>
+                  <th>게시일</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
+                  <td>2025.01.01</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
+                  <td>2025.01.01</td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
+                  <td>2025.01.01</td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
+                  <td>2025.01.01</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        <div id="main">
 
-            <div class="card_tit">공지사항</div>
-
-            <div class="container">
-
-                <div class="table_con">
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>　</th>
-                                <th>제목</th>
-                                <th>게시일</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
-                                <td>2025.01.01</td>
-                            </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
-                                <td>2025.01.01</td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-                                <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
-                                <td>2025.01.01</td>
-                            </tr>
-
-                            <tr>
-                                <td>4</td>
-                                <td class="txt_ell">공지사항 제목이 노출됩니다.</td>
-                                <td>2025.01.01</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div class="pg_con"> 
-                    <div class="pg_wrap">
-                        <a href="#"><i class="bi bi-chevron-left"></i></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#"><i class="bi bi-chevron-right"></i></a>
-                    </div>
-                </div>
-
+          <div class="pg_con">
+            <div class="pg_wrap">
+              <a href="#"><i class="bi bi-chevron-left"></i></a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">9</a>
+              <a href="#"><i class="bi bi-chevron-right"></i></a>
             </div>
+          </div>
+        </div>
 
-                <a href="#" class="upload btn_btm_r">등록</a>
-
-        </div><!--//main-->
-
-    </div><!--/admin_wrap-->
-</body>
-
+        <a href="#" class="upload btn_btm_r">등록</a>
+      </div>
+      <!--//main-->
+    </div>
+    <!--/admin_wrap-->
+  </body>
 </html>

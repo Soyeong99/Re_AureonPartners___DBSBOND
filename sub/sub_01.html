@@ -1,297 +1,388 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aureon Partners</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.png" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/login.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/media.css">
-  <link rel="stylesheet" href="../css/sub_media.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/sub_media.css" />
 
-  <!-- js -->
-  <script defer src="../js/main.js"></script>
-  <script defer src="../js/common.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-</head>
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
-<body>
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/swiper-bundle.min.js.js"></script>
 
-  <div id="wrap" class="about_wrap">
+    <!-- js -->
 
-    <!-- header -->
-    <header id="header">
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
 
-      <h1><a href="../index.html"></a></h1>
+  <body>
+    <div id="wrap" class="about_wrap">
+      <!-- header -->
+      <header id="header">
+        <h1><a href="../kr/index.html"></a></h1>
 
-      <nav>
-        <ul class="gnb">
-          <li><a href="sub_01.html">회사소개</a></li>
-          <li><a href="sub_02.html">투자전략</a></li>
-          <li><a href="sub_03.html">투자상품</a></li>
-          <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="depth2">
-              <li><a href="sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="sub_05_02.html">공지사항</a></li>
-              <li><a href="sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+        <nav>
+          <ul class="gnb">
+            <li><a href="sub_01.html">회사소개</a></li>
+            <li><a href="sub_02.html">투자전략</a></li>
+            <li><a href="sub_03.html">투자상품</a></li>
+            <li><a href="sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="depth2">
+                <li><a href="sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="sub_05_02.html">공지사항</a></li>
+                <li><a href="sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-        <ol class="util">
-          <li>
-            <a href="#none">마이페이지</a>
-            <ol class="u_depth2">
-              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
-              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
-            </ol>
-          </li>
+          <ol class="util">
+            <li>
+              <a href="#none">마이페이지</a>
+              <ol class="u_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
 
-          <li class="note_alarm">
-            <a href="../a_login/mail.html">
-              <span>내 쪽지함</span>
-            </a>
-          </li>
-        </ol>
-      </nav>
+            <li class="note_alarm">
+              <a href="../a_login/mail.html">
+                <span>내 쪽지함</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
 
-      <div class="ham bi bi-list"></div>
+        <div class="ham bi bi-list"></div>
 
-      <div class="mgnb_wrap">
+        <div class="mgnb_wrap">
+          <div class="bi bi-x-lg mgnb_close"></div>
+          <div class="mgnb_logo"></div>
 
-        <div class="bi bi-x-lg mgnb_close"></div>
-        <div class="mgnb_logo"></div>
+          <ul class="mgnb">
+            <li><a href="sub_01.html">회사소개</a></li>
+            <li><a href="sub_02.html">투자전략</a></li>
+            <li><a href="sub_03.html">투자상품</a></li>
+            <li><a href="sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="mdepth2">
+                <li><a href="sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="sub_05_02.html">공지사항</a></li>
+                <li><a href="sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-        <ul class="mgnb">
-          <li><a href="sub_01.html">회사소개</a></li>
-          <li><a href="sub_02.html">투자전략</a></li>
-          <li><a href="sub_03.html">투자상품</a></li>
-          <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="mdepth2">
-              <li><a href="sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="sub_05_02.html">공지사항</a></li>
-              <li><a href="sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+          <ul class="m_util">
+            <li>
+              <a href="#none">마이페이지</a>
 
-        <ul class="m_util">
-          <li>
-            <a href="#none">마이페이지</a>
+              <ol class="u_depth2 mu_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-            <ol class="u_depth2 mu_depth2">
-              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
-              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
-            </ol>
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
+            <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
+          </ul>
+        </div>
+      </header>
 
-          </li>
+      <!-- main -->
+      <main id="main">
+        <div class="sub_container">
+          <section id="about">
+            <div class="inner">
+              <div class="img img_bg"></div>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
-          <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
-        </ul>
+              <div class="right_box">
+                <div class="tit_txt txt">
+                  Aureon Partners는 글로벌 금융 시장에서 디지털 혁신을 선도하며,
+                  지속 가능성을 핵심 가치로 삼아 성장해온 글로벌 대표 자산운용사
+                  입니다.
+                </div>
 
-      </div>
-    </header>
+                <div class="muted_txt txt">
+                  혁신적인 금융 서비스와 지속 가능한 경영 전략을 통해 고객의
+                  신뢰를 쌓아가며, 미래 지향적인 금융 생태계를 구축하는 데
+                  앞장서고 있습니다.
+                </div>
+              </div>
+            </div>
+          </section>
 
-    <!-- main -->
-    <main id="main">
-      <div class="sub_container">
+          <section id="history">
+            <div class="sub_inner">
+              <div class="history_con">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_01_99.jpg"
+                        alt="1999년 오레온 회사 이미지"
+                      />
+                    </div>
 
-        <section id="about">
-          <div class="inner">
+                    <h4>Aureon Partners 설립</h4>
+                    <p>1999</p>
+                    <span
+                      >Aureon Partners 설립 채권 투자 분석 및 고객 서비스 향상을
+                      위한 첨단 기술에 대한 투자 시작</span
+                    >
+                  </li>
 
-            <div class="img img_bg"></div>
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_02_09.jpg"
+                        alt="2009년 오레온 회사 이미지"
+                      />
+                    </div>
 
-            <div class="right_box">
+                    <h4>성공적인 헤지 전략</h4>
+                    <p>2009</p>
+                    <span
+                      >성공적인 헤지 전략을 기반으로 금융 상품 포트폴리오 확장,
+                      시장 입지를 강화하고 안정적인 수익을 통해 13개국 고객
+                      확대</span
+                    >
+                  </li>
 
-              <div class="tit_txt txt">
-                Aureon Partners는 글로벌 금융 시장에서 디지털 혁신을 선도하며, 지속 가능성을 핵심 가치로 삼아 성장해온 글로벌 대표 자산운용사 입니다.
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_03_14.jpg"
+                        alt="2014년 오레온 회사 이미지"
+                      />
+                    </div>
+
+                    <h4>혁신적인 채권 투자 상품 개발</h4>
+                    <p>2014</p>
+                    <span
+                      >혁신적인 채권 투자 상품 개발, 지속 가능한 투자 옵션
+                      도입</span
+                    >
+                  </li>
+
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_04_19.jpg"
+                        alt="2019년 오레온 회사 이미지"
+                      />
+                    </div>
+
+                    <h4>디지털 트랜스포메이션 가속화</h4>
+                    <p>2019</p>
+                    <span
+                      >디지털 트랜스포메이션 가속화, 고객 서비스 및 투자 분석
+                      플랫폼 강화</span
+                    >
+                  </li>
+
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_05_23.jpg"
+                        alt="2023년 오레온 회사 이미지"
+                      />
+                    </div>
+
+                    <h4>AI 기반 디지털 금융 혁신 도입</h4>
+                    <p>2023</p>
+                    <span>
+                      AI 기반 디지털 금융 혁신 도입 지속 가능한 투자 및 친환경
+                      금융 확대
+                    </span>
+                  </li>
+
+                  <li class="swiper-slide">
+                    <div class="img">
+                      <img
+                        src="../img/sub/history_06_24.png"
+                        alt="2024년 오레온 회사 이미지"
+                      />
+                    </div>
+
+                    <h4>미래 성장 전략 개발</h4>
+                    <p>2024</p>
+                    <span
+                      >지속적인 성장 및 글로벌 시장에서의 영향력 확대 신흥 시장
+                      탐색 및 기술 혁신을 통한 미래 성장 전략 개발</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="vision">
+            <div class="sub_inner">
+              <div class="img_box">
+                <img src="../img/sub/vision_img.jpg" alt="오레온 인터뷰 사진" />
               </div>
 
-              <div class="muted_txt txt">
-                혁신적인 금융 서비스와 지속 가능한 경영 전략을 통해 고객의 신뢰를 쌓아가며, 미래 지향적인 금융 생태계를 구축하는 데 앞장서고 있습니다.
+              <div class="txt_box">
+                <h4>Aureon Partners의 비전</h4>
+
+                <p>
+                  Aureon Partners는 금융 시장의 변동성을 극복하고 안정적인
+                  <br class="br" />
+                  수익을 창출하는 선두주자로, 고객의 신뢰를 바탕으로
+                  <br class="br" />
+                  지속 가능한 투자 전략을 통해 글로벌 자산 운용사로서의
+                  <br class="br" />
+                  입지를 강화하는 것을 목표로 합니다.
+                </p>
+
+                <p>
+                  우리는 채권 투자와 혁신적인 금융 상품 개발을 통해 고객에게
+                  <br class="br" />
+                  안정성과 신뢰를 제공하며, 모든 고객이 안정적인 수익을 누릴 수
+                  있도록 지원합니다.
+                </p>
               </div>
             </div>
-
-          </div>
-        </section>
-
-        <section id="history">
-          <div class="sub_inner">
-
-            <div class="history_con">
-              <ul class="swiper-wrapper">
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_01_99.jpg" alt="1999년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>Aureon Partners 설립</h4>
-                  <P>1999</P>
-                  <span>Aureon Partners 설립 채권 투자 분석 및 고객 서비스 향상을 위한 첨단 기술에 대한 투자 시작</span>
-                </li>
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_02_09.jpg" alt="2009년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>성공적인 헤지 전략</h4>
-                  <P>2009</P>
-                  <span>성공적인 헤지 전략을 기반으로 금융 상품 포트폴리오 확장, 시장 입지를 강화하고 안정적인 수익을 통해 13개국 고객 확대</span>
-                </li>
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_03_14.jpg" alt="2014년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>혁신적인 채권 투자 상품 개발</h4>
-                  <P>2014</P>
-                  <span>혁신적인 채권 투자 상품 개발, 지속 가능한 투자 옵션 도입</span>
-                </li>
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_04_19.jpg" alt="2019년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>디지털 트랜스포메이션 가속화</h4>
-                  <P>2019</P>
-                  <span>디지털 트랜스포메이션 가속화, 고객 서비스 및 투자 분석 플랫폼 강화</span>
-                </li>
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_05_23.jpg" alt="2023년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>AI 기반 디지털 금융 혁신 도입</h4>
-                  <P>2023</P>
-                  <span> AI 기반 디지털 금융 혁신 도입 지속 가능한 투자 및 친환경 금융 확대
-                  </span>
-
-                </li>
-
-                <li class="swiper-slide">
-                  <div class="img">
-                    <img src="../img/sub/history_06_24.png" alt="2024년 오레온 회사 이미지">
-                  </div>
-
-                  <h4>미래 성장 전략 개발</h4>
-                  <P>2024</P>
-                  <span>지속적인 성장 및 글로벌 시장에서의 영향력 확대 신흥 시장 탐색 및 기술 혁신을 통한 미래 성장 전략 개발</span>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </div>
-        </section>
-
-        <section id="vision">
-          <div class="sub_inner">
-            <div class="img_box">
-              <img src="../img/sub/vision_img.jpg" alt="오레온 인터뷰 사진">
-            </div>
-
-            <div class="txt_box">
-              <h4>Aureon Partners의 비전</h4>
-
-              <p>Aureon Partners는 금융 시장의 변동성을 극복하고 안정적인 <br class="br">
-                수익을 창출하는 선두주자로, 고객의 신뢰를 바탕으로 <br class="br">
-                지속 가능한 투자 전략을 통해 글로벌 자산 운용사로서의 <br class="br">
-                입지를 강화하는 것을 목표로 합니다. </p>
-
-              <p>우리는 채권 투자와 혁신적인 금융 상품 개발을 통해 고객에게 <br class="br">
-                안정성과 신뢰를 제공하며, 모든 고객이 안정적인 수익을 누릴 수 있도록 지원합니다.</p>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </main>
-
-    <!-- footer -->
-    <footer id="footer">
-      <div class="inner">
-
-        <div class="f_logo"></div>
-
-        <div class="txt_area">
-
-          <div class="f_txt">
-
-            <p class="company">Aureon Partners</p>
-
-            <address>
-              <span>Limited</span>
-              <span>7760 Office Plaza Drive South,</span>
-              <span>West Des Moines, IA 50266</span>
-            </address>
-
-          </div>
-
-          <div class="email">
-            <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
-          </div>
-
+          </section>
         </div>
+      </main>
 
-        <div class="copy">
-          <p>Copylight © 2022 Aureon Partners Ltd</p>
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="f_logo"></div>
+
+          <div class="txt_area">
+            <div class="f_txt">
+              <p class="company">Aureon Partners</p>
+
+              <address>
+                <span>Limited</span>
+                <span>7760 Office Plaza Drive South,</span>
+                <span>West Des Moines, IA 50266</span>
+              </address>
+            </div>
+
+            <div class="email">
+              <a href="mailto:support@aureon.com"
+                >Support : support@aureon.com</a
+              >
+            </div>
+          </div>
+
+          <div class="copy">
+            <p>Copylight © 2022 Aureon Partners Ltd</p>
+          </div>
         </div>
+      </footer>
+      <!--//footer-->
 
+      <!-- go_top -->
+      <div class="go_top">
+        맨 위로
+        <a href="#">
+          <span class="bi bi-chevron-up"></span>
+        </a>
       </div>
-    </footer>
-    <!--//footer-->
-
-    <!-- go_top -->
-    <div class="go_top">맨 위로
-      <a href="#">
-        <span class="bi bi-chevron-up"></span>
-      </a>
     </div>
-
-  </div>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-</body>
-
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="../js/api/websocket.js"></script>
+    <script src="../js/api/websocket-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

@@ -1,0 +1,115 @@
+body.popup-open {
+  overflow: hidden;
+  touch-action: none; /* 모바일 터치 스크롤 방지 */
+  position: fixed;
+  width: 100%;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* 어두운 배경 */
+  z-index: 9999; /* 팝업보다 살짝 낮게 */
+  pointer-events: all; /* 클릭 막기 */
+}
+
+#eventPopup {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 593px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#eventPopup .slide {
+  display: none;
+  padding: 30px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#eventPopup .slide.active {
+  display: block;
+  width: 100%;
+  height: 548px;
+}
+
+#eventPopup .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#eventPopup .nav-arrows {
+  position: absolute;
+  top: 43%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#eventPopup .nav-arrows button {
+  background: none;
+  color: #3f7bda;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  pointer-events: all;
+}
+
+#eventPopup .actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+
+#eventPopup .actions button {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+}
+
+#eventPopup .actions button:first-child {
+  color: #000;
+}
+
+#eventPopup .actions button:last-child {
+  border-left: 1px solid #ddd;
+  background-color: #ddd;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #eventPopup {
+    width: 90%;
+  }
+}

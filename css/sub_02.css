@@ -1,79 +1,81 @@
 @charset "utf-8";
 
-/* :root {
-    --main-color : var(--main-color);
-    --main-font :'Pretendard', sans-serif;
-} */
+:root {
+  --main-color: #3f7bda;
+  --main-font: "Pretendard", sans-serif;
+}
 
-input[type=password],
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=tel],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
 textarea,
-input[type=checkbox] {
-  font-family: 'Pretendard', sans-serif;
+input[type="checkbox"] {
+  font-family: "Pretendard", sans-serif;
 }
 
 /* 이벤트 */
 
-.evt_pg_tit {
-  text-align: center;
-  margin: 80px 0 0;
-}
-
 .evt_line {
-  padding: 60px 2%;
+  padding: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  margin-bottom: 30px; 
-  gap: 60px; 
-  margin: 0 auto;
+  margin-bottom: 30px;
+  align-items: center;
+  gap: 100px;
 }
 
-.evt_line li {
+.evt_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.evt_line li img {
+.evt_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 456px;
+  height: 456px;
+}
+
+.evt_img img{
   border-radius: 30px;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   margin-bottom: 10px;
 }
 
-.evnet_banner img {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+.evt_img_default {
+  border-radius: 30px;
+  width: auto;
+  min-height: 456px;
+  margin-bottom: 10px;
 }
 
-.evt_pg_tit>h2 {
-  font-size: 4.2rem;
-  font-weight: 500;
-}
-
-.evt_none_txt>p {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #888;
+.evt_container p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 800;
   margin-bottom: 5px;
 }
 
-#event .evt_prev_txt > p {  
-font-size: 2rem;
-font-weight: 600;
+.evt_container p:nth-of-type(2) {
+  color: #bbb;
+  font-size: 14px;
 }
 
-.evt_date_area > span{
-color: #888;  
-font-size: 1.8rem;
-font-weight: 400;
-}
-
-.evt_none_txt {
-  margin: 200px auto;
+.evnet_banner img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* 이벤트 */
@@ -114,9 +116,13 @@ font-weight: 400;
   filter: drop-shadow(5px 5px 10px rgb(134, 134, 134));
 }
 
+.qna {
+  height: 100vh;
+}
+
 .qna .qna_in {
-    max-width: 65%;
-    margin: 0 auto 100px;
+  max-width: 65%;
+  margin: 0 auto 100px;
 }
 
 .qna li {
@@ -205,14 +211,10 @@ font-weight: 400;
   display: none;
 }
 
-
 /* sub05_01 자주묻는질문 */
 
-
-
-
 /* sub05_02 공지사항 & 1:1문의 */
-.list_tit a {
+.list_tit{
   display: inline-block;
   width: 30ch;
   white-space: nowrap;
@@ -225,6 +227,11 @@ font-weight: 400;
 
 #container {
   width: 100vw;
+}
+
+.table_con {
+  height: 100vh;
+  padding: 10px 0 50px 0 !important;
 }
 
 .table_con table {
@@ -311,7 +318,6 @@ font-weight: 400;
   width: 15%;
 }
 
-
 .tabcontent2 table tbody .list_tit {
   text-align: left;
 }
@@ -330,14 +336,12 @@ font-weight: 400;
   width: 80px;
   margin: auto;
   border-radius: 15px;
-
 }
 
 .typ {
   text-align: right;
-  position: absolute;
-  right: 18%;
-  top: 320px;
+  max-width: 65%;
+  margin: 0 auto 20px;
 }
 
 .typ_in a {
@@ -354,7 +358,6 @@ font-weight: 400;
   background-color: var(--main-color);
   color: #fff;
 }
-
 
 /* sub05_02 공지사항 & 1:1 문의*/
 
@@ -406,6 +409,7 @@ font-weight: 400;
 }
 
 .write_in table th {
+  font-size: 14px;
   text-align: left;
   width: 10%;
 }
@@ -517,6 +521,7 @@ font-weight: 400;
 .out_notion_txt {
   margin: 50px 0 50px;
   font-size: 18px;
+  padding: 0 10%;
 }
 
 .out_notion_txt span {
@@ -600,9 +605,30 @@ address span {
   background: url(../img/common/logo.png) no-repeat center / 100%;
 }
 
+@media (max-width: 1500px) {
+  .table_con table {
+    width: 1000px;
+    max-width: 100%;
+  }
 
+  .typ {
+    width: 1000px;
+    max-width: 100%;
+  }
 
-@media (max-width:1280px) {
+  .write {
+    width: 1000px;
+    max-width: 100%;
+  }
+
+  .qna .qna_in {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+  }
+}
+
+@media (max-width: 1280px) {
   .gnb>li>a {
     padding: 8px 18px;
   }
@@ -612,9 +638,14 @@ address span {
     gap: 60px;
     justify-content: space-between;
   }
+
+  .write {
+    padding: 10px;
+    max-width: 100%;
+  }
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   #header h1 a {
     width: 180px;
   }
@@ -627,14 +658,31 @@ address span {
   .event_wrap {
     margin-top: 30px;
   }
-
-  .typ {
-    margin-bottom: 10px;
-  }
-
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1080px) {
+  .table_con table {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .typ {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .write {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .qna .qna_in {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
   .sub_banner_in h1 {
     padding-left: 50px;
   }
@@ -644,7 +692,7 @@ address span {
   }
 }
 
-@media (max-width:960px) {
+@media (max-width: 960px) {
   #header {
     justify-content: space-between;
     height: 60px;
@@ -667,20 +715,21 @@ address span {
   }
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
   #header h1 a {
     width: 150px;
   }
 }
 
-@media (max-width:800px) {
-  input[type=checkbox] {
+@media (max-width: 800px) {
+  input[type="checkbox"] {
     width: 50%;
   }
 
   .event_in .evt_line {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    padding: 30px;
   }
 
   .typ {
@@ -688,28 +737,24 @@ address span {
   }
 }
 
-@media (max-width:750px) {
-  .list_tit {
-    width: 50%;
-  }
-
+@media (max-width: 750px) {
   .event_wrap {
     margin-top: 30px;
     border-radius: 15px;
   }
 
-  .list_tit a {
+  .list_tit {
     width: 20ch;
   }
 }
 
-@media (max-width:618px) {  
+@media (max-width: 618px) {
   .typ {
     right: 14%;
   }
 }
 
-@media (max-width:610px) {
+@media (max-width: 610px) {
   #footer .inner {
     gap: 40px;
   }
@@ -745,7 +790,7 @@ address span {
   }
 }
 
-@media (max-width:580px) {
+@media (max-width: 580px) {
   .mlogin {
     font-size: 1.4rem;
   }
@@ -755,8 +800,9 @@ address span {
   }
 
   .list_tit {
-    width: 30%;
+    width: 20ch;
   }
+
   .wait,
   .end {
     padding: 3px 0;
@@ -781,12 +827,13 @@ address span {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .typ {
     right: 11%;
   }
 }
-@media (max-width:500px) {
+
+@media (max-width: 500px) {
   .sub_banner_in h1 {
     font-size: 35px;
   }
@@ -796,15 +843,20 @@ address span {
   }
 
   /* sign_up & sign_in*/
-  .login_inner .tit_area p>a { padding: 0; }
-  .col span.masked { font-size: 1.2rem; }
-}
-
-@media (max-width:480px) {
-  .tab .list_tit {
-    width: 50%;
+  .login_inner .tit_area p>a {
+    padding: 0;
   }
 
+  .col span.masked {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .list_tit {
+    width: 15ch;
+  }
+  
   .write_in table th {
     width: 15%;
   }
@@ -829,20 +881,19 @@ address span {
   .event_wrap {
     margin-top: 30px;
   }
-  
+
   .login_inner {
     padding: 20px 30px;
   }
-
 }
 
-@media (max-width:420px) {
+@media (max-width: 420px) {
   .typ {
     right: 7%;
   }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .write_in ul li a {
     padding: 5px 30px;
   }
@@ -896,20 +947,19 @@ address span {
   .qna_content h5 {
     margin-left: 10px;
   }
-
 }
 
-@media (max-width:370px) {
+@media (max-width: 370px) {
   .masked {
     font-size: 11px;
   }
 
   .sec_title h4+span,
-  input[type=password],
-  input[type=text],
-  input[type=number],
-  input[type=email],
-  input[type=tel] {
+  input[type="password"],
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"] {
     font-size: 1.2rem;
   }
 
@@ -945,27 +995,25 @@ address span {
   }
 }
 
-@media (max-width:350px) {
-  .typ{
-   right: 5%;
+@media (max-width: 350px) {
+  .typ {
+    right: 5%;
   }
 }
 
-@media (max-width:350px) {
-
-  a.go_link{
+@media (max-width: 350px) {
+  a.go_link {
     width: 50%;
     text-align: center;
   }
 
-  .sub_area{
+  .sub_area {
     flex-direction: column;
     gap: 12px;
   }
 }
 
-@media (max-width:321px) {
-
+@media (max-width: 321px) {
   .event_notice strong {
     font-size: 12px;
   }

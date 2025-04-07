@@ -1,567 +1,405 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 게시판 관리 / 등록된 이벤트 목록 노출 -->
+    <title>Aureon Partners | 관리자페이지</title>
 
-  <!-- 게시판 관리 / 등록된 이벤트 목록 노출 -->
-  <title>DBS BOND | 관리자페이지 </title>
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/loader.css" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/admin.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/admin/event-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/admin/popup-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/admin/admin-notification.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/admin.js"></script>
-</head>
+    <style>
+      .img_area img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-<body>
-  <div id="admin_wrap">
+      #file-name,
+      .url-des {
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        border-radius: 2px;
+        font-size: 14px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+        outline: none;
+      }
 
-    <div id="header">
+      .file-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
 
-      <h1>
-        <a href="admin_main.html">
-          <img src="../img/common/logo.png" alt="로고">
-        </a>
-      </h1>
+      .file-container {
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        border-radius: 2px;
+        font-size: 14px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+        outline: none;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0px;
+        padding-left: 10px;
+        width: 192px;
+      }
 
-      <nav>
-        <ul class="lnb_wrap">
-          <li>
-            <div class="icon_person">
-              <img src="../img/admin/icon_person.png" alt="관리자 아이콘">
-            </div>
-            <div class="txt">관리자님, 반갑습니다</div>
-          </li>
+      .link-container {
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-          <!-- 회원관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">회원 관리</div>
+      .link-text {
+        text-decoration: underline;
+        color: #0066cc;
+        cursor: pointer;
+      }
+
+      .remove-button {
+        cursor: pointer;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="admin_wrap">
+      <div id="header">
+        <h1>
+          <a href="admin_main.html">
+            <img src="../img/common/logo.png" alt="로고" />
+          </a>
+        </h1>
+
+        <nav id="sidebar-menu">
+          <ul class="lnb_wrap">
+            <li>
+              <div class="icon_person">
+                <img src="../img/admin/icon_person.png" alt="관리자 아이콘" />
               </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
+              <div class="txt">관리자님, 반갑습니다</div>
+              <div class="logout_icon" style="cursor: pointer">
+                <img
+                  src="../img/admin/logout-icon.png"
+                  alt="로그아웃 아이콘"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 4px;
+                    margin-left: 10px;
+                  "
+                />
               </div>
-            </div>
+            </li>
 
-            <ol class="depth2">
-              <li>
-                <a href="adimin_01_01_00.html">회원 목록</a>
-              </li>
-              <li>
-                <a href="adimin_01_02_00.html">쪽지 보내기</a>
-              </li>
-            </ol>
-          </li>
+            <!-- 회원관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">회원 관리</div>
+                </div>
 
-          <!-- 입금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">입금 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li>
-                <a href="adimin_02_01_00.html">입금 신청</a>
-              </li>
-              <li>
-                <a href="adimin_02_01_01.html">입금 내역</a>
-              </li>
-            </ol>
-          </li>
-
-          <!-- 출금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">출금 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li>
-                <a href="adimin_03_01_00.html">출금 내역</a>
-              </li>
-              <li>
-                <a href="admin_03_02_00.html">미지급 내역</a>
-              </li>
-            </ol>
-          </li>
-
-          <!-- 투자금 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">투자금 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li>
-                <a href="admin_04_01_00.html">회수 관리</a>
-              </li>
-              <li>
-                <a href="admin_04_02_00.html">회수 내역</a>
-              </li>
-            </ol>
-          </li>
-
-          <!-- 게시판 관리 -->
-          <li>
-            <div class="lnb">
-              <div class="left_box">
-                <div class="icon"></div>
-                <div class="txt">게시판 관리</div>
-              </div>
-
-              <div class="right_box">
-                <span class="bi bi-chevron-down snb"></span>
-                <div class="alarm"></div>
-              </div>
-            </div>
-
-            <ol class="depth2">
-              <li> <a href="admin_05_01_00.html">상품 관리</a> </li>
-              <li> <a href="admin_05_02_00.html">계좌 관리</a> </li>
-              <li> <a href="admin_05_03_00.html">1:1 문의</a> </li>
-              <li> <a href="admin_05_04_01_00.html">이벤트 관리</a> </li>
-              <li> <a href="admin_05_05_00.html">공지사항 관리</a> </li>
-              <li> <a href="admin_05_06_00.html">자주묻는질문 관리</a> </li>
-            </ol>
-          </li>
-
-        </ul>
-      </nav>
-
-    </div>
-
-    <div id="main">
-
-      <div class="tab_con">
-
-        <div class="card_tit_tab">
-          <div class="card_tit">이벤트 관리</div>
-          <div class="card_tit">이벤트 팝업</div>
-        </div>
-
-        <div class="tab_menu">
-          <ul>
-            <li class="active">목록</li>
-            <li>팝업 관리</li>
-          </ul>
-        </div>
-
-        <!-- 탭 콘텐츠 -->
-        <div class="tab_item_wrap">
-
-          <div class="tab_item">
-
-            <div class="container">
-
-              <div class="table_con">
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>　</th>
-                      <th>제목</th>
-                      <th>게시일</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>
-                        <a href="admin_05_04_01_02.html">
-                          이벤트 제목이 노출됩니다.
-                      </td>
-                      </a>
-                      <td>2025.01.01</td>
-                    </tr>
-
-                    <tr>
-                      <td>2</td>
-                      <td>
-                        <a href="admin_05_04_01_02.html">
-                          이벤트 제목이 노출됩니다.
-                      </td>
-                      </a>
-                      <td>2025.01.01</td>
-                    </tr>
-
-                    <tr>
-                      <td>3</td>
-                      <td>
-                        <a href="admin_05_04_01_02.html">
-                          이벤트 제목이 노출됩니다.
-                      </td>
-                      </a>
-                      <td>2025.01.01</td>
-                    </tr>
-
-                    <tr>
-                      <td>4</td>
-                      <td>
-                        <a href="admin_05_04_01_02.html">
-                          이벤트 제목이 노출됩니다.
-                      </td>
-                      </a>
-                      <td>2025.01.01</td>
-                    </tr>
-
-                  </tbody>
-                </table>
-
-              </div>
-
-              <div class="pg_con">
-                <div class="pg_wrap">
-                  <a href="#"><i class="bi bi-chevron-left"></i></a>
-                  <a href="#" class="active">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#">6</a>
-                  <a href="#">7</a>
-                  <a href="#">8</a>
-                  <a href="#">9</a>
-                  <a href="#"><i class="bi bi-chevron-right"></i></a>
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="member-alarm"></div>
                 </div>
               </div>
 
-            </div>
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_01_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-1"></span>회원 목록
+                  </a>
+                </li>
+                <li>
+                  <a href="adimin_01_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-2"></span>쪽지 보내기
+                  </a>
+                </li>
+              </ol>
+            </li>
 
-            <a href="admin_05_04_01_01.html" class="upload btn_btm_r">등록</a>
+            <!-- 입금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">입금 관리</div>
+                </div>
 
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="deposit-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_02_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-3"></span>입금 신청
+                  </a>
+                </li>
+                <li>
+                  <a href="adimin_02_01_01.html" class="notice-link">
+                    <span class="notice-dot" id="nd-4"></span>입금 내역
+                  </a>
+                </li>
+              </ol>
+            </li>
+
+            <!-- 출금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">출금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="withdrawal-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li>
+                  <a href="adimin_03_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-5"></span>출금 내역
+                  </a>
+                </li>
+                <li>
+                  <a href="admin_03_02_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-6"></span>미지급 내역
+                  </a>
+                </li>
+              </ol>
+            </li>
+
+            <!-- 투자금 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">투자금 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="repayment-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li>
+                  <a href="admin_04_01_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-7"></span>회수 관리
+                  </a>
+                </li>
+                <li>
+                  <a href="admin_04_02_00.html">회수 내역</a>
+                </li>
+              </ol>
+            </li>
+
+            <!-- 게시판 관리 -->
+            <li>
+              <div class="lnb">
+                <div class="left_box">
+                  <div class="icon"></div>
+                  <div class="txt">게시판 관리</div>
+                </div>
+
+                <div class="right_box">
+                  <span class="bi bi-chevron-down snb"></span>
+                  <div class="alarm" id="management-alarm"></div>
+                </div>
+              </div>
+
+              <ol class="depth2">
+                <li><a href="admin_05_01_00.html">상품 관리</a></li>
+                <li><a href="admin_05_02_00.html">계좌 관리</a></li>
+                <li>
+                  <a href="admin_05_03_00.html" class="notice-link">
+                    <span class="notice-dot" id="nd-8"></span>1:1 문의
+                  </a>
+                </li>
+                <li><a href="admin_05_04_01_00.html">이벤트 관리</a></li>
+                <li><a href="admin_05_05_00.html">공지사항 관리</a></li>
+                <li><a href="admin_05_06_00.html">자주묻는질문 관리</a></li>
+              </ol>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="main">
+        <div class="tab_con">
+          <div class="card_tit_tab">
+            <div class="card_tit card_tit_02">이벤트 관리</div>
+            <div class="card_tit card_tit_01 active">이벤트 팝업</div>
           </div>
 
-          <div class="tab_item">
+          <div class="tab_menu">
+            <ul>
+              <li class="active">목록</li>
+              <li>팝업 관리</li>
+            </ul>
+          </div>
 
-            <div class="pop_con_wrap">
+          <!-- 탭 콘텐츠 -->
+          <div class="tab_item_wrap">
+            <div class="tab_content_02 tab_item active">
+              <div class="container">
+                <div class="table_con">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>　</th>
+                        <th>제목</th>
+                        <th>게시일</th>
+                      </tr>
+                    </thead>
 
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
+                    <tbody>
+                      <tr id="loading-screen">
+                        <td colspan="3">
+                          <div class="spinner-container">
+                            <div class="spinner"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>1</span>
-                  </div>
+                <div class="pg_con">
+                  <div class="pg_wrap" id="pagination"></div>
+                </div>
 
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
+                <a href="admin_05_04_01_01.html" class="upload btn_btm_r"
+                  >등록</a
+                >
               </div>
-              <!-- //pop_list_area -->
-
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
-
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>2</span>
-                  </div>
-
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
+            </div>
+            <div class="tab_content_01 tab_item">
+              <div>
+                <div id="popup-container" class="pop_con_wrap"></div>
               </div>
-              <!-- //pop_list_area -->
 
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
-
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>3</span>
-                  </div>
-
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
+              <div class="btn_manage">
+                <button type="button" class="manage" style="cursor: pointer">
+                  관리
+                </button>
+                <button type="button" class="save" style="cursor: pointer">
+                  완료
+                </button>
               </div>
-              <!-- //pop_list_area -->
+            </div>
+          </div>
+        </div>
 
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
-
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>4</span>
-                  </div>
-
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
+        <template id="popup-template">
+          <div class="pop_list_area" data-popup-index="">
+            <!-- num_area -->
+            <div class="num_area">
+              <div class="idx" data-popup-uuid="">
+                <span>1</span>
               </div>
-              <!-- //pop_list_area -->
 
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
-
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>5</span>
-                  </div>
-
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
+              <div class="del_area" style="cursor: pointer">
+                <span class="del_pop bi bi-x-lg"></span>
               </div>
-              <!-- //pop_list_area -->
-
-              <!-- pop_list_area -->
-              <div class="pop_list_area">
-
-                <!-- num_area -->
-                <div class="num_area">
-                  <div class="idx">
-                    <span>6</span>
-                  </div>
-
-                  <div class="del_area">
-                    <span class="del_pop bi bi-x-lg"></span>
-                  </div>
-                </div><!--//num_area-->
-
-                <div class="img_area"></div>
-
-                <!-- manage_area -->
-                <div class="manage_area">
-                  <div class="check_area">
-                    <input type="checkbox" name="" id="use">
-                    <label for="use" class="use"></label>
-                    <label for="use" class="use">사용</label>
-
-                    <input type="checkbox" name="" id="not_use">
-                    <label for="not_use" class="not_use"></label>
-                    <label for="not_use" class="not_use">미사용</label>
-                  </div>
-
-                  <div class="file_area file_box">
-                    <label for="file">업로드</label>
-                    <input class="upload_name">
-                    <input type="file" id="file">
-                  </div>
-
-                  <div class="file_box url_area">
-                    <label for="url">URL</label>
-                    <input class="upload_name" placeholder="url입력">
-                    <input type="url" id="url">
-                  </div>
-                </div><!--//manage_area-->
-
-              </div>
-              <!-- //pop_list_area -->
-
-            </div><!--//pop_con_wrap-->
-
-            <!-- <div class="btn_manage">
-              <button type="button" id="btn">
-                  <span id="save">관리</span>
-              </button>
-          </div> -->
-
-            <div class="btn_manage">
-              <button type="button" class="manage">관리</button>
-              <button type="button" class="save">완료</button>
             </div>
 
+            <div class="img_area" data-popup-image-uuid=""></div>
+
+            <!-- manage_area -->
+            <div class="manage_area">
+              <div class="check_area">
+                <input type="checkbox" name="" class="use-checkbox" id="use" />
+                <label for="use" class="use"></label>
+                <label for="use" class="use">사용</label>
+
+                <input
+                  type="checkbox"
+                  name=""
+                  class="not-use-checkbox"
+                  id="not_use"
+                />
+                <label for="not_use" class="not_use"></label>
+                <label for="not_use" class="not_use">미사용</label>
+              </div>
+
+              <div class="file_area file_box">
+                <label for="file">업로드</label>
+                <input class="upload_name" id="file-name" value="" readonly />
+                <input
+                  type="file"
+                  id="file"
+                  class="file-input"
+                  accept="image/*"
+                />
+              </div>
+
+              <div class="file_box url_area">
+                <label for="url">URL</label>
+                <input
+                  type="url"
+                  class="upload_name url-des"
+                  id="url"
+                  value=""
+                  placeholder="url입력"
+                />
+              </div>
+            </div>
           </div>
-        </div><!--//main-->
-
-      </div><!--/admin_wrap-->
-</body>
-
-</div><!--//tab_item-->
-
-</div> <!--//tab_con-->
-
-</div>
-
-
-
-</div>
-</body>
-
+        </template>
+      </div>
+    </div>
+  </body>
 </html>

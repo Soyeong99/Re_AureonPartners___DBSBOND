@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>DBS Bond</title>
+    <link>https://aureonkr.com/</link>
+    <description>DBS Bond 웹사이트의 최신 업데이트 정보를 제공합니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Thu, 27 Mar 2025 12:00:00 +0900</lastBuildDate>
+
+    <item>
+      <title>홈페이지</title>
+      <link>https://aureonkr.com/index</link>
+      <description>DBS Bond 메인 페이지입니다.</description>
+      <pubDate>Thu, 27 Mar 2025 12:00:00 +0900</pubDate>
+      <guid>https://aureonkr.com/index</guid>
+    </item>
+
+    <item>
+      <title>로그인 페이지</title>
+      <link>https://aureonkr.com/login.html</link>
+      <description>로그인 페이지입니다.</description>
+      <pubDate>Thu, 27 Mar 2025 12:00:00 +0900</pubDate>
+      <guid>https://aureonkr.com/login.html</guid>
+    </item>
+
+    <item>
+      <title>회원가입 1단계</title>
+      <link>https://aureonkr.com/join_01.html</link>
+      <description>회원가입 절차의 첫 단계입니다.</description>
+      <pubDate>Thu, 27 Mar 2025 12:00:00 +0900</pubDate>
+      <guid>https://aureonkr.com/join_01.html</guid>
+    </item>
+
+    <item>
+      <title>회원가입 2단계</title>
+      <link>https://aureonkr.com/join_02.html</link>
+      <description>회원가입 절차의 두 번째 단계입니다.</description>
+      <pubDate>Thu, 27 Mar 2025 12:00:00 +0900</pubDate>
+      <guid>https://aureonkr.com/join_02.html</guid>
+    </item>
+    
+  </channel>
+</rss>

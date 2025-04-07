@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
   // ✅ Swiper 초기화 (라이브러리 확인 후 실행)
   if (typeof Swiper !== "undefined") {
     new Swiper(".slide_box", {
@@ -43,25 +42,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-// ✅ 인증하기 모달
-const btnSubmits = document.querySelectorAll(".btn_submit");
-const modal = document.querySelector(".ctf_num");
-const modalContent = modal?.querySelector("dl");
+  // ✅ 인증하기 모달
+  // const btnSubmits = document.querySelectorAll(".btn_submit");
+  // const modal = document.querySelector(".ctf_num");
+  // const modalContent = modal?.querySelector("dl");
 
-if (btnSubmits.length > 0 && modal && modalContent) {
-  btnSubmits.forEach((btnSubmit) => {
-    btnSubmit.addEventListener("click", function () {
-      // const rect = btnSubmit.getBoundingClientRect();
-      // modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
-      // modalContent.style.left = "50%";
-      // modalContent.style.transform = "translateX(-50%)";
-      modal.style.display = "block";
-    });
-  });
-}
+  // if (btnSubmits.length > 0 && modal && modalContent) {
+  //   btnSubmits.forEach((btnSubmit) => {
+  //     btnSubmit.addEventListener("click", function () {
+  //       // const rect = btnSubmit.getBoundingClientRect();
+  //       // modalContent.style.top = `${rect.bottom + window.scrollY + 10}px`;
+  //       // modalContent.style.left = "50%";
+  //       // modalContent.style.transform = "translateX(-50%)";
+  //       modal.style.display = "block";
+  //     });
+  //   });
+  // }
 
   // ✅ 이벤트 모달 팝업
-  document.querySelectorAll(".popup-btn").forEach(btn => {
+  document.querySelectorAll(".popup-btn").forEach((btn) => {
     btn.addEventListener("click", function () {
       const popup = document.querySelector(".popup");
       if (popup) hideModal(popup);
@@ -77,15 +76,15 @@ if (btnSubmits.length > 0 && modal && modalContent) {
     });
 
     $(".modal_pop").hide();
-    $(".apply-btn").click(() => showModal($(".modal_pop")[0]));
+    // $(".apply-btn").click(() => showModal($(".modal_pop")[0]));
     $(".btn > .del_pop").click(() => hideModal($(".modal_pop")[0]));
 
-    $(".pop_btn").click(() => showModal($(".modal_wrap")[0]));
+    // $(".pop_btn").click(() => showModal($(".modal_wrap")[0]));
     $(".btn_area button").click(() => hideModal($(".modal_wrap")[0]));
 
     $(".success_pop").hide();
-    $(".btn > .complete").click(() => showModal($(".success_pop")[0]));
-    $(".okay").click(() => $(".success_pop, .modal_pop").stop().fadeOut());
+    // $(".btn > .complete").click(() => showModal($(".success_pop")[0]));
+    // $(".okay").click(() => $(".success_pop, .modal_pop").stop().fadeOut());
   }
 
   // ✅ 전체동의 체크박스
@@ -94,12 +93,16 @@ if (btnSubmits.length > 0 && modal && modalContent) {
 
   if (agreeAllCheckbox && agreeItems.length > 0) {
     agreeAllCheckbox.addEventListener("change", function () {
-      agreeItems.forEach(checkbox => (checkbox.checked = agreeAllCheckbox.checked));
+      agreeItems.forEach(
+        (checkbox) => (checkbox.checked = agreeAllCheckbox.checked)
+      );
     });
 
-    agreeItems.forEach(checkbox => {
+    agreeItems.forEach((checkbox) => {
       checkbox.addEventListener("change", function () {
-        agreeAllCheckbox.checked = [...agreeItems].every(item => item.checked);
+        agreeAllCheckbox.checked = [...agreeItems].every(
+          (item) => item.checked
+        );
       });
     });
   }
@@ -120,10 +123,15 @@ if (btnSubmits.length > 0 && modal && modalContent) {
   }
 
   function formatText(text) {
-    return text.replace(/<br>/g, "¶").split("").map(char => {
-      if (char === "¶") return "<br>";
-      return (char === "D" || char === "Y" || char === "S") ? `<span class="bold">${char}</span>` : char;
-    });
+    return text
+      .replace(/<br>/g, "¶")
+      .split("")
+      .map((char) => {
+        if (char === "¶") return "<br>";
+        return char === "D" || char === "Y" || char === "S"
+          ? `<span class="bold">${char}</span>`
+          : char;
+      });
   }
 
   function startTypingAnimation() {

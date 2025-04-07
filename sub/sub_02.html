@@ -1,295 +1,369 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aureon Partners</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.png" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/login.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/media.css">
-  <link rel="stylesheet" href="../css/sub_media.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- js -->
-  <script defer src="../js/common.js"></script>
-  <script defer src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-</head>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/sub_media.css" />
 
-<body>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <div id="wrap" class="container_wrap">
+    <!-- js -->
 
-    <!-- header -->
-    <header id="header">
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
 
-      <h1><a href="../index.html"></a></h1>
+  <body>
+    <div id="wrap" class="container_wrap">
+      <!-- header -->
+      <header id="header">
+        <h1><a href="../kr/index.html"></a></h1>
 
-      <nav>
-        <ul class="gnb">
-          <li><a href="sub_01.html">회사소개</a></li>
-          <li><a href="sub_02.html">투자전략</a></li>
-          <li><a href="sub_03.html">투자상품</a></li>
-          <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="depth2">
-              <li><a href="sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="sub_05_02.html">공지사항</a></li>
-              <li><a href="sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+        <nav>
+          <ul class="gnb">
+            <li><a href="sub_01.html">회사소개</a></li>
+            <li><a href="sub_02.html">투자전략</a></li>
+            <li><a href="sub_03.html">투자상품</a></li>
+            <li><a href="sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="depth2">
+                <li><a href="sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="sub_05_02.html">공지사항</a></li>
+                <li><a href="sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-        <ol class="util">
-          <li>
-            <a href="#none">마이페이지</a>
-            <ol class="u_depth2">
-              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
-              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
-            </ol>
-          </li>
+          <ol class="util">
+            <li>
+              <a href="#none">마이페이지</a>
+              <ol class="u_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
 
-          <li class="note_alarm">
-            <a href="../a_login/mail.html">
-              <span>내 쪽지함</span>
-            </a>
-          </li>
-        </ol>
-      </nav>
+            <li class="note_alarm">
+              <a href="../a_login/mail.html">
+                <span>내 쪽지함</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
 
-      <div class="ham bi bi-list"></div>
+        <div class="ham bi bi-list"></div>
 
-      <div class="mgnb_wrap">
+        <div class="mgnb_wrap">
+          <div class="bi bi-x-lg mgnb_close"></div>
+          <div class="mgnb_logo"></div>
 
-        <div class="bi bi-x-lg mgnb_close"></div>
-        <div class="mgnb_logo"></div>
+          <ul class="mgnb">
+            <li><a href="sub_01.html">회사소개</a></li>
+            <li><a href="sub_02.html">투자전략</a></li>
+            <li><a href="sub_03.html">투자상품</a></li>
+            <li><a href="sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="mdepth2">
+                <li><a href="sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="sub_05_02.html">공지사항</a></li>
+                <li><a href="sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-        <ul class="mgnb">
-          <li><a href="sub_01.html">회사소개</a></li>
-          <li><a href="sub_02.html">투자전략</a></li>
-          <li><a href="sub_03.html">투자상품</a></li>
-          <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="mdepth2">
-              <li><a href="sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="sub_05_02.html">공지사항</a></li>
-              <li><a href="sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+          <ul class="m_util">
+            <li>
+              <a href="#none">마이페이지</a>
 
-        <ul class="m_util">
-          <li>
-            <a href="#none">마이페이지</a>
+              <ol class="u_depth2 mu_depth2">
+                <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
+                <li><a href="../a_login/mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-            <ol class="u_depth2 mu_depth2">
-              <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
-              <li><a href="../a_login/mycash.html">내 자산현황</a></li>
-            </ol>
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
+            <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
+          </ul>
+        </div>
+      </header>
 
-          </li>
+      <main id="main">
+        <section id="tit_box">
+          <div class="sub_inner">
+            <div class="animate_txt">
+              <p class="typing-txt typing_txt">
+                당신의 성공을 꿈꾸세요 Dream Your Success
+              </p>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
-          <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
-        </ul>
+              <span class="typing"></span>
+            </div>
+          </div>
+        </section>
 
+        <section id="invest_info">
+          <div class="sub_inner">
+            <div class="img_box"></div>
+
+            <div class="info_txt">
+              <div class="tit_box">
+                <h4>채권이란?</h4>
+                <p>
+                  원금과 일정한 수익을 지급하여 안정성과 수익성을 추구하는
+                  투자상품
+                </p>
+                <span
+                  >정부, 공공기관, 금융기관 및 신용도가 우수한 주식회사
+                  자금조달을 위해 발행하는 일종의 차용증서입니다.</span
+                >
+              </div>
+
+              <div class="info_box">
+                <ul>
+                  <li>
+                    <div class="con_tit">
+                      <div class="icon"></div>
+                      <h5>안정성</h5>
+                    </div>
+
+                    <div class="txt_box">
+                      <p>발행주체의 신용도에 따른 안정성 높은 상품</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="con_tit">
+                      <div class="icon"></div>
+                      <h5>수익성</h5>
+                    </div>
+
+                    <div class="txt_box">
+                      <p>만기보유 시에 정해진 수익 지급</p>
+                      <p>중도매도 시에 매매차익 발생</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="con_tit">
+                      <div class="icon"></div>
+                      <h5>절세효과</h5>
+                    </div>
+
+                    <div class="txt_box">
+                      <p>채권투자 시 발생하는 매매차익 비과세</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="invest_contents">
+          <div class="sub_inner">
+            <div class="content" data-aos="flip-right" data-aos-duration="800">
+              <div class="img">
+                <img src="../img/sub/invest_01.jpg" alt=" 섹션 보조 사진" />
+              </div>
+              <div class="txt_box">
+                <h3>유연한 채권 자산 배분</h3>
+                <p>
+                  시장 환경에 따라 채권 자산 배분을 유연하게 조정하여 위험을
+                  관리하고 수익기회를 포착합니다. 이 접근법은 시장의 변동성에
+                  따라 적극적으로 자산클래스의 비율을 조절함으로써, 리스크를
+                  최소화하고 잠재적인 수익을 극대화 합니다.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="content"
+              data-aos="flip-left"
+              data-aos-delay="200"
+              data-aos-duration="1500"
+            >
+              <div class="txt_box">
+                <h3>테마 기반 투자</h3>
+                <p>
+                  장기적인 글로벌 트렌드와 혁신적인 산업에 초점을 맞춘 투자를
+                  통해 높은 성장 잠재력을 탐색합니다. 이는 기술진보, 인구
+                  구조변화, 환경 지속 가능성과 같은 메가 트렌드를 활용하는
+                  전략입니다
+                </p>
+              </div>
+              <div class="img">
+                <img src="../img/sub/invest_02.jpg" alt=" 섹션 보조 사진" />
+              </div>
+            </div>
+
+            <div
+              class="content"
+              data-aos="flip-right"
+              data-aos-delay="400"
+              data-aos-duration="1500"
+            >
+              <div class="img">
+                <img src="../img/sub/invest_03.jpg" alt=" 섹션 보조 사진" />
+              </div>
+              <div class="txt_box">
+                <h3>가치투자와 성장투자의 조화</h3>
+                <p>
+                  시장에서 저평가된 가치 채권과 높은 성장 잠재력을 가진 자산에
+                  동시에 투자함으로써, 포트폴리오의 다양성과 균형을 추구합니다.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="content"
+              data-aos="flip-left"
+              data-aos-delay="600"
+              data-aos-duration="1500"
+            >
+              <div class="txt_box">
+                <h3>ESG 및 지속 가능한 투자</h3>
+                <p>
+                  환경,사회,거버넌스(ESG) 기준을 충족하는 기업에 투자하여
+                  장기적인 지속 가능성과 사회적 책임을 강조합니다. 이 접근법은
+                  투자 결정에 사회적 가치와 환경적 책임을 통합 합니다.
+                </p>
+              </div>
+              <div class="img">
+                <img src="../img/sub/invest_04.jpg" alt=" 섹션 보조 사진" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="f_logo"></div>
+
+          <div class="txt_area">
+            <div class="f_txt">
+              <p class="company">Aureon Partners</p>
+
+              <address>
+                <span>Limited</span>
+                <span>7760 Office Plaza Drive South,</span>
+                <span>West Des Moines, IA 50266</span>
+              </address>
+            </div>
+
+            <div class="email">
+              <a href="mailto:support@aureon.com"
+                >Support : support@aureon.com</a
+              >
+            </div>
+          </div>
+
+          <div class="copy">
+            <p>Copylight © 2022 Aureon Partners Ltd</p>
+          </div>
+        </div>
+      </footer>
+      <!--//footer-->
+
+      <!-- go_top -->
+      <div class="go_top">
+        맨 위로
+        <a href="#">
+          <span class="bi bi-chevron-up"></span>
+        </a>
       </div>
-    </header>
-    
-    <main id="main">
-
-      <section id="tit_box">
-        <div class="sub_inner">
-          <div class="animate_txt">
-
-            <p class="typing-txt typing_txt">
-              당신의 성공을 꿈꾸세요 Dream Your Success
-            </p>
-
-            <span class="typing"></span>
-          </div>
-        </div>
-      </section>
-
-      <section id="invest_info">
-        <div class="sub_inner">
-
-          <div class="img_box"></div>
-
-          <div class="info_txt">
-            <div class="tit_box">
-              <h4>채권이란?</h4>
-              <p>원금과 일정한 수익을 지급하여 안정성과 수익성을 추구하는 투자상품</p>
-              <span>정부, 공공기관, 금융기관 및 신용도가 우수한 주식회사 자금조달을 위해 발행하는 일종의 차용증서입니다.</span>
-            </div>
-
-            <div class="info_box">
-              <ul>
-                <li>
-                  <div class="con_tit">
-                    <div class="icon"></div>
-                    <h5>안정성</h5>
-                  </div>
-
-                  <div class="txt_box">
-                    <p>발행주체의 신용도에 따른 안정성 높은 상품</p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="con_tit">
-                    <div class="icon"></div>
-                    <h5>수익성</h5>
-                  </div>
-
-                  <div class="txt_box">
-                    <p>만기보유 시에 정해진 수익 지급</p>
-                    <p>중도매도 시에 매매차익 발생</p>
-                  </div>
-                </li>
-
-                <li>
-                  <div class="con_tit">
-                    <div class="icon"></div>
-                    <h5>절세효과</h5>
-                  </div>
-
-                  <div class="txt_box">
-                    <p>채권투자 시 발생하는 매매차익 비과세</p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="invest_contents">
-        <div class="sub_inner">
-
-          <div class="content" data-aos="flip-right" data-aos-duration="800">
-            <div class="img">
-              <img src="../img/sub/invest_01.jpg" alt=" 섹션 보조 사진">
-            </div>
-            <div class="txt_box">
-              <h3>유연한 채권 자산 배분</h3>
-              <p>시장 환경에 따라 채권 자산 배분을 유연하게 조정하여 위험을 관리하고 수익기회를 포착합니다.
-                이 접근법은 시장의 변동성에 따라 적극적으로 자산클래스의 비율을 조절함으로써,
-                리스크를 최소화하고 잠재적인 수익을 극대화 합니다.
-              </p>
-            </div>
-          </div>
-
-          <div class="content" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1500">
-            <div class="txt_box">
-              <h3>테마 기반 투자</h3>
-              <p>장기적인 글로벌 트렌드와 혁신적인 산업에 초점을 맞춘 투자를 통해 높은 성장 잠재력을 탐색합니다.
-                이는 기술진보, 인구 구조변화, 환경 지속 가능성과 같은 메가 트렌드를 활용하는 전략입니다
-              </p>
-            </div>
-            <div class="img">
-              <img src="../img/sub/invest_02.jpg" alt=" 섹션 보조 사진">
-            </div>
-          </div>
-
-          <div class="content" data-aos="flip-right" data-aos-delay="400" data-aos-duration="1500">
-            <div class="img">
-              <img src="../img/sub/invest_03.jpg" alt=" 섹션 보조 사진">
-            </div>
-            <div class="txt_box">
-              <h3>가치투자와 성장투자의 조화</h3>
-              <p>시장에서 저평가된 가치 채권과 높은 성장 잠재력을 가진 자산에 동시에 투자함으로써,
-                포트폴리오의 다양성과 균형을 추구합니다.
-              </p>
-            </div>
-          </div>
-
-          <div class="content" data-aos="flip-left" data-aos-delay="600" data-aos-duration="1500">
-            <div class="txt_box">
-              <h3>ESG 및 지속 가능한 투자</h3>
-              <p>환경,사회,거버넌스(ESG) 기준을 충족하는 기업에 투자하여 장기적인 지속 가능성과 사회적 책임을 강조합니다.
-                이 접근법은 투자 결정에 사회적 가치와 환경적 책임을 통합 합니다.
-              </p>
-            </div>
-            <div class="img">
-              <img src="../img/sub/invest_04.jpg" alt=" 섹션 보조 사진">
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </main>
-
-    <!-- footer -->
-    <footer id="footer">
-      <div class="inner">
-
-        <div class="f_logo"></div>
-
-        <div class="txt_area">
-
-          <div class="f_txt">
-
-            <p class="company">Aureon Partners</p>
-
-            <address>
-              <span>Limited</span>
-              <span>7760 Office Plaza Drive South,</span>
-              <span>West Des Moines, IA 50266</span>
-            </address>
-
-          </div>
-
-          <div class="email">
-            <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
-          </div>
-
-        </div>
-
-        <div class="copy">
-          <p>Copylight © 2022 Aureon Partners Ltd</p>
-        </div>
-
-      </div>
-    </footer>
-    <!--//footer-->
-
-    <!-- go_top -->
-    <div class="go_top">맨 위로
-      <a href="#">
-        <span class="bi bi-chevron-up"></span>
-      </a>
     </div>
 
-  </div>
-  <script  src="../js/jquery-3.7.1.min.js.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-</body>
-
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
+    <script src="../js/jquery-3.7.1.min.js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="../js/api/websocket.js"></script>
+    <script src="../js/api/websocket-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

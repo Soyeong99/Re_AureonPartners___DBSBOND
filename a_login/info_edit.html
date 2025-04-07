@@ -1,314 +1,497 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DBS : Trusted as the World's Best Bond | DBS Bond</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.ico" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/sub.css">
-  <link rel="stylesheet" href="../css/login.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/media.css">
-  <link rel="stylesheet" href="../css/a_login.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="../css/a_login.css" />
 
-  <!-- js -->
-  <script src="../js/jquery-3.7.1.min.js"></script>
-  <script defer src="../js/common.js"></script>
-  <script defer src="../js/sub05_01.js"></script>
-  <script defer src="../js/main.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-</head>
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
-<body>
+    <!-- jQuery CDN 추가 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Swiper CDN 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <div id="wrap">
+    <!-- 경로 수정: .js.js -> .js -->
+    <script defer src="../js/jquery-3.7.1.min.js"></script>
+    <script defer src="../js/swiper-bundle.min.js"></script>
 
-    <!-- header -->
-    <header id="header">
+    <!-- js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script defer src="../js/sub05_01.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/member-controller.js"
+    ></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
 
-      <h1><a href="../index.html"></a></h1>
+    <style>
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-5px);
+        }
+        40% {
+          transform: translateX(5px);
+        }
+        60% {
+          transform: translateX(-5px);
+        }
+        80% {
+          transform: translateX(5px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
 
-      <nav>
-        <ul class="gnb">
-          <li><a href="../sub/sub_01.html">회사소개</a></li>
-          <li><a href="../sub/sub_02.html">투자전략</a></li>
-          <li><a href="../sub/sub_03.html">투자상품</a></li>
-          <li><a href="../sub/sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="depth2">
-              <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="../sub/sub_05_02.html">공지사항</a></li>
-              <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+      .notification {
+        background: red;
+        color: white;
+        padding: 10px 20px;
+        display: none;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        border-radius: 5px;
+        z-index: 99999;
+      }
 
-        <ol class="util">
-          <li>
-            <a href="#none">마이페이지</a>
-            <ol class="u_depth2">
-              <li><a href="info_edit.html">내 정보수정</a></li>
-              <li><a href="mycash.html">내 자산현황</a></li>
-            </ol>
-          </li>
+      .shake {
+        animation: shake 0.5s ease-in-out;
+      }
+    </style>
+  </head>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1><a href="../kr/index.html"></a></h1>
 
-          <li class="note_alarm">
-            <a href="mail.html">
-              <span>내 쪽지함</span>
-            </a>
-          </li>
-        </ol>
-      </nav>
+        <nav>
+          <ul class="gnb">
+            <li><a href="../sub/sub_01.html">회사소개</a></li>
+            <li><a href="../sub/sub_02.html">투자전략</a></li>
+            <li><a href="../sub/sub_03.html">투자상품</a></li>
+            <li><a href="../sub/sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="depth2">
+                <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+                <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-      <div class="ham bi bi-list"></div>
+          <ol class="util">
+            <li>
+              <a href="#none">마이페이지</a>
+              <ol class="u_depth2">
+                <li><a href="info_edit.html">내 정보수정</a></li>
+                <li><a href="mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-      <div class="mgnb_wrap">
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
 
-        <div class="bi bi-x-lg mgnb_close"></div>
-        <div class="mgnb_logo"></div>
+            <li class="note_alarm">
+              <a href="mail.html">
+                <span>내 쪽지함</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
 
-        <ul class="mgnb">
-          <li><a href="../sub/sub_01.html">회사소개</a></li>
-          <li><a href="../sub/sub_02.html">투자전략</a></li>
-          <li><a href="../sub/sub_03.html">투자상품</a></li>
-          <li><a href="../sub/sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
-              <span class="bi bi-chevron-down show"></span>
-            </a>
-            <ol class="mdepth2">
-              <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
-              <li><a href="../sub/sub_05_02.html">공지사항</a></li>
-              <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
-            </ol>
-          </li>
-        </ul>
+        <div class="ham bi bi-list"></div>
 
-        <ul class="m_util">
-          <li>
-            <a href="#none">마이페이지</a>
+        <div class="mgnb_wrap">
+          <div class="bi bi-x-lg mgnb_close"></div>
+          <div class="mgnb_logo"></div>
 
-            <ol class="u_depth2 mu_depth2">
-              <li><a href="info_edit.html">내 정보수정</a></li>
-              <li><a href="mycash.html">내 자산현황</a></li>
-            </ol>
+          <ul class="mgnb">
+            <li><a href="../sub/sub_01.html">회사소개</a></li>
+            <li><a href="../sub/sub_02.html">투자전략</a></li>
+            <li><a href="../sub/sub_03.html">투자상품</a></li>
+            <li><a href="../sub/sub_04.html">이벤트</a></li>
+            <li>
+              <a href="#none"
+                >고객지원
+                <span class="bi bi-chevron-down show"></span>
+              </a>
+              <ol class="mdepth2">
+                <li><a href="../sub/sub_05_01.html">자주묻는질문</a></li>
+                <li><a href="../sub/sub_05_02.html">공지사항</a></li>
+                <li><a href="../sub/sub_05_03.html">1:1문의</a></li>
+              </ol>
+            </li>
+          </ul>
 
-          </li>
+          <ul class="m_util">
+            <li>
+              <a href="#none">마이페이지</a>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
-          <li class="note"><a href="mail.html">내 쪽지함</a></li>
+              <ol class="u_depth2 mu_depth2">
+                <li><a href="info_edit.html">내 정보수정</a></li>
+                <li><a href="mycash.html">내 자산현황</a></li>
+              </ol>
+            </li>
 
-        </ul>
+            <li><a href="../index.html" class="logout">로그아웃</a></li>
+            <li class="note"><a href="mail.html">내 쪽지함</a></li>
+          </ul>
+        </div>
+      </header>
 
+      <!-- main -->
+      <main id="main">
+        <div class="sub_inner">
+          <div class="join_con">
+            <h2>내 정보수정</h2>
+
+            <section id="account">
+              <div class="sec_title">
+                <h4>계정정보 수정</h4>
+              </div>
+
+              <div class="input_area">
+                <!-- 아이디 설정란 -->
+                <div class="col">
+                  <span>아이디 </span>
+                  <label for="">
+                    <input
+                      type="text"
+                      placeholder="abcd1234"
+                      id="memberId"
+                      disabled
+                    />
+                  </label>
+                </div>
+
+                <!-- 비밀번호 설정란 -->
+                <div class="col">
+                  <span>새 비밀번호 </span>
+                  <label for="">
+                    <input
+                      type="password"
+                      id="newPassword"
+                      placeholder="새 비밀번호를 입력하세요"
+                    />
+                  </label>
+                </div>
+
+                <!-- 비밀번호 확인란 -->
+                <div class="col">
+                  <span>새 비밀번호 확인 </span>
+                  <label for="">
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      placeholder="비밀번호를 확인하세요"
+                    />
+                  </label>
+                </div>
+
+                <!-- 휴대폰 본인 인증란 -->
+                <div class="col">
+                  <span>휴대폰 </span>
+                  <label for="" class="phone" id="">
+                    <input
+                      type="tel"
+                      name=""
+                      id="cellphoneNo"
+                      placeholder="010-1234-5678"
+                    />
+                    <button
+                      type="button"
+                      class="btn_submit"
+                      id="authenticateNumber"
+                    >
+                      인증하기
+                    </button>
+                  </label>
+                </div>
+
+                <!-- 휴대폰 본인 인증란 -->
+                <div class="col">
+                  <span>인증번호 </span>
+                  <label for="" class="phone">
+                    <input
+                      type="text"
+                      name=""
+                      id="authNumber"
+                      placeholder="인증번호를 입력하세요"
+                    />
+                    <button type="button" id="sendCodeConfirm">확인</button>
+                  </label>
+                </div>
+
+                <div class="col">
+                  <span>은행 </span>
+                  <select name="" id="bank">
+                    <option value="농협">농협</option>
+                    <option value="수협">수협</option>
+                    <option value="신협">신협</option>
+                    <option value="우체국">우체국</option>
+                    <option value="신한은행">신한은행</option>
+                    <option value="광주은행">광주은행</option>
+                    <option value="경남은행">경남은행</option>
+                    <option value="국민은행">국민은행</option>
+                    <option value="기업은행">기업은행</option>
+                    <option value="대구은행">대구은행</option>
+                    <option value="우리은행">우리은행</option>
+                    <option value="부산은행">부산은행</option>
+                    <option value="산림조합">산림조합</option>
+                    <option value="산업은행">산업은행</option>
+                    <option value="씨티은행">씨티은행</option>
+                    <option value="전북은행">전북은행</option>
+                    <option value="제주은행">제주은행</option>
+                    <option value="새마을금고">새마을금고</option>
+                    <option value="카카오뱅크">카카오뱅크</option>
+                  </select>
+                </div>
+
+                <!-- 계좌번호 입력란 -->
+                <div class="col">
+                  <span
+                    >계좌번호
+                    <small>*</small>
+                  </span>
+                  <label for="">
+                    <input
+                      type="text"
+                      placeholder="은행 계좌번호를 입력해주세요."
+                      id="accountNumber"
+                    />
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <div class="btn_final a_account2">
+              <a href="../kr/index.html" class="del">취소</a>
+
+              <a href="#none" id="update" class="join">확인</a>
+            </div>
+          </div>
+          <!--//join_con-->
+        </div>
+        <!--//sub_inner-->
+      </main>
+      <!-- //main -->
+
+      <!-- 인증번호 발송 모달창 -->
+      <div class="modal ctf_num">
+        <dl>
+          <dt>인증번호가 발송되었습니다.</dt>
+          <dd><a class="okay" href="#none" style="cursor: pointer">확인</a></dd>
+        </dl>
       </div>
-    </header>
 
-    <!-- main -->
-    <main id="main">
-      <div class="sub_inner">
+      <!-- 모달팝업 -->
+      <div class="popup2 modal">
+        <div>
+          <ul>
+            <li>내 정보 수정이 완료 되었습니다.</li>
+            <li><a class="popping2-btn" style="cursor: pointer">확인</a></li>
+          </ul>
+        </div>
+      </div>
 
-        <div class="join_con">
+      <!-- footer -->
+      <footer id="footer">
+        <div class="inner">
+          <div class="f_logo"></div>
 
-          <h2>내 정보수정</h2>
+          <div class="txt_area">
+            <div class="f_txt">
+              <p class="company">Aureon Partners</p>
 
-          <section id="account">
-
-            <div class="sec_title">
-              <h4>계정정보 수정</h4>
+              <address>
+                <span>Limited</span>
+                <span>7760 Office Plaza Drive South,</span>
+                <span>West Des Moines, IA 50266</span>
+              </address>
             </div>
 
-            <div class="input_area">
-
-              <!-- 아이디 설정란 -->
-              <div class="col">
-                <span>아이디
-                </span>
-                <label for="">
-                  <input type="text" placeholder="abcd1234">
-                </label>
-              </div>
-
-
-              <!-- 비밀번호 설정란 -->
-              <div class="col">
-                <span>새 비밀번호
-                </span>
-                <label for="">
-                  <input type="password">
-                </label>
-              </div>
-
-              <!-- 비밀번호 확인란 -->
-              <div class="col">
-                <span>새 비밀번호 확인
-                </span>
-                <label for="">
-                  <input type="password">
-                </label>
-              </div>
-
-              <!-- 휴대폰 본인 인증란 -->
-              <div class="col">
-                <span>휴대폰
-                </span>
-                <label for="" class="phone">
-                  <input type="tel" name="" id="" placeholder="010-1234-5678">
-                  <button type="button" class="btn_submit">인증하기</button>
-                </label>
-              </div>
-
-              <!-- 휴대폰 본인 인증란 -->
-              <div class="col">
-                <span>인증번호
-                </span>
-                <label for="" class="phone">
-                  <input type="text" name="" id="">
-                  <button type="button">확인</button>
-                </label>
-              </div>
-
-              <div class="col">
-                <span>은행
-                </span>
-                <select name="" id="">
-                  <option value="농협">농협</option>
-                  <option value="수협">수협</option>
-                  <option value="신협">신협</option>
-                  <option value="우체국">우체국</option>
-                  <option value="신한은행">신한은행</option>
-                  <option value="광주은행">광주은행</option>
-                  <option value="경남은행">경남은행</option>
-                  <option value="국민은행">국민은행</option>
-                  <option value="기업은행">기업은행</option>
-                  <option value="대구은행">대구은행</option>
-                  <option value="우리은행">우리은행</option>
-                  <option value="부산은행">부산은행</option>
-                  <option value="산림조합">산림조합</option>
-                  <option value="산업은행">산업은행</option>
-                  <option value="씨티은행">씨티은행</option>
-                  <option value="전북은행">전북은행</option>
-                  <option value="제주은행">제주은행</option>
-                  <option value="새마을금고">새마을금고</option>
-                  <option value="카카오뱅크">카카오뱅크</option>
-                </select>
-              </div>
-
-              <!-- 계좌번호 입력란 -->
-              <div class="col">
-                <span>계좌번호
-                  <small>*</small>
-                </span>
-                <label for="">
-                  <input type="text" placeholder="은행 계좌번호를 입력해주세요.">
-                </label>
-              </div>
-
+            <div class="email">
+              <a href="mailto:support@aureon.com"
+                >Support : support@aureon.com</a
+              >
             </div>
-          </section>
-
-
-          <div class="btn_final a_account2 ">
-
-            <a href="../index.html" class="del">취소</a>
-
-            <a href="#none" class="join">확인</a>
-
-
           </div>
 
-        </div><!--//join_con-->
+          <div class="copy">
+            <p>Copylight © 2022 Aureon Partners Ltd</p>
+          </div>
+        </div>
+      </footer>
+      <!--//footer-->
 
-      </div><!--//sub_inner-->
-    </main><!-- //main -->
+      <!-- go_top -->
+      <div class="go_top">
+        맨 위로
+        <a href="#">
+          <span class="bi bi-chevron-up"></span>
+        </a>
+      </div>
+    </div>
 
-    <!-- 인증번호 발송 모달창 -->
-    <div class="modal ctf_num">
-      <dl>
-        <dt>인증번호가 발송되었습니다.</dt>
-        <dd><a class="okay" href="#none">확인</a></dd>
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
       </dl>
     </div>
 
-    <!-- 모달팝업 -->
-    <div class="modal popup2">
-      <dl>
-        <dt><strong>내 정보 수정이 완료 되었습니다.</strong></dt>
-        <dd><a class="okay" href="../index.html">확인</a></dd>
-      </dl>
+    <!-- 에러 노티피케이션 -->
+    <div class="notification" id="notificationBox">
+      <span id="notificationText">Default notification</span>
+      <button
+        type="button"
+        class="notif-close"
+        style="
+          cursor: pointer;
+          background: none;
+          border: none;
+          color: white;
+          font-weight: bold;
+          margin-left: 10px;
+        "
+      >
+        X
+      </button>
     </div>
 
-    <!-- footer -->
-    <footer id="footer">
-      <div class="inner">
+    <script>
+      // 에러 알림 기능 정의
+      function showErrorNotification(text) {
+        const notificationBox = document.getElementById("notificationBox");
+        document.getElementById("notificationText").textContent = text;
+        notificationBox.style.display = "block";
+        notificationBox.classList.add("shake");
 
-        <div class="f_logo"></div>
+        setTimeout(() => {
+          notificationBox.classList.remove("shake");
+        }, 500);
 
-        <div class="txt_area">
+        // 5초 후 자동으로 닫힘
+        setTimeout(() => {
+          closeNotification();
+        }, 5000);
+      }
 
-          <div class="f_txt">
+      function closeNotification() {
+        document.getElementById("notificationBox").style.display = "none";
+      }
 
-            <p class="company">Aureon Partners</p>
+      // 닫기 버튼 이벤트 연결
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector(".notif-close")
+          .addEventListener("click", closeNotification);
 
-            <address>
-              <span>Limited</span>
-              <span>7760 Office Plaza Drive South,</span>
-              <span>West Des Moines, IA 50266</span>
-            </address>
+        // 모달 확인 버튼
+        document
+          .querySelector(".modal.ctf_num .okay")
+          .addEventListener("click", function () {
+            document.querySelector(".modal.ctf_num").style.display = "none";
+          });
+      });
 
-          </div>
+      // window 객체에 함수 등록 (다른 스크립트에서 접근할 수 있도록)
+      window.showErrorNotification = showErrorNotification;
+      window.closeNotification = closeNotification;
+    </script>
 
-          <div class="email">
-            <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
-          </div>
-
-        </div>
-
-        <div class="copy">
-          <p>Copylight © 2022 Aureon Partners Ltd</p>
-        </div>
-
-      </div>
-    </footer>
-    <!--//footer-->
-
-    <!-- go_top -->
-    <div class="go_top">맨 위로
-      <a href="#">
-        <span class="bi bi-chevron-up"></span>
-      </a>
-    </div>
-  </div>
-
-  <!-- aos소스 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <script src="../js/sub05_01.js"></script>
-</body>
-
+    <!-- aos소스 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

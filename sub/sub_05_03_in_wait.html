@@ -1,49 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aureon Partners</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aureon Partners</title>
+    <!-- 기본 메타 -->
+    <meta
+      name="description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더"
+    />
 
-  <!-- 파비콘 -->
-  <link rel="shortcut icon" href="../img/common/favicon.png" type="image/x-icon">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aureon Partners (오레온)" />
+    <meta
+      property="og:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureonkr.com" />
+    <meta property="og:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta property="og:site_name" content="Aureon Partners" />
 
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/font.css">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aureon Partners (오레온)" />
+    <meta
+      name="twitter:description"
+      content="당신의 성공을 위한 차별화된 전략, 글로벌 외환 펀드 운용의 리더. 다양한 통화 분야의 외환 펀드를 전략적으로 운용하는 금융 기관 입니다."
+    />
+    <meta name="twitter:image" content="https://aureonkr.com/img/og-img.png" />
+    <meta name="twitter:site" content="@your_twitter_handle" />
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- 검색 키워드 -->
+    <meta
+      name="keywords"
+      content="오레온 파트너스,오레온,오레온채권,aureon,aureon partners"
+    />
 
-  <!-- style.css -->
-  <link rel="stylesheet" href="../css/sub_02.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/media.css">
+    <!-- 파비콘 -->
+    <link
+      rel="shortcut icon"
+      href="../img/common/favicon.png"
+      type="image/x-icon"
+    />
 
-  <!-- aos / boot -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/font.css" />
 
-  <!-- 아코디언 -->
-  <script defer src="https://kit.fontawesome.com/70e0dc75f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
-  <script defer src="../js/jquery-3.7.1.min.js.js"></script>
-  <script defer src="../js/swiper-bundle.min.js.js"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="../css/sub_02.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/media.css" />
 
-  <!-- js -->
-  <script defer src="../js/sub05_01.js"></script>
+    <!-- aos / boot -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <script defer src="../js/main.js"></script>
-  <script defer src="../js/common.js"></script>
+    <!-- 아코디언 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/70e0dc75f1.js"
+      crossorigin="anonymous"
+    ></script>
 
+    <script defer src="../js/jquery-3.7.1.min.js.js"></script>
+    <script defer src="../js/swiper-bundle.min.js.js"></script>
 
-</head>
+    <!-- js -->
+    <script defer src="../js/sub05_01.js"></script>
 
-<body>
+    <script defer src="../js/main.js"></script>
 
+    <script defer type="module" src="../js/api/unreadMsgChecker.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/api/client/auth-controller.js"
+    ></script>
+  </head>
+
+  <body>
     <!-- header -->
     <header id="header">
-
-      <h1><a href="../index.html"></a></h1>
+      <h1><a href="../kr/index.html"></a></h1>
 
       <nav>
         <ul class="gnb">
@@ -51,7 +97,9 @@
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
+          <li>
+            <a href="#none"
+              >고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="depth2">
@@ -71,7 +119,7 @@
             </ol>
           </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
 
           <li class="note_alarm">
             <a href="../a_login/mail.html">
@@ -84,7 +132,6 @@
       <div class="ham bi bi-list"></div>
 
       <div class="mgnb_wrap">
-
         <div class="bi bi-x-lg mgnb_close"></div>
         <div class="mgnb_logo"></div>
 
@@ -93,7 +140,9 @@
           <li><a href="sub_02.html">투자전략</a></li>
           <li><a href="sub_03.html">투자상품</a></li>
           <li><a href="sub_04.html">이벤트</a></li>
-          <li><a href="#none">고객지원
+          <li>
+            <a href="#none"
+              >고객지원
               <span class="bi bi-chevron-down show"></span>
             </a>
             <ol class="mdepth2">
@@ -112,70 +161,63 @@
               <li><a href="../a_login/info_edit.html">내 정보수정</a></li>
               <li><a href="../a_login/mycash.html">내 자산현황</a></li>
             </ol>
-
           </li>
 
-          <li><a href="../en/index.html">로그아웃</a></li>
+          <li><a href="../index.html" class="logout">로그아웃</a></li>
           <li class="note"><a href="../a_login/mail.html">내 쪽지함</a></li>
         </ul>
-
       </div>
     </header>
-  <main id="main">
-    <div class="sub5_container">
+    <main id="main">
+      <div class="sub5_container">
+        <section id="container">
+          <div class="out_notion_wrap">
+            <div class="out_notion_section1">
+              <h5>고객지원 > 1:1 문의사항</h5>
+              <h1>문의사항</h1>
 
-      <section id="container">
+              <!--문의사항 내용 예시입니다. -->
+              <ul>
+                <li>
+                  <h2>문의사항 타이틀</h2>
+                </li>
+                <li>2025.03.12</li>
+              </ul>
 
+              <div class="out_notion_txt">
+                <p>
+                  <span>Q</span> <br />
+                  안녕하세요, <br />
+                  어제(XX월 XX일) 오전에 출금 요청을 했는데 아직 계좌로 입금되지
+                  않았습니다. <br />
+                  출금 요청이 정상적으로 처리되었는지 확인 부탁드립니다. <br />
+                  <br />
+                  또한, 평균적으로 출금이 완료되는 데 얼마나 걸리는지 알고
+                  싶습니다. <br />
+                  빠른 답변 부탁드립니다. <br />
+                  <br />
+                  감사합니다.
+                </p>
+              </div>
+            </div>
 
-        <div class="out_notion_wrap">
-          <div class="out_notion_section1">
-            <h5>고객지원 > 1:1 문의사항</h5>
-            <h1>문의사항</h1>
-
-            <!--문의사항 내용 예시입니다. -->
-            <ul>
-              <li>
-                <h2>문의사항 타이틀</h2>
-              </li>
-              <li>2025.03.12</li>
-            </ul>
-
-            <div class="out_notion_txt">
-              <p><span>Q</span> <br>
-                안녕하세요, <br>
-                어제(XX월 XX일) 오전에 출금 요청을 했는데 아직 계좌로 입금되지 않았습니다. <br>
-                출금 요청이 정상적으로 처리되었는지 확인 부탁드립니다. <br>
-                <br>
-                또한, 평균적으로 출금이 완료되는 데 얼마나 걸리는지 알고 싶습니다. <br>
-                빠른 답변 부탁드립니다. <br>
-                <br>
-                감사합니다.
-              </p>
-
+            <div class="out_notion_section2">
+              <a href="./sub_05_03.html" onclick="history.back(); return false;"
+                >목록보기</a
+              >
             </div>
           </div>
-
-          <div class="out_notion_section2">
-            <a href="./sub_05_03.html"  onclick="history.back(); return false;">목록보기</a>
-          </div>
-
-        </div>
-
-      </section>
-
-    </div>
-  </main>
+        </section>
+      </div>
+    </main>
 
     <!-- footer -->
     <footer id="footer">
       <div class="inner">
-
         <div class="f_logo"></div>
 
         <div class="txt_area">
-
           <div class="f_txt">
-
             <p class="company">Aureon Partners</p>
 
             <address>
@@ -183,37 +225,47 @@
               <span>7760 Office Plaza Drive South,</span>
               <span>West Des Moines, IA 50266</span>
             </address>
-
           </div>
 
           <div class="email">
             <a href="mailto:support@aureon.com">Support : support@aureon.com</a>
           </div>
-
         </div>
 
         <div class="copy">
           <p>Copylight © 2022 Aureon Partners Ltd</p>
         </div>
-
       </div>
     </footer>
     <!--//footer-->
 
     <!-- go_top -->
-    <div class="go_top">맨 위로
+    <div class="go_top">
+      맨 위로
       <a href="#">
         <span class="bi bi-chevron-up"></span>
       </a>
     </div>
 
-  <!-- aos소스 -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- modal -->
+    <div class="modal mail_alarm">
+      <dl style="position: fixed">
+        <dt><strong>아직 읽지 않은 쪽지가 있습니다.</strong></dt>
+        <dd class="muted_txt">(쪽지 미확인시 페이지 이동이 제한 됩니다.)</dd>
+        <dd><a class="okay" href="/a_login/mail.html">이동</a></dd>
+      </dl>
+    </div>
+    <!-- aos소스 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <!-- 3. 마지막에 websocket.js -->
+    <script src="../js/api/websocket.js"></script>
+    <script src="../js/api/websocket-init.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-  <script src="../js/sub05_01.js"></script>
-</body>
-
+    <script src="../js/sub05_01.js"></script>
+  </body>
 </html>
