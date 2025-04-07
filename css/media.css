@@ -436,6 +436,11 @@
   #prd .prd_tit_box .br {
     display: none;
   }
+  
+#prd .prd_tit_box > p span.br {
+ display: block;
+}
+
   #prd .prd_tit_box > p {
     font-size: 4.8rem;
     text-align: center;
