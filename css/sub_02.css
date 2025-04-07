@@ -221,15 +221,12 @@ input[type="checkbox"] {
 /* sub05_01 자주묻는질문 */
 
 /* sub05_02 공지사항 & 1:1문의 */
-.list_tit{
+tr > td.list_tit{
   display: inline-block;
   width: 30ch;
   white-space: nowrap;
-  /* 줄바꿈 방지 */
   overflow: hidden;
-  /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis;
-  /* 생략 부호(...) 표시 */
 }
 
 #container {
