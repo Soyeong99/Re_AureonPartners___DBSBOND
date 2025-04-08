@@ -879,7 +879,7 @@ a.back {
 }
 .price_con > p > span {
   display: inline-block;
-  width: 150px;
+  width: 40%;
 }
 .price_con > p:nth-child(2) {
   display: flex;
