@@ -175,7 +175,7 @@ thead {
   background: #ddd;
 }
 thead th {
-  padding: 16px 0;
+  padding: 16px;
   border-bottom: 2px solid #888;
 }
 
@@ -188,7 +188,7 @@ tbody tr:hover {
   background: #ddd;
 }
 tbody td {
-  padding: 14px 0;
+  padding: 14px 20px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -1285,10 +1285,10 @@ span.box_style {
 .faq_table > table > tbody .txt_ell {
   text-align: left;
 }
-.faq_table > table thead th:first-child,
+/* .faq_table > table thead th:first-child,
 .faq_table > table tbody td:first-child {
   width: 50px !important;
-}
+} API 연동 후 적용 안되고 있음 */
 
 .faq_btn_area {
   position: absolute;
