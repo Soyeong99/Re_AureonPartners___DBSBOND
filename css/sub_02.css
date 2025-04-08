@@ -53,7 +53,6 @@ input[type="checkbox"] {
 
 .evt_img img{
   max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
 }
@@ -522,6 +521,7 @@ tr > td.list_tit{
 }
 
 .out_notion_txt {
+  text-align: center; 
   margin: 50px 0 50px;
   font-size: 18px;
   padding: 0 10%;
