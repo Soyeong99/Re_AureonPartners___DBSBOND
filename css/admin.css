@@ -419,15 +419,17 @@ textarea::placeholder {
 ol.depth2 > li {
   background: #fff;
   padding: 12px 10px;
+  transition: all 0.5s;  
 }
+
 ol.depth2 > li > a {
   padding: 8px 30px;
   display: block;
   font-size: 1.6rem;
 }
 
-ol.depth2 > li:hover > a {
-  border-radius: 100px;
+ol.depth2 > li:hover > a,
+ol.depth2 > li > a.active {
   background: #ddd;
 }
 
