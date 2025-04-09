@@ -11,20 +11,21 @@ input[type="number"],
 input[type="email"],
 input[type="tel"],
 textarea,
-input[type="checkbox"] {
-  font-family: "Pretendard", sans-serif;
-}
+input[type="checkbox"] { font-family: "Pretendard", sans-serif; }
 
 /* 이벤트 */
+.event_in {
+ padding: 80px 5%;
+}
 
 .evt_line {
-  padding: 60px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: 0 auto;
   align-items: center;
-  gap: 50px;
+  gap: 80px;
 }
 
 .evt_container {
@@ -33,50 +34,45 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width:384px; 
 }
 
 .evt_img {
+  border-radius: 20px ;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 456px;
-  height: 456px;
-}
-
-@media screen and (max-width: 1700px) {
-  .evt_img {
-    width: 356px;
-    height: 356px;
-  }
+  width: 100%;
+  aspect-ratio: 8 / 5;
 }
 
 .evt_img img{
-  border-radius: 30px;
   max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
-  margin-bottom: 10px;
 }
 
 .evt_img_default {
-  border-radius: 30px;
   width: auto;
-  min-height: 456px;
-  margin-bottom: 10px;
+  min-height: 240px;
 }
 
 .evt_container p:nth-of-type(1) {
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 5px;
+    width: 100%;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 6px 0 3px;
 }
 
 .evt_container p:nth-of-type(2) {
-  color: #bbb;
-  font-size: 14px;
+  color: #666;
+  font-size: 16px;
 }
 
 .evnet_banner img {
@@ -221,15 +217,12 @@ input[type="checkbox"] {
 /* sub05_01 자주묻는질문 */
 
 /* sub05_02 공지사항 & 1:1문의 */
-.list_tit{
+tr > td.list_tit{
   display: inline-block;
   width: 30ch;
   white-space: nowrap;
-  /* 줄바꿈 방지 */
   overflow: hidden;
-  /* 넘치는 텍스트 숨김 */
   text-overflow: ellipsis;
-  /* 생략 부호(...) 표시 */
 }
 
 #container {
@@ -242,7 +235,6 @@ input[type="checkbox"] {
 }
 
 .table_con table {
-  max-width: 65%;
   margin: 0 auto;
   padding: 0 10%;
 }
@@ -315,9 +307,8 @@ input[type="checkbox"] {
   text-decoration: underline var(--main-color);
 }
 
-.tabcontent2 table tbody td:nth-of-type(2) {
-  width: 65%;
-  text-align: center;
+.sub5_container table tbody td:nth-of-type(2) {
+  text-align: left;
 }
 
 .tabcontent2 table tbody td:nth-of-type(3),
@@ -526,6 +517,7 @@ input[type="checkbox"] {
 }
 
 .out_notion_txt {
+  text-align: center; 
   margin: 50px 0 50px;
   font-size: 18px;
   padding: 0 10%;
@@ -661,10 +653,6 @@ address span {
   .out_notion_wrap {
     margin: auto;
   }
-
-  .event_wrap {
-    margin-top: 30px;
-  }
 }
 
 @media (max-width: 1080px) {
@@ -693,15 +681,6 @@ address span {
   .sub_banner_in h1 {
     padding-left: 50px;
   }
-
-  .event_wrap {
-    margin-top: 30px;
-  }
-
-  .evt_img {
-    width: 356px !important;
-    height: 356px !important;
-  }
 }
 
 @media (max-width: 960px) {
@@ -725,11 +704,6 @@ address span {
   .qna {
     margin: auto;
   }
-
-  .evt_img {
-    width: 356px;
-    height: 356px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -743,37 +717,19 @@ address span {
     width: 50%;
   }
 
-  .event_in .evt_line {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 0;
-  }
-
-  .evt_img {
-    width: 300px !important;
-    height: 300px !important;
-  }
-
   .typ {
     right: 17%;
   }
 }
 
 @media (max-width: 750px) {
-  .event_wrap {
-    margin-top: 30px;
-    border-radius: 15px;
-  }
-
   .list_tit {
     width: 20ch;
   }
-}
 
-@media (max-width: 650px) {
-  .evt_img {
-    width: 250px !important;
-    height: 250px !important;
+  .evt_container p {
+    text-align: left;
+    padding-left : 5px; 
   }
 }
 
@@ -810,10 +766,6 @@ address span {
     font-size: 25px;
   }
 
-  .event_wrap {
-    margin-top: 30px;
-  }
-
   .modal dl {
     width: 60%;
   }
@@ -828,10 +780,6 @@ address span {
     flex-direction: column;
   }
 
-  .list_tit {
-    width: 20ch;
-  }
-
   .wait,
   .end {
     padding: 3px 0;
@@ -840,10 +788,6 @@ address span {
 
   .table_con thead th {
     padding: 20px 10px;
-  }
-
-  .event_wrap {
-    margin-top: 30px;
   }
 
   .evt_line li img {
@@ -881,11 +825,7 @@ address span {
   }
 }
 
-@media (max-width: 480px) {
-  .list_tit {
-    width: 15ch;
-  }
-  
+@media (max-width: 480px) {  
   .write_in table th {
     width: 15%;
   }
@@ -905,10 +845,6 @@ address span {
   .login_inner {
     width: 90%;
     padding: 0;
-  }
-
-  .event_wrap {
-    margin-top: 30px;
   }
 
   .login_inner {
@@ -957,10 +893,6 @@ address span {
 
   .col span {
     padding-left: 5px;
-  }
-
-  .event_wrap {
-    margin-top: 30px;
   }
 
   .event_notice strong {
