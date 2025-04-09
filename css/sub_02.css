@@ -791,10 +791,6 @@ address span {
     flex-direction: column;
   }
 
-  .list_tit {
-    width: 20ch;
-  }
-
   .wait,
   .end {
     padding: 3px 0;
@@ -840,11 +836,7 @@ address span {
   }
 }
 
-@media (max-width: 480px) {
-  .list_tit {
-    width: 15ch;
-  }
-  
+@media (max-width: 480px) {  
   .write_in table th {
     width: 15%;
   }
