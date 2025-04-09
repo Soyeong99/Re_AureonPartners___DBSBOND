@@ -323,14 +323,7 @@
   .evt_line {
     width: 100%;
   }
-
-  /* modal */
-  .modal dl {
-    padding: 25px 20px; /* width: 70%; */
-  }
-  div.modal dt > strong {
-    font-size: 1.8rem;
-  }
+  
   .modal .okay {
     padding: 2px 30px;
     margin: 0;
@@ -882,7 +875,7 @@
   .form_wrap {
     padding: 40px 45px;
     max-width: 500px;
-  }
+  }  
 }
 
 @media (max-width: 580px) {
@@ -990,21 +983,7 @@
     flex-direction: column;
     align-items: flex-start !important;
   }
-
-  /* modal */
-  .modal dd > a.okay {
-    font-size: 1.6rem;
-    padding: 4px 28px;
-    font-weight: 400;
-  }
-  .modal dl {
-    width: 60%;
-    padding: 20px;
-  }
-  div.modal dt > strong {
-    font-size: 1.6rem;
-  }
-
+  
   /* event */
   .evt_line {
     gap: 40px;
@@ -1015,6 +994,15 @@
   .evt_line li a {
     margin: 0 auto;
     width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  /* modal */
+  .modal dd > a.okay {
+    font-size: 1.6rem;
+    padding: 4px 28px;
+    font-weight: 400;
   }
 }
 
@@ -1069,10 +1057,6 @@
   }
 
   /* sub_03_01_01 */
-  .modal dl {
-    width: 80%;
-    padding: 20px;
-  }
   .tit_box span {
     font-size: 1.6rem;
   }
@@ -1246,7 +1230,7 @@
 
 @media (max-width: 420px) {
   /* sub_02  */
-  /* #tit_box { height: 220px; position: relative; }  */
+
   span.typing {
     font-size: 2.4rem;
   }
@@ -1402,15 +1386,10 @@
     font-size: 13px;
     width: 30%;
   }
-
-  /* modal */
-  .mail_alarm dl dd.muted_txt {
-    font-size: 1.4rem;
-  }
 }
 
 @media (max-width: 360px) {
-  /* sub_02 ?? */
+  /* sub_02 */
   #about .img {
     height: 200px;
   }
