@@ -893,7 +893,7 @@ a.back {
   background: #fff;
 }
 .percent_area {
-  padding: 0 20px 20px;
+  padding: 0 20px 40px;
 }
 .percent {
   color: #888;
@@ -1137,6 +1137,12 @@ td.faq_read > label input {
 .user_q {
   gap: 0;
 }
+
+.prd_grid .prd_content > .tit {
+  padding: 0;
+  margin: 0;
+}
+
 .tit {
   padding: 12px 20px;
   font-size: 1.8rem;
