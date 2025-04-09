@@ -310,9 +310,8 @@ tr > td.list_tit{
   text-decoration: underline var(--main-color);
 }
 
-.tabcontent2 table tbody td:nth-of-type(2) {
-  width: 65%;
-  text-align: center;
+.sub5_container table tbody td:nth-of-type(2) {
+  text-align: left;
 }
 
 .tabcontent2 table tbody td:nth-of-type(3),
