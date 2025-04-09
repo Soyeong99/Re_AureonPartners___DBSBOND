@@ -781,7 +781,7 @@
   /* modal */
   .modal dd > a.okay {
     font-size: 1.6rem;
-    padding: 4px 28px;
+    padding: 6px 26px;
     font-weight: 400;
   }
   .modal dl {
@@ -831,6 +831,12 @@
   p.slash::before {
     display: block;
     right: -15px;
+  }
+
+  /* modal */
+  .modal dl {
+    width: 80%;
+    padding: 20px;
   }
 }
 
@@ -942,12 +948,6 @@
   .masked {
     font-size: 14px;
   }
-
-  /* modal */
-  .modal dl {
-    width: 80%;
-    padding: 20px;
-  }
   .tit_box span {
     font-size: 1.6rem;
   }
@@ -1024,6 +1024,12 @@
   .swiper-button-next:after,
   .swiper-button-prev:after {
     font-size: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mail_alarm dl dd.muted_txt {
+    font-size: 1.2rem;
   }
 }
 
