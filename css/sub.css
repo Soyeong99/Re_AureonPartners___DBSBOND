@@ -838,6 +838,7 @@ input[type="checkbox"] {
   background: url(../img/sub/prd_form_bg.jpg) no-repeat center / cover;
 }
 .form_wrap {
+  flex: 1;
   max-width: 800px;
   margin: 60px auto 80px;
   padding: 60px 50px;
