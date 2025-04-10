@@ -226,7 +226,7 @@ tr > td.list_tit{
 }
 
 .table_con {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   height: 100vh;
   padding: 10px 0 50px 0 !important;
@@ -612,6 +612,11 @@ address span {
 }
 
 @media (max-width: 1280px) {
+
+  .table_con {
+    width: 80%;
+  }
+  
   .gnb>li>a {
     padding: 8px 18px;
   }
