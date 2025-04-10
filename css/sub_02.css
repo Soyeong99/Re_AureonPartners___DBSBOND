@@ -253,9 +253,9 @@ tr > td.list_tit{
   padding: 15px;
 }
 
-.sub5_container tbody td {
+/* .sub5_container tbody td {
   text-align: center;
-}
+} */
 
 .list_tit {
   cursor: pointer;
