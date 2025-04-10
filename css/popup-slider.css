@@ -36,7 +36,6 @@ body.popup-open {
 
 #eventPopup .slide {
   display: none;
-  padding: 30px;
   transition: opacity 0.3s ease-in-out;
 }
 
