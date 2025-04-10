@@ -11,9 +11,7 @@ input[type="number"],
 input[type="email"],
 input[type="tel"],
 textarea,
-input[type="checkbox"] {
-  font-family: "Pretendard", sans-serif;
-}
+input[type="checkbox"] { font-family: "Pretendard", sans-serif; }
 
 /* 이벤트 */
 .event_in {
@@ -27,7 +25,7 @@ input[type="checkbox"] {
   justify-items: center;
   margin: 0 auto;
   align-items: center;
-  gap: 20px;
+  gap: 80px;
 }
 
 .evt_container {
@@ -73,7 +71,6 @@ input[type="checkbox"] {
 }
 
 .evt_container p:nth-of-type(2) {
-  width: 100%;
   color: #666;
   font-size: 16px;
 }
@@ -228,19 +225,15 @@ tr > td.list_tit{
   text-overflow: ellipsis;
 }
 
-#container {
-  width: 100vw;
-}
-
 .table_con {
   min-height: 60vh;
   padding: 10px 0 50px 0 !important;
 }
 
 .table_con table {
-  max-width: 65%;
-  margin: 0 auto;
-  padding: 0 10%;
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 0 10%;
 }
 
 .table_con th:nth-of-type(1),
@@ -333,7 +326,6 @@ tr > td.list_tit{
 }
 
 .tabcontent2 .end {
-  text-align: center;
   background-color: var(--main-color);
   color: #fff;
   width: 80px;
@@ -342,9 +334,9 @@ tr > td.list_tit{
 }
 
 .typ {
+  max-width: 100%;
+  margin-bottom: 20px;
   text-align: right;
-  max-width: 65%;
-  margin: 0 auto 20px;
 }
 
 .typ_in a {
@@ -610,15 +602,6 @@ address span {
 }
 
 @media (max-width: 1500px) {
-  .table_con table {
-    width: 1000px;
-    max-width: 100%;
-  }
-
-  .typ {
-    width: 1000px;
-    max-width: 100%;
-  }
 
   .write {
     width: 1000px;
@@ -633,6 +616,11 @@ address span {
 }
 
 @media (max-width: 1280px) {
+
+  .table_con {
+    width: 80%;
+  }
+  
   .gnb>li>a {
     padding: 8px 18px;
   }
@@ -661,15 +649,6 @@ address span {
 }
 
 @media (max-width: 1080px) {
-  .table_con table {
-    width: 90%;
-    max-width: 90%;
-  }
-
-  .typ {
-    width: 90%;
-    max-width: 90%;
-  }
 
   .write {
     width: 90%;
@@ -721,24 +700,16 @@ address span {
   input[type="checkbox"] {
     width: 50%;
   }
-
-  .typ {
-    right: 17%;
-  }
 }
 
 @media (max-width: 750px) {
   .list_tit {
     width: 20ch;
   }
+
   .evt_container p {
     text-align: left;
     padding-left : 5px; 
-  }
-
-@media (max-width: 618px) {
-  .typ {
-    right: 14%;
   }
 }
 
@@ -804,12 +775,6 @@ address span {
 }
 
 @media (max-width: 500px) {
-  .typ {
-    right: 11%;
-  }
-}
-
-@media (max-width: 500px) {
   .sub_banner_in h1 {
     font-size: 35px;
   }
@@ -833,10 +798,6 @@ address span {
     width: 15%;
   }
 
-  .typ_in {
-    margin-bottom: 20px;
-  }
-
   .grid_con {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -852,12 +813,6 @@ address span {
 
   .login_inner {
     padding: 20px 30px;
-  }
-}
-
-@media (max-width: 420px) {
-  .typ {
-    right: 7%;
   }
 }
 
@@ -956,12 +911,6 @@ address span {
 
   .auto_login {
     margin: auto;
-  }
-}
-
-@media (max-width: 350px) {
-  .typ {
-    right: 5%;
   }
 }
 
