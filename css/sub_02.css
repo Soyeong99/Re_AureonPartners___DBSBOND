@@ -226,8 +226,14 @@ tr > td.list_tit{
 }
 
 .table_con {
-  height: 100vh;
+  min-height: 60vh;
   padding: 10px 0 50px 0 !important;
+}
+
+.table_con table {
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 0 10%;
 }
 
 .table_con th:nth-of-type(1),
@@ -251,9 +257,9 @@ tr > td.list_tit{
   padding: 15px;
 }
 
-/* .sub5_container tbody td {
+.sub5_container tbody td {
   text-align: center;
-} */
+}
 
 .list_tit {
   cursor: pointer;
