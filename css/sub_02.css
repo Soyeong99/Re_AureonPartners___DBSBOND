@@ -333,6 +333,7 @@ tr > td.list_tit{
 }
 
 .tabcontent2 .end {
+  text-align: center;
   background-color: var(--main-color);
   color: #fff;
   width: 80px;
