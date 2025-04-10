@@ -226,8 +226,6 @@ tr > td.list_tit{
 }
 
 .table_con {
-  width: 60%;
-  margin: 0 auto;
   height: 100vh;
   padding: 10px 0 50px 0 !important;
 }
